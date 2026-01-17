@@ -1,2 +1,48 @@
-/target
-src-tauri/
+# Rust
+/target/
+**/*.rs.bk
+
+# Tauri build artifacts
+/src-tauri/target/
+src-tauri/.tauri-build/
+src-tauri/.DS_Store
+
+# Node.js/JS/TS (если используете npm/yarn)
+node_modules/
+ui/node_modules/
+ui/dist/
+ui/build/
+ui/.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+*.egg-info/
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+
+# System
+.DS_Store
+Thumbs.db
+
+# Личные/секретные файлы
+.env
+.env.local
+*.key
+*.pem
+
+# Логи
+*.log
+
+# Бэкапы
+*~
+*.bak
+*.tmp

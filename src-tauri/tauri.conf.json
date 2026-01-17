@@ -1,0 +1,39 @@
+{
+  "productName": "Synergy.OS",
+  "version": "0.1.0",
+  "identifier": "com.dota2draft.dev",
+  "build": {
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "frontendDist": "../ui"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "security": {
+      "csp": "default-src 'self' 'unsafe-inline' https://cdn.steamstatic.com https://cdn.tailwindcss.com; img-src 'self' * data:;"
+    },
+    "windows": [
+      {
+        "title": "Synergy.OS",
+        "width": 1620,
+        "height": 860,
+        "resizable": true,
+        "fullscreen": false,
+        "center": true
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": [
+      "../data/**/*"
+    ]
+  }
+}
