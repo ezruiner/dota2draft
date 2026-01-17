@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --copper-raw: #b87333;
+            --copper-light: #f6a07c;
+            --copper-dark: #5d2e1c;
+            --galvanized-zinc: #a8a8a8;
+            --bg-obsidian: #0a0a0c;
+            --verdigris: #4ecdc4;
+            --grid-line: rgba(184, 115, 51, 0.15);
+            --transition: cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-obsidian);
+            color: #e0e0e0;
+            font-family: 'Outfit', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* SVG Grain Texture */
+        .noise {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 999;
+        }
+
+        /* The Grid Framework */
+        .grid-canvas {
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background-image: 
+                linear-gradient(var(--grid-line) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+            background-size: 60px 60px;
+            transform: perspective(1000px) rotateX(20deg) translateY(-20%);
+            z-index: -1;
+            mask-image: radial-gradient(circle at center, black, transparent 80%);
+        }
+
+        .main-container {
+            width: 95vw;
+            height: 90vh;
+            display: grid;
+            grid-template-columns: 280px 1fr 280px;
+            grid-template-rows: 80px 1fr 140px;
+            gap: 20px;
+            position: relative;
+        }
+
+        /* HEADER */
+        .header {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 2px solid var(--copper-dark);
+            padding-bottom: 10px;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 15%;
+            height: 4px;
+            background: var(--copper-raw);
+            box-shadow: 0 0 15px var(--copper-raw);
+        }
+
+        .title {
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 2.5rem;
+            letter-spacing: -1px;
+            background: linear-gradient(to bottom, #fff, var(--copper-raw));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .metadata {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--copper-raw);
+            text-align: right;
+        }
+
+        /* TEAM SLOTS (SIDEBARS) */
+        .team-column {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .slot {
+            height: 80px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(184, 115, 51, 0.2);
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            overflow: hidden;
+            transition: var(--transition) 0.4s;
+            clip-path: polygon(0 0, 90% 0, 100% 20%, 100% 100%, 10% 100%, 0 80%);
+        }
+
+        .slot:hover {
+            background: rgba(184, 115, 51, 0.1);
+            border-color: var(--copper-raw);
+            transform: translateX(10px);
+        }
+
+        .slot::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--copper-dark);
+        }
+
+        .radiant .slot::before { background: var(--verdigris); box-shadow: 0 0 10px var(--verdigris); }
+        .dire .slot::before { background: #ff4d4d; box-shadow: 0 0 10px #ff4d4d; }
+
+        .slot-avatar {
+            width: 50px;
+            height: 50px;
+            background: #1a1a1a;
+            border: 1px solid var(--copper-dark);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .slot-avatar::after {
+            content: '';
+            position: absolute;
+            width: 120%; height: 120%;
+            border: 1px solid rgba(184, 115, 51, 0.1);
+            pointer-events: none;
+        }
+
+        .slot-info h4 {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        .slot-info p {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        /* HERO SELECTION GRID */
+        .selection-area {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 8px;
+            padding: 20px;
+            background: radial-gradient(circle at center, rgba(184, 115, 51, 0.05) 0%, transparent 70%);
+            border: 1px solid var(--copper-dark);
+            border-top: 0;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .hero-node {
+            aspect-ratio: 1/1;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.05);
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s var(--transition);
+        }
+
+        .hero-node:hover {
+            border-color: var(--copper-raw);
+            transform: scale(1.1) rotate(2deg);
+            z-index: 10;
+            box-shadow: 0 0 20px rgba(184, 115, 51, 0.3);
+        }
+
+        .hero-node::after {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            border: 1px solid rgba(184, 115, 51, 0.1);
+        }
+
+        .hero-node.strength { border-bottom: 2px solid #ff4d4d; }
+        .hero-node.agility { border-bottom: 2px solid #2ecc71; }
+        .hero-node.intelligence { border-bottom: 2px solid #3498db; }
+
+        /* FOOTER PANELS */
+        .analysis-panel {
+            grid-column: 2;
+            background: rgba(184, 115, 51, 0.03);
+            border: 1px solid var(--copper-dark);
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gauge-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .gauge-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            color: var(--copper-raw);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .gauge-bar {
+            height: 4px;
+            background: rgba(255,255,255,0.05);
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .gauge-fill {
+            height: 100%;
+            background: var(--copper-raw);
+            box-shadow: 0 0 10px var(--copper-raw);
+            transition: width 1s ease-in-out;
+        }
+
+        /* CONTROLS */
+        .controls {
+            grid-column: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .btn {
+            background: transparent;
+            border: 1px solid var(--copper-raw);
+            color: var(--copper-raw);
+            padding: 15px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--copper-raw);
+            color: var(--bg-obsidian);
+        }
+
+        .btn-primary {
+            height: 100%;
+            background: rgba(184, 115, 51, 0.1);
+            font-size: 1.2rem;
+        }
+
+        /* Decorative Grid Elements */
+        .rivet {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: var(--copper-dark);
+            border-radius: 50%;
+            box-shadow: inset -1px -1px 2px rgba(0,0,0,0.8), 1px 1px 1px rgba(255,255,255,0.1);
+        }
+
+        .top-left { top: 10px; left: 10px; }
+        .top-right { top: 10px; right: 10px; }
+        .bottom-left { bottom: 10px; left: 10px; }
+        .bottom-right { bottom: 10px; right: 10px; }
+
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--copper-dark); border-radius: 2px; }
+
+        @keyframes reveal {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-in {
+            animation: reveal 0.8s var(--transition) forwards;
+        }
+    </style>
+</head>
+<body>
+
+<svg class="noise">
+    <filter id="grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch" />
+        <feColorMatrix type="saturate" values="0" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#grain)" />
+</svg>
+
+<div class="grid-canvas"></div>
+
+<div class="main-container">
+    
+    <header class="header animate-in" style="animation-delay: 0.1s;">
+        <div>
+            <h1 class="title">Aegis Protocol</h1>
+            <p style="font-family: 'Space Mono'; font-size: 0.7rem; letter-spacing: 4px; color: var(--verdigris);">DRAFT ENGINE // V.4.0.2</p>
+        </div>
+        <div class="metadata">
+            <p>MATCH_ID: 7749-X-COPPER</p>
+            <p>SERVER: US-EAST (VERDIGRIS)</p>
+            <p style="color: #fff; font-size: 1rem; margin-top: 5px;">04:32 <span style="color: var(--copper-raw);">UNTIL START</span></p>
+        </div>
+    </header>
+
+    <aside class="team-column radiant animate-in" style="animation-delay: 0.2s;">
+        <div class="slot">
+            <div class="slot-avatar"></div>
+            <div class="slot-info">
+                <h4>Carry</h4>
+                <p>---</p>
+            </div>
+        </div>
+        <div class="slot">
+            <div class="slot-avatar"></div>
+            <div class="slot-info">
+                <h4>Mid</h4>
+                <p>---</p>
+            </div>
+        </div>
+        <div class="slot">
+            <div class="slot-avatar"></div>
+            <div class="slot-info">
+                <h4>Offlane</h4>
+                <p>---</p>
+            </div>
+        </div>
+        <div class="slot">
+            <div class="slot-avatar"></div>
+            <div class="slot-info">
+                <h4>Soft Support</h4>
+                <p>---</p>
+            </div>
+        </div>
+        <div class="slot">
+            <div class="slot-avatar"></div>
+            <div class="slot-info">
+                <h4>Hard Support</h4>
+                <p>---</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="selection-area animate-in" id="heroGrid" style="animation-delay: 0.3s;">
+        <!-- Generated by JS for demo -->
+    </main>
+
+    <aside class="team-column dire animate-in" style="animation-delay: 0.4s;">
+        <div class="slot" style="flex-direction: row-reverse; text-align: right;">
+            <div class="slot-avatar" style="margin-right: 0; margin-left: 15px;"></div>
+            <div class="slot-info">
+                <h4>Carry</h4>
+                <p>---</p>
+            </div>
+        </div>
+        <div class="slot" style="flex-direction: row-reverse; text-align: right;">
+            <div class="slot-avatar" style="margin-right: 0; margin-left: 15px;"></div>
+            <div class="slot-info">
+                <h4>Mid</h4>
+                <p>---</p>
+            </div>
+        </div>
+        <div class="slot" style="flex-direction: row-reverse; text-align: right;">
+            <div class="slot-avatar" style="margin-right: 0; margin-left: 15px;"></div>
+            <div class="slot-info">
+                <h4>Offlane</h4>
+                <p>---</p>
+            </div>
+        </div>
+        <div class="slot" style="flex-direction: row-reverse; text-align: right;">
+            <div class="slot-avatar" style="margin-right: 0; margin-left: 15px;"></div>
+            <div class="slot-info">
+                <h4>Soft Support</h4>
+                <p>---</p>
+            </div>
+        </div>
+        <div class="slot" style="flex-direction: row-reverse; text-align: right;">
+            <div class="slot-avatar" style="margin-right: 0; margin-left: 15px;"></div>
+            <div class="slot-info">
+                <h4>Hard Support</h4>
+                <p>---</p>
+            </div>
+        </div>
+    </aside>
+
+    <div class="analysis-panel animate-in" style="animation-delay: 0.5s;">
+        <div class="gauge-container">
+            <div class="gauge-label">
+                <span>Team Synergy</span>
+                <span>72%</span>
+            </div>
+            <div class="gauge-bar"><div class="gauge-fill" style="width: 72%;"></div></div>
+            <div class="gauge-label" style="margin-top: 15px;">
+                <span>Durability</span>
+                <span>45%</span>
+            </div>
+            <div class="gauge-bar"><div class="gauge-fill" style="width: 45%;"></div></div>
+        </div>
+        <div class="gauge-container">
+            <div class="gauge-label">
+                <span>Crowd Control</span>
+                <span>88%</span>
+            </div>
+            <div class="gauge-bar"><div class="gauge-fill" style="width: 88%; background: var(--verdigris); box-shadow: 0 0 10px var(--verdigris);"></div></div>
+            <div class="gauge-label" style="margin-top: 15px;">
+                <span>Win Probability</span>
+                <span>54.2%</span>
+            </div>
+            <div class="gauge-bar"><div class="gauge-fill" style="width: 54.2%;"></div></div>
+        </div>
+    </div>
+
+    <div class="controls animate-in" style="animation-delay: 0.6s;">
+        <button class="btn btn-primary">Lock Selection</button>
+        <div style="display: flex; gap: 10px; margin-top: 10px;">
+            <button class="btn" style="flex: 1; font-size: 0.7rem;">Suggest</button>
+            <button class="btn" style="flex: 1; font-size: 0.7rem;">Ban</button>
+        </div>
+    </div>
+
+    <!-- Rivets for structural feel -->
+    <div class="rivet top-left"></div>
+    <div class="rivet top-right"></div>
+    <div class="rivet bottom-left"></div>
+    <div class="rivet bottom-right"></div>
+</div>
+
+<script>
+    const grid = document.getElementById('heroGrid');
+    const types = ['strength', 'agility', 'intelligence'];
+    
+    // Create 120 hero nodes
+    for (let i = 0; i < 120; i++) {
+        const node = document.createElement('div');
+        node.className = `hero-node ${types[Math.floor(Math.random() * 3)]}`;
+        
+        // Add metallic sheen on hover via JS to track mouse
+        node.addEventListener('mousemove', (e) => {
+            const rect = node.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            node.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(184, 115, 51, 0.4) 0%, rgba(0,0,0,0.6) 70%)`;
+        });
+
+        node.addEventListener('mouseleave', () => {
+            node.style.background = `rgba(0,0,0,0.4)`;
+        });
+
+        grid.appendChild(node);
+    }
+</script>
+
+</body>
+</html>
+

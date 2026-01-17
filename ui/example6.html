@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monolith Draft Engine</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --basalt-dark: #0a0a0c;
+            --basalt-mid: #1a1a1e;
+            --basalt-light: #2a2a30;
+            --accent-glow: #4a9eff;
+            --accent-threat: #ff4a4a;
+            --text-main: #e0e0e0;
+            --text-dim: #666666;
+            --slab-border: #333338;
+            --grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: crosshair;
+        }
+
+        body {
+            background-color: var(--basalt-dark);
+            color: var(--text-main);
+            font-family: 'Syncopate', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: var(--grain);
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .monolith-container {
+            width: 95vw;
+            height: 90vh;
+            display: grid;
+            grid-template-columns: 350px 1fr 400px;
+            gap: 2px;
+            background: var(--slab-border);
+            border: 1px solid var(--slab-border);
+            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+            position: relative;
+        }
+
+        /* Slab Styling */
+        .slab {
+            background: var(--basalt-mid);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slab::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .slab-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--slab-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .slab-title {
+            font-size: 0.7rem;
+            letter-spacing: 0.3em;
+            font-weight: 700;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        /* Hero Roster Styling */
+        .hero-grid {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+            gap: 4px;
+            padding: 20px;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+
+        .hero-node {
+            aspect-ratio: 3/4;
+            background: var(--basalt-dark);
+            border: 1px solid var(--slab-border);
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            filter: grayscale(1);
+        }
+
+        .hero-node:hover {
+            filter: grayscale(0);
+            transform: scale(1.05);
+            z-index: 5;
+            border-color: var(--accent-glow);
+            box-shadow: 0 0 20px rgba(74, 158, 255, 0.2);
+        }
+
+        .hero-node .mana-cost {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: var(--accent-glow);
+        }
+
+        /* Draft Slots (Left Panel) */
+        .draft-slots {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            background: var(--slab-border);
+        }
+
+        .slot {
+            height: 20%;
+            background: var(--basalt-mid);
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            border-left: 0px solid var(--accent-glow);
+            transition: all 0.4s ease;
+        }
+
+        .slot:hover {
+            border-left-width: 8px;
+            background: var(--basalt-light);
+        }
+
+        .slot-meta {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .slot-role {
+            font-size: 10px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .slot-hero-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        /* Analysis Panel (Right Panel) */
+        .analysis-content {
+            padding: 30px;
+        }
+
+        .metric-block {
+            margin-bottom: 40px;
+        }
+
+        .metric-label {
+            font-size: 0.6rem;
+            color: var(--text-dim);
+            margin-bottom: 15px;
+            display: block;
+            letter-spacing: 0.2em;
+        }
+
+        .win-rate-display {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+            font-family: 'Syncopate', sans-serif;
+            background: linear-gradient(to bottom, #fff, #444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .counter-list {
+            list-style: none;
+        }
+
+        .counter-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--slab-border);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+        }
+
+        .threat-level {
+            height: 4px;
+            background: var(--basalt-dark);
+            width: 100px;
+            margin-top: 6px;
+            position: relative;
+        }
+
+        .threat-fill {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            background: var(--accent-threat);
+            box-shadow: 0 0 10px var(--accent-threat);
+        }
+
+        /* Decorative Elements */
+        .tectonic-line {
+            position: absolute;
+            background: var(--accent-glow);
+            opacity: 0.3;
+        }
+
+        .vertical { width: 1px; height: 100%; top: 0; }
+        .horizontal { height: 1px; width: 100%; left: 0; }
+
+        /* Scroller Styling */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: var(--basalt-dark); }
+        ::-webkit-scrollbar-thumb { background: var(--text-dim); }
+
+        /* Animations */
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .animate {
+            animation: slideIn 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="monolith-container">
+        <!-- LEFT: DRAFT SLOTS -->
+        <aside class="slab draft-slots">
+            <div class="slab-header">
+                <span class="slab-title">Current Selection</span>
+                <div style="width: 8px; height: 8px; background: var(--accent-glow); border-radius: 50%;"></div>
+            </div>
+            
+            <div class="slot">
+                <div class="slot-meta">
+                    <span class="slot-role">Position 1 // Carry</span>
+                    <div class="slot-hero-name">VOID_WALKER</div>
+                </div>
+            </div>
+            <div class="slot">
+                <div class="slot-meta">
+                    <span class="slot-role">Position 2 // Mid</span>
+                    <div class="slot-hero-name">EMBER_SPIRIT</div>
+                </div>
+            </div>
+            <div class="slot">
+                <div class="slot-meta">
+                    <span class="slot-role">Position 3 // Offlane</span>
+                    <div class="slot-hero-name">IRON_GIANT</div>
+                </div>
+            </div>
+            <div class="slot">
+                <div class="slot-meta">
+                    <span class="slot-role">Position 4 // Support</span>
+                    <div class="slot-hero-name">FROST_ARCHER</div>
+                </div>
+            </div>
+            <div class="slot">
+                <div class="slot-meta">
+                    <span class="slot-role">Position 5 // Hard Support</span>
+                    <div class="slot-hero-name">PENDING...</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- CENTER: HERO ROSTER -->
+        <main class="slab">
+            <div class="slab-header">
+                <span class="slab-title">Basalt Roster [ 124 Units Detected ]</span>
+                <input type="text" placeholder="FILTER_IDENTITY..." style="background: transparent; border: 1px solid var(--slab-border); color: var(--text-main); font-family: 'JetBrains Mono'; padding: 5px 10px; font-size: 10px; width: 200px;">
+            </div>
+            <div class="hero-grid" id="heroGrid">
+                <!-- Hero nodes generated by JS -->
+            </div>
+            <div class="tectonic-line vertical" style="right: 0;"></div>
+        </main>
+
+        <!-- RIGHT: ANALYSIS -->
+        <aside class="slab">
+            <div class="slab-header">
+                <span class="slab-title">Strategic Oracle</span>
+                <span style="font-family: 'JetBrains Mono'; font-size: 10px; color: var(--text-dim);">v4.0.2</span>
+            </div>
+            
+            <div class="analysis-content">
+                <div class="metric-block animate" style="animation-delay: 0.1s;">
+                    <span class="metric-label">PROBABILITY OF TRIUMPH</span>
+                    <div class="win-rate-display">54.2%</div>
+                </div>
+
+                <div class="metric-block animate" style="animation-delay: 0.2s;">
+                    <span class="metric-label">CRITICAL THREATS</span>
+                    <ul class="counter-list">
+                        <li class="counter-item">
+                            <div>
+                                <span style="display: block; font-weight: 700;">STORM_CALLER</span>
+                                <div class="threat-level"><div class="threat-fill" style="width: 85%;"></div></div>
+                            </div>
+                            <span style="color: var(--accent-threat);">CRITICAL</span>
+                        </li>
+                        <li class="counter-item">
+                            <div>
+                                <span style="display: block; font-weight: 700;">BLOOD_SEEKER</span>
+                                <div class="threat-level"><div class="threat-fill" style="width: 62%;"></div></div>
+                            </div>
+                            <span style="color: var(--text-dim);">MODERATE</span>
+                        </li>
+                        <li class="counter-item">
+                            <div>
+                                <span style="display: block; font-weight: 700;">EARTH_SHAKER</span>
+                                <div class="threat-level"><div class="threat-fill" style="width: 40%;"></div></div>
+                            </div>
+                            <span style="color: var(--text-dim);">LOW</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="metric-block animate" style="animation-delay: 0.3s;">
+                    <span class="metric-label">TEAM SYNERGY METRICS</span>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-family: 'JetBrains Mono'; font-size: 11px;">
+                        <div style="padding: 10px; background: var(--basalt-dark); border: 1px solid var(--slab-border);">
+                            <span style="color: var(--text-dim);">CC:</span> 8.5/10
+                        </div>
+                        <div style="padding: 10px; background: var(--basalt-dark); border: 1px solid var(--slab-border);">
+                            <span style="color: var(--text-dim);">BURST:</span> 4.2/10
+                        </div>
+                        <div style="padding: 10px; background: var(--basalt-dark); border: 1px solid var(--slab-border);">
+                            <span style="color: var(--text-dim);">PUSH:</span> 9.1/10
+                        </div>
+                        <div style="padding: 10px; background: var(--basalt-dark); border: 1px solid var(--slab-border);">
+                            <span style="color: var(--text-dim);">TANK:</span> 6.8/10
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script>
+        const grid = document.getElementById('heroGrid');
+        
+        // Generate placeholder hero nodes
+        for (let i = 0; i < 60; i++) {
+            const node = document.createElement('div');
+            node.className = 'hero-node';
+            node.style.animationDelay = `${Math.random() * 0.5}s`;
+            
+            // Random basalt-like gradients
+            const shade = Math.floor(Math.random() * 20) + 10;
+            node.style.background = `linear-gradient(to bottom right, #222, #000)`;
+            
+            const mana = document.createElement('span');
+            mana.className = 'mana-cost';
+            mana.innerText = (Math.random() * 100).toFixed(0);
+            
+            node.appendChild(mana);
+            grid.appendChild(node);
+        }
+
+        // Interactive movement effect
+        document.addEventListener('mousemove', (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 10;
+            const y = (e.clientY / window.innerHeight - 0.5) * 10;
+            document.querySelector('.monolith-container').style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${-y}deg)`;
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monolith Draft Engine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --basalt-900: #0a0a0c;
+            --basalt-800: #16161a;
+            --basalt-700: #24242b;
+            --magma-glow: rgba(255, 68, 0, 0.4);
+            --mana-glow: rgba(0, 183, 255, 0.3);
+            --fracture-line: rgba(255, 255, 255, 0.08);
+            --text-primary: #e0e0e0;
+            --text-dim: #6b6b7a;
+            --accent: #ff4d00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: crosshair;
+        }
+
+        body {
+            background-color: var(--basalt-900);
+            color: var(--text-primary);
+            font-family: 'Bebas Neue', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Stone Grain Texture Overlay */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+            opacity: 0.03;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+
+        .monolith-container {
+            width: 95vw;
+            height: 90vh;
+            background: linear-gradient(135deg, var(--basalt-800) 0%, var(--basalt-900) 100%);
+            border: 1px solid var(--fracture-line);
+            box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+            position: relative;
+            display: grid;
+            grid-template-columns: 350px 1fr 350px;
+            overflow: hidden;
+        }
+
+        /* Central Fracture Line */
+        .monolith-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: -10%;
+            width: 1px;
+            height: 120%;
+            background: var(--fracture-line);
+            transform: rotate(5deg);
+            z-index: 1;
+        }
+
+        /* Side Panels - The Basalt Slabs */
+        .side-panel {
+            background: var(--basalt-800);
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            z-index: 2;
+            border-right: 1px solid var(--fracture-line);
+        }
+
+        .side-panel.dire {
+            border-right: none;
+            border-left: 1px solid var(--fracture-line);
+        }
+
+        .panel-header {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .radiant .panel-header { color: #81ff9d; text-shadow: 0 0 20px rgba(129, 255, 157, 0.3); }
+        .dire .panel-header { color: #ff5252; text-shadow: 0 0 20px rgba(255, 82, 82, 0.3); }
+
+        /* Draft Slots - Fractured Geometry */
+        .draft-slot {
+            height: 80px;
+            background: #111;
+            position: relative;
+            clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+            margin-bottom: 10px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+            overflow: hidden;
+        }
+
+        .draft-slot:hover {
+            transform: translateX(10px);
+            background: #1a1a1a;
+        }
+
+        .draft-slot::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .draft-slot.filled::after { opacity: 1; }
+
+        .hero-name {
+            font-size: 1.8rem;
+            color: var(--text-dim);
+            transition: color 0.3s;
+        }
+
+        .draft-slot.filled .hero-name {
+            color: white;
+        }
+
+        /* Main Engine Section */
+        .draft-engine {
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 2;
+        }
+
+        .engine-title {
+            font-size: 5rem;
+            line-height: 0.8;
+            margin-bottom: 2rem;
+            background: linear-gradient(to bottom, #fff, #444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: auto;
+        }
+
+        .data-block {
+            background: rgba(255,255,255,0.02);
+            padding: 1.5rem;
+            border-left: 2px solid var(--fracture-line);
+        }
+
+        .data-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .data-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.4rem;
+            color: var(--accent);
+        }
+
+        /* Hero Selector Grid */
+        .hero-picker {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        .hero-node {
+            aspect-ratio: 1;
+            background: var(--basalt-700);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            transition: all 0.3s;
+            position: relative;
+            opacity: 0.6;
+        }
+
+        .hero-node:hover {
+            opacity: 1;
+            transform: scale(1.1) rotate(5deg);
+            background: var(--accent);
+            box-shadow: 0 0 30px var(--magma-glow);
+        }
+
+        .hero-node::before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: var(--basalt-900);
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+            z-index: -1;
+        }
+
+        /* Fracture Animations */
+        @keyframes flicker {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+        .glow-crack {
+            position: absolute;
+            background: var(--accent);
+            filter: blur(8px);
+            opacity: 0.3;
+            animation: flicker 2s infinite;
+        }
+
+        .status-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            padding: 4px 12px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            margin-left: auto;
+            text-transform: uppercase;
+        }
+
+        /* Background Visuals */
+        .monolith-bg-text {
+            position: absolute;
+            bottom: -50px;
+            right: -20px;
+            font-size: 20rem;
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <main class="monolith-container">
+        <div class="monolith-bg-text">DOTA</div>
+
+        <!-- RADIANT SLAB -->
+        <section class="side-panel radiant">
+            <header class="panel-header">
+                RADIANT
+                <span style="font-size: 0.8rem; letter-spacing: 4px; color: var(--text-dim);">// FACTION</span>
+            </header>
+            
+            <div class="draft-slot filled">
+                <span class="hero-name">EMEMBER SPIRIT</span>
+                <div class="status-badge">PICK 1</div>
+            </div>
+            <div class="draft-slot filled">
+                <span class="hero-name">MORPHLING</span>
+                <div class="status-badge">PICK 2</div>
+            </div>
+            <div class="draft-slot">
+                <span class="hero-name">---</span>
+            </div>
+            <div class="draft-slot">
+                <span class="hero-name">---</span>
+            </div>
+            <div class="draft-slot">
+                <span class="hero-name">---</span>
+            </div>
+
+            <div class="analysis-grid" style="margin-top: 4rem;">
+                <div class="data-block">
+                    <span class="data-label">WIN PROBABILITY</span>
+                    <span class="data-value">54.2%</span>
+                </div>
+                <div class="data-block">
+                    <span class="data-label">TEAM SYNERGY</span>
+                    <span class="data-value">A+</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CENTRAL ENGINE -->
+        <section class="draft-engine">
+            <h1 class="engine-title">Basalt<br>Fracture<br>Engine</h1>
+            
+            <div class="hero-picker">
+                <!-- Generative Hex Grid -->
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node" style="background: var(--accent); opacity: 1;"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+                <div class="hero-node"></div>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <span class="data-label">SUGGESTED COUNTERS</span>
+                <div style="display: flex; gap: 20px; margin-top: 1rem;">
+                    <div style="width: 60px; height: 80px; background: #222; border: 1px solid var(--accent);"></div>
+                    <div style="width: 60px; height: 80px; background: #222; border: 1px solid var(--fracture-line);"></div>
+                    <div style="width: 60px; height: 80px; background: #222; border: 1px solid var(--fracture-line);"></div>
+                </div>
+            </div>
+
+            <div class="data-block" style="margin-top: auto; border-left: 2px solid var(--accent);">
+                <span class="data-label">LOGS_FRAGMENT_882</span>
+                <span class="data-value" style="font-size: 0.9rem; color: var(--text-dim);">
+                    >> Analyzing Dire Pick: Faceless Void... <br>
+                    >> Vulnerability detected in Radiant backline... <br>
+                    >> Suggesting: Shadow Demon (Fracture Disruption)
+                </span>
+            </div>
+        </section>
+
+        <!-- DIRE SLAB -->
+        <section class="side-panel dire">
+            <header class="panel-header">
+                DIRE
+                <span style="font-size: 0.8rem; letter-spacing: 4px; color: var(--text-dim);">// FACTION</span>
+            </header>
+
+            <div class="draft-slot filled" style="--accent: #ff5252">
+                <span class="hero-name">FACELESS VOID</span>
+                <div class="status-badge" style="border-color: #ff5252; color: #ff5252">PICK 1</div>
+            </div>
+            <div class="draft-slot">
+                <span class="hero-name">---</span>
+            </div>
+            <div class="draft-slot">
+                <span class="hero-name">---</span>
+            </div>
+            <div class="draft-slot">
+                <span class="hero-name">---</span>
+            </div>
+            <div class="draft-slot">
+                <span class="hero-name">---</span>
+            </div>
+
+            <div class="analysis-grid" style="margin-top: 4rem;">
+                <div class="data-block">
+                    <span class="data-label">GOLD SCALING</span>
+                    <span class="data-value" style="color: #ff5252">EXTREME</span>
+                </div>
+                <div class="data-block">
+                    <span class="data-label">CROWD CONTROL</span>
+                    <span class="data-value" style="color: #ff5252">HIGH</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Subtle Mouse Interaction for "Lava" effect
+        document.addEventListener('mousemove', (e) => {
+            const container = document.querySelector('.monolith-container');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            container.style.boxShadow = `${(x - 0.5) * 40}px ${(y - 0.5) * 40}px 100px rgba(0,0,0,0.9)`;
+        });
+
+        // Add random fracture lines on slots
+        document.querySelectorAll('.draft-slot').forEach(slot => {
+            slot.addEventListener('mouseenter', () => {
+                const crack = document.createElement('div');
+                crack.className = 'glow-crack';
+                crack.style.width = '100%';
+                crack.style.height = '1px';
+                crack.style.top = Math.random() * 100 + '%';
+                crack.style.transform = `rotate(${Math.random() * 4 - 2}deg)`;
+                slot.appendChild(crack);
+                setTimeout(() => crack.remove(), 1000);
+            });
+        });
+    </script>
+</body>
+</html>

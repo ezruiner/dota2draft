@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYNERGY.OS // Mercury Draft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050506;
+            --mercury: #e0e0e2;
+            --mercury-glow: rgba(224, 224, 226, 0.4);
+            --radiant: #00ffcc;
+            --dire: #ff3366;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--mercury);
+            font-family: 'Inter', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Kinetic Background */
+        .liquid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: contrast(150%) brightness(50%);
+            opacity: 0.4;
+        }
+
+        /* Custom Cursor */
+        #cursor {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: transform 0.1s ease;
+        }
+
+        /* Typography */
+        h1 { font-weight: 800; font-size: 0.75rem; letter-spacing: 0.5em; text-transform: uppercase; opacity: 0.5; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
+
+        /* Layout */
+        .app-container {
+            display: grid;
+            grid-template-columns: 320px 1fr 320px;
+            height: 100%;
+            padding: 40px;
+            gap: 40px;
+        }
+
+        /* Draft Slots - Kinetic Mercury Style */
+        .side-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .hero-slot {
+            height: 80px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .hero-slot::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            transition: 0.5s;
+        }
+
+        .hero-slot:hover {
+            border-color: var(--mercury);
+            transform: translateX(10px);
+            background: rgba(255,255,255,0.06);
+        }
+
+        .hero-slot:hover::before { left: 100%; }
+
+        .slot-indicator {
+            width: 4px;
+            height: 40%;
+            background: var(--indicator-color);
+            margin-right: 20px;
+            box-shadow: 0 0 15px var(--indicator-color);
+        }
+
+        .radiant { --indicator-color: var(--radiant); }
+        .dire { --indicator-color: var(--dire); text-align: right; flex-direction: row-reverse; }
+        .dire:hover { transform: translateX(-10px); }
+
+        /* Main Center View */
+        .main-view {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .hero-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+            gap: 8px;
+            padding: 20px;
+            mask-image: linear-gradient(to bottom, black 80%, transparent);
+        }
+
+        .hero-node {
+            aspect-ratio: 1;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .hero-node:hover {
+            background: var(--mercury);
+            transform: scale(1.2);
+            box-shadow: 0 0 30px var(--mercury-glow);
+            z-index: 10;
+        }
+
+        /* Synergy Analysis Panel */
+        .analysis-panel {
+            height: 240px;
+            background: var(--glass);
+            border-top: 1px solid var(--border);
+            backdrop-filter: blur(20px);
+            border-radius: 40px 40px 0 0;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .synergy-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--mercury), transparent);
+        }
+
+        .metric-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .bar-container {
+            width: 200px;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            position: relative;
+        }
+
+        .bar-fill {
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%;
+            background: var(--mercury);
+            width: 65%;
+            box-shadow: 0 0 10px var(--mercury-glow);
+            animation: flow 2s infinite alternate ease-in-out;
+        }
+
+        @keyframes flow {
+            from { width: 60%; filter: brightness(1); }
+            to { width: 75%; filter: brightness(1.5); }
+        }
+
+        /* Animations */
+        .reveal {
+            animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes revealUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+
+        /* Floating Kinetic Element */
+        .mercury-blob {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--mercury-glow) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="cursor"></div>
+
+    <header style="padding: 40px 40px 0 40px; display: flex; justify-content: space-between; align-items: center;">
+        <div class="reveal">
+            <h1>Synergy.OS</h1>
+            <p class="mono" style="opacity: 0.4; margin-top: 4px;">DRAFT ASSISTANT V.2.04</p>
+        </div>
+        <div class="reveal mono" style="text-align: right;">
+            <span style="color: var(--radiant)">CONNECTED</span> // 0.04ms LATENCY
+        </div>
+    </header>
+
+    <main class="app-container">
+        <!-- Radiant Side -->
+        <section class="side-panel">
+            <div class="hero-slot radiant reveal stagger-1">
+                <div class="slot-indicator"></div>
+                <div>
+                    <p class="mono">POS 1</p>
+                    <p style="font-weight: 800; letter-spacing: 1px;">MORPHLING</p>
+                </div>
+            </div>
+            <div class="hero-slot radiant reveal stagger-2">
+                <div class="slot-indicator"></div>
+                <div>
+                    <p class="mono">POS 2</p>
+                    <p style="font-weight: 800; letter-spacing: 1px;">VOID SPIRIT</p>
+                </div>
+            </div>
+            <div class="hero-slot radiant reveal stagger-3">
+                <div class="slot-indicator"></div>
+                <div>
+                    <p class="mono">POS 3</p>
+                    <p style="opacity: 0.3">SELECTING...</p>
+                </div>
+            </div>
+            <div class="hero-slot radiant reveal" style="animation-delay: 0.4s">
+                <div class="slot-indicator"></div>
+                <p style="opacity: 0.3">--</p>
+            </div>
+            <div class="hero-slot radiant reveal" style="animation-delay: 0.5s">
+                <div class="slot-indicator"></div>
+                <p style="opacity: 0.3">--</p>
+            </div>
+        </section>
+
+        <!-- Main Draft Grid -->
+        <section class="main-view">
+            <div class="hero-grid reveal" style="animation-delay: 0.6s">
+                <!-- Dynamically populated hero nodes -->
+                <script>
+                    for(let i=0; i<84; i++) {
+                        document.write('<div class="hero-node"></div>');
+                    }
+                </script>
+            </div>
+
+            <div class="analysis-panel reveal" style="animation-delay: 0.8s">
+                <div class="synergy-line"></div>
+                
+                <div class="metric-group">
+                    <p class="mono">TEAM SYNERGY</p>
+                    <div class="bar-container">
+                        <div class="bar-fill" style="width: 82%;"></div>
+                    </div>
+                    <p class="mono" style="font-size: 1.5rem; margin-top: 10px;">82.4%</p>
+                </div>
+
+                <div style="text-align: center; width: 300px;">
+                    <p class="mono" style="margin-bottom: 10px; color: var(--radiant)">SUGGESTED NEXT PICK</p>
+                    <p style="font-weight: 800; font-size: 1.5rem;">MARS</p>
+                    <p class="mono" style="opacity: 0.5; font-size: 0.6rem; margin-top: 8px;">
+                        REASON: ULTIMATE SYNERGY WITH VOID SPIRIT + FRONT-LINE DURABILITY
+                    </p>
+                </div>
+
+                <div class="metric-group" style="align-items: flex-end;">
+                    <p class="mono">WIN PROBABILITY</p>
+                    <div class="bar-container" style="direction: rtl;">
+                        <div class="bar-fill" style="width: 54%; background: var(--radiant);"></div>
+                    </div>
+                    <p class="mono" style="font-size: 1.5rem; margin-top: 10px;">54.1%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dire Side -->
+        <section class="side-panel">
+            <div class="hero-slot dire reveal stagger-1">
+                <div>
+                    <p class="mono">POS 1</p>
+                    <p style="font-weight: 800; letter-spacing: 1px;">TERRORBLADE</p>
+                </div>
+                <div class="slot-indicator"></div>
+            </div>
+            <div class="hero-slot dire reveal stagger-2">
+                <div>
+                    <p class="mono">POS 2</p>
+                    <p style="font-weight: 800; letter-spacing: 1px;">INVOKER</p>
+                </div>
+                <div class="slot-indicator"></div>
+            </div>
+            <div class="hero-slot dire reveal stagger-3">
+                <div>
+                    <p class="mono">POS 3</p>
+                    <p style="font-weight: 800; letter-spacing: 1px;">TIDEHUNTER</p>
+                </div>
+                <div class="slot-indicator"></div>
+            </div>
+            <div class="hero-slot dire reveal" style="animation-delay: 0.4s">
+                <div>
+                    <p class="mono">POS 4</p>
+                    <p style="font-weight: 800; letter-spacing: 1px;">RUBICK</p>
+                </div>
+                <div class="slot-indicator"></div>
+            </div>
+            <div class="hero-slot dire reveal" style="animation-delay: 0.5s">
+                <p style="opacity: 0.3">--</p>
+                <div class="slot-indicator"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Kinetic Visual Elements -->
+    <div class="mercury-blob" id="blob"></div>
+
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+
+    <script>
+        const cursor = document.getElementById('cursor');
+        const blob = document.getElementById('blob');
+        
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            
+            cursor.style.left = x + 'px';
+            cursor.style.top = y + 'px';
+            
+            // Move background blob with lag for kinetic feel
+            blob.animate({
+                left: (x - 150) + 'px',
+                top: (y - 150) + 'px'
+            }, { duration: 3000, fill: "forwards", easing: "ease-out" });
+        });
+
+        // Hover effect for hero nodes to simulate liquid connection
+        document.querySelectorAll('.hero-node').forEach(node => {
+            node.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(4)';
+                cursor.style.background = 'rgba(255,255,255,0.1)';
+                cursor.style.border = '1px solid white';
+            });
+            node.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.background = 'white';
+                cursor.style.border = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,2980 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYNERGY.OS // Dota 2 Draft</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050506;
+            --mercury: #e0e0e2;
+            --mercury-glow: rgba(224, 224, 226, 0.4);
+            --radiant: #00ffcc;
+            --dire: #ff3366;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+            --str: #ff3a3a;
+            --agi: #16e62c;
+            --int: #12d7ff;
+            --uni: #df59ff;
+        }
+
+        html, body, * { cursor: none !important; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--mercury);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Custom Cursor */
+        #cursor {
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: transform 0.2s ease, opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0; /* Initially hidden */
+        }
+
+        #cursor::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            opacity: var(--dot-opacity, 0);
+        }
+
+        /* Typography */
+        h1 { font-weight: 800; font-size: 0.75rem; letter-spacing: 0.5em; text-transform: uppercase; opacity: 0.5; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
+
+        /* Kinetic Background */
+        .mercury-blob {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--mercury-glow) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.8s ease;
+            transform: translate(-50%, -50%); /* Centering magic */
+        }
+
+        /* Grain/Noise Background */
+        .noise-overlay {
+            position: fixed;
+            top: -5%;
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            pointer-events: none;
+            z-index: 0; /* Behind content */
+            opacity: 0.07;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+            background-size: 150px 150px; /* Force small tile size for finer grain */
+            animation: noise 0.5s steps(2) infinite;
+        }
+
+        @keyframes noise {
+           0% { transform: translate(0,0); }
+           10% { transform: translate(-1%,-1%); }
+           20% { transform: translate(-2%,1%); }
+           30% { transform: translate(1%,-2%); }
+           40% { transform: translate(-1%,3%); }
+           50% { transform: translate(-2%,1%); }
+           60% { transform: translate(3%,0); }
+           70% { transform: translate(0,2%); }
+           80% { transform: translate(-3%,0); }
+           90% { transform: translate(2%,1%); }
+           100% { transform: translate(1%,0); }
+        }
+
+        /* Alive Background */
+        .ambient-fog {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(150px);
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.03;
+        }
+
+        .fog-1 {
+            width: 80vw;
+            height: 80vw;
+            background: var(--radiant);
+            top: -30%;
+            left: -30%;
+            animation: breathe 25s infinite alternate ease-in-out;
+        }
+
+        .fog-2 {
+            width: 70vw;
+            height: 70vw;
+            background: var(--dire);
+            bottom: -30%;
+            right: -30%;
+            animation: breathe 30s infinite alternate-reverse ease-in-out;
+        }
+
+        @keyframes breathe {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(5%, 10%) scale(1.1); }
+            100% { transform: translate(-5%, -5%) scale(0.95); }
+        }
+
+        /* Draft Slots - Mercury Style */
+        .hero-slot {
+            height: 70px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            gap: 16px;
+            touch-action: none; /* Crucial for smooth D&D on touch/pen devices */
+            user-select: none;
+        }
+
+        .hero-slot::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+            transition: 0.5s;
+        }
+
+        .hero-slot:hover {
+            border-color: var(--mercury);
+            transform: translateX(8px);
+            background: rgba(255,255,255,0.06);
+        }
+
+        .hero-slot:hover::before { left: 100%; }
+
+        .hero-slot.drag-over {
+            box-shadow: 0 0 20px rgba(224, 224, 226, 0.5);
+            border-color: var(--mercury);
+        }
+
+        .slot-indicator {
+            width: 3px;
+            height: 40%;
+            background: var(--indicator-color);
+            box-shadow: 0 0 12px var(--indicator-color);
+            flex-shrink: 0;
+        }
+
+        .radiant-slot { 
+            --indicator-color: var(--radiant);
+            flex-direction: row;
+            text-align: left;
+        }
+        .radiant-slot:hover { transform: translateX(8px); }
+        
+        .dire-slot { 
+            --indicator-color: var(--dire); 
+            flex-direction: row;
+            text-align: right;
+        }
+        .dire-slot:hover { transform: translateX(-8px); }
+
+        /* Dire: reverse the background sweep (right -> left) */
+        .dire-slot::before {
+            left: auto;
+            right: -100%;
+        }
+
+        .dire-slot:hover::before {
+            left: auto;
+            right: 100%;
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            border: 1px solid color-mix(in srgb, var(--dire) 35%, transparent);
+            background: color-mix(in srgb, var(--dire) 16%, transparent);
+            color: var(--dire);
+            font-size: 0.7rem;
+            border-radius: 2px;
+            display: grid;
+            place-items: center;
+            opacity: 0.7;
+            transition: all 0.2s ease;
+        }
+
+        .remove-btn:hover {
+            opacity: 1;
+            border-color: color-mix(in srgb, var(--dire) 70%, transparent);
+            background: color-mix(in srgb, var(--dire) 28%, transparent);
+        }
+
+        .remove-right { right: 8px; }
+        .remove-left { left: 8px; }
+
+        .hero-mini-icon {
+            width: 32px;
+            height: 32px;
+            background-image: url('minimap_icons.png');
+            background-repeat: no-repeat;
+            flex-shrink: 0;
+            border-radius: 2px;
+        }
+
+        /* Hero Grid */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, var(--hero-icon-size, 62px));
+            /* Remove fixed row height to allow content to flow (name below) */
+            /* grid-auto-rows: var(--hero-icon-size, 62px); */
+            gap: 20px 12px; /* Increased vertical gap for names */
+            padding: 30px 0 20px 0;
+            justify-content: center;
+            overflow: visible;
+        }
+
+        .hero-node-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: var(--hero-icon-size, 62px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-node-container:hover {
+            z-index: 20;
+        }
+
+        .hero-node {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border-color: #333; /* Default border */
+        }
+
+        .hero-node img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .hero-node:hover {
+            background: rgba(255,255,255,0.08);
+            transform: scale(1.15);
+            box-shadow: 0 0 20px var(--attr-color);
+            z-index: 10;
+            border-color: var(--attr-color);
+        }
+
+        .hero-node:hover img {
+            opacity: 1;
+        }
+
+        .hero-node.picked {
+            opacity: 0.3;
+            filter: grayscale(1);
+        }
+
+        .hero-name-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.5rem; 
+            text-align: center;
+            color: var(--mercury);
+            margin-top: 4px;
+            width: 120%; /* Allow slightly wider than icon */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            opacity: 0.6;
+            transition: opacity 0.2s, color 0.2s;
+        }
+
+        .hero-node-container:hover .hero-name-label {
+            opacity: 1;
+            color: #fff;
+        }
+
+        .hero-node-container:hover .hero-node {
+             /* Pass hover effect to parent */
+             transform: scale(1.15);
+             box-shadow: 0 0 20px var(--attr-color);
+             z-index: 10;
+             border-color: var(--attr-color);
+        }
+        
+        /* Remove old hover on node itself to prevent double trigger or conflict with container */
+        .hero-node:hover {
+            transform: none;
+            box-shadow: none;
+            border-color: inherit;
+        }
+
+        /* Fix picked state hover */
+        .hero-node.picked:hover {
+             transform: none;
+             box-shadow: none;
+        }
+        
+        .hero-node-container:hover .hero-node.picked {
+             transform: none;
+             box-shadow: none;
+        }
+
+        /* Analysis Panel */
+        .analysis-panel {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 30px 40px;
+            display: flex;
+            justify-content: center; /* Center content initially */
+            align-items: center;
+            position: relative;
+            gap: 40px;
+            margin: 0 auto 40px auto; /* Center the panel itself */
+            width: fit-content; /* Shrink to fit content initially */
+            min-width: calc(100% - 680px); /* Match middle column width approx (100% - 2*280 - gaps) or min-size */
+            max-width: calc(100% - 80px); /* Don't touch edges */
+            transition: all 0.3s ease;
+        }
+
+        .synergy-line {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--mercury), transparent);
+        }
+
+        /* Recommendations */
+        .rec-item {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 12px;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rec-item:hover {
+            background: rgba(255,255,255,0.06);
+            border-color: var(--mercury);
+            transform: translateX(4px);
+        }
+
+        /* Animations */
+        .reveal {
+            animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes revealUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .stagger-1 { animation-delay: 0.05s; }
+        .stagger-2 { animation-delay: 0.1s; }
+        .stagger-3 { animation-delay: 0.15s; }
+        .stagger-4 { animation-delay: 0.2s; }
+        .stagger-5 { animation-delay: 0.25s; }
+
+        /* Buttons */
+        .btn-primary {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            color: var(--mercury);
+        }
+
+        .btn-primary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--mercury);
+            box-shadow: 0 0 20px var(--mercury-glow);
+        }
+
+        .btn-analyze {
+            background: linear-gradient(90deg, var(--radiant), #00cc99);
+            border: none;
+            color: #000;
+            font-weight: 800;
+        }
+
+        .btn-analyze:hover {
+            box-shadow: 0 0 30px rgba(0,255,204,0.5);
+        }
+
+        /* Filter buttons */
+        .filter-btn {
+            padding: 8px 16px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            color: var(--mercury);
+            opacity: 0.5;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            opacity: 1;
+            border-color: var(--mercury);
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* Header Island */
+        .header-island {
+            position: sticky;
+            top: 20px;
+            margin: 0 40px 10px 40px;
+            padding: 15px 30px;
+            background: rgba(5, 5, 6, 0.6); /* Slightly more opaque for readability */
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        /* Line Animations */
+        @keyframes line-spawn {
+            0% { height: 0%; opacity: 0; filter: brightness(5); }
+            60% { height: 70%; opacity: 1; filter: brightness(2); box-shadow: 0 0 25px var(--indicator-color); }
+            100% { height: 40%; opacity: 1; filter: brightness(1); box-shadow: 0 0 12px var(--indicator-color); }
+        }
+
+        @keyframes line-despawn {
+            0% { height: 40%; opacity: 0.8; filter: brightness(2); }
+            100% { height: 40%; opacity: 0.2; filter: brightness(1); }
+        }
+
+        .line-active {
+            animation: line-spawn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        .line-empty {
+            animation: line-despawn 0.5s ease-out forwards;
+        }
+
+        /* Layout Wrapper for Width Control */
+        #layout-wrapper {
+            width: 100%;
+            margin: 0 auto;
+            max-width: var(--app-max-width, 1920px);
+            transition: max-width 0.3s ease;
+        }
+
+        /* Responsive main layout */
+        @media (max-width: 1400px) {
+            main {
+                grid-template-columns: minmax(200px, 1fr) minmax(0, var(--hero-grid-width, 900px)) minmax(200px, 1fr) !important;
+                padding: 0 30px !important;
+                gap: 20px !important;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            main {
+                grid-template-columns: minmax(150px, 1fr) minmax(0, 700px) minmax(150px, 1fr) !important;
+                padding: 0 20px !important;
+                gap: 15px !important;
+            }
+        }
+
+        /* Allow hero nodes to overflow on hover */
+        #col-center {
+            overflow: visible;
+            position: relative;
+        }
+
+        /* Search field responsiveness */
+        #hero-search {
+            min-width: 120px !important;
+            flex-shrink: 1 !important;
+        }
+
+        /* Grid Collapse Toggle */
+        .btn-collapse-grid {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            color: var(--mercury);
+            padding: 8px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .btn-collapse-grid:hover {
+            opacity: 1;
+            background: rgba(255,255,255,0.08);
+            border-color: var(--mercury);
+        }
+
+        .btn-collapse-grid.active {
+            opacity: 1;
+            background: rgba(255,255,255,0.1);
+            border-color: var(--radiant);
+            color: var(--radiant);
+        }
+
+        .btn-collapse-grid svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Grid Collapsed State */
+        body.grid-collapsed #hero-grid,
+        body.grid-collapsed #helper-text {
+            display: none !important;
+        }
+
+        body.grid-collapsed #filter-buttons,
+        body.grid-collapsed #hero-search {
+            display: none !important;
+        }
+
+        /* Grid Collapsed: Always center recommendations, minimize side slots */
+        body.grid-collapsed main {
+            grid-template-columns: auto 1fr auto !important;
+        }
+
+        body.grid-collapsed #col-radiant,
+        body.grid-collapsed #col-dire {
+            width: auto;
+            min-width: 140px;
+            max-width: 200px;
+        }
+
+        /* Hide bottom and side recommendation panels when grid collapsed */
+        body.grid-collapsed .analysis-panel {
+            display: none !important;
+        }
+
+        body.grid-collapsed .side-mode-panel {
+            display: none !important;
+        }
+
+        body.grid-collapsed .side-mode-winrate {
+            display: none !important;
+        }
+
+        /* Minimized Slots - always when grid collapsed */
+        body.grid-collapsed .hero-slot {
+            height: 50px;
+            padding: 0 10px;
+            gap: 10px;
+            justify-content: space-between;
+        }
+
+        body.grid-collapsed .hero-slot .slot-indicator {
+            height: 28px;
+            width: 3px;
+        }
+
+        body.grid-collapsed .hero-slot .slot-info {
+            display: flex !important;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 2px;
+            min-width: 60px;
+        }
+
+        body.grid-collapsed .hero-slot .slot-info p:not(.mono) {
+            display: none !important;
+        }
+
+        body.grid-collapsed .hero-slot .slot-info .mono {
+            display: block !important;
+            font-size: 0.55rem !important;
+            opacity: 0.6 !important;
+        }
+
+        body.grid-collapsed .hero-slot .hero-mini-icon {
+            width: 32px;
+            height: 32px;
+            margin: 0 8px;
+        }
+
+        body.grid-collapsed .hero-slot .remove-btn {
+            width: 20px;
+            height: 20px;
+            font-size: 0.65rem;
+            position: relative;
+            left: auto;
+            right: auto;
+            top: auto;
+            transform: none;
+        }
+
+        body.grid-collapsed .radiant-slot .remove-btn {
+            margin-left: auto;
+        }
+
+        body.grid-collapsed .dire-slot .remove-btn {
+            margin-left: auto;
+        }
+
+        /* Center Panel when Grid Collapsed */
+        body.grid-collapsed #col-center {
+            flex: 1;
+            padding-top: 30px; /* Space for button glow effects */
+        }
+
+        /* Collapsed Center Recommendations Layout */
+        .collapsed-recs-container {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            padding: 20px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        body.grid-collapsed .collapsed-recs-container {
+            display: flex;
+        }
+
+        .collapsed-recs-row {
+            display: flex;
+            gap: 30px;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .collapsed-recs-row > div {
+            flex: 1;
+        }
+
+        .collapsed-winrate-center {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 10px;
+        }
+
+        /* Settings Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-window {
+            background: rgba(13, 13, 15, 0.95);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            width: 400px;
+            padding: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-window {
+            transform: translateY(0);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+        }
+
+        .modal-title {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--mercury);
+            margin: 0;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--mercury);
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+
+        .modal-close:hover {
+            opacity: 1;
+        }
+
+        .setting-group {
+            margin-bottom: 20px;
+        }
+
+        .setting-label {
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--mercury);
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        .setting-control {
+            width: 100%;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        input[type="range"] {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 2px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #fff;
+        }
+
+        .value-display {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--primary);
+            min-width: 60px;
+            text-align: right;
+        }
+
+        .btn-icon {
+            background: none;
+            border: 1px solid transparent;
+            color: var(--mercury);
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-icon:hover {
+            opacity: 1;
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.1);
+        }
+
+        /* Toggle Switch */
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255,255,255,0.1);
+            transition: .4s;
+            border-radius: 20px; /* Round */
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px;
+            width: 14px;
+            left: 3px;
+            bottom: 3px;
+            background-color: var(--mercury);
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--primary); /* More distinct active color */
+            box-shadow: 0 0 10px rgba(0, 255, 204, 0.4); /* Glow for better visibility */
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+
+        /* Language Buttons */
+        .lang-btn {
+            border-radius: 8px !important;
+            transition: all 0.2s ease-in-out !important;
+        }
+
+        .lang-btn.active {
+            opacity: 1 !important;
+            background: rgba(255,255,255,0.1) !important;
+            border: 1px solid var(--mercury) !important;
+        }
+
+        /* Side Mode Styles */
+        .side-mode-panel {
+            margin-top: 10px;
+            padding: 20px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            animation: revealUp 0.3s ease-out forwards;
+        }
+
+        .side-mode-winrate {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            width: 100% !important; /* Override inline 220px */
+            animation: revealUp 0.3s ease-out forwards;
+        }
+        
+        /* Redesign Win Rate when in top position */
+        .side-mode-winrate p:first-child {
+            display: none; /* Hide "WIN PROBABILITY" label in side mode */
+        }
+        .side-mode-winrate div { /* The divider line */
+            height: 48px !important;
+            width: 1px !important;
+            background: var(--border) !important;
+            margin: 0 40px !important;
+            opacity: 0.3;
+        }
+
+        /* Hide synergy line in side mode if needed, but it's part of analysis-panel which is hidden */
+
+        /* Tabs */
+        .settings-tabs {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0px;
+        }
+
+        .tab-btn {
+            background: none;
+            border: none;
+            color: var(--mercury);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            padding-bottom: 12px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .tab-btn:hover {
+            opacity: 0.8;
+        }
+
+        .tab-btn.active {
+            opacity: 1;
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            box-shadow: 0 -2px 10px rgba(0, 255, 204, 0.5);
+        }
+
+        .tab-content {
+            display: none;
+            animation: revealUp 0.3s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* System Cursor Override */
+        body.system-cursor, body.system-cursor * {
+            cursor: default !important;
+        }
+        body.system-cursor button, body.system-cursor a, body.system-cursor .clickable, body.system-cursor label {
+            cursor: pointer !important;
+        }
+        body.system-cursor input, body.system-cursor textarea {
+            cursor: text !important;
+        }
+        body.system-cursor #cursor {
+            display: none !important;
+        }
+
+        /* Update Modal */
+        .confirm-modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 10000;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none; transition: opacity 0.3s;
+        }
+        .confirm-modal-overlay.active { opacity: 1; pointer-events: auto; }
+        .confirm-modal {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 32px;
+            width: 400px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+        }
+        .confirm-modal h3 { margin-bottom: 16px; color: var(--mercury); font-weight: 800; letter-spacing: 0.1em; }
+        .confirm-modal p { margin-bottom: 24px; color: #888; font-size: 0.9em; line-height: 1.5; }
+        .confirm-buttons { display: flex; gap: 16px; justify-content: center; }
+        .confirm-btn {
+            background: transparent; border: 1px solid var(--border);
+            color: var(--mercury); padding: 10px 24px; border-radius: 4px;
+            cursor: none; font-family: 'JetBrains Mono', monospace; font-size: 0.8em;
+            transition: all 0.2s;
+        }
+        .confirm-btn:hover { background: rgba(255,255,255,0.1); border-color: var(--mercury); }
+        .confirm-btn.primary { background: var(--mercury); color: var(--bg); border: none; }
+        .confirm-btn.primary:hover { background: white; }
+    </style>
+</head>
+<body class="system-cursor">
+    <div style="position: absolute; top: 0; left: 0; z-index: 10000; background: red; color: white; padding: 5px;" id="debug-overlay">DEBUG MODE ACTIVE</div>
+    <script>
+        window.onerror = function(msg, url, line, col, error) {
+            alert("Error: " + msg + "\nLine: " + line);
+            const d = document.getElementById('debug-overlay');
+            if(d) d.innerHTML += "<br>" + msg;
+        };
+        console.log("Body start script executed");
+    </script>
+    <div id="cursor"></div>
+    <div class="mercury-blob" id="blob"></div>
+    <div class="ambient-fog fog-1"></div>
+    <div class="ambient-fog fog-2"></div>
+    <div class="noise-overlay"></div>
+
+    <div id="layout-wrapper">
+    <!-- Header -->
+    <header class="header-island reveal">
+        <div style="display: flex; align-items: center; gap: 20px;">
+            <img id="app-logo" src="logo_light.ico" style="height: 42px; width: auto; opacity: 0.9;" alt="Logo">
+            <div>
+                <h1 style="margin: 0; line-height: 1;">SYNERGY.OS</h1>
+                <p class="mono" id="app-subtitle" data-i18n="subtitle" style="opacity: 0.4; margin-top: 4px; font-size: 0.7rem; letter-spacing: 0.2em;">DOTA 2 DRAFT ASSISTANT</p>
+            </div>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+            <button id="btn-collapse-grid" class="btn-icon btn-collapse-grid" title="Toggle Hero Grid" style="opacity: 0.8;">
+                <svg id="icon-grid-visible" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+                </svg>
+                <svg id="icon-grid-hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;"></svg>
+                    <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+                </svg>
+            </button>
+            <button id="settings-btn" class="btn-icon" title="Settings" style="opacity: 0.8;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.47a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.39a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <main style="display: grid; grid-template-columns: minmax(280px, 1fr) minmax(0, var(--hero-grid-width, 900px)) minmax(280px, 1fr); min-height: calc(100vh - 120px); padding: 0 40px 0 40px; gap: 30px; position: relative; z-index: 1; margin-top: 35px; overflow: hidden;">
+        
+        <!-- Radiant Side Slots -->
+        <section id="col-radiant" style="display: flex; flex-direction: column; gap: 10px; justify-content: flex-start; padding-top: 20px; padding-bottom: 40px; min-width: 0;">
+            <div style="margin-bottom: 12px;">
+                <p class="mono" data-i18n="radiant" style="opacity: 0.5; font-size: 0.65rem; letter-spacing: 0.2em;">RADIANT</p>
+            </div>
+            <div id="radiant-slots">
+                <!-- Slots populated by JS -->
+            </div>
+        </section>
+
+        <!-- Center: Hero Grid + Analysis -->
+        <section id="col-center" style="display: flex; flex-direction: column; gap: 20px; min-width: 0;">
+            
+            <!-- Actions -->
+            <div class="reveal" style="display: flex; gap: 12px; animation-delay: 0.2s; overflow: visible;">
+                <button id="reset-btn" class="btn-primary" style="flex: 1;" data-i18n="reset">RESET</button>
+                <button id="analyze-btn" class="btn-primary btn-analyze" style="flex: 2;" data-i18n="analyze">ANALYZE DRAFT</button>
+            </div>
+
+            <!-- Filters -->
+            <div class="reveal" style="display: flex; gap: 12px; align-items: center; padding: 0 20px; animation-delay: 0.3s; flex-wrap: wrap; position: relative; z-index: 10;">
+                <div style="display: flex; gap: 6px; flex-wrap: wrap;" id="filter-buttons">
+                    <button data-filter="ALL" class="filter-btn active" data-i18n="filter_all">ALL</button>
+                    <button data-filter="strength" class="filter-btn" data-i18n="filter_str">STR</button>
+                    <button data-filter="agility" class="filter-btn" data-i18n="filter_agi">AGI</button>
+                    <button data-filter="intelligence" class="filter-btn" data-i18n="filter_int">INT</button>
+                    <button data-filter="universal" class="filter-btn" data-i18n="filter_uni">UNI</button>
+                </div>
+                <input id="hero-search" type="text" placeholder="SEARCH HERO..." data-i18n-placeholder="search_placeholder"
+                    style="flex: 1 1 120px; background: var(--glass); border: 1px solid var(--border); border-radius: 4px; padding: 8px 16px; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--mercury); min-width: 120px;" />
+            </div>
+
+            <p class="mono reveal" id="helper-text" style="text-align: center; opacity: 0.4; font-size: 0.6rem; animation-delay: 0.35s;">
+                LEFT CLICK: <span style="color: var(--radiant)">RADIANT</span> // RIGHT CLICK: <span style="color: var(--dire)">DIRE</span>
+            </p>
+
+            <!-- Hero Grid -->
+            <div id="hero-grid" class="hero-grid reveal" style="animation-delay: 0.4s;">
+                <div style="grid-column: 1 / -1; text-align: center; padding: 40px; opacity: 0.3;">
+                    <p class="mono" data-i18n="loading">LOADING HEROES...</p>
+                </div>
+            </div>
+
+            <!-- Collapsed Mode Recommendations Container -->
+            <div id="collapsed-recs" class="collapsed-recs-container">
+                <div class="collapsed-winrate-center">
+                    <div>
+                        <p class="mono" style="opacity: 0.5; font-size: 0.6rem; margin-bottom: 4px;"><span style="color: var(--radiant);" data-i18n="radiant">RADIANT</span></p>
+                        <p id="collapsed-radiant-wr" style="font-weight: 800; font-size: 2rem; color: var(--radiant);">--</p>
+                    </div>
+                    <div style="width: 1px; background: var(--border);"></div>
+                    <div>
+                        <p class="mono" style="opacity: 0.5; font-size: 0.6rem; margin-bottom: 4px;"><span style="color: var(--dire);" data-i18n="dire">DIRE</span></p>
+                        <p id="collapsed-dire-wr" style="font-weight: 800; font-size: 2rem; color: var(--dire);">--</p>
+                    </div>
+                </div>
+                <div class="collapsed-recs-row">
+                    <div id="collapsed-radiant-recs">
+                        <p class="mono" style="opacity: 0.5; margin-bottom: 8px;"><span style="color: var(--radiant);" data-i18n="radiant">RADIANT</span> <span data-i18n="recs">RECOMMENDATIONS</span></p>
+                        <div id="collapsed-radiant-recs-list"></div>
+                    </div>
+                    <div id="collapsed-dire-recs" style="text-align: right;"></div>
+                        <p class="mono" style="opacity: 0.5; margin-bottom: 8px;"><span style="color: var(--dire);" data-i18n="dire">DIRE</span> <span data-i18n="recs">RECOMMENDATIONS</span></p>
+                        <div id="collapsed-dire-recs-list" style="text-align: left;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Panel Removed from here -->
+        </section>
+
+        <!-- Dire Side Slots -->
+        <section id="col-dire" style="display: flex; flex-direction: column; gap: 10px; justify-content: flex-start; padding-top: 20px; padding-bottom: 40px; min-width: 0;">
+            <div style="margin-bottom: 12px; text-align: right;">
+                <p class="mono" data-i18n="dire" style="opacity: 0.5; font-size: 0.65rem; letter-spacing: 0.2em;">DIRE</p>
+            </div>
+            <div id="dire-slots">
+                <!-- Slots populated by JS -->
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- Analysis Panel (Full Width) -->
+    <div class="analysis-panel reveal" style="animation-delay: 0.5s;">
+        <div class="synergy-line"></div>
+        
+        <div id="panel-radiant" style="flex: 1;">
+            <p class="mono" id="label-radiant-recs" style="opacity: 0.5; margin-bottom: 8px;"><span style="color: var(--radiant);" data-i18n="radiant">RADIANT</span> <span data-i18n="recs">RECOMMENDATIONS</span></p>
+            <div id="radiant-recs">
+                <p class="mono" data-i18n="no_data" style="opacity: 0.3; font-size: 0.65rem;">NO DATA</p>
+            </div>
+        </div>
+
+        <div id="panel-winrate" style="text-align: center; width: 220px;">
+            <p class="mono" data-i18n="win_prob" style="opacity: 0.5; font-size: 0.6rem; margin-bottom: 4px;">WIN PROBABILITY</p>
+            <p id="radiant-win-rate" style="font-weight: 800; font-size: 2rem; letter-spacing: -0.02em; color: var(--radiant); text-align: left; padding-left: 10px;">--</p>
+            <div style="height: 1px; background: var(--border); margin: 12px 0;"></div>
+            <p id="dire-win-rate" style="font-weight: 800; font-size: 2rem; letter-spacing: -0.02em; color: var(--dire); text-align: right; padding-right: 10px;">--</p>
+        </div>
+
+        <div id="panel-dire" style="flex: 1; text-align: right;"></div>
+            <p class="mono" id="label-dire-recs" style="opacity: 0.5; margin-bottom: 8px;"><span style="color: var(--dire);" data-i18n="dire">DIRE</span> <span data-i18n="recs">RECOMMENDATIONS</span></p>
+            <div id="dire-recs" style="text-align: left;">
+                <p class="mono" data-i18n="no_data" style="opacity: 0.3; font-size: 0.65rem; text-align: right;">NO DATA</p>
+            </div>
+        </div>
+    </div>
+    
+    </div><!-- End layout-wrapper -->
+
+        <!-- Settings Modal -->
+    <div id="settings-modal" class="modal-overlay">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h3 class="modal-title" data-i18n="settings_title">SYSTEM CONFIG</h3>
+                <button id="close-settings" class="modal-close">&times;</button>
+            </div>
+            
+            <div class="settings-tabs">
+                <button class="tab-btn active" data-tab="visual" data-i18n="section_visual">VISUALS</button>
+                <button class="tab-btn" data-tab="data" data-i18n="section_data">DATA</button>
+            </div>
+            
+            <!-- VISUALS SECTION -->
+            <div id="tab-content-visual" class="tab-content active">
+                
+                <div class="setting-group">
+                    <label class="setting-label" data-i18n="setting_language">LANGUAGE</label>
+                    <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--mercury); padding: 4px; border: 1px solid var(--border); border-radius: 4px; display: flex; gap: 4px;">
+                        <button id="lang-en" class="lang-btn active" style="flex: 1; background: none; border: none; color: var(--mercury); padding: 8px 6px; cursor: pointer; opacity: 0.5;">ENGLISH</button>
+                        <button id="lang-ru" class="lang-btn" style="flex: 1; background: none; border: none; color: var(--mercury); padding: 8px 6px; cursor: pointer; opacity: 0.5;">РУССКИЙ</button>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label class="setting-label" data-i18n="setting_interface_width">INTERFACE WIDTH (%)</label>
+                    <div class="slider-container">
+                        <input type="range" id="width-slider" min="65" max="100" value="100" step="1">
+                        <span id="width-value" class="value-display">100%</span>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label class="setting-label" data-i18n="setting_icon_size">HERO GRID ICON SIZE (PX)</label>
+                    <div class="slider-container">
+                        <input type="range" id="icon-size-slider" min="40" max="80" value="62" step="2">
+                        <span id="icon-size-value" class="value-display">62px</span>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label class="setting-label" data-i18n="setting_grid_width">HERO GRID WIDTH (PX)</label>
+                    <div class="slider-container">
+                        <input type="range" id="grid-width-slider" min="600" max="1400" value="900" step="20">
+                        <span id="grid-width-value" class="value-display">900px</span>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label class="setting-label" data-i18n="setting_cursor_glow">CURSOR GLOW RADIUS (PX)</label>
+                    <div class="slider-container">
+                        <input type="range" id="blob-radius-slider" min="100" max="800" value="500" step="50">
+                        <span id="blob-radius-value" class="value-display">500px</span>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label class="setting-label" style="margin: 0;" data-i18n="setting_system_cursor">ENABLE SYSTEM CURSOR</label>
+                         <label class="toggle-switch">
+                            <input type="checkbox" id="system-cursor-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label class="setting-label" style="margin: 0;" data-i18n="setting_auto_analyze">AUTO ANALYZE ON PICK</label>
+                         <label class="toggle-switch">
+                            <input type="checkbox" id="auto-analyze-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DATA SECTION -->
+            <div id="tab-content-data" class="tab-content">
+
+                 <div class="setting-group">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <label class="setting-label" style="margin: 0;" data-i18n="setting_side_mode">SIDE RECOMMENDATIONS</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="side-mode-toggle">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label class="setting-label" data-i18n="setting_stratz_api_key">STRATZ API KEY</label>
+                    <input type="password" id="stratz-api-key-input" placeholder="Enter your STRATZ API key"
+                        style="width: 100%; background: var(--glass); border: 1px solid var(--border); border-radius: 4px; padding: 10px 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--mercury); margin-bottom: 8px;" />
+                    <p style="font-size: 0.65rem; color: #888; margin: 0;">Get your key at <a href="https://www.stratz.com/api" target="_blank" style="color: var(--radiant); text-decoration: none;">stratz.com/api</a></p>
+                </div>
+
+                <div class="setting-group">
+                    <label class="setting-label" data-i18n="setting_max_workers">MAX WORKERS (THREADS)</label>
+                    <div class="slider-container">
+                        <input type="range" id="max-workers-slider" min="1" max="6" value="3" step="1">
+                        <span id="max-workers-value" class="value-display">3</span>
+                    </div>
+                </div>
+
+                <div class="setting-group">
+                    <label class="setting-label" data-i18n="setting_update_data">UPDATE STATS (STRATZ API)</label>
+                    <button id="btn-update-data" class="btn-primary" style="width: 100%; text-align: center; margin-top: 8px;" data-i18n="btn_update">RUN UPDATE</button>
+                    
+                    <div id="update-console" style="margin-top: 12px; height: 120px; background: #000; border: 1px solid var(--border); border-radius: 4px; padding: 10px; overflow-y: auto; font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; color: #aaa; display: none;">
+                        <div id="console-output"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <!-- Update Confirmation Modal -->
+    <div id="confirm-modal" class="confirm-modal-overlay">
+        <div class="confirm-modal">
+            <h3 data-i18n="modal_confirm_title">CONFIRM ACTION</h3>
+            <p data-i18n="modal_update_desc">Data has already been updated effectively. Force update?</p>
+            <div class="confirm-buttons">
+                <button id="confirm-yes" class="confirm-btn primary" data-i18n="modal_yes">YES</button>
+                <button id="confirm-no" class="confirm-btn" data-i18n="modal_no">NO</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- DATA & STATE ---
+        const HERO_IMAGES = {
+            "Abaddon": "abaddon.png",
+            "Alchemist": "alchemist.png", 
+            "Ancient Apparition": "ancient_apparition.png",
+            "Anti-Mage": "antimage.png",
+            "Arc Warden": "arc_warden.png",
+            "Axe": "axe.png",
+            "Bane": "bane.png",
+            "Batrider": "batrider.png",
+            "Beastmaster": "beastmaster.png",
+            "Bloodseeker": "bloodseeker.png",
+            "Bounty Hunter": "bounty_hunter.png",
+            "Brewmaster": "brewmaster.png",
+            "Bristleback": "bristleback.png",
+            "Broodmother": "broodmother.png",
+            "Centaur Warrunner": "centaur.png",
+            "Chaos Knight": "chaos_knight.png",
+            "Chen": "chen.png",
+            "Clinkz": "clinkz.png",
+            "Clockwerk": "rattletrap.png",
+            "Crystal Maiden": "crystal_maiden.png",
+            "Dark Seer": "dark_seer.png",
+            "Dark Willow": "dark_willow.png",
+            "Dawnbreaker": "dawnbreaker.png",
+            "Dazzle": "dazzle.png",
+            "Death Prophet": "death_prophet.png",
+            "Disruptor": "disruptor.png",
+            "Doom": "doom_bringer.png",
+            "Dragon Knight": "dragon_knight.png",
+            "Drow Ranger": "drow_ranger.png",
+            "Earth Spirit": "earth_spirit.png",
+            "Earthshaker": "earthshaker.png",
+            "Elder Titan": "elder_titan.png",
+            "Ember Spirit": "ember_spirit.png",
+            "Enchantress": "enchantress.png",
+            "Enigma": "enigma.png",
+            "Faceless Void": "faceless_void.png",
+            "Grimstroke": "grimstroke.png",
+            "Gyrocopter": "gyrocopter.png",
+            "Hoodwink": "hoodwink.png",
+            "Huskar": "huskar.png",
+            "Invoker": "invoker.png",
+            "Io": "wisp.png",
+            "Jakiro": "jakiro.png",
+            "Juggernaut": "juggernaut.png",
+            "Keeper of the Light": "keeper_of_the_light.png",
+            "Kez": "kez.png",
+            "Kunkka": "kunkka.png",
+            "Largo": "largo.png",
+            "Legion Commander": "legion_commander.png",
+            "Leshrac": "leshrac.png",
+            "Lich": "lich.png",
+            "Lifestealer": "life_stealer.png",
+            "Lina": "lina.png",
+            "Lion": "lion.png",
+            "Lone Druid": "lone_druid.png",
+            "Luna": "luna.png",
+            "Lycan": "lycan.png",
+            "Magnus": "magnataur.png",
+            "Marci": "marci.png",
+            "Mars": "mars.png",
+            "Medusa": "medusa.png",
+            "Meepo": "meepo.png",
+            "Mirana": "mirana.png",
+            "Monkey King": "monkey_king.png",
+            "Morphling": "morphling.png",
+            "Muerta": "muerta.png",
+            "Naga Siren": "naga_siren.png",
+            "Nature's Prophet": "furion.png",
+            "Necrophos": "necrolyte.png",
+            "Night Stalker": "night_stalker.png",
+            "Nyx Assassin": "nyx_assassin.png",
+            "Ogre Magi": "ogre_magi.png",
+            "Omniknight": "omniknight.png",
+            "Oracle": "oracle.png",
+            "Outworld Destroyer": "obsidian_destroyer.png",
+            "Pangolier": "pangolier.png",
+            "Phantom Assassin": "phantom_assassin.png",
+            "Phantom Lancer": "phantom_lancer.png",
+            "Phoenix": "phoenix.png",
+            "Primal Beast": "primal_beast.png",
+            "Puck": "puck.png",
+            "Pudge": "pudge.png",
+            "Pugna": "pugna.png",
+            "Queen of Pain": "queenofpain.png",
+            "Razor": "razor.png",
+            "Riki": "riki.png",
+            "Ringmaster": "ringmaster.png",
+            "Rubick": "rubick.png",
+            "Sand King": "sand_king.png",
+            "Shadow Demon": "shadow_demon.png",
+            "Shadow Fiend": "nevermore.png",
+            "Shadow Shaman": "shadow_shaman.png",
+            "Silencer": "silencer.png",
+            "Skywrath Mage": "skywrath_mage.png",
+            "Slardar": "slardar.png",
+            "Slark": "slark.png",
+            "Snapfire": "snapfire.png",
+            "Sniper": "sniper.png",
+            "Spectre": "spectre.png",
+            "Spirit Breaker": "spirit_breaker.png",
+            "Storm Spirit": "storm_spirit.png",
+            "Sven": "sven.png",
+            "Techies": "techies.png",
+            "Templar Assassin": "templar_assassin.png",
+            "Terrorblade": "terrorblade.png",
+            "Tidehunter": "tidehunter.png",
+            "Timbersaw": "shredder.png",
+            "Tinker": "tinker.png",
+            "Tiny": "tiny.png",
+            "Treant Protector": "treant.png",
+            "Troll Warlord": "troll_warlord.png",
+            "Tusk": "tusk.png",
+            "Underlord": "abyssal_underlord.png",
+            "Undying": "undying.png",
+            "Ursa": "ursa.png",
+            "Vengeful Spirit": "vengefulspirit.png",
+            "Venomancer": "venomancer.png",
+            "Viper": "viper.png",
+            "Visage": "visage.png",
+            "Void Spirit": "void_spirit.png",
+            "Warlock": "warlock.png",
+            "Weaver": "weaver.png",
+            "Windranger": "windrunner.png",
+            "Winter Wyvern": "winter_wyvern.png",
+            "Witch Doctor": "witch_doctor.png",
+            "Wraith King": "skeleton_king.png",
+            "Zeus": "zuus.png"
+        };
+        const BASE_IMG_URL = "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/heroes/";
+        
+        const HERO_ICON_INDEX = {
+            "Axe": 1, "Anti-Mage": 2, "Crystal Maiden": 3, "Ancient Apparition": 4, "Batrider": 5,
+            "Beastmaster": 6, "Bloodseeker": 7, "Bounty Hunter": 8, "Broodmother": 9, "Chen": 10,
+            "Dark Seer": 11, "Dazzle": 12, "Death Prophet": 13, "Doom": 14, "Dragon Knight": 15,
+            "Alchemist": 16, "Drow Ranger": 17, "Earthshaker": 18, "Enchantress": 19, "Enigma": 20,
+            "Faceless Void": 21, "Nature's Prophet": 22, "Huskar": 23, "Juggernaut": 24, "Kunkka": 25,
+            "Leshrac": 26, "Lich": 27, "Lifestealer": 28, "Lina": 29, "Lion": 30, "Mirana": 31,
+            "Morphling": 32, "Necrophos": 33, "Shadow Fiend": 34, "Night Stalker": 35, "Omniknight": 36,
+            "Puck": 37, "Pudge": 38, "Pugna": 39, "Queen of Pain": 40, "Clockwerk": 41, "Razor": 42,
+            "Riki": 43, "Sand King": 44, "Shadow Shaman": 45, "Silencer": 46, "Wraith King": 47,
+            "Slardar": 48, "Sniper": 49, "Spectre": 50, "Spirit Breaker": 51, "Storm Spirit": 52,
+            "Sven": 53, "Tidehunter": 54, "Tinker": 55, "Tiny": 56, "Jakiro": 57, "Ursa": 58,
+            "Vengeful Spirit": 59, "Venomancer": 60, "Viper": 61, "Warlock": 62, "Weaver": 63,
+            "Windranger": 64, "Witch Doctor": 65, "Zeus": 66, "Invoker": 67, "Clinkz": 68,
+            "Outworld Devourer": 69, "Bane": 70, "Shadow Demon": 71, "Lycan": 72, "Lone Druid": 73,
+            "Brewmaster": 74, "Phantom Lancer": 78, "Chaos Knight": 79, "Phantom Assassin": 80,
+            "Treant Protector": 81, "Luna": 82, "Ogre Magi": 83, "Gyrocopter": 84, "Rubick": 85,
+            "Io": 86, "Disruptor": 87, "Undying": 88, "Naga Siren": 89, "Templar Assassin": 90,
+            "Nyx Assassin": 91, "Keeper of the Light": 92, "Visage": 93, "Magnus": 94, "Meepo": 95,
+            "Centaur Warrunner": 96, "Slark": 97, "Medusa": 98, "Timbersaw": 99, "Troll Warlord": 100,
+            "Tusk": 101, "Bristleback": 102, "Skywrath Mage": 103, "Elder Titan": 104, "Abaddon": 105,
+            "Ember Spirit": 106, "Legion Commander": 107, "Earth Spirit": 108, "Terrorblade": 109,
+            "Phoenix": 110, "Techies": 111, "Winter Wyvern": 112, "Underlord": 113, "Monkey King": 114,
+            "Oracle": 115, "Arc Warden": 116, "Pangolier": 118, "Dark Willow": 129, "Grimstroke": 132,
+            "Mars": 134, "Snapfire": 138, "Void Spirit": 139, "Hoodwink": 149, "Dawnbreaker": 150,
+            "Marci": 157, "Primal Beast": 158, "Muerta": 166, "Ringmaster": 171, "Kez": 174, "Largo": 176
+        };
+
+        function getHeroIconBg(name) {
+            const idx = HERO_ICON_INDEX[name];
+            if (!idx) return '0 0';
+            const i = idx - 1;
+            const size = 32;
+            const col = i % 16;
+            const row = Math.floor(i / 16);
+            return `-${col * size}px -${row * size}px`;
+        }
+
+        let availableHeroes = [];
+        let currentAttrFilter = 'ALL';
+        // Stores { "pos_1": "HeroName", "pos_2": null, ... }
+        let radiantHeroes = { "pos_1": null, "pos_2": null, "pos_3": null, "pos_4": null, "pos_5": null };
+        let direHeroes = { "pos_1": null, "pos_2": null, "pos_3": null, "pos_4": null, "pos_5": null };
+        let dragSrcHero = null;
+        let dragSrcTeam = null;
+        let dragSrcPos = null;
+        let isSlotDragging = false;
+        let dragPointerId = null;
+        let dragOverSlotEl = null;
+        let dragSrcSlotEl = null;
+        let dragGhostEl = null;
+        let searchQuery = "";
+        let autoAnalyzeEnabled = true; // Default: enabled
+        let lastAnalysisResult = null; // Store last analysis for re-rendering
+
+        const ROLE_NAMES = {
+            "pos_1": "Carry",
+            "pos_2": "Mid",
+            "pos_3": "Offlane",
+            "pos_4": "Support",
+            "pos_5": "Hard Supp"
+        };
+        const radiantSlotsEl = document.getElementById('radiant-slots');
+        const direSlotsEl = document.getElementById('dire-slots');
+        const heroGridEl = document.getElementById('hero-grid');
+        const searchInput = document.getElementById('hero-search');
+        
+        const radiantRecsEl = document.getElementById('radiant-recs');
+        const direRecsEl = document.getElementById('dire-recs');
+        const analyzeBtn = document.getElementById('analyze-btn');
+        const resetBtn = document.getElementById('reset-btn');
+
+        // Custom Cursor
+        const cursor = document.getElementById('cursor');
+        const blob = document.getElementById('blob');
+        const CURSOR_SIZE = 20;
+        const CURSOR_RADIUS = CURSOR_SIZE / 2;
+
+        let isCursorInitialized = false;
+
+        function updateCustomCursorPosition(e) {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            // Align circle CENTER to the pointer coordinate
+            cursor.style.left = (x - CURSOR_RADIUS) + 'px';
+            cursor.style.top = (y - CURSOR_RADIUS) + 'px';
+
+            // First time reveal: snap blob to position immediately
+            if (!isCursorInitialized) {
+                isCursorInitialized = true;
+                cursor.style.opacity = 1;
+                blob.style.opacity = 1;
+
+                // Snap blob immediately without animation
+                blob.animate({
+                    left: x + 'px',
+                    top: y + 'px'
+                }, { duration: 0, fill: "forwards" });
+            } else {
+                // Move blob with kinetic lag
+                blob.animate({
+                    left: x + 'px',
+                    top: y + 'px'
+                }, { duration: 3000, fill: "forwards", easing: "ease-out" });
+            }
+
+            // Distance based logic for the inner dot
+            const removeButtons = document.querySelectorAll('.remove-btn');
+            let minDistance = Infinity;
+            
+            removeButtons.forEach(btn => {
+                const rect = btn.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 3;
+                const centerY = rect.top + rect.height / 3;
+                const dist = Math.hypot(x - centerX, y - centerY);
+                if (dist < minDistance) minDistance = dist;
+            });
+
+            // Dot becomes visible within 100px range
+            const threshold = 50;
+            const targetOpacity = minDistance < threshold 
+                ? Math.max(0, 0.3 * (1 - minDistance / threshold)) // Max 0.3 opacity for the "smaller opacity" requirement
+                : 0;
+            
+            cursor.style.setProperty('--dot-opacity', targetOpacity);
+        }
+
+        document.addEventListener('mousemove', updateCustomCursorPosition);
+        document.addEventListener('pointermove', updateCustomCursorPosition);
+
+        // Disable system context menu
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        // --- TAURI SETUP ---
+        let invoke;
+        
+        function setupTauriAPI() {
+            console.log('setupTauriAPI called, checking window.__TAURI__...');
+            const tauri = window.__TAURI__;
+            console.log('window.__TAURI__:', tauri);
+            if (tauri) {
+                if (tauri.core?.invoke) {
+                    invoke = tauri.core.invoke;
+                    console.log('Using tauri.core.invoke');
+                } else if (tauri.invoke) {
+                    invoke = tauri.invoke;
+                    console.log('Using tauri.invoke');
+                }
+            }
+            console.log('invoke defined:', !!invoke);
+            return !!invoke;
+        }
+
+        function getHeroImgUrl(name) {
+            const file = HERO_IMAGES[name] || name.toLowerCase().replace(/ /g, '_') + ".png";
+            return BASE_IMG_URL + file;
+        }
+
+        // --- INIT ---
+        async function init() {
+            console.log('init() called');
+            // Setup Tauri API first
+            if (!setupTauriAPI()) {
+                console.warn("Tauri invoke not found. Running in browser mode/mock.");
+                heroGridEl.innerHTML = `<div class="col-span-full text-red-500 text-center uppercase font-bold mt-10">Tauri API Not Connected (Dev Mode)</div>`;
+                return;
+            }
+
+            console.log('Tauri API ready, fetching heroes...');
+            try {
+                // Try to load from cache first
+                const cachedHeroes = localStorage.getItem('heroes-cache');
+                if (cachedHeroes) {
+                    try {
+                        availableHeroes = JSON.parse(cachedHeroes);
+                        console.log('Loaded heroes from cache');
+                    } catch (e) {
+                        console.warn('Cache parse error, fetching fresh data');
+                    }
+                }
+                
+                // Always fetch fresh data and update cache
+                availableHeroes = await invoke('cmd_get_heroes');
+                localStorage.setItem('heroes-cache', JSON.stringify(availableHeroes));
+                console.log('Heroes cached to localStorage');
+                render();
+            } catch (e) {
+                console.error(e);
+                // If fetch fails but we have cache, use it
+                if (availableHeroes && availableHeroes.length > 0) {
+                    console.log('Using cached heroes due to fetch error');
+                    render();
+                } else {
+                    heroGridEl.innerHTML = `<div class="col-span-full text-red-500">Error: ${e}</div>`;
+                }
+            }
+        }
+
+        // --- RENDERING ---
+        function render() {
+            renderTeamSlots(radiantSlotsEl, radiantHeroes, 'radiant');
+            renderTeamSlots(direSlotsEl, direHeroes, 'dire');
+            renderGrid();
+        }
+
+        // Helper to find best empty slot for a hero
+        function findBestSlot(heroName, teamObj) {
+            const heroData = availableHeroes.find(h => h.name === heroName);
+            if (!heroData || !heroData.positions) {
+                // Return first empty if no data
+                for (let i = 1; i <= 5; i++) {
+                    if (!teamObj[`pos_${i}`]) return `pos_${i}`;
+                }
+                return null;
+            }
+
+            // Sort positions by pick rate (descending)
+            const sortedPos = Object.entries(heroData.positions)
+                .sort((a, b) => b[1] - a[1])
+                .map(entry => entry[0]);
+
+            // Try to find empty slot in preference order
+            for (const pos of sortedPos) {
+                if (!teamObj[pos]) return pos;
+            }
+            
+            // Fallback: any empty slot
+            for (let i = 1; i <= 5; i++) {
+                if (!teamObj[`pos_${i}`]) return `pos_${i}`;
+            }
+            return null;
+        }
+
+        function handleHeroPick(heroName, teamType) {
+            const teamObj = teamType === 'radiant' ? radiantHeroes : direHeroes;
+            
+            // Check if hero already picked in this team
+            if (Object.values(teamObj).includes(heroName)) return;
+
+            // Check if team full
+            if (Object.values(teamObj).every(v => v !== null)) return;
+
+            const slot = findBestSlot(heroName, teamObj);
+            if (slot) {
+                teamObj[slot] = heroName;
+                updateSlotContent(teamType, slot, heroName);
+                renderGrid(); // Only re-render grid to show picked state
+                
+                // Auto-update recommendations if enabled
+                if (autoAnalyzeEnabled) {
+                    setTimeout(() => {
+                        analyzeBtn.click();
+                    }, 100);
+                }
+            }
+        }
+
+        function removeHero(teamType, posKey) {
+            const teamObj = teamType === 'radiant' ? radiantHeroes : direHeroes;
+            teamObj[posKey] = null;
+            updateSlotContent(teamType, posKey, null);
+            renderGrid();
+            
+            // Auto-update recommendations if enabled
+            if (autoAnalyzeEnabled) {
+                setTimeout(() => {
+                    analyzeBtn.click();
+                }, 100);
+            }
+        }
+
+        function swapHeroes(srcTeam, srcPos, targetTeam, targetPos) {
+            const targetTeamObj = targetTeam === 'radiant' ? radiantHeroes : direHeroes;
+            const srcTeamObj = srcTeam === 'radiant' ? radiantHeroes : direHeroes;
+
+            const srcHero = srcTeamObj[srcPos];
+            const targetHero = targetTeamObj[targetPos];
+
+            srcTeamObj[srcPos] = targetHero;
+            targetTeamObj[targetPos] = srcHero;
+
+            updateSlotContent(srcTeam, srcPos, targetHero);
+            updateSlotContent(targetTeam, targetPos, srcHero);
+            renderGrid();
+        }
+
+        function cleanupPointerDrag() {
+            // Remove ANY ghosts we find, just to be safe
+            if (dragGhostEl) {
+                dragGhostEl.remove();
+            }
+            // Also query for potential orphaned ghosts
+            document.querySelectorAll('.ghost-card').forEach(el => el.remove());
+            
+            dragGhostEl = null;
+
+            if (dragSrcSlotEl) {
+                // Restore visual state if drag is cancelled (or just cleanup for swap to overwrite)
+                // We need to restore the slot to what the model says it is.
+                // If swap happens later, it will overwrite this again, which is fine.
+                const team = dragSrcSlotEl.dataset.team;
+                const pos = dragSrcSlotEl.dataset.pos;
+                const teamObj = team === 'radiant' ? radiantHeroes : direHeroes;
+                const heroName = teamObj[pos];
+                
+                // Release capture if possible
+                if (dragSrcSlotEl.hasPointerCapture && dragPointerId) {
+                    try { dragSrcSlotEl.releasePointerCapture(dragPointerId); } catch(e){}
+                }
+                
+                // Restore visual content
+                updateSlotContent(team, pos, heroName);
+
+                dragSrcSlotEl = null;
+            }
+            if (dragOverSlotEl) {
+                dragOverSlotEl.classList.remove('drag-over');
+                dragOverSlotEl = null;
+            }
+            isSlotDragging = false;
+            dragPointerId = null;
+
+            document.removeEventListener('pointermove', handlePointerMove);
+            document.removeEventListener('pointerup', handlePointerUp);
+            document.removeEventListener('pointercancel', handlePointerUp);
+        }
+
+        function handlePointerMove(e) {
+            if (!isSlotDragging || e.pointerId !== dragPointerId) return;
+
+            // Move ghost with rAF for smoothness
+            requestAnimationFrame(() => {
+                if (dragGhostEl) {
+                    dragGhostEl.style.left = e.clientX + 'px';
+                    dragGhostEl.style.top = e.clientY + 'px';
+                }
+            });
+
+            // Perform hit test
+            // Hide ghost momentarily to peek underneath (optional, but elementFromPoint usually ignores pointer-events: none)
+            const el = document.elementFromPoint(e.clientX, e.clientY);
+            const slot = el ? el.closest('.hero-slot') : null;
+
+            if (slot === dragOverSlotEl) return;
+            if (dragOverSlotEl) dragOverSlotEl.classList.remove('drag-over');
+
+            if (slot && slot !== dragSrcSlotEl) {
+                slot.classList.add('drag-over');
+                dragOverSlotEl = slot;
+            } else {
+                dragOverSlotEl = null;
+            }
+        }
+
+        function handlePointerUp(e) {
+            if (!isSlotDragging || e.pointerId !== dragPointerId) return;
+
+            const srcEl = dragSrcSlotEl;
+            const targetEl = dragOverSlotEl;
+
+            cleanupPointerDrag();
+
+            if (!srcEl || !targetEl) return;
+
+            const srcTeam = srcEl.dataset.team;
+            const srcPos = srcEl.dataset.pos;
+            const targetTeam = targetEl.dataset.team;
+            const targetPos = targetEl.dataset.pos;
+
+            if (!srcTeam || !srcPos || !targetTeam || !targetPos) return;
+            if (srcTeam === targetTeam && srcPos === targetPos) return;
+
+            const srcTeamObj = srcTeam === 'radiant' ? radiantHeroes : direHeroes;
+            if (!srcTeamObj[srcPos]) return;
+
+            swapHeroes(srcTeam, srcPos, targetTeam, targetPos);
+        }
+
+        function attachSlotInteractions(slot) {
+            // Prevent duplicate listeners
+            if (slot.dataset.listenersAttached === 'true') return;
+            slot.dataset.listenersAttached = 'true';
+
+            slot.addEventListener('pointerdown', (e) => {
+                if (e.button !== 0) return;
+                if (e.target && e.target.closest && e.target.closest('.remove-btn')) return;
+
+                const team = slot.dataset.team;
+                const pos = slot.dataset.pos;
+                const teamObj = team === 'radiant' ? radiantHeroes : direHeroes;
+                const hero = teamObj[pos];
+                if (!hero) return;
+
+                // Prevent default scrolling/gestures
+                e.preventDefault();
+
+                // Force cleanup of any previous state
+                cleanupPointerDrag();
+
+                isSlotDragging = true;
+                dragPointerId = e.pointerId;
+                dragSrcSlotEl = slot;
+                
+                // Set capture to ensure we don't lose the pointer
+                try {
+                    slot.setPointerCapture(e.pointerId);
+                } catch (err) {
+                    console.warn("Pointer capture failed", err);
+                }
+
+                // Create Ghost
+                dragGhostEl = slot.cloneNode(true);
+                dragGhostEl.classList.add('ghost-card'); // Mark for cleanup
+                dragGhostEl.style.position = 'fixed';
+                dragGhostEl.style.width = slot.offsetWidth + 'px';
+                dragGhostEl.style.height = slot.offsetHeight + 'px';
+                // Center on cursor
+                dragGhostEl.style.left = e.clientX + 'px';
+                dragGhostEl.style.top = e.clientY + 'px';
+                dragGhostEl.style.pointerEvents = 'none';
+                dragGhostEl.style.zIndex = '9999';
+                dragGhostEl.style.transform = 'translate(-50%, -50%) rotate(2deg) scale(1.05)';
+                dragGhostEl.style.opacity = '0.9';
+                dragGhostEl.style.boxShadow = '0 15px 30px rgba(0,0,0,0.3)';
+                dragGhostEl.style.border = '1px solid var(--mercury)';
+                // Remove animation classes to prevent re-triggering
+                dragGhostEl.className = dragGhostEl.className.replace(/stagger-\d/, '').replace('reveal', '');
+                
+                document.body.appendChild(dragGhostEl);
+
+                // Visually clear the slot (make it look empty)
+                // We pass null for heroName so it renders the empty state
+                // Model data is preserved in variables
+                updateSlotContent(team, pos, null);
+                // Note: updateSlotContent clears listeners on the element because it clears innerHTML,
+                // but since 'slot' is the same reference, and we are holding a reference to it in dragSrcSlotEl...
+                // Wait. updateSlotContent wipes innerHTML. But pointerdown bubbles from children? 
+                // No, pointerdown is on 'slot'. innerHTML clearing doesn't remove listener on 'slot' itself unless we replaced 'slot'.
+                // We reused 'slot'. The listener is still there.
+                // But updateSlotContent calls attachSlotInteractions again.
+                // Our guard clause in attachSlotInteractions handles that.
+
+                document.addEventListener('pointermove', handlePointerMove);
+                document.addEventListener('pointerup', handlePointerUp);
+                document.addEventListener('pointercancel', handlePointerUp);
+            });
+        }
+
+        function updateSlotContent(teamType, posKey, heroName) {
+            const container = teamType === 'radiant' ? radiantSlotsEl : direSlotsEl;
+            const slot = container.querySelector(`[data-pos="${posKey}"]`);
+            if (!slot) return;
+
+            // Clear current content
+            slot.innerHTML = '';
+
+            const type = teamType;
+            const delays = ['stagger-1', 'stagger-2', 'stagger-3', 'stagger-4', 'stagger-5'];
+            const idx = ["pos_1", "pos_2", "pos_3", "pos_4", "pos_5"].indexOf(posKey);
+
+            slot.className = `hero-slot ${type === 'radiant' ? 'radiant-slot' : 'dire-slot'} reveal ${delays[idx]}`;
+            slot.dataset.team = type;
+            slot.dataset.pos = posKey;
+
+            if (heroName) {
+                slot.draggable = false;
+
+                const indicator = document.createElement('div');
+                indicator.className = 'slot-indicator line-active'; // Animation class
+                indicator.style.pointerEvents = 'none';
+
+                // Hero icon - separate from slot-info so it stays visible in collapsed mode
+                const icon = document.createElement('div');
+                icon.className = 'hero-mini-icon';
+                icon.style.backgroundPosition = getHeroIconBg(heroName);
+                icon.style.flexShrink = '0';
+
+                const content = document.createElement('div');
+                content.className = 'slot-info';
+                content.style.flex = '1';
+                content.style.minWidth = '0';
+                content.style.pointerEvents = 'none';
+
+                const role = document.createElement('p');
+                role.className = 'mono';
+                role.style.opacity = '0.5';
+                role.style.fontSize = '0.6rem';
+                role.style.pointerEvents = 'none';
+                role.innerText = ROLE_NAMES[posKey].toUpperCase();
+
+                const name = document.createElement('p');
+                name.style.fontWeight = '800';
+                name.style.letterSpacing = '0.5px';
+                name.style.fontSize = '0.8rem';
+                name.style.overflow = 'hidden';
+                name.style.textOverflow = 'ellipsis';
+                name.style.whiteSpace = 'nowrap';
+                name.style.marginTop = '2px';
+                name.innerText = heroName.toUpperCase();
+
+                content.appendChild(role);
+                content.appendChild(name);
+
+                if (type === 'radiant') {
+                    slot.appendChild(indicator);
+                    slot.appendChild(icon);
+                    slot.appendChild(content);
+                } else {
+                    slot.appendChild(content);
+                    slot.appendChild(icon);
+                    slot.appendChild(indicator);
+                }
+
+                const removeBtn = document.createElement('button');
+                removeBtn.className = `remove-btn ${type === 'radiant' ? 'remove-right' : 'remove-left'}`;
+                removeBtn.type = 'button';
+                removeBtn.innerText = '×';
+                removeBtn.title = 'Удалить';
+                removeBtn.setAttribute('aria-label', 'Удалить героя');
+                removeBtn.draggable = false;
+                removeBtn.addEventListener('mousedown', (e) => e.stopPropagation());
+                removeBtn.addEventListener('pointerdown', (e) => e.stopPropagation());
+                removeBtn.addEventListener('dragstart', (e) => e.preventDefault());
+                removeBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    removeHero(type, posKey);
+                });
+                if (type === 'radiant') {
+                    slot.appendChild(removeBtn);
+                } else {
+                    slot.insertBefore(removeBtn, slot.firstChild);
+                }
+
+                // Hover effect for cursor
+                slot.addEventListener('mouseenter', () => {
+                    cursor.style.transform = 'scale(2)';
+                    cursor.style.background = 'rgba(255,255,255,0.2)';
+                });
+                slot.addEventListener('mouseleave', () => {
+                    cursor.style.transform = 'scale(1)';
+                    cursor.style.background = 'white';
+                });
+
+            } else {
+                const indicator = document.createElement('div');
+                indicator.className = 'slot-indicator line-empty'; // Animation class for fade
+                indicator.style.opacity = '0.2';
+
+                const content = document.createElement('div');
+                content.style.flex = '1';
+
+                const empty = document.createElement('p');
+                empty.className = 'mono';
+                empty.style.opacity = '0.3';
+                empty.style.fontSize = '0.7rem';
+                empty.innerText = '--';
+
+                content.appendChild(empty);
+
+                if (type === 'radiant') {
+                    slot.appendChild(indicator);
+                    slot.appendChild(content);
+                } else {
+                    slot.appendChild(content);
+                    slot.appendChild(indicator);
+                }
+            }
+
+            attachSlotInteractions(slot);
+        }
+
+        function renderTeamSlots(container, teamObj, type) {
+            container.innerHTML = '';
+            
+            const delays = ['stagger-1', 'stagger-2', 'stagger-3', 'stagger-4', 'stagger-5'];
+            
+            ["pos_1", "pos_2", "pos_3", "pos_4", "pos_5"].forEach((posKey, idx) => {
+                const hero = teamObj[posKey];
+                
+                const slot = document.createElement('div');
+                slot.className = `hero-slot ${type === 'radiant' ? 'radiant-slot' : 'dire-slot'} reveal ${delays[idx]}`;
+                slot.dataset.team = type;
+                slot.dataset.pos = posKey;
+                
+                if (hero) {
+                    slot.draggable = false;
+                    
+                    const indicator = document.createElement('div');
+                    indicator.className = 'slot-indicator';
+                    indicator.style.pointerEvents = 'none';
+                    
+                    // Hero icon - separate from slot-info
+                    const icon = document.createElement('div');
+                    icon.className = 'hero-mini-icon';
+                    icon.style.backgroundPosition = getHeroIconBg(hero);
+                    icon.style.flexShrink = '0';
+                    
+                    const content = document.createElement('div');
+                    content.className = 'slot-info';
+                    content.style.flex = '1';
+                    content.style.minWidth = '0';
+                    content.style.pointerEvents = 'none';
+                    
+                    const role = document.createElement('p');
+                    role.className = 'mono';
+                    role.style.opacity = '0.5';
+                    role.style.fontSize = '0.6rem';
+                    role.style.pointerEvents = 'none';
+                    role.innerText = ROLE_NAMES[posKey].toUpperCase();
+
+                    const name = document.createElement('p');
+                    name.style.fontWeight = '800';
+                    name.style.letterSpacing = '0.5px';
+                    name.style.fontSize = '0.8rem';
+                    name.style.overflow = 'hidden';
+                    name.style.textOverflow = 'ellipsis';
+                    name.style.whiteSpace = 'nowrap';
+                    name.style.marginTop = '2px';
+                    name.innerText = hero.toUpperCase();
+
+                    content.appendChild(role);
+                    content.appendChild(name);
+                    
+                    if (type === 'radiant') {
+                        slot.appendChild(indicator);
+                        slot.appendChild(icon);
+                        slot.appendChild(content);
+                    } else {
+                        slot.appendChild(content);
+                        slot.appendChild(icon);
+                        slot.appendChild(indicator);
+                    }
+
+                    const removeBtn = document.createElement('button');
+                    removeBtn.className = `remove-btn ${type === 'radiant' ? 'remove-right' : 'remove-left'}`;
+                    removeBtn.type = 'button';
+                    removeBtn.innerText = '×';
+                    removeBtn.title = 'Удалить';
+                    removeBtn.setAttribute('aria-label', 'Удалить героя');
+                    removeBtn.draggable = false;
+                    removeBtn.addEventListener('mousedown', (e) => e.stopPropagation());
+                    removeBtn.addEventListener('pointerdown', (e) => e.stopPropagation());
+                    removeBtn.addEventListener('dragstart', (e) => e.preventDefault());
+                    removeBtn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        removeHero(type, posKey);
+                    });
+                    if (type === 'radiant') {
+                        slot.appendChild(removeBtn);
+                    } else {
+                        slot.insertBefore(removeBtn, slot.firstChild);
+                    }
+                    
+                    // Hover effect for cursor
+                    slot.addEventListener('mouseenter', () => {
+                        cursor.style.transform = 'scale(2)';
+                        cursor.style.background = 'rgba(255,255,255,0.2)';
+                    });
+                    slot.addEventListener('mouseleave', () => {
+                        cursor.style.transform = 'scale(1)';
+                        cursor.style.background = 'white';
+                    });
+                    
+                } else {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'slot-indicator';
+                    indicator.style.opacity = '0.2';
+                    
+                    const content = document.createElement('div');
+                    content.style.flex = '1';
+                    
+                    const empty = document.createElement('p');
+                    empty.className = 'mono';
+                    empty.style.opacity = '0.3';
+                    empty.style.fontSize = '0.7rem';
+                    empty.innerText = '--';
+                    
+                    content.appendChild(empty);
+                    
+                    if (type === 'radiant') {
+                        slot.appendChild(indicator);
+                        slot.appendChild(content);
+                    } else {
+                        slot.appendChild(content);
+                        slot.appendChild(indicator);
+                    }
+                }
+                
+                container.appendChild(slot);
+            });
+
+            container.querySelectorAll('.hero-slot').forEach(attachSlotInteractions);
+        }
+        
+        function handleDragStart(e) {
+            const slot = e.currentTarget;
+            const team = slot.dataset.team;
+            const pos = slot.dataset.pos;
+            const teamObj = team === 'radiant' ? radiantHeroes : direHeroes;
+            const hero = teamObj[pos];
+            
+            if (!hero) {
+                e.preventDefault();
+                return;
+            }
+            
+            dragSrcHero = hero;
+            dragSrcTeam = team;
+            dragSrcPos = pos;
+            
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', hero);
+            
+            slot.style.opacity = '0.4';
+        }
+        
+        function handleDragEnd(e) {
+            const slot = e.currentTarget;
+            slot.style.opacity = '';
+            
+            // Clear drag state
+            dragSrcHero = null;
+            dragSrcTeam = null;
+            dragSrcPos = null;
+        }
+        
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            e.currentTarget.style.boxShadow = '0 0 20px rgba(224, 224, 226, 0.5)';
+            e.currentTarget.style.borderColor = 'var(--mercury)';
+        }
+        
+        function handleDragLeave(e) {
+            e.currentTarget.style.boxShadow = '';
+            e.currentTarget.style.borderColor = 'var(--border)';
+        }
+        
+        function handleDrop(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const targetSlot = e.currentTarget;
+            targetSlot.style.boxShadow = '';
+            targetSlot.style.borderColor = 'var(--border)';
+            
+            const targetTeam = targetSlot.dataset.team;
+            const targetPos = targetSlot.dataset.pos;
+            
+            if (!dragSrcTeam || (dragSrcTeam === targetTeam && dragSrcPos === targetPos)) return;
+            
+            const targetTeamObj = targetTeam === 'radiant' ? radiantHeroes : direHeroes;
+            const srcTeamObj = dragSrcTeam === 'radiant' ? radiantHeroes : direHeroes;
+            
+            const srcHero = srcTeamObj[dragSrcPos];
+            const targetHero = targetTeamObj[targetPos];
+            
+            // Swap
+            srcTeamObj[dragSrcPos] = targetHero;
+            targetTeamObj[targetPos] = srcHero;
+            
+            // Update only the affected slots instead of full render
+            updateSlotContent(dragSrcTeam, dragSrcPos, targetHero);
+            updateSlotContent(targetTeam, targetPos, srcHero);
+            renderGrid(); // Only re-render grid to show picked state changes
+        }
+
+
+        function renderGrid() {
+            heroGridEl.innerHTML = '';
+            
+            const filtered = availableHeroes.filter(h => {
+                const nameMatches = h.name.toLowerCase().includes(searchQuery.toLowerCase());
+                const attrMatches = currentAttrFilter === 'ALL' || h.primary_attr === currentAttrFilter;
+                return nameMatches && attrMatches;
+            });
+            
+            filtered.forEach(heroObj => {
+                const hero = heroObj.name;
+                const attr = heroObj.primary_attr;
+                
+                const isRadiant = Object.values(radiantHeroes).includes(hero);
+                const isDire = Object.values(direHeroes).includes(hero);
+                const isPicked = isRadiant || isDire;
+
+                // Color mapping for attributes
+                const attrColors = {
+                    'strength': 'var(--str)',
+                    'agility': 'var(--agi)',
+                    'intelligence': 'var(--int)',
+                    'universal': 'var(--uni)'
+                };
+
+                // Container
+                const container = document.createElement('div');
+                container.className = 'hero-node-container';
+                container.style.setProperty('--attr-color', attrColors[attr] || 'var(--mercury)');
+
+                const node = document.createElement('div');
+                node.className = `hero-node ${isPicked ? 'picked' : ''}`;
+                
+                node.title = hero;
+                
+                const img = document.createElement('img');
+                img.src = getHeroImgUrl(hero);
+                img.alt = hero;
+                img.draggable = false;
+                node.appendChild(img);
+
+                // No overlay inside node anymore
+                
+                // Name Label outside
+                const nameLabel = document.createElement('div');
+                nameLabel.className = 'hero-name-label';
+                nameLabel.innerText = hero.toUpperCase();
+                
+                container.appendChild(node);
+                container.appendChild(nameLabel);
+
+                if (!isPicked) {
+                    // Hover effect for cursor - attach to container for better UX
+                    container.addEventListener('mouseenter', () => {
+                        cursor.style.transform = 'scale(4)';
+                        cursor.style.background = 'rgba(255,255,255,0.1)';
+                        cursor.style.border = '1px solid white';
+                        // Image opacity handled by CSS
+                        img.style.opacity = '1'; 
+                    });
+                    container.addEventListener('mouseleave', () => {
+                        cursor.style.transform = 'scale(1)';
+                        cursor.style.background = 'white';
+                        cursor.style.border = 'none';
+                        img.style.opacity = '0.7';
+                    });
+                    
+                    // Left click = Radiant
+                    container.addEventListener('click', (e) => {
+                        handleHeroPick(hero, 'radiant');
+                    });
+
+                    // Right click = Dire
+                    container.addEventListener('contextmenu', (e) => {
+                        e.preventDefault();
+                        handleHeroPick(hero, 'dire');
+                    });
+                }
+
+                heroGridEl.appendChild(container);
+            });
+        }
+
+
+
+        function renderRecommendationsToPanel(container, recs, type) {
+            container.innerHTML = '';
+            
+            if (!recs || recs.length === 0) {
+                 container.innerHTML = `<p class="mono" data-i18n="no_data" style="opacity: 0.3; font-size: 0.65rem;">${TRANSLATIONS[currentLang]["no_data"]}</p>`;
+                 return;
+            }
+
+            recs.slice(0, 10).forEach((rec, idx) => {
+                const row = document.createElement('div');
+                row.className = "rec-item";
+                
+                // Allow clicking to add
+                row.style.cursor = 'pointer';
+                row.title = `Add ${rec.hero_name} to ${type.toUpperCase()}`;
+                row.addEventListener('click', () => {
+                    handleHeroPick(rec.hero_name, type);
+                });
+                
+                const num = document.createElement('span');
+                num.className = 'mono';
+                num.style.opacity = '0.5';
+                num.style.fontSize = '0.7rem';
+                num.style.minWidth = '20px';
+                num.innerText = `${idx + 1}.`;
+                
+                const content = document.createElement('div');
+                content.style.flex = '1';
+                content.style.minWidth = '0';
+                
+                const nameRow = document.createElement('div');
+                nameRow.style.display = 'flex';
+                nameRow.style.alignItems = 'center';
+                nameRow.style.gap = '6px';
+                nameRow.style.marginBottom = '2px';
+
+                const icon = document.createElement('div');
+                icon.className = 'hero-mini-icon';
+                icon.style.backgroundPosition = getHeroIconBg(rec.hero_name);
+
+                const name = document.createElement('p');
+                name.style.fontWeight = '800';
+                name.style.fontSize = '0.75rem';
+                name.style.letterSpacing = '0.5px';
+                name.style.overflow = 'hidden';
+                name.style.textOverflow = 'ellipsis';
+                name.style.whiteSpace = 'nowrap';
+                name.style.marginTop = '2px';
+                name.innerText = rec.hero_name.toUpperCase();
+
+                nameRow.appendChild(icon);
+                nameRow.appendChild(name);
+                
+                const reasons = document.createElement('p');
+                reasons.className = 'mono';
+                reasons.style.opacity = '0.5';
+                reasons.style.fontSize = '0.6rem';
+                reasons.style.whiteSpace = 'normal';
+                reasons.style.lineHeight = '1.2';
+                reasons.innerText = rec.reasons.join(', ');
+                
+                content.appendChild(nameRow);
+                content.appendChild(reasons);
+                
+                const score = document.createElement('span');
+                score.className = 'mono';
+                score.style.color = type === 'radiant' ? 'var(--radiant)' : 'var(--dire)';
+                score.style.fontSize = '0.75rem';
+                score.style.fontWeight = '800';
+                score.innerText = rec.score;
+                
+                row.appendChild(num);
+                row.appendChild(content);
+                row.appendChild(score);
+                
+                container.appendChild(row);
+            });
+        }
+
+        // --- ACTIONS ---
+        resetBtn.addEventListener('click', () => {
+            radiantHeroes = { "pos_1": null, "pos_2": null, "pos_3": null, "pos_4": null, "pos_5": null };
+            direHeroes = { "pos_1": null, "pos_2": null, "pos_3": null, "pos_4": null, "pos_5": null };
+            radiantRecsEl.innerHTML = `<p class="mono" data-i18n="no_data" style="opacity: 0.3; font-size: 0.65rem;">${TRANSLATIONS[currentLang]["no_data"]}</p>`;
+            direRecsEl.innerHTML = `<p class="mono" data-i18n="no_data" style="opacity: 0.3; font-size: 0.65rem;">${TRANSLATIONS[currentLang]["no_data"]}</p>`;
+            document.getElementById('radiant-win-rate').innerText = "--";
+            document.getElementById('dire-win-rate').innerText = "--";
+            render();
+        });
+
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            renderGrid();
+        });
+
+        analyzeBtn.addEventListener('click', async () => {
+            const rList = Object.values(radiantHeroes).filter(h => h !== null);
+            const dList = Object.values(direHeroes).filter(h => h !== null);
+            if (rList.length === 0 && dList.length === 0) return;
+
+            analyzeBtn.disabled = true;
+            analyzeBtn.textContent = '...';
+            analyzeBtn.classList.add('opacity-50');
+
+            try {
+                const result = await invoke('cmd_recommend', {
+                    radiant: rList,
+                    dire: dList
+                });
+                
+                lastAnalysisResult = result; // Store for collapsed view sync
+                
+                renderRecommendationsToPanel(radiantRecsEl, result.radiant, 'radiant');
+                renderRecommendationsToPanel(direRecsEl, result.dire, 'dire');
+                
+                // Mock winrate for visual completeness
+                document.getElementById('radiant-win-rate').innerText = "52%";
+                document.getElementById('dire-win-rate').innerText = "48%";
+                
+                // Sync collapsed recommendations panel
+                if (isGridCollapsed) {
+                    syncCollapsedRecs();
+                }
+
+            } catch(e) {
+                alert(e);
+            } finally {
+                analyzeBtn.disabled = false;
+                analyzeBtn.textContent = TRANSLATIONS[currentLang]["analyze"];
+                analyzeBtn.classList.remove('opacity-50');
+            }
+        });
+
+        // --- FILTERS ---
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                currentAttrFilter = btn.dataset.filter;
+                
+                // Update active state
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                renderGrid();
+            });
+        });
+
+        // --- SETTINGS LOGIC ---
+        const settingsBtn = document.getElementById('settings-btn');
+        const settingsModal = document.getElementById('settings-modal');
+        const closeSettingsBtn = document.getElementById('close-settings');
+        const widthSlider = document.getElementById('width-slider');
+        const widthValue = document.getElementById('width-value');
+        const iconSizeSlider = document.getElementById('icon-size-slider');
+        const iconSizeValue = document.getElementById('icon-size-value');
+        const sideModeToggle = document.getElementById('side-mode-toggle');
+        const langEnBtn = document.getElementById('lang-en');
+        const langRuBtn = document.getElementById('lang-ru');
+        const btnUpdateData = document.getElementById('btn-update-data');
+        const updateConsole = document.getElementById('update-console');
+        const consoleOutput = document.getElementById('console-output');
+        const systemCursorToggle = document.getElementById('system-cursor-toggle');
+        const autoAnalyzeToggle = document.getElementById('auto-analyze-toggle');
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        const TRANSLATIONS = {
+            "en": {
+                "subtitle": "DOTA 2 DRAFT ASSISTANT",
+                "settings_title": "SYSTEM CONFIG",
+                "reset": "RESET",
+                "analyze": "ANALYZE DRAFT",
+                "search_placeholder": "SEARCH HERO...",
+                "helper_text": "LEFT CLICK: <span style=\"color: var(--radiant)\">RADIANT</span> // RIGHT CLICK: <span style=\"color: var(--dire)\">DIRE</span>",
+                "loading": "LOADING HEROES...",
+                "radiant": "RADIANT",
+                "dire": "DIRE",
+                "recs": "RECOMMENDATIONS",
+                "win_prob": "WIN PROBABILITY",
+                "no_data": "NO DATA",
+                "setting_interface_width": "INTERFACE WIDTH (%)",
+                "setting_icon_size": "HERO GRID ICON SIZE (PX)",
+                "setting_grid_width": "HERO GRID WIDTH (PX)",
+                "setting_cursor_glow": "CURSOR GLOW RADIUS (PX)",
+                "setting_side_mode": "SIDE RECOMMENDATIONS",
+                "setting_language": "LANGUAGE",
+                "filter_all": "ALL",
+                "filter_str": "STR",
+                "filter_agi": "AGI",
+                "filter_int": "INT",
+                "filter_uni": "UNI",
+                "section_visual": "VISUALS",
+                "section_data": "DATA",
+                "setting_stratz_api_key": "STRATZ API KEY",
+                "setting_max_workers": "MAX WORKERS (THREADS)",
+                "setting_update_data": "UPDATE STATS (STRATZ API)",
+                "btn_update": "RUN UPDATE",
+                "setting_system_cursor": "ENABLE SYSTEM CURSOR",
+                "setting_auto_analyze": "AUTO ANALYZE ON PICK",
+                "modal_confirm_title": "CONFIRM UPDATE",
+                "modal_update_desc": "Data has already been checked\nthis week. Download again?",
+                "modal_yes": "UPDATE",
+                "modal_no": "CANCEL"
+            },
+            "ru": {
+                "subtitle": "ПОМОЩНИК ДРАФТА DOTA 2",
+                "settings_title": "КОНФИГУРАЦИЯ СИСТЕМЫ",
+                "reset": "СБРОС",
+                "analyze": "АНАЛИЗ ДРАФТА",
+                "search_placeholder": "ПОИСК ГЕРОЯ...",
+                "helper_text": "ЛЕВЫЙ КЛИК: <span style=\"color: var(--radiant)\">RADIANT</span> // ПРАВЫЙ КЛИК: <span style=\"color: var(--dire)\">DIRE</span>",
+                "loading": "ЗАГРУЗКА ГЕРОВ...",
+                "radiant": "RADIANT",
+                "dire": "DIRE",
+                "recs": "РЕКОМЕНДАЦИИ",
+                "win_prob": "ВЕРОЯТНОСТЬ ПОБЕДЫ",
+                "no_data": "НЕТ ДАННЫХ",
+                "setting_interface_width": "ШИРИНА ИНТЕРФЕЙСА (%)",
+                "setting_icon_size": "РАЗМЕР ИКОНОК (PX)",
+                "setting_grid_width": "ШИРИНА СЕТКИ ГЕРОЕВ (PX)",
+                "setting_cursor_glow": "РАДИУС СВЕЧЕНИЯ КУРСОРА (PX)",
+                "setting_side_mode": "БОКОВЫЕ ПАНЕЛИ",
+                "setting_language": "ЯЗЫК / LANGUAGE",
+                "section_visual": "ВИЗУАЛ",
+                "section_data": "ДАННЫЕ",
+                "setting_update_data": "ОБНОВИТЬ СТАТИСТИКУ (STRATZ API)",
+                "btn_update": "ЗАПУСТИТЬ ОБНОВЛЕНИЕ",
+                "setting_system_cursor": "СИСТЕМНЫЙ КУРСОР",
+                "setting_auto_analyze": "АВТОАНАЛИЗ ПРИ ВЫБОРЕ",
+                "setting_stratz_api_key": "API КЛЮЧ STRATZ",
+                "setting_max_workers": "МАКС. ПОТОКОВ",
+                "modal_confirm_title": "ПОДТВЕРЖДЕНИЕ",
+                "modal_update_desc": "Данные уже были проверены\nна этой неделе. Скачать заново?",
+                "modal_yes": "ОБНОВИТЬ",
+                "modal_no": "ОТМЕНА"
+            }
+        };
+
+        let currentLang = localStorage.getItem('app-lang') || 'en';
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('app-lang', lang);
+            
+            // Buttons state
+            if (lang === 'en') {
+                langEnBtn.classList.add('active');
+                langRuBtn.classList.remove('active');
+            } else {
+                langRuBtn.classList.add('active');
+                langEnBtn.classList.remove('active');
+            }
+
+            const t = TRANSLATIONS[lang];
+
+            // Update text keys
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.dataset.i18n;
+                if (t[key]) {
+                    if (key === 'helper_text') {
+                        el.innerHTML = t[key];
+                    } else {
+                        el.innerText = t[key];
+                    }
+                }
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.dataset.i18nPlaceholder;
+                if (t[key]) {
+                    el.placeholder = t[key];
+                }
+            });
+        }
+
+
+        // Layout Elements
+        const analysisPanel = document.querySelector('.analysis-panel');
+        const colRadiant = document.getElementById('col-radiant');
+        const colDire = document.getElementById('col-dire');
+        const colCenter = document.getElementById('col-center');
+
+        const panelRadiant = document.getElementById('panel-radiant');
+        const panelWinrate = document.getElementById('panel-winrate');
+        const panelDire = document.getElementById('panel-dire');
+        const synergyLine = document.querySelector('.synergy-line'); // To maintain order
+        
+        // Grid Collapse Elements
+        const btnCollapseGrid = document.getElementById('btn-collapse-grid');
+        const iconGridVisible = document.getElementById('icon-grid-visible');
+        const iconGridHidden = document.getElementById('icon-grid-hidden');
+        let isGridCollapsed = false;
+
+        function updateLayoutMode(isSideMode) {
+            // Toggle body class for CSS targeting
+            if (isSideMode) {
+                document.body.classList.add('side-mode-active');
+            } else {
+                document.body.classList.remove('side-mode-active');
+            }
+
+            if (isSideMode) {
+                // Move to sides
+                colRadiant.appendChild(panelRadiant);
+                colDire.appendChild(panelDire);
+                
+                // Move winrate to top of center
+                colCenter.insertBefore(panelWinrate, colCenter.firstChild);
+
+                analysisPanel.style.display = 'none';
+                
+                // Adjust styles
+                panelRadiant.classList.add('side-mode-panel');
+                panelDire.classList.add('side-mode-panel');
+                panelWinrate.classList.add('side-mode-winrate');
+                
+            } else {
+                // Move back to bottom panel
+                analysisPanel.style.display = 'flex';
+                
+                // Re-append in correct order
+                // Ensure synergy line is first if it exists
+                analysisPanel.appendChild(synergyLine);
+                analysisPanel.appendChild(panelRadiant);
+                analysisPanel.appendChild(panelWinrate);
+                analysisPanel.appendChild(panelDire);
+
+                panelRadiant.classList.remove('side-mode-panel');
+                panelDire.classList.remove('side-mode-panel');
+                panelWinrate.classList.remove('side-mode-winrate');
+            }
+        }
+
+        function updateGridCollapsedState(collapsed) {
+            isGridCollapsed = collapsed;
+            
+            if (collapsed) {
+                document.body.classList.add('grid-collapsed');
+                btnCollapseGrid.classList.add('active');
+                iconGridVisible.style.display = 'none';
+                iconGridHidden.style.display = 'block';
+            } else {
+                document.body.classList.remove('grid-collapsed');
+                btnCollapseGrid.classList.remove('active');
+                iconGridVisible.style.display = 'block';
+                iconGridHidden.style.display = 'none';
+            }
+            
+            localStorage.setItem('grid-collapsed', collapsed);
+        } 
+
+        // Sync collapsed recommendations with main panels
+        function syncCollapsedRecs() {
+            const collapsedRadiantWr = document.getElementById('collapsed-radiant-wr');
+            const collapsedDireWr = document.getElementById('collapsed-dire-wr');
+            const collapsedRadiantRecsList = document.getElementById('collapsed-radiant-recs-list');
+            const collapsedDireRecsList = document.getElementById('collapsed-dire-recs-list');
+            
+            // Sync winrate
+            collapsedRadiantWr.innerText = document.getElementById('radiant-win-rate').innerText;
+            collapsedDireWr.innerText = document.getElementById('dire-win-rate').innerText;
+            
+            // Re-render from data to preserve event listeners
+            if (lastAnalysisResult) {
+                renderRecommendationsToPanel(collapsedRadiantRecsList, lastAnalysisResult.radiant, 'radiant');
+                renderRecommendationsToPanel(collapsedDireRecsList, lastAnalysisResult.dire, 'dire');
+            } else {
+                // If no data yet, just show empty/loading state matching the main panels if possible, or just standard "no data"
+                collapsedRadiantRecsList.innerHTML = `<p class="mono" style="opacity: 0.3; font-size: 0.65rem;">${TRANSLATIONS[currentLang]["no_data"]}</p>`;
+                collapsedDireRecsList.innerHTML = `<p class="mono" style="opacity: 0.3; font-size: 0.65rem;">${TRANSLATIONS[currentLang]["no_data"]}</p>`;
+            }
+        }
+        btnCollapseGrid.addEventListener('click', () => {
+            updateGridCollapsedState(!isGridCollapsed);
+            if (isGridCollapsed) {
+                syncCollapsedRecs();
+            }
+        });
+
+        // Load saved settings
+        const savedWidth = localStorage.getItem('app-max-width');
+        // Check if savedWidth exists and seems to be a percentage (<= 100), otherwise default to 100
+        let initialWidth = 100;
+        if (savedWidth) {
+            const val = parseInt(savedWidth);
+            // If user had pixel value stored (>100), reset to 100. Else use stored percent.
+            if (val <= 100) initialWidth = val;
+        }
+
+        document.documentElement.style.setProperty('--app-max-width', initialWidth + '%');
+        widthSlider.value = initialWidth;
+        widthValue.innerText = initialWidth + '%';
+
+        // Load Icon Size
+        const savedIconSize = localStorage.getItem('hero-icon-size');
+        const initialIconSize = savedIconSize ? parseInt(savedIconSize) : 62;
+        document.documentElement.style.setProperty('--hero-icon-size', initialIconSize + 'px');
+        iconSizeSlider.value = initialIconSize;
+        iconSizeValue.innerText = initialIconSize + 'px';
+
+        // Load Hero Grid Width
+        const gridWidthSlider = document.getElementById('grid-width-slider');
+        const gridWidthValue = document.getElementById('grid-width-value');
+        const savedGridWidth = localStorage.getItem('hero-grid-width');
+        const initialGridWidth = savedGridWidth ? parseInt(savedGridWidth) : 900;
+        document.documentElement.style.setProperty('--hero-grid-width', initialGridWidth + 'px');
+        gridWidthSlider.value = initialGridWidth;
+        gridWidthValue.innerText = initialGridWidth + 'px';
+
+        // Load Blob Radius
+        const blobRadiusSlider = document.getElementById('blob-radius-slider');
+        const blobRadiusValue = document.getElementById('blob-radius-value');
+        const savedBlobRadius = localStorage.getItem('blob-radius');
+        const initialBlobRadius = savedBlobRadius ? parseInt(savedBlobRadius) : 500;
+        blob.style.width = initialBlobRadius + 'px';
+        blob.style.height = initialBlobRadius + 'px';
+        blobRadiusSlider.value = initialBlobRadius;
+        blobRadiusValue.innerText = initialBlobRadius + 'px';
+
+        // Load Side Mode
+        const savedSideMode = localStorage.getItem('side-mode') === 'true';
+        sideModeToggle.checked = savedSideMode;
+        // Initial setup might fail if elements aren't ready? No, inside script module defer/end of body.
+        // But panels exist.
+        updateLayoutMode(savedSideMode);
+
+        settingsBtn.addEventListener('click', () => {
+            settingsModal.classList.add('active');
+        });
+
+        closeSettingsBtn.addEventListener('click', () => {
+            settingsModal.classList.remove('active');
+        });
+
+        settingsModal.addEventListener('click', (e) => {
+            if (e.target === settingsModal) {
+                settingsModal.classList.remove('active');
+            }
+        });
+
+        widthSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            widthValue.innerText = val + '%';
+            document.documentElement.style.setProperty('--app-max-width', val + '%');
+            localStorage.setItem('app-max-width', val);
+        });
+
+        iconSizeSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            iconSizeValue.innerText = val + 'px';
+            document.documentElement.style.setProperty('--hero-icon-size', val + 'px');
+            localStorage.setItem('hero-icon-size', val);
+        });
+
+        gridWidthSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            gridWidthValue.innerText = val + 'px';
+            document.documentElement.style.setProperty('--hero-grid-width', val + 'px');
+            localStorage.setItem('hero-grid-width', val);
+        });
+
+        blobRadiusSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            blobRadiusValue.innerText = val + 'px';
+            blob.style.width = val + 'px';
+            blob.style.height = val + 'px';
+            localStorage.setItem('blob-radius', val);
+        });
+
+        sideModeToggle.addEventListener('change', (e) => {
+            const isChecked = e.target.checked;
+            updateLayoutMode(isChecked);
+            localStorage.setItem('side-mode', isChecked);
+        });
+
+        langEnBtn.addEventListener('click', () => updateLanguage('en'));
+        langRuBtn.addEventListener('click', () => updateLanguage('ru'));
+        
+        // Init Language
+        updateLanguage(currentLang);
+
+
+        // ESC key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && settingsModal.classList.contains('active')) {
+                settingsModal.classList.remove('active');
+            }
+        });
+
+        // --- DATA UPDATE LOGIC ---
+        if (window.__TAURI__) {
+            try {
+                // Ensure event API is available
+                if (window.__TAURI__.event) {
+                    // Listen for update logs
+                    window.__TAURI__.event.listen('update-log', (event) => {
+                        const line = document.createElement('div');
+                        line.innerText = event.payload;
+                        consoleOutput.appendChild(line);
+                        updateConsole.scrollTop = updateConsole.scrollHeight;
+                    });
+                     // Debug: listener attached
+                    console.log("Update log listener attached");
+                } else {
+                     console.warn("window.__TAURI__.event is undefined. Check capabilities.");
+                }
+            } catch(e) { console.warn("Tauri events setup failed", e); }
+        }
+
+        const confirmModal = document.getElementById('confirm-modal');
+        const confirmYesBtn = document.getElementById('confirm-yes');
+        const confirmNoBtn = document.getElementById('confirm-no');
+        const stratzApiKeyInput = document.getElementById('stratz-api-key-input');
+        const maxWorkersSlider = document.getElementById('max-workers-slider');
+        const maxWorkersValue = document.getElementById('max-workers-value');
+
+        // Load saved settings
+        const savedApiKey = localStorage.getItem('stratz-api-key') || '';
+        const savedMaxWorkers = localStorage.getItem('max-workers') || '3';
+        stratzApiKeyInput.value = savedApiKey;
+        maxWorkersSlider.value = savedMaxWorkers;
+        maxWorkersValue.innerText = savedMaxWorkers;
+
+        stratzApiKeyInput.addEventListener('change', (e) => {
+            localStorage.setItem('stratz-api-key', e.target.value);
+        });
+
+        maxWorkersSlider.addEventListener('input', (e) => {
+            const val = e.target.value;
+            maxWorkersValue.innerText = val;
+            localStorage.setItem('max-workers', val);
+        });
+
+        let pendingUpdateResolve = null;
+
+        btnUpdateData.addEventListener('click', async () => {
+            if (!invoke) return;
+            
+            // Check freshness
+            const isFresh = await invoke('cmd_check_data_freshness');
+            
+            if (isFresh) {
+                // Show Custom Modal
+                confirmModal.classList.add('active');
+                
+                // Return a promise that resolves when user clicks
+                const userConfirmed = await new Promise(resolve => {
+                    pendingUpdateResolve = resolve;
+                });
+                
+                confirmModal.classList.remove('active');
+                if (!userConfirmed) return;
+            }
+
+            // Start Update
+            updateConsole.style.display = 'block';
+            consoleOutput.innerHTML = '';
+            
+            const startMsg = document.createElement('div');
+            startMsg.style.color = '#888';
+            startMsg.innerText = '> Requesting backend update...';
+            consoleOutput.appendChild(startMsg);
+
+            btnUpdateData.disabled = true;
+            btnUpdateData.style.opacity = '0.5';
+
+            try {
+                const apiKey = stratzApiKeyInput.value;
+                const maxWorkers = maxWorkersSlider.value;
+                await invoke('cmd_update_data', { apiKey, maxWorkers: parseInt(maxWorkers) });
+            } catch (err) {
+                const errLine = document.createElement('div');
+                errLine.style.color = '#ff3a3a';
+                errLine.innerText = "Error: " + err;
+                consoleOutput.appendChild(errLine);
+            } finally {
+                btnUpdateData.disabled = false;
+                btnUpdateData.style.opacity = '1';
+                // Trigger reload of heroes if needed?
+                // await init(); 
+            }
+        });
+
+        confirmYesBtn.addEventListener('click', () => {
+             if (pendingUpdateResolve) pendingUpdateResolve(true);
+        });
+        
+        confirmNoBtn.addEventListener('click', () => {
+             if (pendingUpdateResolve) pendingUpdateResolve(false);
+        });
+
+        // Load Grid Collapsed State - always start with expanded
+        updateGridCollapsedState(false);
+
+        // --- INIT ---
+        console.log('Script loaded, waiting for Tauri...');
+        
+        // Since script is at the end of body, DOM is ready
+        // Wait a bit for Tauri script to load
+        setTimeout(() => {
+            console.log('Attempting to initialize...');
+            init();
+        }, 300);
+
+        // Tab Switching Logic
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Deactivate all
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Activate clicked
+                btn.classList.add('active');
+                const targetId = `tab-content-${btn.dataset.tab}`;
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        // Load System Cursor
+        const savedSystemCursor = localStorage.getItem('system-cursor') === 'true';
+        systemCursorToggle.checked = savedSystemCursor;
+        if (savedSystemCursor) {
+            document.body.classList.add('system-cursor');
+        } else {
+            document.body.classList.remove('system-cursor');
+        }
+
+        systemCursorToggle.addEventListener('change', (e) => {
+            const isChecked = e.target.checked;
+            localStorage.setItem('system-cursor', isChecked);
+            if (isChecked) {
+                document.body.classList.add('system-cursor');
+            } else {
+                document.body.classList.remove('system-cursor');
+            }
+        });
+
+        // Auto-analyze toggle
+        const savedAutoAnalyze = localStorage.getItem('auto-analyze');
+        if (savedAutoAnalyze !== null) {
+            autoAnalyzeEnabled = savedAutoAnalyze === 'true';
+            autoAnalyzeToggle.checked = autoAnalyzeEnabled;
+        }
+
+        autoAnalyzeToggle.addEventListener('change', (e) => {
+            autoAnalyzeEnabled = e.target.checked;
+            localStorage.setItem('auto-analyze', autoAnalyzeEnabled);
+        });
+    </script>
+</body>
+</html>
