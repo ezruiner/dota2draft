@@ -1,0 +1,54 @@
+{
+  "name": "Sand King",
+  "primary_attribute": "universal",
+  "roles": [
+    "nuker",
+    "initiator",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "magical_damage",
+    "aoe",
+    "stealth",
+    "mobile",
+    "lockdown"
+  ],
+  "positions": {
+    "pos_1": 4.3,
+    "pos_2": 23.3,
+    "pos_3": 50.4,
+    "pos_4": 14.0,
+    "pos_5": 8.0
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 10,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Clinkz": -6.87,
+    "Spectre": -6.57,
+    "Elder Titan": -6.52,
+    "Centaur Warrunner": -5.45,
+    "Phoenix": -4.98,
+    "Legion Commander": -3.76,
+    "Void Spirit": -3.56,
+    "Nyx Assassin": -3.52,
+    "Troll Warlord": -3.48,
+    "Zeus": -3.46
+  },
+  "explicit_synergies": {
+    "Beastmaster": 9.73,
+    "Meepo": 8.06,
+    "Enchantress": 6.69,
+    "Arc Warden": 5.49,
+    "Clockwerk": 5.46,
+    "Dazzle": 4.4,
+    "Lycan": 4.28,
+    "Morphling": 3.97,
+    "Broodmother": 3.81,
+    "Dawnbreaker": 3.71
+  }
+}

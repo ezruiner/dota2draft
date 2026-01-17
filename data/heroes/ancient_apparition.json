@@ -1,0 +1,53 @@
+{
+  "name": "Ancient Apparition",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "anti_heal",
+    "global",
+    "burst_damage",
+    "glass_cannon",
+    "scaling_support"
+  ],
+  "positions": {
+    "pos_1": 2.4,
+    "pos_2": 9.7,
+    "pos_3": 3.3,
+    "pos_4": 35.8,
+    "pos_5": 48.9
+  },
+  "game_phase": {
+    "early": 3,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Brewmaster": -6.92,
+    "Spectre": -6.41,
+    "Phantom Lancer": -5.75,
+    "Broodmother": -4.97,
+    "Clinkz": -4.53,
+    "Arc Warden": -4.12,
+    "Legion Commander": -3.76,
+    "Elder Titan": -3.66,
+    "Riki": -3.54,
+    "Naga Siren": -3.36
+  },
+  "explicit_synergies": {
+    "Naga Siren": 8.74,
+    "Meepo": 6.81,
+    "Earth Spirit": 4.24,
+    "Medusa": 3.99,
+    "Bounty Hunter": 3.7,
+    "Visage": 3.52,
+    "Lone Druid": 2.95,
+    "Dark Seer": 2.89,
+    "Puck": 2.84,
+    "Arc Warden": 2.74
+  }
+}

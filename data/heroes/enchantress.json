@@ -1,0 +1,54 @@
+{
+  "name": "Enchantress",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "durable",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "summoner",
+    "heal",
+    "durable",
+    "pure_damage",
+    "dispel",
+    "sustain"
+  ],
+  "positions": {
+    "pos_1": 5.4,
+    "pos_2": 12.7,
+    "pos_3": 10.8,
+    "pos_4": 37.4,
+    "pos_5": 33.6
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 8,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Meepo": -13.87,
+    "Muerta": -6.93,
+    "Omniknight": -6.88,
+    "Broodmother": -6.74,
+    "Arc Warden": -6.57,
+    "Medusa": -6.34,
+    "Marci": -6.25,
+    "Lich": -6.2,
+    "Ancient Apparition": -6.07,
+    "Chaos Knight": -5.97
+  },
+  "explicit_synergies": {
+    "Batrider": 11.3,
+    "Visage": 9.19,
+    "Io": 8.68,
+    "Underlord": 5.79,
+    "Sand King": 5.69,
+    "Lone Druid": 5.22,
+    "Skywrath Mage": 5.2,
+    "Alchemist": 5.15,
+    "Huskar": 4.94,
+    "Enigma": 4.51
+  }
+}

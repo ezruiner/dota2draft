@@ -1,0 +1,54 @@
+{
+  "name": "Shadow Shaman",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "initiator",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "lockdown",
+    "push",
+    "hex",
+    "burst_damage"
+  ],
+  "positions": {
+    "pos_1": 2.1,
+    "pos_2": 2.3,
+    "pos_3": 2.4,
+    "pos_4": 30.8,
+    "pos_5": 62.4
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 7,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Meepo": -8.51,
+    "Wraith King": -4.51,
+    "Spectre": -4.29,
+    "Broodmother": -4.16,
+    "Enigma": -3.55,
+    "Phantom Lancer": -3.52,
+    "Chen": -3.04,
+    "Arc Warden": -2.91,
+    "Winter Wyvern": -2.82,
+    "Chaos Knight": -2.53
+  },
+  "explicit_synergies": {
+    "Monkey King": 3.03,
+    "Dawnbreaker": 2.56,
+    "Dark Willow": 2.46,
+    "Bloodseeker": 2.15,
+    "Ringmaster": 2.08,
+    "Terrorblade": 2.08,
+    "Ancient Apparition": 1.97,
+    "Phoenix": 1.91,
+    "Mirana": 1.88,
+    "Templar Assassin": 1.87
+  }
+}

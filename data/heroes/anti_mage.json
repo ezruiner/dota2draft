@@ -1,0 +1,52 @@
+{
+  "name": "Anti-Mage",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "nuker"
+  ],
+  "tags": [
+    "melee",
+    "mobile",
+    "flash_farming",
+    "splitpush",
+    "anti_magic",
+    "manaburn"
+  ],
+  "positions": {
+    "pos_1": 81.8,
+    "pos_2": 6.3,
+    "pos_3": 5.9,
+    "pos_4": 2.4,
+    "pos_5": 3.7
+  },
+  "game_phase": {
+    "early": 2,
+    "mid": 7,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Meepo": -16.12,
+    "Axe": -8.18,
+    "Legion Commander": -7.71,
+    "Huskar": -7.7,
+    "Slardar": -6.09,
+    "Troll Warlord": -5.99,
+    "Broodmother": -5.97,
+    "Omniknight": -5.34,
+    "Elder Titan": -4.84,
+    "Spectre": -4.66
+  },
+  "explicit_synergies": {
+    "Chen": 4.48,
+    "Pangolier": 4.21,
+    "Bane": 3.64,
+    "Abaddon": 3.25,
+    "Visage": 3.2,
+    "Brewmaster": 3.01,
+    "Lycan": 2.91,
+    "Winter Wyvern": 2.79,
+    "Techies": 2.61,
+    "Monkey King": 2.12
+  }
+}

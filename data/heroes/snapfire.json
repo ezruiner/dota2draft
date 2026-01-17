@@ -1,0 +1,53 @@
+{
+  "name": "Snapfire",
+  "primary_attribute": "universal",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "physical_damage",
+    "burst_damage",
+    "aoe",
+    "save"
+  ],
+  "positions": {
+    "pos_1": 3.6,
+    "pos_2": 7.4,
+    "pos_3": 7.3,
+    "pos_4": 44.8,
+    "pos_5": 36.9
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 9,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Troll Warlord": -8.53,
+    "Broodmother": -6.96,
+    "Spectre": -6.5,
+    "Dazzle": -6.26,
+    "Meepo": -5.98,
+    "Omniknight": -5.83,
+    "Elder Titan": -5.56,
+    "Bloodseeker": -5.56,
+    "Clinkz": -5.53,
+    "Enchantress": -5.42
+  },
+  "explicit_synergies": {
+    "Lycan": 6.39,
+    "Lone Druid": 4.31,
+    "Arc Warden": 3.9,
+    "Pangolier": 2.79,
+    "Broodmother": 2.72,
+    "Sven": 2.6,
+    "Disruptor": 2.51,
+    "Doom": 2.44,
+    "Mars": 2.15,
+    "Phantom Lancer": 2.14
+  }
+}

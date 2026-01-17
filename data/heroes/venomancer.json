@@ -1,0 +1,54 @@
+{
+  "name": "Venomancer",
+  "primary_attribute": "universal",
+  "roles": [
+    "nuker",
+    "initiator",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "burn",
+    "slow",
+    "anti_tank",
+    "vision"
+  ],
+  "positions": {
+    "pos_1": 6.4,
+    "pos_2": 9.7,
+    "pos_3": 12.6,
+    "pos_4": 36.9,
+    "pos_5": 34.5
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 8,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Phantom Lancer": -5.91,
+    "Broodmother": -5.37,
+    "Meepo": -5.03,
+    "Arc Warden": -4.89,
+    "Visage": -3.86,
+    "Legion Commander": -3.76,
+    "Lich": -2.17,
+    "Wraith King": -1.98,
+    "Void Spirit": -1.94,
+    "Enigma": -1.89
+  },
+  "explicit_synergies": {
+    "Dawnbreaker": 3.33,
+    "Shadow Demon": 3.18,
+    "Void Spirit": 3.04,
+    "Marci": 2.53,
+    "Winter Wyvern": 2.47,
+    "Leshrac": 2.44,
+    "Ringmaster": 2.05,
+    "Keeper of the Light": 1.81,
+    "Doom": 1.75,
+    "Ember Spirit": 1.72
+  }
+}

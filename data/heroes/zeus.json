@@ -1,0 +1,52 @@
+{
+  "name": "Zeus",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "carry",
+    "nuker"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "burst_damage",
+    "global",
+    "vision",
+    "aoe"
+  ],
+  "positions": {
+    "pos_1": 3.6,
+    "pos_2": 39.0,
+    "pos_3": 5.8,
+    "pos_4": 30.8,
+    "pos_5": 20.8
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Broodmother": -7.71,
+    "Spectre": -6.44,
+    "Wraith King": -5.26,
+    "Meepo": -5.06,
+    "Lifestealer": -4.65,
+    "Clinkz": -4.19,
+    "Chaos Knight": -3.97,
+    "Abaddon": -3.87,
+    "Alchemist": -3.64,
+    "Visage": -3.62
+  },
+  "explicit_synergies": {
+    "Tinker": 3.07,
+    "Night Stalker": 3.04,
+    "Brewmaster": 2.68,
+    "Juggernaut": 2.52,
+    "Arc Warden": 2.39,
+    "Queen of Pain": 2.33,
+    "Timbersaw": 2.3,
+    "Void Spirit": 2.22,
+    "Wraith King": 1.86,
+    "Terrorblade": 1.83
+  }
+}

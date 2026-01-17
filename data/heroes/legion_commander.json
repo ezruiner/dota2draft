@@ -1,0 +1,54 @@
+{
+  "name": "Legion Commander",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "lockdown",
+    "dispel",
+    "sustain"
+  ],
+  "positions": {
+    "pos_1": 8.4,
+    "pos_2": 7.6,
+    "pos_3": 77.3,
+    "pos_4": 4.4,
+    "pos_5": 2.2
+  },
+  "game_phase": {
+    "early": 5,
+    "mid": 9,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Winter Wyvern": -5.03,
+    "Broodmother": -3.19,
+    "Chaos Knight": -2.77,
+    "Dazzle": -1.41,
+    "Wraith King": -1.29,
+    "Spectre": -1.24,
+    "Meepo": -1.23,
+    "Vengeful Spirit": -0.98,
+    "Abaddon": -0.57,
+    "Lone Druid": -0.44
+  },
+  "explicit_synergies": {
+    "Phoenix": 5.08,
+    "Abaddon": 3.03,
+    "Troll Warlord": 2.96,
+    "Muerta": 2.85,
+    "Meepo": 2.08,
+    "Necrophos": 2.06,
+    "Treant Protector": 2.05,
+    "Bane": 2.02,
+    "Broodmother": 2.02,
+    "Grimstroke": 2.02
+  }
+}

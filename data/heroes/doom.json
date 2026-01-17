@@ -1,0 +1,55 @@
+{
+  "name": "Doom",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "anti_heal",
+    "disable_heavy",
+    "farming",
+    "durable",
+    "silence"
+  ],
+  "positions": {
+    "pos_1": 8.3,
+    "pos_2": 9.0,
+    "pos_3": 65.2,
+    "pos_4": 11.4,
+    "pos_5": 6.1
+  },
+  "game_phase": {
+    "early": 5,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Meepo": -16.46,
+    "Broodmother": -15.62,
+    "Spectre": -13.31,
+    "Dazzle": -11.81,
+    "Arc Warden": -11.76,
+    "Clinkz": -11.19,
+    "Brewmaster": -10.63,
+    "Wraith King": -10.56,
+    "Tusk": -9.63,
+    "Chaos Knight": -9.45
+  },
+  "explicit_synergies": {
+    "Dark Seer": 13.1,
+    "Beastmaster": 12.19,
+    "Primal Beast": 9.87,
+    "Dawnbreaker": 8.58,
+    "Clockwerk": 8.22,
+    "Slardar": 7.02,
+    "Muerta": 6.8,
+    "Night Stalker": 6.2,
+    "Monkey King": 6.15,
+    "Death Prophet": 5.53
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Underlord",
+  "primary_attribute": "strength",
+  "roles": [
+    "nuker",
+    "durable",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "magical_damage",
+    "aoe",
+    "tank",
+    "lockdown",
+    "global"
+  ],
+  "positions": {
+    "pos_1": 5.9,
+    "pos_2": 6.3,
+    "pos_3": 69.9,
+    "pos_4": 11.2,
+    "pos_5": 6.7
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Alchemist": -5.69,
+    "Elder Titan": -5.34,
+    "Clinkz": -4.93,
+    "Dazzle": -4.86,
+    "Juggernaut": -4.53,
+    "Venomancer": -4.43,
+    "Ringmaster": -4.03,
+    "Spectre": -4.02,
+    "Lich": -3.94,
+    "Tinker": -3.77
+  },
+  "explicit_synergies": {
+    "Shadow Demon": 5.26,
+    "Night Stalker": 5.23,
+    "Enchantress": 5.19,
+    "Winter Wyvern": 4.55,
+    "Primal Beast": 4.51,
+    "Io": 4.16,
+    "Doom": 4.03,
+    "Arc Warden": 3.98,
+    "Ursa": 3.58,
+    "Mirana": 3.33
+  }
+}

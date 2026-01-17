@@ -1,0 +1,55 @@
+{
+  "name": "Ogre Magi",
+  "primary_attribute": "strength",
+  "roles": [
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "magical_damage",
+    "buff_specialist",
+    "tank",
+    "rng",
+    "bloodlust"
+  ],
+  "positions": {
+    "pos_1": 3.9,
+    "pos_2": 11.9,
+    "pos_3": 17.6,
+    "pos_4": 31.7,
+    "pos_5": 34.9
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 6,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Broodmother": -5.69,
+    "Meepo": -5.54,
+    "Phantom Lancer": -4.24,
+    "Naga Siren": -3.66,
+    "Legion Commander": -3.25,
+    "Wraith King": -3.07,
+    "Spectre": -3.05,
+    "Arc Warden": -2.42,
+    "Dazzle": -2.35,
+    "Winter Wyvern": -2.29
+  },
+  "explicit_synergies": {
+    "Enigma": 4.2,
+    "Enchantress": 3.71,
+    "Brewmaster": 3.49,
+    "Lone Druid": 3.01,
+    "Death Prophet": 2.98,
+    "Puck": 2.7,
+    "Void Spirit": 2.64,
+    "Batrider": 2.49,
+    "Troll Warlord": 2.36,
+    "Medusa": 2.25
+  }
+}

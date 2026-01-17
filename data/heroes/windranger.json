@@ -1,0 +1,55 @@
+{
+  "name": "Windranger",
+  "primary_attribute": "universal",
+  "roles": [
+    "carry",
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "physical_damage",
+    "magical_damage",
+    "mobile",
+    "burst_damage",
+    "lockdown",
+    "fast_attack"
+  ],
+  "positions": {
+    "pos_1": 11.4,
+    "pos_2": 26.8,
+    "pos_3": 16.3,
+    "pos_4": 30.3,
+    "pos_5": 15.2
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Meepo": -8.3,
+    "Broodmother": -7.55,
+    "Spectre": -7.22,
+    "Wraith King": -6.65,
+    "Phantom Lancer": -5.91,
+    "Axe": -5.76,
+    "Vengeful Spirit": -5.16,
+    "Necrophos": -4.95,
+    "Clinkz": -4.93,
+    "Legion Commander": -4.84
+  },
+  "explicit_synergies": {
+    "Alchemist": 2.47,
+    "Oracle": 2.46,
+    "Dark Willow": 2.36,
+    "Batrider": 1.92,
+    "Troll Warlord": 1.89,
+    "Ember Spirit": 1.85,
+    "Earth Spirit": 1.83,
+    "Ringmaster": 1.78,
+    "Abaddon": 1.76,
+    "Monkey King": 1.73
+  }
+}

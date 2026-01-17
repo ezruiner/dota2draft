@@ -1,0 +1,52 @@
+{
+  "name": "Arc Warden",
+  "primary_attribute": "universal",
+  "roles": [
+    "carry",
+    "nuker"
+  ],
+  "tags": [
+    "ranged",
+    "splitpush",
+    "late_scaler",
+    "burst_damage",
+    "magical_damage",
+    "summoner"
+  ],
+  "positions": {
+    "pos_1": 10.4,
+    "pos_2": 68.0,
+    "pos_3": 6.0,
+    "pos_4": 9.2,
+    "pos_5": 6.3
+  },
+  "game_phase": {
+    "early": 2,
+    "mid": 7,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Broodmother": -10.75,
+    "Meepo": -9.47,
+    "Visage": -9.41,
+    "Lycan": -6.36,
+    "Spectre": -6.3,
+    "Phantom Lancer": -4.82,
+    "Spirit Breaker": -3.9,
+    "Dazzle": -3.81,
+    "Leshrac": -3.81,
+    "Chaos Knight": -3.79
+  },
+  "explicit_synergies": {
+    "Sand King": 5.49,
+    "Kunkka": 4.81,
+    "Dark Seer": 4.56,
+    "Night Stalker": 4.36,
+    "Underlord": 4.29,
+    "Luna": 4.18,
+    "Ringmaster": 3.36,
+    "Snapfire": 3.2,
+    "Abaddon": 3.14,
+    "Outworld Destroyer": 3.13
+  }
+}

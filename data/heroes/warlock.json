@@ -1,0 +1,53 @@
+{
+  "name": "Warlock",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "initiator",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "aoe",
+    "sustain",
+    "lockdown",
+    "summoner"
+  ],
+  "positions": {
+    "pos_1": 2.9,
+    "pos_2": 3.3,
+    "pos_3": 3.8,
+    "pos_4": 32.5,
+    "pos_5": 57.4
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Phoenix": -3.59,
+    "Io": -3.42,
+    "Winter Wyvern": -3.34,
+    "Broodmother": -3.33,
+    "Clinkz": -3.3,
+    "Spectre": -2.92,
+    "Lich": -2.83,
+    "Sand King": -2.78,
+    "Bounty Hunter": -2.48,
+    "Legion Commander": -2.29
+  },
+  "explicit_synergies": {
+    "Elder Titan": 6.28,
+    "Riki": 3.87,
+    "Brewmaster": 3.57,
+    "Oracle": 3.2,
+    "Earth Spirit": 3.17,
+    "Chaos Knight": 2.87,
+    "Clockwerk": 2.75,
+    "Abaddon": 2.71,
+    "Crystal Maiden": 2.64,
+    "Disruptor": 2.59
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "role_conflicts": {
+    "carry+carry": -20,
+    "support+support": -8,
+    "nuker+nuker": -6,
+    "disabler+disabler": -6
+  },
+
+  "role_synergies": {
+    "carry+support": 24,
+    "carry+disabler": 20,
+    "carry+initiator": 16,
+    "carry+durable": 12,
+    "initiator+disabler": 16,
+    "initiator+nuker": 16,
+    "disabler+nuker": 12,
+    "durable+support": 12,
+    "support+disabler": 10
+  },
+
+  "role_definitions": {
+    "carry": {
+      "needs": ["space", "disable"],
+      "provides": ["damage"]
+    },
+    "support": {
+      "needs": [],
+      "provides": ["disable", "vision"]
+    },
+    "initiator": {
+      "needs": ["damage"],
+      "provides": ["initiation"]
+    },
+    "durable": {
+      "needs": ["support"],
+      "provides": ["frontline"]
+    },
+    "disabler": {
+      "needs": ["damage"],
+      "provides": ["control"]
+    },
+    "nuker": {
+      "needs": ["initiation"],
+      "provides": ["burst"]
+    }
+  }
+}

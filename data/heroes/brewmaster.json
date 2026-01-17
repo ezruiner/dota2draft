@@ -1,0 +1,55 @@
+{
+  "name": "Brewmaster",
+  "primary_attribute": "universal",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "micro",
+    "dispel",
+    "evasion",
+    "disable_heavy",
+    "sustain"
+  ],
+  "positions": {
+    "pos_1": 7.7,
+    "pos_2": 9.9,
+    "pos_3": 54.4,
+    "pos_4": 17.6,
+    "pos_5": 10.5
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 9,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Arc Warden": -10.5,
+    "Lifestealer": -9.03,
+    "Winter Wyvern": -8.48,
+    "Abaddon": -8.29,
+    "Clockwerk": -7.98,
+    "Lycan": -7.89,
+    "Meepo": -7.47,
+    "Tidehunter": -7.45,
+    "Leshrac": -7.45,
+    "Broodmother": -7.26
+  },
+  "explicit_synergies": {
+    "Meepo": 12.87,
+    "Bane": 11.72,
+    "Pangolier": 11.59,
+    "Night Stalker": 10.54,
+    "Keeper of the Light": 10.31,
+    "Earth Spirit": 9.49,
+    "Void Spirit": 7.23,
+    "Abaddon": 6.92,
+    "Muerta": 6.64,
+    "Earthshaker": 6.48
+  }
+}

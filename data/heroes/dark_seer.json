@@ -1,0 +1,51 @@
+{
+  "name": "Dark Seer",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "initiator",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "aoe",
+    "initiator",
+    "speed",
+    "aura"
+  ],
+  "positions": {
+    "pos_1": 6.5,
+    "pos_2": 6.8,
+    "pos_3": 51.8,
+    "pos_4": 22.7,
+    "pos_5": 12.2
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Visage": -13.33,
+    "Marci": -11.07,
+    "Riki": -10.19,
+    "Elder Titan": -10.0,
+    "Clinkz": -9.34,
+    "Nyx Assassin": -9.31,
+    "Lich": -9.13,
+    "Invoker": -8.64,
+    "Centaur Warrunner": -7.19,
+    "Shadow Demon": -6.9
+  },
+  "explicit_synergies": {
+    "Lycan": 15.15,
+    "Doom": 11.1,
+    "Vengeful Spirit": 10.06,
+    "Bane": 9.58,
+    "Kunkka": 8.46,
+    "Weaver": 8.28,
+    "Tusk": 6.99,
+    "Oracle": 6.88,
+    "Morphling": 6.24,
+    "Arc Warden": 5.96
+  }
+}

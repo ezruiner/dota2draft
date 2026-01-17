@@ -1,0 +1,53 @@
+{
+  "name": "Monkey King",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "initiator",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "mobile",
+    "aoe",
+    "lockdown",
+    "vision"
+  ],
+  "positions": {
+    "pos_1": 43.9,
+    "pos_2": 23.2,
+    "pos_3": 12.5,
+    "pos_4": 12.9,
+    "pos_5": 7.6
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 7,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Troll Warlord": -13.5,
+    "Phoenix": -12.2,
+    "Clinkz": -11.45,
+    "Io": -11.39,
+    "Spectre": -11.25,
+    "Bloodseeker": -10.89,
+    "Bounty Hunter": -10.76,
+    "Enchantress": -10.74,
+    "Mirana": -10.69,
+    "Broodmother": -10.55
+  },
+  "explicit_synergies": {
+    "Lone Druid": 6.81,
+    "Batrider": 6.69,
+    "Terrorblade": 6.25,
+    "Doom": 5.65,
+    "Naga Siren": 4.0,
+    "Tusk": 3.53,
+    "Bloodseeker": 3.42,
+    "Visage": 3.38,
+    "Slark": 2.94,
+    "Outworld Destroyer": 2.93
+  }
+}

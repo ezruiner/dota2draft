@@ -1,0 +1,52 @@
+{
+  "name": "Queen of Pain",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "carry",
+    "nuker"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "pure_damage",
+    "mobile",
+    "burst_damage",
+    "aoe"
+  ],
+  "positions": {
+    "pos_1": 3.0,
+    "pos_2": 70.7,
+    "pos_3": 7.2,
+    "pos_4": 12.5,
+    "pos_5": 6.6
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 9,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Meepo": -7.98,
+    "Legion Commander": -7.64,
+    "Enigma": -6.58,
+    "Winter Wyvern": -6.26,
+    "Riki": -5.84,
+    "Chen": -5.52,
+    "Witch Doctor": -4.98,
+    "Clinkz": -4.92,
+    "Wraith King": -4.71,
+    "Broodmother": -4.61
+  },
+  "explicit_synergies": {
+    "Elder Titan": 3.76,
+    "Lone Druid": 3.66,
+    "Death Prophet": 2.93,
+    "Primal Beast": 2.87,
+    "Mirana": 2.7,
+    "Pangolier": 2.44,
+    "Zeus": 2.33,
+    "Night Stalker": 2.3,
+    "Shadow Demon": 2.13,
+    "Batrider": 2.04
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Lich",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "save",
+    "slow",
+    "aoe"
+  ],
+  "positions": {
+    "pos_1": 1.5,
+    "pos_2": 2.0,
+    "pos_3": 2.1,
+    "pos_4": 32.8,
+    "pos_5": 61.6
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 7,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Meepo": -3.04,
+    "Brewmaster": -2.67,
+    "Undying": -2.36,
+    "Clinkz": -1.94,
+    "Arc Warden": -1.87,
+    "Spectre": -1.67,
+    "Omniknight": -0.95,
+    "Troll Warlord": -0.94,
+    "Riki": -0.86,
+    "Legion Commander": -0.52
+  },
+  "explicit_synergies": {
+    "Batrider": 5.28,
+    "Lycan": 4.39,
+    "Bane": 3.72,
+    "Io": 3.67,
+    "Dark Seer": 3.45,
+    "Storm Spirit": 3.43,
+    "Enchantress": 3.4,
+    "Meepo": 2.87,
+    "Tinker": 2.58,
+    "Oracle": 2.52
+  }
+}

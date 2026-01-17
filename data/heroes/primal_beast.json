@@ -1,0 +1,53 @@
+{
+  "name": "Primal Beast",
+  "primary_attribute": "strength",
+  "roles": [
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "magical_damage",
+    "physical_damage",
+    "mobile",
+    "tank",
+    "aoe"
+  ],
+  "positions": {
+    "pos_1": 2.7,
+    "pos_2": 22.4,
+    "pos_3": 60.1,
+    "pos_4": 10.2,
+    "pos_5": 4.7
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 9,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Broodmother": -9.39,
+    "Outworld Destroyer": -8.69,
+    "Elder Titan": -8.39,
+    "Omniknight": -7.92,
+    "Winter Wyvern": -6.46,
+    "Visage": -6.45,
+    "Void Spirit": -6.37,
+    "Meepo": -6.27,
+    "Night Stalker": -6.21,
+    "Lycan": -6.2
+  },
+  "explicit_synergies": {
+    "Lone Druid": 15.14,
+    "Lycan": 11.72,
+    "Timbersaw": 10.24,
+    "Doom": 8.47,
+    "Io": 6.1,
+    "Slardar": 5.9,
+    "Broodmother": 5.65,
+    "Omniknight": 5.62,
+    "Pangolier": 5.52,
+    "Dawnbreaker": 5.15
+  }
+}

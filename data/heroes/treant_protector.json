@@ -1,0 +1,54 @@
+{
+  "name": "Treant Protector",
+  "primary_attribute": "strength",
+  "roles": [
+    "initiator",
+    "durable",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "magical_damage",
+    "sustain",
+    "save",
+    "aoe",
+    "vision"
+  ],
+  "positions": {
+    "pos_1": 5.7,
+    "pos_2": 3.4,
+    "pos_3": 12.0,
+    "pos_4": 35.1,
+    "pos_5": 43.7
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 7,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Enigma": -8.45,
+    "Visage": -6.84,
+    "Broodmother": -6.35,
+    "Meepo": -6.05,
+    "Phoenix": -5.71,
+    "Leshrac": -4.4,
+    "Lich": -4.32,
+    "Shadow Shaman": -4.21,
+    "Undying": -3.86,
+    "Phantom Lancer": -3.35
+  },
+  "explicit_synergies": {
+    "Keeper of the Light": 8.27,
+    "Bane": 6.28,
+    "Pangolier": 5.54,
+    "Dark Willow": 4.88,
+    "Brewmaster": 4.34,
+    "Chaos Knight": 4.24,
+    "Io": 4.03,
+    "Lycan": 3.64,
+    "Underlord": 3.23,
+    "Winter Wyvern": 3.23
+  }
+}

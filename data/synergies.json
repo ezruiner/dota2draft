@@ -1,0 +1,50 @@
+{
+  "tag_synergies": {
+    "disable_heavy+burst_damage": 20,
+    "lockdown+burst_damage": 18,
+    "tank+save": 14,
+    "sustain+tank": 12,
+    "mobile+save": 12,
+    "aoe+aoe": 10,
+    "push+push": 14,
+    "summoner+buff_specialist": 12,
+    "dispel+buff_specialist": 10,
+    "armor_reduction+physical_damage": 16,
+    "slow+burst_damage": 12,
+    "vision+initiator": 10,
+    "invis+burst_damage": 10
+  },
+
+  "tag_counters": {
+    "illusion+aoe": 18,
+    "summoner+aoe": 16,
+    "mobile+lockdown": 14,
+    "mobile+slow": 8,
+    "tank+percent_damage": 18,
+    "tank+pure_damage": 14,
+    "heal_based+anti_heal": 20,
+    "sustain+anti_heal": 16,
+    "mana_dependent+manaburn": 18,
+    "mana_dependent+mana_drain": 16,
+    "spell_immunity+magical_damage": -12,
+    "invis+vision": 14,
+    "elusive+lockdown": 16,
+    "glass_cannon+burst_damage": 16,
+    "late_scaler+early_bully": 10
+  },
+
+  "phase_bias": {
+    "early": {
+      "early_bully": 8,
+      "roaming": 6
+    },
+    "mid": {
+      "farming": 6,
+      "fast_farm": 8
+    },
+    "late": {
+      "late_scaler": 12,
+      "hard_carry": 14
+    }
+  }
+}

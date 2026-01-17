@@ -1,0 +1,54 @@
+{
+  "name": "Necrophos",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "carry",
+    "nuker",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "sustain",
+    "tank",
+    "anti_tank",
+    "lockdown"
+  ],
+  "positions": {
+    "pos_1": 5.2,
+    "pos_2": 54.2,
+    "pos_3": 30.0,
+    "pos_4": 6.5,
+    "pos_5": 4.1
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Brewmaster": -6.78,
+    "Meepo": -5.13,
+    "Muerta": -4.09,
+    "Legion Commander": -3.18,
+    "Skywrath Mage": -2.89,
+    "Arc Warden": -2.87,
+    "Drow Ranger": -2.64,
+    "Keeper of the Light": -2.5,
+    "Oracle": -2.07,
+    "Lich": -1.85
+  },
+  "explicit_synergies": {
+    "Enchantress": 4.07,
+    "Dawnbreaker": 3.89,
+    "Brewmaster": 3.16,
+    "Elder Titan": 2.97,
+    "Mirana": 2.51,
+    "Terrorblade": 2.51,
+    "Dark Seer": 2.42,
+    "Storm Spirit": 2.2,
+    "Bloodseeker": 2.18,
+    "Bane": 2.09
+  }
+}

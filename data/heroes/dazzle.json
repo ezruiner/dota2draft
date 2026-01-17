@@ -1,0 +1,53 @@
+{
+  "name": "Dazzle",
+  "primary_attribute": "universal",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "save",
+    "heal_based",
+    "sustain",
+    "physical_damage",
+    "armor_reduction"
+  ],
+  "positions": {
+    "pos_1": 3.3,
+    "pos_2": 6.6,
+    "pos_3": 4.5,
+    "pos_4": 29.4,
+    "pos_5": 56.2
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 8,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Elder Titan": -5.1,
+    "Meepo": -4.95,
+    "Spectre": -3.91,
+    "Lone Druid": -3.55,
+    "Broodmother": -2.43,
+    "Axe": -2.32,
+    "Outworld Destroyer": -2.3,
+    "Night Stalker": -2.23,
+    "Ancient Apparition": -2.18,
+    "Abaddon": -2.06
+  },
+  "explicit_synergies": {
+    "Lycan": 6.41,
+    "Phoenix": 5.0,
+    "Primal Beast": 4.54,
+    "Sand King": 4.4,
+    "Tinker": 4.0,
+    "Muerta": 3.27,
+    "Lone Druid": 3.23,
+    "Naga Siren": 3.22,
+    "Batrider": 3.11,
+    "Pugna": 3.04
+  }
+}

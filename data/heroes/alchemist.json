@@ -1,0 +1,56 @@
+{
+  "name": "Alchemist",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "farming",
+    "sustain",
+    "stun",
+    "armor_reduction",
+    "physical_damage"
+  ],
+  "positions": {
+    "pos_1": 26.0,
+    "pos_2": 17.5,
+    "pos_3": 22.1,
+    "pos_4": 21.5,
+    "pos_5": 12.9
+  },
+  "game_phase": {
+    "early": 3,
+    "mid": 9,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Lone Druid": -6.82,
+    "Meepo": -4.31,
+    "Broodmother": -3.97,
+    "Troll Warlord": -3.46,
+    "Clinkz": -3.35,
+    "Dazzle": -3.29,
+    "Io": -2.98,
+    "Lycan": -2.98,
+    "Axe": -2.94,
+    "Visage": -2.81
+  },
+  "explicit_synergies": {
+    "Ringmaster": 7.09,
+    "Meepo": 7.01,
+    "Kez": 5.45,
+    "Shadow Demon": 5.42,
+    "Marci": 5.17,
+    "Omniknight": 4.93,
+    "Pangolier": 4.53,
+    "Outworld Destroyer": 4.07,
+    "Faceless Void": 4.0,
+    "Kunkka": 3.94
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Bane",
+  "primary_attribute": "universal",
+  "roles": [
+    "nuker",
+    "durable",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "bkb_disable",
+    "pure_damage",
+    "single_target",
+    "save",
+    "disable_heavy"
+  ],
+  "positions": {
+    "pos_1": 2.3,
+    "pos_2": 8.3,
+    "pos_3": 3.6,
+    "pos_4": 36.0,
+    "pos_5": 49.8
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 8,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Arc Warden": -15.31,
+    "Elder Titan": -15.15,
+    "Lone Druid": -14.29,
+    "Visage": -13.08,
+    "Chaos Knight": -12.24,
+    "Treant Protector": -9.85,
+    "Phantom Lancer": -9.44,
+    "Broodmother": -9.43,
+    "Spectre": -9.31,
+    "Sand King": -7.03
+  },
+  "explicit_synergies": {
+    "Visage": 16.51,
+    "Brewmaster": 13.22,
+    "Dark Seer": 8.78,
+    "Terrorblade": 8.17,
+    "Lone Druid": 8.04,
+    "Abaddon": 6.96,
+    "Largo": 6.79,
+    "Medusa": 6.58,
+    "Treant Protector": 6.08,
+    "Gyrocopter": 5.65
+  }
+}

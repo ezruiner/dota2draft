@@ -1,0 +1,56 @@
+{
+  "name": "Kunkka",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "magical_damage",
+    "physical_damage",
+    "aoe",
+    "disable_heavy",
+    "tank"
+  ],
+  "positions": {
+    "pos_1": 8.0,
+    "pos_2": 30.4,
+    "pos_3": 47.5,
+    "pos_4": 8.9,
+    "pos_5": 5.2
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 10,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Omniknight": -7.04,
+    "Spectre": -5.06,
+    "Arc Warden": -4.57,
+    "Grimstroke": -4.29,
+    "Io": -4.03,
+    "Clinkz": -3.94,
+    "Dazzle": -3.9,
+    "Keeper of the Light": -3.85,
+    "Phantom Lancer": -3.65,
+    "Undying": -3.35
+  },
+  "explicit_synergies": {
+    "Visage": 9.59,
+    "Dark Seer": 5.86,
+    "Arc Warden": 5.01,
+    "Huskar": 4.54,
+    "Terrorblade": 4.25,
+    "Kez": 3.81,
+    "Naga Siren": 3.6,
+    "Clockwerk": 3.47,
+    "Alchemist": 3.34,
+    "Troll Warlord": 3.26
+  }
+}

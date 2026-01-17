@@ -1,0 +1,52 @@
+{
+  "name": "Tinker",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "carry",
+    "nuker"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "pure_damage",
+    "global",
+    "burst_damage",
+    "sustain"
+  ],
+  "positions": {
+    "pos_1": 4.3,
+    "pos_2": 69.2,
+    "pos_3": 5.5,
+    "pos_4": 11.7,
+    "pos_5": 9.3
+  },
+  "game_phase": {
+    "early": 5,
+    "mid": 9,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Visage": -5.65,
+    "Legion Commander": -5.14,
+    "Chaos Knight": -5.07,
+    "Clinkz": -4.98,
+    "Vengeful Spirit": -4.33,
+    "Lich": -4.18,
+    "Huskar": -3.81,
+    "Juggernaut": -3.79,
+    "Pudge": -3.47,
+    "Meepo": -3.37
+  },
+  "explicit_synergies": {
+    "Pangolier": 8.38,
+    "Winter Wyvern": 4.26,
+    "Void Spirit": 4.12,
+    "Broodmother": 4.11,
+    "Magnus": 4.07,
+    "Dazzle": 3.8,
+    "Shadow Demon": 3.46,
+    "Enchantress": 3.39,
+    "Visage": 3.37,
+    "Clinkz": 3.32
+  }
+}

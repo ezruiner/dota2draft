@@ -1,0 +1,54 @@
+{
+  "name": "Mirana",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "mobile",
+    "save",
+    "aoe",
+    "long_range_stun"
+  ],
+  "positions": {
+    "pos_1": 8.9,
+    "pos_2": 11.4,
+    "pos_3": 10.4,
+    "pos_4": 43.8,
+    "pos_5": 25.5
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 7,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Meepo": -7.89,
+    "Broodmother": -6.8,
+    "Wraith King": -5.18,
+    "Phantom Lancer": -4.8,
+    "Brewmaster": -4.39,
+    "Spectre": -4.25,
+    "Outworld Destroyer": -3.71,
+    "Nyx Assassin": -3.53,
+    "Slardar": -3.36,
+    "Chaos Knight": -3.3
+  },
+  "explicit_synergies": {
+    "Pangolier": 6.04,
+    "Lifestealer": 3.65,
+    "Underlord": 3.23,
+    "Templar Assassin": 2.9,
+    "Disruptor": 2.87,
+    "Queen of Pain": 2.8,
+    "Sven": 2.75,
+    "Necrophos": 2.61,
+    "Faceless Void": 2.41,
+    "Bloodseeker": 2.37
+  }
+}

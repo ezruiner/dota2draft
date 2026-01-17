@@ -1,0 +1,54 @@
+{
+  "name": "Witch Doctor",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "pure_damage",
+    "aoe",
+    "sustain",
+    "lockdown",
+    "burst_damage"
+  ],
+  "positions": {
+    "pos_1": 1.5,
+    "pos_2": 3.5,
+    "pos_3": 2.1,
+    "pos_4": 33.8,
+    "pos_5": 59.2
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 8,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Broodmother": -5.75,
+    "Clinkz": -3.5,
+    "Brewmaster": -2.36,
+    "Wraith King": -2.23,
+    "Meepo": -2.07,
+    "Winter Wyvern": -1.68,
+    "Legion Commander": -1.54,
+    "Spectre": -1.43,
+    "Vengeful Spirit": -0.56,
+    "Medusa": -0.5
+  },
+  "explicit_synergies": {
+    "Terrorblade": 3.42,
+    "Lone Druid": 2.29,
+    "Grimstroke": 2.19,
+    "Shadow Shaman": 1.8,
+    "Visage": 1.76,
+    "Enchantress": 1.68,
+    "Lycan": 1.57,
+    "Spectre": 1.54,
+    "Windranger": 1.5,
+    "Nature's Prophet": 1.34
+  }
+}

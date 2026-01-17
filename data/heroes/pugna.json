@@ -1,0 +1,51 @@
+{
+  "name": "Pugna",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "sustain",
+    "save",
+    "push",
+    "anti_mage"
+  ],
+  "positions": {
+    "pos_1": 2.4,
+    "pos_2": 13.6,
+    "pos_3": 5.2,
+    "pos_4": 38.8,
+    "pos_5": 40.0
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 7,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Meepo": -10.38,
+    "Nyx Assassin": -8.49,
+    "Enigma": -6.7,
+    "Chaos Knight": -6.62,
+    "Pudge": -6.16,
+    "Io": -5.27,
+    "Spectre": -5.2,
+    "Largo": -5.04,
+    "Clinkz": -5.0,
+    "Wraith King": -4.89
+  },
+  "explicit_synergies": {
+    "Lycan": 8.02,
+    "Io": 6.6,
+    "Lone Druid": 5.54,
+    "Keeper of the Light": 5.24,
+    "Chen": 5.08,
+    "Marci": 4.26,
+    "Timbersaw": 3.84,
+    "Kez": 3.53,
+    "Puck": 3.43,
+    "Spectre": 3.29
+  }
+}

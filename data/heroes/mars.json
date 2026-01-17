@@ -1,0 +1,54 @@
+{
+  "name": "Mars",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "magical_damage",
+    "aoe",
+    "tank",
+    "lockdown"
+  ],
+  "positions": {
+    "pos_1": 2.7,
+    "pos_2": 5.3,
+    "pos_3": 82.5,
+    "pos_4": 6.2,
+    "pos_5": 3.3
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 10,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Dazzle": -10.87,
+    "Phantom Lancer": -9.66,
+    "Meepo": -8.93,
+    "Visage": -8.92,
+    "Omniknight": -8.58,
+    "Enigma": -8.27,
+    "Broodmother": -8.12,
+    "Wraith King": -7.9,
+    "Lifestealer": -7.36,
+    "Elder Titan": -7.03
+  },
+  "explicit_synergies": {
+    "Chen": 4.82,
+    "Doom": 4.2,
+    "Timbersaw": 4.07,
+    "Dawnbreaker": 3.78,
+    "Io": 3.53,
+    "Night Stalker": 3.2,
+    "Shadow Fiend": 2.94,
+    "Undying": 2.83,
+    "Bloodseeker": 2.57,
+    "Abaddon": 2.38
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Ringmaster",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "pure_damage",
+    "save",
+    "lockdown",
+    "aoe",
+    "fear"
+  ],
+  "positions": {
+    "pos_1": 1.4,
+    "pos_2": 2.1,
+    "pos_3": 2.3,
+    "pos_4": 41.1,
+    "pos_5": 52.9
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 9,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Elder Titan": -10.61,
+    "Dazzle": -8.51,
+    "Spectre": -8.14,
+    "Visage": -7.83,
+    "Meepo": -7.59,
+    "Tinker": -7.53,
+    "Winter Wyvern": -7.37,
+    "Enchantress": -7.14,
+    "Wraith King": -6.94,
+    "Death Prophet": -6.7
+  },
+  "explicit_synergies": {
+    "Visage": 9.03,
+    "Meepo": 9.03,
+    "Alchemist": 7.39,
+    "Tusk": 5.88,
+    "Brewmaster": 5.75,
+    "Elder Titan": 4.96,
+    "Batrider": 4.84,
+    "Disruptor": 4.47,
+    "Pangolier": 4.34,
+    "Lone Druid": 4.16
+  }
+}

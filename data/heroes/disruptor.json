@@ -1,0 +1,53 @@
+{
+  "name": "Disruptor",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "initiator",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "disable_heavy",
+    "initiator",
+    "aoe",
+    "vision"
+  ],
+  "positions": {
+    "pos_1": 1.0,
+    "pos_2": 1.6,
+    "pos_3": 1.3,
+    "pos_4": 30.9,
+    "pos_5": 65.2
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Arc Warden": -5.05,
+    "Clinkz": -4.98,
+    "Winter Wyvern": -4.92,
+    "Elder Titan": -4.63,
+    "Vengeful Spirit": -4.47,
+    "Wraith King": -4.44,
+    "Legion Commander": -4.32,
+    "Spectre": -4.31,
+    "Outworld Destroyer": -4.21,
+    "Kunkka": -4.2
+  },
+  "explicit_synergies": {
+    "Io": 7.49,
+    "Lycan": 5.61,
+    "Keeper of the Light": 5.53,
+    "Ringmaster": 4.77,
+    "Marci": 4.65,
+    "Medusa": 3.87,
+    "Terrorblade": 3.67,
+    "Visage": 3.6,
+    "Viper": 2.86,
+    "Razor": 2.75
+  }
+}

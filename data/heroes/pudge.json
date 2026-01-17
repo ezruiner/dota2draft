@@ -1,0 +1,54 @@
+{
+  "name": "Pudge",
+  "primary_attribute": "strength",
+  "roles": [
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "pure_damage",
+    "magical_damage",
+    "tank",
+    "burst_damage",
+    "lockdown"
+  ],
+  "positions": {
+    "pos_1": 5.0,
+    "pos_2": 16.5,
+    "pos_3": 20.9,
+    "pos_4": 29.1,
+    "pos_5": 28.5
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 8,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Meepo": -5.44,
+    "Broodmother": -4.6,
+    "Wraith King": -4.21,
+    "Chaos Knight": -3.59,
+    "Visage": -3.3,
+    "Lycan": -2.49,
+    "Vengeful Spirit": -2.3,
+    "Spectre": -2.26,
+    "Omniknight": -2.14,
+    "Alchemist": -2.05
+  },
+  "explicit_synergies": {
+    "Muerta": 2.63,
+    "Alchemist": 2.62,
+    "Oracle": 2.61,
+    "Winter Wyvern": 2.46,
+    "Naga Siren": 2.38,
+    "Silencer": 2.28,
+    "Keeper of the Light": 2.2,
+    "Ancient Apparition": 2.12,
+    "Pugna": 2.11,
+    "Underlord": 1.86
+  }
+}

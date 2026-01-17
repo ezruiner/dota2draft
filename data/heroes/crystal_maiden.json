@@ -1,0 +1,52 @@
+{
+  "name": "Crystal Maiden",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "aura",
+    "aoe",
+    "root",
+    "slow"
+  ],
+  "positions": {
+    "pos_1": 1.9,
+    "pos_2": 2.8,
+    "pos_3": 2.1,
+    "pos_4": 29.0,
+    "pos_5": 64.1
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 7,
+    "late": 4
+  },
+  "explicit_counters": {
+    "Elder Titan": -5.93,
+    "Phoenix": -4.66,
+    "Clinkz": -3.88,
+    "Juggernaut": -3.78,
+    "Winter Wyvern": -3.45,
+    "Witch Doctor": -2.81,
+    "Wraith King": -2.79,
+    "Omniknight": -2.78,
+    "Drow Ranger": -2.7,
+    "Spectre": -2.68
+  },
+  "explicit_synergies": {
+    "Visage": 5.25,
+    "Beastmaster": 4.61,
+    "Dark Seer": 3.22,
+    "Dazzle": 2.98,
+    "Warlock": 2.74,
+    "Pugna": 2.59,
+    "Templar Assassin": 2.41,
+    "Enchantress": 2.37,
+    "Enigma": 2.37,
+    "Kez": 2.17
+  }
+}

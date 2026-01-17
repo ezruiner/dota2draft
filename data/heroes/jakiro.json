@@ -1,0 +1,53 @@
+{
+  "name": "Jakiro",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "aoe",
+    "push",
+    "disable_heavy",
+    "burn"
+  ],
+  "positions": {
+    "pos_1": 2.6,
+    "pos_2": 9.2,
+    "pos_3": 3.8,
+    "pos_4": 31.4,
+    "pos_5": 53.0
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 7,
+    "late": 4
+  },
+  "explicit_counters": {
+    "Legion Commander": -7.08,
+    "Spectre": -6.6,
+    "Clinkz": -5.56,
+    "Arc Warden": -5.19,
+    "Lifestealer": -5.1,
+    "Winter Wyvern": -4.85,
+    "Pudge": -4.64,
+    "Dark Seer": -4.64,
+    "Phantom Lancer": -4.62,
+    "Broodmother": -4.55
+  },
+  "explicit_synergies": {
+    "Largo": 3.85,
+    "Io": 3.36,
+    "Meepo": 2.95,
+    "Pangolier": 2.77,
+    "Kez": 2.69,
+    "Brewmaster": 2.58,
+    "Marci": 2.51,
+    "Treant Protector": 2.43,
+    "Broodmother": 2.31,
+    "Earth Spirit": 2.08
+  }
+}

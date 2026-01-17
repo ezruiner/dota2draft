@@ -1,0 +1,53 @@
+{
+  "name": "Rubick",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "mobile",
+    "spell_stealer",
+    "disable_heavy",
+    "complexity_high"
+  ],
+  "positions": {
+    "pos_1": 2.1,
+    "pos_2": 24.8,
+    "pos_3": 4.9,
+    "pos_4": 39.4,
+    "pos_5": 28.7
+  },
+  "game_phase": {
+    "early": 4,
+    "mid": 7,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Spectre": -9.32,
+    "Meepo": -9.06,
+    "Clinkz": -8.05,
+    "Legion Commander": -7.82,
+    "Broodmother": -7.61,
+    "Elder Titan": -7.02,
+    "Visage": -6.49,
+    "Drow Ranger": -6.15,
+    "Dazzle": -5.92,
+    "Razor": -5.66
+  },
+  "explicit_synergies": {
+    "Chen": 6.67,
+    "Keeper of the Light": 4.82,
+    "Naga Siren": 4.51,
+    "Terrorblade": 2.96,
+    "Lone Druid": 2.72,
+    "Kunkka": 2.31,
+    "Largo": 2.27,
+    "Underlord": 2.19,
+    "Visage": 2.09,
+    "Dawnbreaker": 1.74
+  }
+}

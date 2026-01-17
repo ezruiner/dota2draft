@@ -1,0 +1,52 @@
+{
+  "name": "Phantom Lancer",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "nuker"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "late_scaler",
+    "splitpush",
+    "aoe",
+    "mana_dependent"
+  ],
+  "positions": {
+    "pos_1": 79.8,
+    "pos_2": 3.9,
+    "pos_3": 7.9,
+    "pos_4": 3.8,
+    "pos_5": 4.5
+  },
+  "game_phase": {
+    "early": 2,
+    "mid": 7,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Meepo": -5.21,
+    "Tidehunter": -5.2,
+    "Crystal Maiden": -3.85,
+    "Leshrac": -3.59,
+    "Axe": -3.41,
+    "Lina": -3.41,
+    "Necrophos": -3.3,
+    "Underlord": -2.75,
+    "Sand King": -2.16,
+    "Centaur Warrunner": -2.07
+  },
+  "explicit_synergies": {
+    "Brewmaster": 5.04,
+    "Chen": 4.51,
+    "Elder Titan": 3.76,
+    "Faceless Void": 3.71,
+    "Lycan": 3.44,
+    "Alchemist": 2.99,
+    "Techies": 2.84,
+    "Kunkka": 2.75,
+    "Keeper of the Light": 2.66,
+    "Lina": 2.52
+  }
+}

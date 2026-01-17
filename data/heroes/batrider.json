@@ -1,0 +1,50 @@
+{
+  "name": "Batrider",
+  "primary_attribute": "universal",
+  "roles": [
+    "initiator",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "mobile",
+    "bkb_disable",
+    "flying"
+  ],
+  "positions": {
+    "pos_1": 4.8,
+    "pos_2": 25.0,
+    "pos_3": 15.2,
+    "pos_4": 33.4,
+    "pos_5": 21.5
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 9,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Spectre": -14.03,
+    "Phoenix": -14.02,
+    "Winter Wyvern": -13.46,
+    "Legion Commander": -12.81,
+    "Phantom Lancer": -12.35,
+    "Abaddon": -10.83,
+    "Visage": -10.42,
+    "Enigma": -10.38,
+    "Grimstroke": -10.16,
+    "Disruptor": -10.07
+  },
+  "explicit_synergies": {
+    "Enchantress": 11.3,
+    "Terrorblade": 11.23,
+    "Visage": 8.77,
+    "Largo": 7.45,
+    "Monkey King": 6.39,
+    "Chaos Knight": 5.98,
+    "Sven": 5.89,
+    "Vengeful Spirit": 5.8,
+    "Chen": 5.75,
+    "Grimstroke": 5.61
+  }
+}

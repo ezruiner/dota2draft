@@ -1,0 +1,55 @@
+{
+  "name": "Night Stalker",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "mobile",
+    "silence",
+    "vision",
+    "burst_damage"
+  ],
+  "positions": {
+    "pos_1": 6.6,
+    "pos_2": 8.3,
+    "pos_3": 74.0,
+    "pos_4": 7.4,
+    "pos_5": 3.8
+  },
+  "game_phase": {
+    "early": 3,
+    "mid": 10,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Broodmother": -10.31,
+    "Lycan": -9.87,
+    "Bounty Hunter": -8.08,
+    "Meepo": -6.27,
+    "Beastmaster": -5.21,
+    "Wraith King": -4.92,
+    "Spectre": -4.88,
+    "Vengeful Spirit": -4.4,
+    "Chaos Knight": -4.14,
+    "Troll Warlord": -3.9
+  },
+  "explicit_synergies": {
+    "Brewmaster": 10.54,
+    "Lycan": 9.84,
+    "Elder Titan": 9.56,
+    "Underlord": 5.63,
+    "Doom": 4.8,
+    "Arc Warden": 4.76,
+    "Chen": 4.71,
+    "Grimstroke": 3.67,
+    "Dawnbreaker": 3.58,
+    "Lifestealer": 3.55
+  }
+}

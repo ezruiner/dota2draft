@@ -1,0 +1,53 @@
+{
+  "name": "Ursa",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "burst_damage",
+    "late_scaler",
+    "anti_tank",
+    "lockdown"
+  ],
+  "positions": {
+    "pos_1": 80.2,
+    "pos_2": 4.4,
+    "pos_3": 9.9,
+    "pos_4": 2.7,
+    "pos_5": 2.9
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Brewmaster": -9.89,
+    "Spectre": -9.73,
+    "Meepo": -8.72,
+    "Broodmother": -8.6,
+    "Wraith King": -8.02,
+    "Clinkz": -7.24,
+    "Arc Warden": -7.09,
+    "Omniknight": -6.8,
+    "Slardar": -5.93,
+    "Shadow Shaman": -5.35
+  },
+  "explicit_synergies": {
+    "Gyrocopter": 3.93,
+    "Underlord": 3.08,
+    "Phantom Assassin": 3.02,
+    "Treant Protector": 2.75,
+    "Faceless Void": 2.66,
+    "Sven": 2.4,
+    "Chen": 2.36,
+    "Razor": 2.13,
+    "Broodmother": 2.12,
+    "Naga Siren": 2.1
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Death Prophet",
+  "primary_attribute": "universal",
+  "roles": [
+    "carry",
+    "nuker",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "push",
+    "sustain",
+    "silence",
+    "durable",
+    "mobile"
+  ],
+  "positions": {
+    "pos_1": 5.4,
+    "pos_2": 42.8,
+    "pos_3": 26.8,
+    "pos_4": 14.9,
+    "pos_5": 10.1
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 10,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Arc Warden": -12.2,
+    "Broodmother": -11.77,
+    "Spectre": -8.47,
+    "Phoenix": -7.77,
+    "Bloodseeker": -7.57,
+    "Meepo": -6.67,
+    "Chaos Knight": -6.53,
+    "Clinkz": -6.44,
+    "Vengeful Spirit": -5.57,
+    "Lycan": -5.45
+  },
+  "explicit_synergies": {
+    "Chen": 12.64,
+    "Shadow Demon": 5.96,
+    "Enigma": 5.88,
+    "Doom": 5.53,
+    "Bane": 5.3,
+    "Earth Spirit": 5.28,
+    "Brewmaster": 4.87,
+    "Tiny": 4.83,
+    "Puck": 4.79,
+    "Spectre": 3.85
+  }
+}

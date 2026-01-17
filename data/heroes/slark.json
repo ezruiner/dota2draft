@@ -1,0 +1,54 @@
+{
+  "name": "Slark",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "nuker",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "mobile",
+    "late_scaler",
+    "dispel",
+    "elusive",
+    "stealth"
+  ],
+  "positions": {
+    "pos_1": 69.4,
+    "pos_2": 8.1,
+    "pos_3": 9.0,
+    "pos_4": 7.0,
+    "pos_5": 6.4
+  },
+  "game_phase": {
+    "early": 4,
+    "mid": 8,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Enigma": -9.77,
+    "Omniknight": -8.76,
+    "Oracle": -8.75,
+    "Grimstroke": -8.56,
+    "Meepo": -8.46,
+    "Night Stalker": -8.08,
+    "Broodmother": -7.52,
+    "Legion Commander": -7.4,
+    "Bloodseeker": -7.3,
+    "Vengeful Spirit": -7.13
+  },
+  "explicit_synergies": {
+    "Elder Titan": 7.45,
+    "Enchantress": 3.85,
+    "Troll Warlord": 3.7,
+    "Naga Siren": 3.34,
+    "Monkey King": 3.14,
+    "Luna": 2.92,
+    "Keeper of the Light": 2.86,
+    "Viper": 2.79,
+    "Io": 2.62,
+    "Sven": 2.54
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Vengeful Spirit",
+  "primary_attribute": "agility",
+  "roles": [
+    "nuker",
+    "initiator",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "physical_damage",
+    "magical_damage",
+    "save",
+    "repositioning",
+    "armor_reduction",
+    "rebirth_mechanic"
+  ],
+  "positions": {
+    "pos_1": 7.0,
+    "pos_2": 7.5,
+    "pos_3": 14.2,
+    "pos_4": 33.8,
+    "pos_5": 37.6
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 7,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Spectre": -5.41,
+    "Phantom Lancer": -3.44,
+    "Wraith King": -2.87,
+    "Winter Wyvern": -2.57,
+    "Broodmother": -1.81,
+    "Necrophos": -1.75,
+    "Lich": -1.67,
+    "Void Spirit": -1.48,
+    "Underlord": -1.38,
+    "Elder Titan": -1.35
+  },
+  "explicit_synergies": {
+    "Dark Seer": 10.96,
+    "Chen": 6.57,
+    "Batrider": 6.4,
+    "Medusa": 4.46,
+    "Gyrocopter": 3.83,
+    "Lycan": 3.2,
+    "Io": 3.19,
+    "Kunkka": 3.01,
+    "Sven": 3.01,
+    "Huskar": 2.94
+  }
+}

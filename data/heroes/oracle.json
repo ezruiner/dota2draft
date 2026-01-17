@@ -1,0 +1,53 @@
+{
+  "name": "Oracle",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "sustain",
+    "save",
+    "dispel",
+    "burst_damage"
+  ],
+  "positions": {
+    "pos_1": 1.6,
+    "pos_2": 8.7,
+    "pos_3": 2.2,
+    "pos_4": 27.1,
+    "pos_5": 60.4
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 8,
+    "late": 9
+  },
+  "explicit_counters": {
+    "Meepo": -9.54,
+    "Riki": -6.51,
+    "Treant Protector": -5.84,
+    "Bane": -5.81,
+    "Winter Wyvern": -5.65,
+    "Alchemist": -5.62,
+    "Spectre": -5.61,
+    "Enchantress": -5.41,
+    "Outworld Destroyer": -5.09,
+    "Wraith King": -4.64
+  },
+  "explicit_synergies": {
+    "Pangolier": 7.12,
+    "Dark Seer": 6.88,
+    "Winter Wyvern": 5.7,
+    "Bane": 4.45,
+    "Clockwerk": 4.39,
+    "Viper": 4.37,
+    "Tiny": 4.07,
+    "Leshrac": 3.57,
+    "Dawnbreaker": 3.55,
+    "Sven": 3.12
+  }
+}

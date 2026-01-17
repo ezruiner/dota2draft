@@ -1,0 +1,54 @@
+{
+  "name": "Elder Titan",
+  "primary_attribute": "strength",
+  "roles": [
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "armor_reduction",
+    "magic_resistance_reduction",
+    "aoe",
+    "micro",
+    "initiator"
+  ],
+  "positions": {
+    "pos_1": 7.1,
+    "pos_2": 7.2,
+    "pos_3": 31.1,
+    "pos_4": 30.5,
+    "pos_5": 24.0
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 8,
+    "late": 9
+  },
+  "explicit_counters": {
+    "Troll Warlord": -12.07,
+    "Wraith King": -10.2,
+    "Clockwerk": -7.5,
+    "Clinkz": -5.71,
+    "Juggernaut": -5.6,
+    "Phoenix": -5.46,
+    "Alchemist": -4.87,
+    "Lone Druid": -4.72,
+    "Brewmaster": -4.39,
+    "Ogre Magi": -4.29
+  },
+  "explicit_synergies": {
+    "Chen": 31.97,
+    "Void Spirit": 10.35,
+    "Clockwerk": 9.58,
+    "Tiny": 9.06,
+    "Tidehunter": 9.01,
+    "Dark Willow": 7.54,
+    "Lycan": 7.1,
+    "Templar Assassin": 7.05,
+    "Night Stalker": 6.66,
+    "Slark": 6.65
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Kez",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "mobile",
+    "physical_damage",
+    "burst_damage",
+    "complexity_high"
+  ],
+  "positions": {
+    "pos_1": 48.8,
+    "pos_2": 32.0,
+    "pos_3": 9.9,
+    "pos_4": 5.0,
+    "pos_5": 4.3
+  },
+  "game_phase": {
+    "early": 5,
+    "mid": 9,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Omniknight": -8.94,
+    "Dazzle": -8.38,
+    "Shadow Shaman": -8.12,
+    "Enigma": -7.92,
+    "Medusa": -7.61,
+    "Visage": -7.59,
+    "Lone Druid": -7.45,
+    "Vengeful Spirit": -7.14,
+    "Clockwerk": -6.75,
+    "Spectre": -6.45
+  },
+  "explicit_synergies": {
+    "Luna": 6.79,
+    "Enigma": 6.11,
+    "Doom": 5.55,
+    "Drow Ranger": 5.46,
+    "Puck": 5.01,
+    "Alchemist": 4.95,
+    "Huskar": 4.84,
+    "Brewmaster": 4.6,
+    "Troll Warlord": 4.46,
+    "Dawnbreaker": 4.13
+  }
+}

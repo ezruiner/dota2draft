@@ -1,0 +1,53 @@
+{
+  "name": "Tusk",
+  "primary_attribute": "strength",
+  "roles": [
+    "nuker",
+    "initiator",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "magical_damage",
+    "physical_damage",
+    "burst_damage",
+    "save",
+    "lockdown"
+  ],
+  "positions": {
+    "pos_1": 4.0,
+    "pos_2": 8.0,
+    "pos_3": 16.5,
+    "pos_4": 39.8,
+    "pos_5": 31.8
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 8,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Broodmother": -6.72,
+    "Underlord": -6.32,
+    "Winter Wyvern": -6.27,
+    "Lich": -5.74,
+    "Death Prophet": -5.6,
+    "Spectre": -5.44,
+    "Omniknight": -5.43,
+    "Venomancer": -5.4,
+    "Bounty Hunter": -5.28,
+    "Crystal Maiden": -5.23
+  },
+  "explicit_synergies": {
+    "Dark Seer": 6.58,
+    "Ringmaster": 5.18,
+    "Shadow Demon": 4.41,
+    "Keeper of the Light": 4.34,
+    "Beastmaster": 3.98,
+    "Monkey King": 3.93,
+    "Huskar": 3.86,
+    "Lifestealer": 3.73,
+    "Troll Warlord": 3.39,
+    "Enchantress": 3.24
+  }
+}

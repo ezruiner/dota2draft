@@ -1,0 +1,52 @@
+{
+  "name": "Gyrocopter",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "nuker",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "aoe",
+    "nuker",
+    "farming",
+    "glass_cannon"
+  ],
+  "positions": {
+    "pos_1": 61.0,
+    "pos_2": 7.9,
+    "pos_3": 7.5,
+    "pos_4": 14.2,
+    "pos_5": 9.4
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 8,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Phoenix": -9.21,
+    "Alchemist": -8.58,
+    "Meepo": -8.5,
+    "Brewmaster": -8.29,
+    "Bloodseeker": -7.58,
+    "Broodmother": -7.48,
+    "Elder Titan": -7.45,
+    "Ogre Magi": -7.35,
+    "Razor": -6.84,
+    "Legion Commander": -6.82
+  },
+  "explicit_synergies": {
+    "Bane": 6.05,
+    "Brewmaster": 5.12,
+    "Magnus": 4.71,
+    "Troll Warlord": 4.38,
+    "Keeper of the Light": 4.14,
+    "Lone Druid": 4.14,
+    "Vengeful Spirit": 4.03,
+    "Visage": 4.01,
+    "Riki": 3.62,
+    "Ursa": 3.43
+  }
+}

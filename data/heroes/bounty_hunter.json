@@ -1,0 +1,50 @@
+{
+  "name": "Bounty Hunter",
+  "primary_attribute": "agility",
+  "roles": [
+    "nuker"
+  ],
+  "tags": [
+    "melee",
+    "invis",
+    "vision",
+    "burst_damage",
+    "roaming"
+  ],
+  "positions": {
+    "pos_1": 5.7,
+    "pos_2": 9.6,
+    "pos_3": 10.9,
+    "pos_4": 50.6,
+    "pos_5": 23.2
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 9,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Meepo": -7.77,
+    "Phantom Lancer": -4.38,
+    "Broodmother": -4.17,
+    "Legion Commander": -4.03,
+    "Vengeful Spirit": -3.73,
+    "Wraith King": -3.25,
+    "Leshrac": -3.05,
+    "Shadow Shaman": -2.92,
+    "Enigma": -2.75,
+    "Tidehunter": -2.25
+  },
+  "explicit_synergies": {
+    "Pangolier": 6.55,
+    "Troll Warlord": 4.72,
+    "Ancient Apparition": 3.6,
+    "Storm Spirit": 3.3,
+    "Leshrac": 3.21,
+    "Lifestealer": 2.76,
+    "Largo": 2.73,
+    "Earth Spirit": 2.66,
+    "Visage": 2.64,
+    "Brewmaster": 2.56
+  }
+}

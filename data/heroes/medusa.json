@@ -1,0 +1,53 @@
+{
+  "name": "Medusa",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "physical_damage",
+    "late_scaler",
+    "aoe",
+    "tank",
+    "mana_dependent"
+  ],
+  "positions": {
+    "pos_1": 72.0,
+    "pos_2": 13.3,
+    "pos_3": 8.7,
+    "pos_4": 3.0,
+    "pos_5": 3.0
+  },
+  "game_phase": {
+    "early": 2,
+    "mid": 6,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Anti-Mage": -11.55,
+    "Nyx Assassin": -8.83,
+    "Clockwerk": -6.44,
+    "Alchemist": -5.94,
+    "Broodmother": -5.27,
+    "Outworld Destroyer": -4.9,
+    "Spectre": -4.78,
+    "Clinkz": -4.65,
+    "Lich": -4.41,
+    "Winter Wyvern": -4.1
+  },
+  "explicit_synergies": {
+    "Bane": 7.58,
+    "Magnus": 4.54,
+    "Vengeful Spirit": 4.16,
+    "Storm Spirit": 3.79,
+    "Ancient Apparition": 3.69,
+    "Disruptor": 3.67,
+    "Shadow Demon": 3.53,
+    "Viper": 3.3,
+    "Enigma": 2.96,
+    "Earth Spirit": 2.25
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Nyx Assassin",
+  "primary_attribute": "universal",
+  "roles": [
+    "nuker",
+    "initiator",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "magical_damage",
+    "burst_damage",
+    "stealth",
+    "anti_mage",
+    "lockdown"
+  ],
+  "positions": {
+    "pos_1": 3.1,
+    "pos_2": 18.3,
+    "pos_3": 13.4,
+    "pos_4": 44.8,
+    "pos_5": 20.4
+  },
+  "game_phase": {
+    "early": 5,
+    "mid": 10,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Meepo": -5.07,
+    "Legion Commander": -3.97,
+    "Spectre": -3.66,
+    "Chen": -3.33,
+    "Chaos Knight": -3.05,
+    "Omniknight": -2.28,
+    "Visage": -2.26,
+    "Disruptor": -2.25,
+    "Slardar": -1.98,
+    "Wraith King": -1.92
+  },
+  "explicit_synergies": {
+    "Dawnbreaker": 4.7,
+    "Chen": 3.83,
+    "Naga Siren": 3.77,
+    "Meepo": 3.44,
+    "Enchantress": 3.18,
+    "Largo": 2.64,
+    "Oracle": 2.6,
+    "Tinker": 2.56,
+    "Phantom Lancer": 2.52,
+    "Alchemist": 2.51
+  }
+}

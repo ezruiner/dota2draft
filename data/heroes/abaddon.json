@@ -1,0 +1,51 @@
+{
+  "name": "Abaddon",
+  "primary_attribute": "universal",
+  "roles": [
+    "carry",
+    "durable",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "sustain",
+    "save",
+    "strong_dispel"
+  ],
+  "positions": {
+    "pos_1": 30.4,
+    "pos_2": 3.1,
+    "pos_3": 35.5,
+    "pos_4": 14.1,
+    "pos_5": 16.9
+  },
+  "game_phase": {
+    "early": 4,
+    "mid": 8,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Chen": -13.75,
+    "Broodmother": -8.51,
+    "Elder Titan": -7.03,
+    "Meepo": -4.94,
+    "Undying": -4.52,
+    "Visage": -4.5,
+    "Grimstroke": -3.77,
+    "Phoenix": -3.68,
+    "Alchemist": -3.57,
+    "Keeper of the Light": -3.07
+  },
+  "explicit_synergies": {
+    "Beastmaster": 8.08,
+    "Brewmaster": 7.92,
+    "Bane": 7.75,
+    "Chaos Knight": 5.12,
+    "Void Spirit": 4.37,
+    "Doom": 4.08,
+    "Terrorblade": 4.08,
+    "Axe": 3.89,
+    "Anti-Mage": 3.15,
+    "Warlock": 3.1
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Silencer",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "pure_damage",
+    "silence",
+    "anti_mage",
+    "late_scaler"
+  ],
+  "positions": {
+    "pos_1": 3.2,
+    "pos_2": 14.0,
+    "pos_3": 3.9,
+    "pos_4": 37.0,
+    "pos_5": 41.9
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 7,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Broodmother": -9.14,
+    "Brewmaster": -8.61,
+    "Abaddon": -8.3,
+    "Arc Warden": -8.06,
+    "Phantom Lancer": -7.13,
+    "Spectre": -6.8,
+    "Legion Commander": -5.97,
+    "Razor": -5.82,
+    "Wraith King": -5.53,
+    "Tidehunter": -5.46
+  },
+  "explicit_synergies": {
+    "Meepo": 3.27,
+    "Tinker": 2.68,
+    "Troll Warlord": 2.55,
+    "Dark Seer": 2.45,
+    "Pudge": 2.18,
+    "Tusk": 2.02,
+    "Magnus": 1.77,
+    "Marci": 1.73,
+    "Broodmother": 1.72,
+    "Arc Warden": 1.6
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Omniknight",
+  "primary_attribute": "strength",
+  "roles": [
+    "nuker",
+    "durable",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "pure_damage",
+    "sustain",
+    "heal_based",
+    "save",
+    "dispel",
+    "buff_specialist"
+  ],
+  "positions": {
+    "pos_1": 7.0,
+    "pos_2": 6.9,
+    "pos_3": 36.0,
+    "pos_4": 25.4,
+    "pos_5": 24.7
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 8,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Lycan": -4.23,
+    "Broodmother": -3.66,
+    "Visage": -3.56,
+    "Muerta": -2.33,
+    "Phantom Lancer": -1.94,
+    "Dazzle": -1.73,
+    "Enigma": -1.62,
+    "Undying": -1.39,
+    "Alchemist": -1.01,
+    "Necrophos": -0.92
+  },
+  "explicit_synergies": {
+    "Primal Beast": 5.42,
+    "Alchemist": 5.23,
+    "Pangolier": 5.19,
+    "Beastmaster": 4.94,
+    "Dawnbreaker": 4.32,
+    "Elder Titan": 4.3,
+    "Leshrac": 4.14,
+    "Winter Wyvern": 4.07,
+    "Chen": 3.86,
+    "Gyrocopter": 3.62
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "Razor",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "nuker",
+    "durable"
+  ],
+  "tags": [
+    "ranged",
+    "physical_damage",
+    "magical_damage",
+    "anti_carry",
+    "mobile",
+    "tank"
+  ],
+  "positions": {
+    "pos_1": 22.3,
+    "pos_2": 24.8,
+    "pos_3": 36.8,
+    "pos_4": 9.4,
+    "pos_5": 6.7
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Elder Titan": -7.04,
+    "Broodmother": -6.51,
+    "Winter Wyvern": -5.95,
+    "Meepo": -5.59,
+    "Sand King": -4.34,
+    "Clockwerk": -3.93,
+    "Arc Warden": -3.49,
+    "Wraith King": -3.3,
+    "Witch Doctor": -3.24,
+    "Templar Assassin": -3.14
+  },
+  "explicit_synergies": {
+    "Chen": 6.49,
+    "Troll Warlord": 5.39,
+    "Elder Titan": 4.94,
+    "Death Prophet": 3.91,
+    "Keeper of the Light": 3.64,
+    "Sand King": 3.21,
+    "Io": 3.21,
+    "Juggernaut": 3.16,
+    "Visage": 2.91,
+    "Disruptor": 2.85
+  }
+}

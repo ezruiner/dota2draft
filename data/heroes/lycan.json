@@ -1,0 +1,51 @@
+{
+  "name": "Lycan",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "durable"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "push",
+    "mobile",
+    "summoner"
+  ],
+  "positions": {
+    "pos_1": 15.1,
+    "pos_2": 13.7,
+    "pos_3": 53.5,
+    "pos_4": 11.2,
+    "pos_5": 6.5
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 10,
+    "late": 4
+  },
+  "explicit_counters": {
+    "Naga Siren": -11.43,
+    "Tidehunter": -9.49,
+    "Phantom Lancer": -9.02,
+    "Clockwerk": -8.5,
+    "Enigma": -7.55,
+    "Beastmaster": -6.84,
+    "Troll Warlord": -6.82,
+    "Crystal Maiden": -6.0,
+    "Sven": -5.49,
+    "Sand King": -5.48
+  },
+  "explicit_synergies": {
+    "Dark Seer": 15.15,
+    "Primal Beast": 11.72,
+    "Bristleback": 11.67,
+    "Pugna": 8.21,
+    "Terrorblade": 8.14,
+    "Meepo": 7.67,
+    "Night Stalker": 7.54,
+    "Elder Titan": 7.1,
+    "Dazzle": 6.71,
+    "Slardar": 6.56
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Sven",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "burst_damage",
+    "aoe",
+    "tank",
+    "late_scaler"
+  ],
+  "positions": {
+    "pos_1": 71.8,
+    "pos_2": 3.5,
+    "pos_3": 15.1,
+    "pos_4": 5.0,
+    "pos_5": 4.6
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 9,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Broodmother": -10.59,
+    "Troll Warlord": -8.47,
+    "Wraith King": -7.93,
+    "Arc Warden": -7.8,
+    "Treant Protector": -7.47,
+    "Abaddon": -6.87,
+    "Clockwerk": -6.77,
+    "Brewmaster": -6.65,
+    "Clinkz": -6.64,
+    "Enchantress": -6.49
+  },
+  "explicit_synergies": {
+    "Riki": 7.7,
+    "Elder Titan": 6.71,
+    "Troll Warlord": 5.56,
+    "Meepo": 5.28,
+    "Batrider": 4.29,
+    "Ringmaster": 4.25,
+    "Leshrac": 4.15,
+    "Lycan": 4.09,
+    "Dark Seer": 3.86,
+    "Dawnbreaker": 3.63
+  }
+}

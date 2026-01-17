@@ -1,0 +1,52 @@
+{
+  "name": "Dawnbreaker",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "durable"
+  ],
+  "tags": [
+    "melee",
+    "global",
+    "sustain",
+    "aoe",
+    "burst_damage",
+    "initiator"
+  ],
+  "positions": {
+    "pos_1": 4.1,
+    "pos_2": 7.2,
+    "pos_3": 74.1,
+    "pos_4": 9.1,
+    "pos_5": 5.5
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 9,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Nyx Assassin": -7.32,
+    "Phoenix": -7.08,
+    "Broodmother": -5.53,
+    "Clinkz": -5.37,
+    "Dazzle": -5.33,
+    "Winter Wyvern": -4.47,
+    "Lich": -4.21,
+    "Razor": -4.0,
+    "Underlord": -4.0,
+    "Lifestealer": -3.95
+  },
+  "explicit_synergies": {
+    "Doom": 8.68,
+    "Largo": 5.49,
+    "Elder Titan": 5.44,
+    "Sand King": 4.51,
+    "Primal Beast": 4.45,
+    "Nyx Assassin": 4.1,
+    "Kez": 4.03,
+    "Dark Seer": 3.98,
+    "Visage": 3.81,
+    "Oracle": 3.75
+  }
+}

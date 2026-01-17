@@ -1,0 +1,55 @@
+{
+  "name": "Invoker",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "carry",
+    "nuker",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "mobile",
+    "magical_damage",
+    "late_scaler",
+    "burst_damage",
+    "dispel",
+    "aoe",
+    "disable_heavy"
+  ],
+  "positions": {
+    "pos_1": 2.3,
+    "pos_2": 58.7,
+    "pos_3": 4.1,
+    "pos_4": 21.3,
+    "pos_5": 13.5
+  },
+  "game_phase": {
+    "early": 4,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Meepo": -6.19,
+    "Broodmother": -5.88,
+    "Clinkz": -4.67,
+    "Void Spirit": -3.35,
+    "Riki": -3.12,
+    "Phantom Lancer": -2.97,
+    "Omniknight": -2.84,
+    "Slardar": -2.33,
+    "Legion Commander": -2.27,
+    "Alchemist": -2.23
+  },
+  "explicit_synergies": {
+    "Death Prophet": 1.89,
+    "Lone Druid": 1.82,
+    "Pangolier": 1.8,
+    "Shadow Demon": 1.79,
+    "Clockwerk": 1.78,
+    "Templar Assassin": 1.75,
+    "Io": 1.58,
+    "Phantom Lancer": 1.45,
+    "Dark Willow": 1.44,
+    "Underlord": 1.39
+  }
+}

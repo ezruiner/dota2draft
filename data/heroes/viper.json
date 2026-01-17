@@ -1,0 +1,54 @@
+{
+  "name": "Viper",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "tank",
+    "anti_tank",
+    "break",
+    "slow"
+  ],
+  "positions": {
+    "pos_1": 9.2,
+    "pos_2": 45.3,
+    "pos_3": 29.4,
+    "pos_4": 9.5,
+    "pos_5": 6.6
+  },
+  "game_phase": {
+    "early": 9,
+    "mid": 8,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Arc Warden": -9.49,
+    "Elder Titan": -9.13,
+    "Meepo": -8.82,
+    "Tinker": -6.88,
+    "Clinkz": -6.61,
+    "Phantom Lancer": -6.59,
+    "Broodmother": -6.21,
+    "Witch Doctor": -5.85,
+    "Visage": -5.43,
+    "Legion Commander": -5.32
+  },
+  "explicit_synergies": {
+    "Enigma": 6.45,
+    "Naga Siren": 4.24,
+    "Oracle": 4.07,
+    "Faceless Void": 3.41,
+    "Medusa": 3.3,
+    "Chaos Knight": 3.24,
+    "Earth Spirit": 3.14,
+    "Underlord": 2.93,
+    "Slark": 2.89,
+    "Arc Warden": 2.85
+  }
+}

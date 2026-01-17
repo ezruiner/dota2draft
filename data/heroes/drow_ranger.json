@@ -1,0 +1,51 @@
+{
+  "name": "Drow Ranger",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "glass_cannon",
+    "silence",
+    "aura",
+    "armor_piercing"
+  ],
+  "positions": {
+    "pos_1": 69.8,
+    "pos_2": 12.7,
+    "pos_3": 6.8,
+    "pos_4": 5.0,
+    "pos_5": 5.7
+  },
+  "game_phase": {
+    "early": 4,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Spectre": -6.4,
+    "Phantom Lancer": -3.83,
+    "Wraith King": -3.16,
+    "Arc Warden": -3.09,
+    "Lycan": -3.05,
+    "Winter Wyvern": -2.58,
+    "Clockwerk": -2.53,
+    "Broodmother": -1.71,
+    "Lich": -1.33,
+    "Chaos Knight": -1.21
+  },
+  "explicit_synergies": {
+    "Kez": 5.26,
+    "Pangolier": 3.75,
+    "Weaver": 3.28,
+    "Alchemist": 3.0,
+    "Vengeful Spirit": 2.86,
+    "Batrider": 2.44,
+    "Largo": 2.22,
+    "Storm Spirit": 2.19,
+    "Gyrocopter": 1.78,
+    "Chaos Knight": 1.75
+  }
+}

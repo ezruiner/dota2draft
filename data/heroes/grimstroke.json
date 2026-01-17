@@ -1,0 +1,52 @@
+{
+  "name": "Grimstroke",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "silence",
+    "stun",
+    "nuker",
+    "unique"
+  ],
+  "positions": {
+    "pos_1": 2.2,
+    "pos_2": 4.6,
+    "pos_3": 3.5,
+    "pos_4": 40.1,
+    "pos_5": 49.6
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Spectre": -8.51,
+    "Chaos Knight": -8.02,
+    "Lycan": -7.25,
+    "Underlord": -6.84,
+    "Meepo": -6.82,
+    "Clinkz": -6.77,
+    "Warlock": -6.71,
+    "Keeper of the Light": -6.3,
+    "Night Stalker": -5.99,
+    "Dazzle": -5.42
+  },
+  "explicit_synergies": {
+    "Batrider": 4.81,
+    "Marci": 4.65,
+    "Shadow Demon": 4.3,
+    "Clockwerk": 4.09,
+    "Largo": 4.08,
+    "Naga Siren": 3.92,
+    "Visage": 3.9,
+    "Primal Beast": 3.44,
+    "Oracle": 3.34,
+    "Dawnbreaker": 3.25
+  }
+}

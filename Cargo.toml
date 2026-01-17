@@ -1,0 +1,23 @@
+[package]
+name = "dota2draft"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "dota2draft"
+path = "src/lib.rs"
+
+[[bin]]
+name = "dota2draft"
+path = "src/main.rs"
+
+[[bin]]
+name = "stratz_requests"
+path = "src/stratz_requests.rs"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json", "blocking"] } # HTTP клиент
+tokio = { version = "1", features = ["full"] }   # Асинхронность
+futures = "0.3" # Для работы с потоками (аналог ThreadPool)

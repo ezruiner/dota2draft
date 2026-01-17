@@ -1,0 +1,51 @@
+{
+  "name": "Phantom Assassin",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "burst_damage",
+    "late_scaler",
+    "mobile",
+    "stealth"
+  ],
+  "positions": {
+    "pos_1": 73.8,
+    "pos_2": 7.4,
+    "pos_3": 7.6,
+    "pos_4": 4.9,
+    "pos_5": 6.3
+  },
+  "game_phase": {
+    "early": 3,
+    "mid": 6,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Void Spirit": -8.16,
+    "Meepo": -7.71,
+    "Wraith King": -7.65,
+    "Spectre": -7.63,
+    "Nyx Assassin": -7.24,
+    "Axe": -6.74,
+    "Vengeful Spirit": -6.7,
+    "Drow Ranger": -6.6,
+    "Clockwerk": -6.15,
+    "Keeper of the Light": -5.82
+  },
+  "explicit_synergies": {
+    "Visage": 4.6,
+    "Dark Seer": 3.88,
+    "Ursa": 3.32,
+    "Grimstroke": 2.94,
+    "Earth Spirit": 2.62,
+    "Riki": 2.62,
+    "Slark": 2.56,
+    "Sand King": 2.31,
+    "Skywrath Mage": 2.11,
+    "Magnus": 2.1
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Storm Spirit",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "mobile",
+    "burst_damage",
+    "late_scaler",
+    "mana_dependent"
+  ],
+  "positions": {
+    "pos_1": 6.4,
+    "pos_2": 82.4,
+    "pos_3": 4.1,
+    "pos_4": 4.3,
+    "pos_5": 2.9
+  },
+  "game_phase": {
+    "early": 5,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Meepo": -13.45,
+    "Troll Warlord": -8.78,
+    "Dazzle": -7.99,
+    "Broodmother": -7.87,
+    "Wraith King": -7.21,
+    "Arc Warden": -7.18,
+    "Legion Commander": -7.16,
+    "Pugna": -7.13,
+    "Night Stalker": -6.11,
+    "Nyx Assassin": -6.02
+  },
+  "explicit_synergies": {
+    "Terrorblade": 6.38,
+    "Elder Titan": 4.55,
+    "Medusa": 4.09,
+    "Largo": 3.5,
+    "Void Spirit": 3.37,
+    "Lich": 3.23,
+    "Doom": 3.18,
+    "Kez": 3.14,
+    "Enchantress": 2.94,
+    "Alchemist": 2.88
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Tidehunter",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "magical_damage",
+    "aoe",
+    "tank",
+    "lockdown"
+  ],
+  "positions": {
+    "pos_1": 4.9,
+    "pos_2": 5.1,
+    "pos_3": 72.2,
+    "pos_4": 11.9,
+    "pos_5": 5.9
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Omniknight": -5.51,
+    "Elder Titan": -4.83,
+    "Meepo": -4.55,
+    "Clinkz": -3.21,
+    "Lifestealer": -3.07,
+    "Legion Commander": -2.72,
+    "Necrophos": -2.69,
+    "Clockwerk": -2.54,
+    "Outworld Destroyer": -2.53,
+    "Nyx Assassin": -2.48
+  },
+  "explicit_synergies": {
+    "Elder Titan": 8.31,
+    "Lycan": 6.29,
+    "Naga Siren": 4.5,
+    "Visage": 3.88,
+    "Slardar": 3.67,
+    "Primal Beast": 3.43,
+    "Arc Warden": 3.31,
+    "Bloodseeker": 2.92,
+    "Doom": 2.75,
+    "Timbersaw": 2.62
+  }
+}

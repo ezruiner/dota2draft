@@ -1,0 +1,54 @@
+{
+  "name": "Hoodwink",
+  "primary_attribute": "agility",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "mobile",
+    "burst_damage",
+    "magical_damage",
+    "disable_heavy",
+    "break",
+    "nuker"
+  ],
+  "positions": {
+    "pos_1": 4.5,
+    "pos_2": 7.0,
+    "pos_3": 5.8,
+    "pos_4": 46.7,
+    "pos_5": 36.0
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 4
+  },
+  "explicit_counters": {
+    "Naga Siren": -7.62,
+    "Broodmother": -7.49,
+    "Meepo": -6.88,
+    "Legion Commander": -6.87,
+    "Void Spirit": -6.68,
+    "Vengeful Spirit": -6.54,
+    "Nyx Assassin": -6.52,
+    "Abaddon": -6.33,
+    "Spectre": -6.32,
+    "Arc Warden": -6.3
+  },
+  "explicit_synergies": {
+    "Chen": 5.56,
+    "Lone Druid": 5.01,
+    "Dark Seer": 3.75,
+    "Kez": 3.2,
+    "Beastmaster": 2.84,
+    "Puck": 2.8,
+    "Lycan": 2.79,
+    "Io": 2.47,
+    "Ringmaster": 2.35,
+    "Arc Warden": 2.3
+  }
+}

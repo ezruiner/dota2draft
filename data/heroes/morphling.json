@@ -1,0 +1,54 @@
+{
+  "name": "Morphling",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "nuker",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "physical_damage",
+    "magical_damage",
+    "mobile",
+    "late_scaler",
+    "sustain"
+  ],
+  "positions": {
+    "pos_1": 70.5,
+    "pos_2": 13.7,
+    "pos_3": 5.7,
+    "pos_4": 5.0,
+    "pos_5": 5.1
+  },
+  "game_phase": {
+    "early": 4,
+    "mid": 7,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Meepo": -11.48,
+    "Broodmother": -11.27,
+    "Spectre": -7.91,
+    "Phantom Lancer": -7.4,
+    "Shadow Shaman": -7.37,
+    "Outworld Destroyer": -7.13,
+    "Omniknight": -6.96,
+    "Nyx Assassin": -6.86,
+    "Night Stalker": -6.62,
+    "Abaddon": -6.48
+  },
+  "explicit_synergies": {
+    "Lone Druid": 7.5,
+    "Dark Seer": 6.84,
+    "Chen": 6.65,
+    "Visage": 4.37,
+    "Troll Warlord": 4.34,
+    "Enigma": 3.79,
+    "Sand King": 3.77,
+    "Doom": 2.73,
+    "Hoodwink": 2.38,
+    "Batrider": 2.27
+  }
+}

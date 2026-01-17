@@ -1,0 +1,54 @@
+{
+  "name": "Ember Spirit",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "mobile",
+    "escape",
+    "root",
+    "magic_damage",
+    "aoe"
+  ],
+  "positions": {
+    "pos_1": 7.8,
+    "pos_2": 76.7,
+    "pos_3": 7.1,
+    "pos_4": 5.2,
+    "pos_5": 3.3
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 10,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Meepo": -11.08,
+    "Huskar": -6.52,
+    "Broodmother": -5.66,
+    "Winter Wyvern": -5.42,
+    "Legion Commander": -5.41,
+    "Elder Titan": -4.78,
+    "Abaddon": -4.74,
+    "Phoenix": -4.19,
+    "Tidehunter": -4.04,
+    "Tinker": -4.04
+  },
+  "explicit_synergies": {
+    "Leshrac": 7.46,
+    "Templar Assassin": 3.76,
+    "Ringmaster": 3.37,
+    "Bane": 3.04,
+    "Kunkka": 2.82,
+    "Gyrocopter": 2.54,
+    "Enigma": 2.42,
+    "Batrider": 2.11,
+    "Ancient Apparition": 2.06,
+    "Lifestealer": 1.82
+  }
+}

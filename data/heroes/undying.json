@@ -1,0 +1,56 @@
+{
+  "name": "Undying",
+  "primary_attribute": "strength",
+  "roles": [
+    "nuker",
+    "durable",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "magical_damage",
+    "sustain",
+    "tank",
+    "anti_tank",
+    "heal",
+    "early_bully",
+    "rebirth_mechanic"
+  ],
+  "positions": {
+    "pos_1": 3.1,
+    "pos_2": 3.2,
+    "pos_3": 31.8,
+    "pos_4": 34.2,
+    "pos_5": 27.7
+  },
+  "game_phase": {
+    "early": 10,
+    "mid": 7,
+    "late": 4
+  },
+  "explicit_counters": {
+    "Broodmother": -7.62,
+    "Chaos Knight": -4.98,
+    "Elder Titan": -4.31,
+    "Meepo": -3.98,
+    "Alchemist": -3.78,
+    "Bloodseeker": -3.64,
+    "Medusa": -3.48,
+    "Slardar": -3.02,
+    "Clinkz": -2.72,
+    "Legion Commander": -2.7
+  },
+  "explicit_synergies": {
+    "Winter Wyvern": 4.86,
+    "Enigma": 4.18,
+    "Magnus": 3.66,
+    "Riki": 3.58,
+    "Tiny": 3.43,
+    "Sand King": 3.27,
+    "Tusk": 3.21,
+    "Axe": 3.04,
+    "Mars": 3.03,
+    "Beastmaster": 2.63
+  }
+}

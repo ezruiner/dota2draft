@@ -1,0 +1,52 @@
+{
+  "name": "Spectre",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "durable"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "pure_damage",
+    "late_scaler",
+    "global",
+    "tank"
+  ],
+  "positions": {
+    "pos_1": 74.6,
+    "pos_2": 7.6,
+    "pos_3": 8.3,
+    "pos_4": 4.6,
+    "pos_5": 4.8
+  },
+  "game_phase": {
+    "early": 3,
+    "mid": 6,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Meepo": -8.3,
+    "Undying": -2.31,
+    "Phantom Lancer": -2.05,
+    "Lycan": -1.12,
+    "Elder Titan": -0.68,
+    "Necrophos": -0.6,
+    "Lifestealer": -0.35,
+    "Wraith King": -0.19,
+    "Abaddon": -0.1,
+    "Bounty Hunter": 0.0
+  },
+  "explicit_synergies": {
+    "Bloodseeker": 4.29,
+    "Death Prophet": 3.65,
+    "Keeper of the Light": 3.59,
+    "Pugna": 3.49,
+    "Arc Warden": 3.38,
+    "Chaos Knight": 2.86,
+    "Lycan": 2.66,
+    "Razor": 2.3,
+    "Riki": 2.27,
+    "Ringmaster": 2.22
+  }
+}

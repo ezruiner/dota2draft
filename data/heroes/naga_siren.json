@@ -1,0 +1,55 @@
+{
+  "name": "Naga Siren",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "initiator",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "heal",
+    "splitpush",
+    "aoe",
+    "lockdown",
+    "bkb_disable"
+  ],
+  "positions": {
+    "pos_1": 45.3,
+    "pos_2": 6.6,
+    "pos_3": 13.4,
+    "pos_4": 16.2,
+    "pos_5": 18.5
+  },
+  "game_phase": {
+    "early": 4,
+    "mid": 8,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Phoenix": -10.57,
+    "Axe": -10.31,
+    "Necrophos": -10.04,
+    "Largo": -8.97,
+    "Kunkka": -8.72,
+    "Medusa": -7.32,
+    "Abaddon": -7.06,
+    "Shadow Demon": -6.9,
+    "Warlock": -6.68,
+    "Dark Seer": -6.16
+  },
+  "explicit_synergies": {
+    "Phoenix": 10.08,
+    "Chaos Knight": 8.29,
+    "Dark Willow": 8.13,
+    "Ancient Apparition": 7.24,
+    "Enigma": 5.8,
+    "Puck": 5.3,
+    "Riki": 5.0,
+    "Techies": 4.69,
+    "Tidehunter": 4.5,
+    "Pangolier": 4.49
+  }
+}

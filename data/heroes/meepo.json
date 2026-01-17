@@ -1,0 +1,55 @@
+{
+  "name": "Meepo",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "magical_damage",
+    "fast_farm",
+    "summoner",
+    "burst_damage",
+    "micro"
+  ],
+  "positions": {
+    "pos_1": 17.6,
+    "pos_2": 58.5,
+    "pos_3": 10.5,
+    "pos_4": 8.2,
+    "pos_5": 5.2
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 10,
+    "late": 5
+  },
+  "explicit_counters": {
+    "Elder Titan": -3.85,
+    "Troll Warlord": -3.0,
+    "Winter Wyvern": -2.57,
+    "Sven": -1.52,
+    "Drow Ranger": -1.31,
+    "Omniknight": -1.3,
+    "Shadow Fiend": -1.23,
+    "Warlock": -0.37,
+    "Vengeful Spirit": -0.26,
+    "Lina": 0.49
+  },
+  "explicit_synergies": {
+    "Brewmaster": 11.87,
+    "Ringmaster": 10.03,
+    "Centaur Warrunner": 8.87,
+    "Sand King": 8.66,
+    "Bloodseeker": 8.19,
+    "Ancient Apparition": 7.91,
+    "Keeper of the Light": 7.89,
+    "Alchemist": 6.01,
+    "Sven": 5.67,
+    "Shadow Demon": 5.15
+  }
+}

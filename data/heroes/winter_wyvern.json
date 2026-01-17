@@ -1,0 +1,54 @@
+{
+  "name": "Winter Wyvern",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "pure_damage",
+    "save",
+    "aoe",
+    "lockdown",
+    "anti_physical"
+  ],
+  "positions": {
+    "pos_1": 2.6,
+    "pos_2": 6.5,
+    "pos_3": 5.1,
+    "pos_4": 36.8,
+    "pos_5": 49.0
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 8,
+    "late": 9
+  },
+  "explicit_counters": {
+    "Spectre": -3.88,
+    "Necrophos": -3.24,
+    "Chaos Knight": -2.27,
+    "Lich": -1.93,
+    "Spirit Breaker": -1.59,
+    "Broodmother": -1.59,
+    "Abaddon": -1.41,
+    "Keeper of the Light": -1.41,
+    "Clockwerk": -0.68,
+    "Muerta": -0.31
+  },
+  "explicit_synergies": {
+    "Oracle": 6.7,
+    "Marci": 6.31,
+    "Undying": 5.25,
+    "Huskar": 4.91,
+    "Tinker": 4.86,
+    "Io": 4.65,
+    "Underlord": 4.46,
+    "Enchantress": 3.98,
+    "Slardar": 3.95,
+    "Pugna": 3.9
+  }
+}

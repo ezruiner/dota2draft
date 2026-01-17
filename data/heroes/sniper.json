@@ -1,0 +1,52 @@
+{
+  "name": "Sniper",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "nuker"
+  ],
+  "tags": [
+    "ranged",
+    "physical_damage",
+    "late_scaler",
+    "long_range",
+    "burst_damage",
+    "glass_cannon"
+  ],
+  "positions": {
+    "pos_1": 17.8,
+    "pos_2": 47.5,
+    "pos_3": 8.7,
+    "pos_4": 16.7,
+    "pos_5": 9.3
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 7,
+    "late": 9
+  },
+  "explicit_counters": {
+    "Spectre": -11.08,
+    "Meepo": -9.65,
+    "Phantom Lancer": -8.01,
+    "Wraith King": -7.96,
+    "Nyx Assassin": -7.62,
+    "Broodmother": -7.28,
+    "Arc Warden": -6.84,
+    "Centaur Warrunner": -6.79,
+    "Pudge": -6.53,
+    "Clinkz": -6.29
+  },
+  "explicit_synergies": {
+    "Enigma": 3.24,
+    "Naga Siren": 2.24,
+    "Bloodseeker": 2.17,
+    "Batrider": 1.73,
+    "Spectre": 1.61,
+    "Pudge": 1.53,
+    "Meepo": 1.52,
+    "Phantom Lancer": 1.49,
+    "Omniknight": 1.44,
+    "Tusk": 1.37
+  }
+}

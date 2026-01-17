@@ -1,0 +1,51 @@
+{
+  "name": "Clinkz",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry"
+  ],
+  "tags": [
+    "ranged",
+    "invis",
+    "burst_damage",
+    "summoner",
+    "mobile",
+    "push"
+  ],
+  "positions": {
+    "pos_1": 34.2,
+    "pos_2": 29.3,
+    "pos_3": 13.4,
+    "pos_4": 13.4,
+    "pos_5": 9.6
+  },
+  "game_phase": {
+    "early": 4,
+    "mid": 10,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Meepo": -6.45,
+    "Broodmother": -5.03,
+    "Phantom Lancer": -2.98,
+    "Wraith King": -2.63,
+    "Arc Warden": -2.56,
+    "Spectre": -2.42,
+    "Bounty Hunter": -2.24,
+    "Chaos Knight": -1.21,
+    "Visage": -0.84,
+    "Naga Siren": -0.29
+  },
+  "explicit_synergies": {
+    "Tinker": 3.32,
+    "Clockwerk": 2.8,
+    "Keeper of the Light": 2.75,
+    "Chen": 2.69,
+    "Leshrac": 2.38,
+    "Naga Siren": 2.23,
+    "Muerta": 2.08,
+    "Storm Spirit": 2.07,
+    "Pangolier": 2.02,
+    "Primal Beast": 1.96
+  }
+}

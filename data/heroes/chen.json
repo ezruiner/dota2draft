@@ -1,0 +1,51 @@
+{
+  "name": "Chen",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "summoner",
+    "micro",
+    "sustain",
+    "aura",
+    "push"
+  ],
+  "positions": {
+    "pos_1": 5.1,
+    "pos_2": 4.6,
+    "pos_3": 6.1,
+    "pos_4": 34.1,
+    "pos_5": 50.1
+  },
+  "game_phase": {
+    "early": 10,
+    "mid": 8,
+    "late": 4
+  },
+  "explicit_counters": {
+    "Meepo": -15.45,
+    "Earth Spirit": -13.64,
+    "Keeper of the Light": -13.27,
+    "Void Spirit": -12.82,
+    "Phoenix": -12.22,
+    "Undying": -11.63,
+    "Grimstroke": -11.54,
+    "Broodmother": -10.71,
+    "Enigma": -10.0,
+    "Bristleback": -10.0
+  },
+  "explicit_synergies": {
+    "Elder Titan": 31.97,
+    "Pangolier": 18.36,
+    "Marci": 16.0,
+    "Clockwerk": 15.03,
+    "Death Prophet": 11.04,
+    "Terrorblade": 9.81,
+    "Earth Spirit": 9.46,
+    "Riki": 8.76,
+    "Skywrath Mage": 8.55,
+    "Vengeful Spirit": 8.17
+  }
+}

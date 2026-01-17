@@ -1,0 +1,54 @@
+{
+  "name": "Shadow Demon",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "initiator",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "pure_damage",
+    "save",
+    "dispel",
+    "anti_carry"
+  ],
+  "positions": {
+    "pos_1": 2.2,
+    "pos_2": 4.7,
+    "pos_3": 3.3,
+    "pos_4": 39.8,
+    "pos_5": 50.0
+  },
+  "game_phase": {
+    "early": 5,
+    "mid": 8,
+    "late": 9
+  },
+  "explicit_counters": {
+    "Chen": -12.82,
+    "Pangolier": -9.0,
+    "Spectre": -8.38,
+    "Meepo": -8.28,
+    "Undying": -8.17,
+    "Winter Wyvern": -7.69,
+    "Phantom Lancer": -7.1,
+    "Chaos Knight": -6.71,
+    "Lycan": -6.57,
+    "Nyx Assassin": -5.36
+  },
+  "explicit_synergies": {
+    "Underlord": 5.56,
+    "Meepo": 5.45,
+    "Death Prophet": 5.26,
+    "Terrorblade": 5.12,
+    "Alchemist": 5.02,
+    "Lycan": 4.67,
+    "Grimstroke": 4.6,
+    "Lone Druid": 4.59,
+    "Pangolier": 4.57,
+    "Tusk": 4.51
+  }
+}

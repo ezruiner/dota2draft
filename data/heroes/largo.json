@@ -1,0 +1,53 @@
+{
+  "name": "Largo",
+  "primary_attribute": "strength",
+  "roles": [
+    "durable",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "melee",
+    "sustain",
+    "magical_damage",
+    "dispel",
+    "buff_specialist",
+    "save"
+  ],
+  "positions": {
+    "pos_1": 1.4,
+    "pos_2": 5.0,
+    "pos_3": 13.1,
+    "pos_4": 38.6,
+    "pos_5": 42.0
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 8,
+    "late": 9
+  },
+  "explicit_counters": {
+    "Broodmother": -10.57,
+    "Lycan": -8.82,
+    "Batrider": -8.65,
+    "Enigma": -8.11,
+    "Outworld Destroyer": -8.1,
+    "Riki": -8.04,
+    "Clockwerk": -7.24,
+    "Alchemist": -7.11,
+    "Bloodseeker": -7.04,
+    "Legion Commander": -6.91
+  },
+  "explicit_synergies": {
+    "Batrider": 7.95,
+    "Visage": 7.25,
+    "Bane": 6.19,
+    "Dawnbreaker": 5.19,
+    "Leshrac": 4.81,
+    "Pangolier": 4.76,
+    "Chen": 4.53,
+    "Naga Siren": 4.46,
+    "Grimstroke": 4.29,
+    "Broodmother": 3.99
+  }
+}

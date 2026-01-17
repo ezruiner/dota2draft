@@ -1,0 +1,53 @@
+{
+  "name": "Lina",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "carry",
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "magical_damage",
+    "physical_damage",
+    "burst_damage",
+    "fast_attack"
+  ],
+  "positions": {
+    "pos_1": 9.1,
+    "pos_2": 52.2,
+    "pos_3": 7.6,
+    "pos_4": 18.1,
+    "pos_5": 13.1
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 9,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Spectre": -7.61,
+    "Visage": -7.12,
+    "Clinkz": -6.74,
+    "Axe": -5.74,
+    "Wraith King": -5.11,
+    "Winter Wyvern": -5.02,
+    "Slardar": -4.82,
+    "Tidehunter": -4.47,
+    "Lich": -4.07,
+    "Medusa": -3.89
+  },
+  "explicit_synergies": {
+    "Phoenix": 3.46,
+    "Alchemist": 3.32,
+    "Io": 2.85,
+    "Bane": 2.8,
+    "Phantom Lancer": 2.62,
+    "Dark Seer": 2.44,
+    "Elder Titan": 1.89,
+    "Sand King": 1.86,
+    "Faceless Void": 1.84,
+    "Slark": 1.72
+  }
+}

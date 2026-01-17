@@ -1,0 +1,52 @@
+{
+  "name": "Enigma",
+  "primary_attribute": "universal",
+  "roles": [
+    "initiator",
+    "disabler"
+  ],
+  "tags": [
+    "ranged",
+    "summoner",
+    "bkb_disable",
+    "aoe",
+    "initiator",
+    "percent_damage"
+  ],
+  "positions": {
+    "pos_1": 4.9,
+    "pos_2": 6.4,
+    "pos_3": 25.1,
+    "pos_4": 39.6,
+    "pos_5": 23.9
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Wraith King": -7.49,
+    "Arc Warden": -6.5,
+    "Meepo": -6.46,
+    "Elder Titan": -6.18,
+    "Spectre": -5.91,
+    "Bristleback": -4.6,
+    "Clinkz": -3.47,
+    "Visage": -3.21,
+    "Vengeful Spirit": -2.76,
+    "Winter Wyvern": -2.63
+  },
+  "explicit_synergies": {
+    "Enchantress": 6.11,
+    "Viper": 5.84,
+    "Muerta": 5.75,
+    "Earth Spirit": 5.7,
+    "Kez": 5.5,
+    "Death Prophet": 5.48,
+    "Pangolier": 5.09,
+    "Phoenix": 5.08,
+    "Naga Siren": 4.7,
+    "Undying": 4.18
+  }
+}

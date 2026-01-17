@@ -1,0 +1,51 @@
+{
+  "name": "Io",
+  "primary_attribute": "universal",
+  "roles": [
+    "nuker",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "mobile",
+    "sustain",
+    "save",
+    "magical_damage"
+  ],
+  "positions": {
+    "pos_1": 2.2,
+    "pos_2": 4.6,
+    "pos_3": 2.4,
+    "pos_4": 30.3,
+    "pos_5": 60.6
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 8,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Elder Titan": -10.32,
+    "Broodmother": -5.85,
+    "Bane": -5.63,
+    "Keeper of the Light": -5.61,
+    "Enigma": -5.05,
+    "Sand King": -4.95,
+    "Visage": -4.76,
+    "Bounty Hunter": -4.67,
+    "Lycan": -4.43,
+    "Underlord": -4.32
+  },
+  "explicit_synergies": {
+    "Enchantress": 8.88,
+    "Pugna": 7.7,
+    "Disruptor": 6.99,
+    "Marci": 6.91,
+    "Primal Beast": 6.1,
+    "Batrider": 6.06,
+    "Beastmaster": 5.02,
+    "Winter Wyvern": 4.95,
+    "Oracle": 4.8,
+    "Underlord": 4.66
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Dark Willow",
+  "primary_attribute": "intelligence",
+  "roles": [
+    "nuker",
+    "disabler",
+    "support"
+  ],
+  "tags": [
+    "ranged",
+    "disable_heavy",
+    "burst_damage",
+    "escape",
+    "nuker"
+  ],
+  "positions": {
+    "pos_1": 4.7,
+    "pos_2": 13.2,
+    "pos_3": 5.8,
+    "pos_4": 38.5,
+    "pos_5": 37.8
+  },
+  "game_phase": {
+    "early": 6,
+    "mid": 9,
+    "late": 8
+  },
+  "explicit_counters": {
+    "Meepo": -7.88,
+    "Lycan": -7.86,
+    "Omniknight": -6.8,
+    "Troll Warlord": -6.19,
+    "Spectre": -5.77,
+    "Legion Commander": -5.57,
+    "Venomancer": -5.17,
+    "Wraith King": -5.13,
+    "Juggernaut": -5.11,
+    "Naga Siren": -4.98
+  },
+  "explicit_synergies": {
+    "Elder Titan": 8.54,
+    "Naga Siren": 7.33,
+    "Treant Protector": 5.08,
+    "Dark Seer": 4.09,
+    "Troll Warlord": 3.59,
+    "Shadow Shaman": 3.16,
+    "Puck": 2.94,
+    "Leshrac": 2.88,
+    "Meepo": 2.71,
+    "Windranger": 2.66
+  }
+}

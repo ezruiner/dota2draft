@@ -1,0 +1,54 @@
+{
+  "name": "Faceless Void",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "bkb_disable",
+    "initiator",
+    "hard_carry",
+    "bash",
+    "escape"
+  ],
+  "positions": {
+    "pos_1": 75.5,
+    "pos_2": 4.5,
+    "pos_3": 11.1,
+    "pos_4": 4.3,
+    "pos_5": 4.6
+  },
+  "game_phase": {
+    "early": 3,
+    "mid": 8,
+    "late": 10
+  },
+  "explicit_counters": {
+    "Broodmother": -7.87,
+    "Troll Warlord": -6.53,
+    "Wraith King": -6.49,
+    "Meepo": -6.41,
+    "Legion Commander": -5.78,
+    "Lone Druid": -5.62,
+    "Visage": -5.4,
+    "Spectre": -4.93,
+    "Chaos Knight": -4.84,
+    "Tidehunter": -4.77
+  },
+  "explicit_synergies": {
+    "Lone Druid": 5.67,
+    "Alchemist": 4.4,
+    "Kez": 3.27,
+    "Meepo": 3.14,
+    "Phantom Lancer": 3.11,
+    "Viper": 3.01,
+    "Mirana": 2.91,
+    "Clockwerk": 2.73,
+    "Abaddon": 2.59,
+    "Riki": 2.56
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "Templar Assassin",
+  "primary_attribute": "agility",
+  "roles": [
+    "carry"
+  ],
+  "tags": [
+    "ranged",
+    "physical_damage",
+    "burst_damage",
+    "late_scaler",
+    "fast_farm",
+    "armor_reduction"
+  ],
+  "positions": {
+    "pos_1": 58.8,
+    "pos_2": 29.8,
+    "pos_3": 4.8,
+    "pos_4": 3.6,
+    "pos_5": 3.0
+  },
+  "game_phase": {
+    "early": 5,
+    "mid": 10,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Meepo": -10.49,
+    "Phantom Lancer": -9.48,
+    "Spectre": -8.62,
+    "Phoenix": -7.86,
+    "Naga Siren": -7.85,
+    "Vengeful Spirit": -7.46,
+    "Elder Titan": -7.33,
+    "Clinkz": -7.12,
+    "Arc Warden": -6.97,
+    "Dazzle": -6.93
+  },
+  "explicit_synergies": {
+    "Elder Titan": 7.16,
+    "Void Spirit": 6.88,
+    "Earth Spirit": 4.44,
+    "Ember Spirit": 3.96,
+    "Mirana": 3.4,
+    "Lone Druid": 2.86,
+    "Leshrac": 2.49,
+    "Crystal Maiden": 2.31,
+    "Tiny": 2.29,
+    "Primal Beast": 2.27
+  }
+}

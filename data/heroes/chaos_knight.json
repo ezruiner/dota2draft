@@ -1,0 +1,53 @@
+{
+  "name": "Chaos Knight",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "illusion",
+    "burst_damage",
+    "sustain",
+    "stun"
+  ],
+  "positions": {
+    "pos_1": 27.4,
+    "pos_2": 7.1,
+    "pos_3": 49.6,
+    "pos_4": 9.5,
+    "pos_5": 6.4
+  },
+  "game_phase": {
+    "early": 8,
+    "mid": 10,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Broodmother": -5.46,
+    "Meepo": -5.22,
+    "Phoenix": -4.26,
+    "Elder Titan": -3.85,
+    "Phantom Lancer": -3.73,
+    "Underlord": -3.07,
+    "Beastmaster": -2.41,
+    "Kunkka": -2.36,
+    "Wraith King": -2.33,
+    "Io": -2.09
+  },
+  "explicit_synergies": {
+    "Naga Siren": 7.69,
+    "Batrider": 5.98,
+    "Abaddon": 5.32,
+    "Treant Protector": 5.04,
+    "Beastmaster": 4.44,
+    "Troll Warlord": 3.85,
+    "Viper": 3.54,
+    "Elder Titan": 3.5,
+    "Doom": 3.34,
+    "Terrorblade": 3.14
+  }
+}

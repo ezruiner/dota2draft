@@ -1,0 +1,53 @@
+{
+  "name": "Huskar",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "initiator",
+    "durable"
+  ],
+  "tags": [
+    "ranged",
+    "sustain",
+    "burst_damage",
+    "single_target",
+    "mobile",
+    "magical_damage"
+  ],
+  "positions": {
+    "pos_1": 8.2,
+    "pos_2": 49.0,
+    "pos_3": 22.3,
+    "pos_4": 11.5,
+    "pos_5": 9.0
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 10,
+    "late": -5
+  },
+  "explicit_counters": {
+    "Broodmother": -13.81,
+    "Chaos Knight": -8.82,
+    "Viper": -7.65,
+    "Spectre": -6.95,
+    "Chen": -6.85,
+    "Clinkz": -6.41,
+    "Necrophos": -6.32,
+    "Vengeful Spirit": -6.26,
+    "Luna": -6.03,
+    "Razor": -5.99
+  },
+  "explicit_synergies": {
+    "Chen": 5.6,
+    "Earthshaker": 5.42,
+    "Enchantress": 5.14,
+    "Pangolier": 4.93,
+    "Marci": 4.47,
+    "Kez": 4.44,
+    "Kunkka": 4.24,
+    "Tusk": 4.06,
+    "Winter Wyvern": 4.01,
+    "Luna": 3.81
+  }
+}

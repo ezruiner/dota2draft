@@ -1,0 +1,55 @@
+{
+  "name": "Pangolier",
+  "primary_attribute": "universal",
+  "roles": [
+    "carry",
+    "nuker",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "physical_damage",
+    "magical_damage",
+    "mobile",
+    "aoe",
+    "lockdown"
+  ],
+  "positions": {
+    "pos_1": 5.6,
+    "pos_2": 39.2,
+    "pos_3": 40.6,
+    "pos_4": 9.5,
+    "pos_5": 5.2
+  },
+  "game_phase": {
+    "early": 4,
+    "mid": 9,
+    "late": 7
+  },
+  "explicit_counters": {
+    "Grimstroke": -17.39,
+    "Wraith King": -16.26,
+    "Huskar": -15.52,
+    "Leshrac": -13.16,
+    "Naga Siren": -12.5,
+    "Visage": -12.26,
+    "Sand King": -12.02,
+    "Elder Titan": -11.9,
+    "Nyx Assassin": -11.42,
+    "Underlord": -11.42
+  },
+  "explicit_synergies": {
+    "Chen": 18.36,
+    "Brewmaster": 11.59,
+    "Beastmaster": 9.04,
+    "Weaver": 8.62,
+    "Tinker": 8.38,
+    "Wraith King": 7.97,
+    "Terrorblade": 7.64,
+    "Oracle": 7.51,
+    "Slardar": 7.06,
+    "Bristleback": 6.97
+  }
+}

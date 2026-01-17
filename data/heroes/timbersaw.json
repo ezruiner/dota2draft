@@ -1,0 +1,52 @@
+{
+  "name": "Timbersaw",
+  "primary_attribute": "strength",
+  "roles": [
+    "nuker",
+    "durable"
+  ],
+  "tags": [
+    "melee",
+    "pure_damage",
+    "magical_damage",
+    "tank",
+    "aoe",
+    "anti_carry"
+  ],
+  "positions": {
+    "pos_1": 2.9,
+    "pos_2": 13.1,
+    "pos_3": 74.6,
+    "pos_4": 6.4,
+    "pos_5": 3.0
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 10,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Broodmother": -9.61,
+    "Clinkz": -8.17,
+    "Bloodseeker": -7.38,
+    "Elder Titan": -7.0,
+    "Enigma": -6.9,
+    "Weaver": -6.83,
+    "Spectre": -6.36,
+    "Io": -6.2,
+    "Outworld Destroyer": -6.18,
+    "Troll Warlord": -6.18
+  },
+  "explicit_synergies": {
+    "Primal Beast": 10.04,
+    "Tiny": 5.06,
+    "Mars": 4.47,
+    "Elder Titan": 3.83,
+    "Pugna": 3.54,
+    "Marci": 3.25,
+    "Naga Siren": 2.91,
+    "Batrider": 2.8,
+    "Phoenix": 2.8,
+    "Outworld Destroyer": 2.74
+  }
+}

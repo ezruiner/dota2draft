@@ -1,0 +1,53 @@
+{
+  "name": "Axe",
+  "primary_attribute": "strength",
+  "roles": [
+    "carry",
+    "initiator",
+    "durable",
+    "disabler"
+  ],
+  "tags": [
+    "melee",
+    "aoe",
+    "pure_damage",
+    "disable_heavy",
+    "bkb_disable"
+  ],
+  "positions": {
+    "pos_1": 3.1,
+    "pos_2": 4.0,
+    "pos_3": 81.4,
+    "pos_4": 7.7,
+    "pos_5": 3.7
+  },
+  "game_phase": {
+    "early": 7,
+    "mid": 9,
+    "late": 6
+  },
+  "explicit_counters": {
+    "Spectre": -7.12,
+    "Meepo": -4.55,
+    "Wraith King": -3.79,
+    "Outworld Destroyer": -3.57,
+    "Lifestealer": -3.14,
+    "Clinkz": -3.12,
+    "Witch Doctor": -2.67,
+    "Venomancer": -2.5,
+    "Necrophos": -2.24,
+    "Legion Commander": -1.96
+  },
+  "explicit_synergies": {
+    "Abaddon": 3.89,
+    "Doom": 3.71,
+    "Dark Seer": 3.61,
+    "Undying": 2.94,
+    "Io": 2.73,
+    "Night Stalker": 2.61,
+    "Oracle": 2.58,
+    "Batrider": 2.54,
+    "Lycan": 2.45,
+    "Templar Assassin": 2.3
+  }
+}
