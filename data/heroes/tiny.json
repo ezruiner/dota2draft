@@ -29,27 +29,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Meepo": -10.67,
-    "Winter Wyvern": -10.65,
-    "Necrophos": -9.17,
-    "Arc Warden": -8.47,
-    "Dazzle": -8.37,
-    "Lifestealer": -8.32,
-    "Undying": -8.11,
-    "Clinkz": -8.05,
-    "Wraith King": -7.98,
-    "Spectre": -7.94
+    "Winter Wyvern": -11.46,
+    "Meepo": -10.15,
+    "Dazzle": -9.27,
+    "Necrophos": -9.26,
+    "Elder Titan": -9.25,
+    "Lifestealer": -8.85,
+    "Undying": -7.95,
+    "Clinkz": -7.95,
+    "Wraith King": -7.94,
+    "Venomancer": -7.77
   },
   "explicit_synergies": {
-    "Elder Titan": 8.66,
-    "Timbersaw": 5.16,
-    "Brewmaster": 5.04,
-    "Meepo": 4.92,
-    "Death Prophet": 4.53,
-    "Oracle": 4.37,
-    "Naga Siren": 3.75,
-    "Undying": 3.63,
-    "Winter Wyvern": 3.62,
-    "Dark Willow": 2.98
+    "Elder Titan": 6.94,
+    "Brewmaster": 5.57,
+    "Death Prophet": 4.86,
+    "Timbersaw": 4.66,
+    "Winter Wyvern": 4.34,
+    "Meepo": 3.86,
+    "Naga Siren": 3.6,
+    "Undying": 3.57,
+    "Monkey King": 2.78,
+    "Io": 2.73
   }
 }

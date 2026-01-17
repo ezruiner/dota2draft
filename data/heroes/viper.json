@@ -28,27 +28,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Arc Warden": -9.49,
-    "Elder Titan": -9.13,
-    "Meepo": -8.82,
-    "Tinker": -6.88,
-    "Clinkz": -6.61,
-    "Phantom Lancer": -6.59,
-    "Broodmother": -6.21,
-    "Witch Doctor": -5.85,
-    "Visage": -5.43,
-    "Legion Commander": -5.32
+    "Meepo": -9.16,
+    "Elder Titan": -8.96,
+    "Arc Warden": -8.4,
+    "Clinkz": -6.89,
+    "Phantom Lancer": -6.3,
+    "Tinker": -6.2,
+    "Visage": -5.66,
+    "Dazzle": -5.52,
+    "Broodmother": -5.4,
+    "Witch Doctor": -5.36
   },
   "explicit_synergies": {
-    "Enigma": 6.45,
-    "Naga Siren": 4.24,
-    "Oracle": 4.07,
-    "Faceless Void": 3.41,
-    "Medusa": 3.3,
-    "Chaos Knight": 3.24,
-    "Earth Spirit": 3.14,
-    "Underlord": 2.93,
-    "Slark": 2.89,
-    "Arc Warden": 2.85
+    "Enigma": 5.98,
+    "Oracle": 4.62,
+    "Earth Spirit": 3.48,
+    "Naga Siren": 3.24,
+    "Slark": 3.15,
+    "Faceless Void": 3.12,
+    "Chen": 3.07,
+    "Medusa": 2.89,
+    "Underlord": 2.84,
+    "Disruptor": 2.65
   }
 }

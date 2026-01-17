@@ -27,27 +27,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Brewmaster": -9.89,
-    "Spectre": -9.73,
-    "Meepo": -8.72,
-    "Broodmother": -8.6,
-    "Wraith King": -8.02,
-    "Clinkz": -7.24,
-    "Arc Warden": -7.09,
+    "Spectre": -9.75,
+    "Broodmother": -8.75,
+    "Meepo": -8.33,
+    "Brewmaster": -8.22,
+    "Wraith King": -7.64,
+    "Clinkz": -7.17,
     "Omniknight": -6.8,
-    "Slardar": -5.93,
-    "Shadow Shaman": -5.35
+    "Arc Warden": -6.67,
+    "Naga Siren": -5.69,
+    "Slardar": -5.62
   },
   "explicit_synergies": {
-    "Gyrocopter": 3.93,
-    "Underlord": 3.08,
-    "Phantom Assassin": 3.02,
-    "Treant Protector": 2.75,
-    "Faceless Void": 2.66,
-    "Sven": 2.4,
-    "Chen": 2.36,
-    "Razor": 2.13,
-    "Broodmother": 2.12,
-    "Naga Siren": 2.1
+    "Chen": 4.38,
+    "Underlord": 4.05,
+    "Naga Siren": 3.96,
+    "Gyrocopter": 3.16,
+    "Lone Druid": 3.08,
+    "Treant Protector": 2.93,
+    "Faceless Void": 2.53,
+    "Phantom Assassin": 2.52,
+    "Brewmaster": 2.02,
+    "Broodmother": 2.0
   }
 }

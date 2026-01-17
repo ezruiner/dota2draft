@@ -27,27 +27,27 @@
     "late": 9
   },
   "explicit_counters": {
-    "Meepo": -9.54,
-    "Riki": -6.51,
-    "Treant Protector": -5.84,
-    "Bane": -5.81,
-    "Winter Wyvern": -5.65,
-    "Alchemist": -5.62,
-    "Spectre": -5.61,
-    "Enchantress": -5.41,
-    "Outworld Destroyer": -5.09,
-    "Wraith King": -4.64
+    "Meepo": -9.61,
+    "Alchemist": -6.8,
+    "Riki": -6.57,
+    "Winter Wyvern": -6.46,
+    "Bane": -5.5,
+    "Io": -5.48,
+    "Troll Warlord": -5.35,
+    "Spectre": -5.32,
+    "Undying": -5.0,
+    "Wraith King": -4.93
   },
   "explicit_synergies": {
-    "Pangolier": 7.12,
-    "Dark Seer": 6.88,
-    "Winter Wyvern": 5.7,
-    "Bane": 4.45,
-    "Clockwerk": 4.39,
-    "Viper": 4.37,
-    "Tiny": 4.07,
-    "Leshrac": 3.57,
-    "Dawnbreaker": 3.55,
-    "Sven": 3.12
+    "Dark Seer": 6.37,
+    "Bane": 5.38,
+    "Pangolier": 5.12,
+    "Viper": 4.72,
+    "Winter Wyvern": 4.53,
+    "Clockwerk": 4.26,
+    "Marci": 4.1,
+    "Sven": 3.73,
+    "Dawnbreaker": 3.4,
+    "Io": 3.12
   }
 }

@@ -28,27 +28,27 @@
     "late": 4
   },
   "explicit_counters": {
-    "Naga Siren": -7.62,
-    "Broodmother": -7.49,
-    "Meepo": -6.88,
-    "Legion Commander": -6.87,
-    "Void Spirit": -6.68,
-    "Vengeful Spirit": -6.54,
-    "Nyx Assassin": -6.52,
-    "Abaddon": -6.33,
-    "Spectre": -6.32,
-    "Arc Warden": -6.3
+    "Broodmother": -7.83,
+    "Legion Commander": -7.34,
+    "Arc Warden": -6.53,
+    "Vengeful Spirit": -6.53,
+    "Nyx Assassin": -6.29,
+    "Void Spirit": -6.21,
+    "Phantom Lancer": -6.19,
+    "Naga Siren": -6.13,
+    "Meepo": -6.13,
+    "Axe": -6.07
   },
   "explicit_synergies": {
-    "Chen": 5.56,
-    "Lone Druid": 5.01,
-    "Dark Seer": 3.75,
-    "Kez": 3.2,
-    "Beastmaster": 2.84,
-    "Puck": 2.8,
-    "Lycan": 2.79,
-    "Io": 2.47,
-    "Ringmaster": 2.35,
-    "Arc Warden": 2.3
+    "Beastmaster": 5.14,
+    "Lone Druid": 4.85,
+    "Chen": 4.15,
+    "Puck": 3.14,
+    "Necrophos": 2.88,
+    "Ringmaster": 2.49,
+    "Nyx Assassin": 2.49,
+    "Lycan": 2.45,
+    "Kez": 2.42,
+    "Tinker": 2.22
   }
 }

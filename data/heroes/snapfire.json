@@ -27,27 +27,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Troll Warlord": -8.53,
-    "Broodmother": -6.96,
-    "Spectre": -6.5,
-    "Dazzle": -6.26,
-    "Meepo": -5.98,
-    "Omniknight": -5.83,
-    "Elder Titan": -5.56,
-    "Bloodseeker": -5.56,
-    "Clinkz": -5.53,
-    "Enchantress": -5.42
+    "Troll Warlord": -7.96,
+    "Meepo": -7.64,
+    "Broodmother": -7.4,
+    "Dazzle": -6.72,
+    "Spectre": -6.06,
+    "Clinkz": -6.02,
+    "Elder Titan": -6.02,
+    "Wraith King": -5.91,
+    "Omniknight": -5.72,
+    "Enchantress": -5.51
   },
   "explicit_synergies": {
-    "Lycan": 6.39,
-    "Lone Druid": 4.31,
-    "Arc Warden": 3.9,
-    "Pangolier": 2.79,
-    "Broodmother": 2.72,
-    "Sven": 2.6,
-    "Disruptor": 2.51,
-    "Doom": 2.44,
-    "Mars": 2.15,
-    "Phantom Lancer": 2.14
+    "Lycan": 6.88,
+    "Lone Druid": 3.69,
+    "Arc Warden": 3.45,
+    "Doom": 3.23,
+    "Pangolier": 3.19,
+    "Broodmother": 3.0,
+    "Wraith King": 2.98,
+    "Nyx Assassin": 2.42,
+    "Ember Spirit": 2.22,
+    "Visage": 2.04
   }
 }

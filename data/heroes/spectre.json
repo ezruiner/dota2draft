@@ -26,27 +26,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Meepo": -8.3,
-    "Undying": -2.31,
-    "Phantom Lancer": -2.05,
-    "Lycan": -1.12,
-    "Elder Titan": -0.68,
-    "Necrophos": -0.6,
-    "Lifestealer": -0.35,
-    "Wraith King": -0.19,
-    "Abaddon": -0.1,
-    "Bounty Hunter": 0.0
+    "Meepo": -7.33,
+    "Undying": -2.41,
+    "Phantom Lancer": -2.22,
+    "Lycan": -2.02,
+    "Elder Titan": -2.0,
+    "Lifestealer": -0.6,
+    "Abaddon": -0.44,
+    "Necrophos": -0.19,
+    "Bounty Hunter": -0.02,
+    "Wraith King": 0.08
   },
   "explicit_synergies": {
-    "Bloodseeker": 4.29,
-    "Death Prophet": 3.65,
-    "Keeper of the Light": 3.59,
-    "Pugna": 3.49,
-    "Arc Warden": 3.38,
-    "Chaos Knight": 2.86,
-    "Lycan": 2.66,
-    "Razor": 2.3,
-    "Riki": 2.27,
-    "Ringmaster": 2.22
+    "Bloodseeker": 3.97,
+    "Arc Warden": 3.94,
+    "Pugna": 3.27,
+    "Death Prophet": 2.91,
+    "Enigma": 2.78,
+    "Keeper of the Light": 2.77,
+    "Lycan": 2.57,
+    "Riki": 2.51,
+    "Troll Warlord": 2.12,
+    "Ringmaster": 2.12
   }
 }

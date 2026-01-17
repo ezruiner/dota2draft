@@ -27,27 +27,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Meepo": -11.73,
-    "Elder Titan": -8.23,
-    "Bounty Hunter": -7.86,
-    "Legion Commander": -7.59,
-    "Sand King": -6.11,
-    "Brewmaster": -6.07,
-    "Juggernaut": -5.43,
-    "Alchemist": -5.35,
-    "Enigma": -5.31,
-    "Ogre Magi": -4.94
+    "Meepo": -12.5,
+    "Elder Titan": -8.89,
+    "Brewmaster": -8.27,
+    "Legion Commander": -7.44,
+    "Bounty Hunter": -6.67,
+    "Sand King": -5.56,
+    "Clinkz": -4.89,
+    "Alchemist": -4.57,
+    "Wraith King": -4.14,
+    "Ogre Magi": -4.13
   },
   "explicit_synergies": {
-    "Brewmaster": 10.71,
-    "Treant Protector": 8.17,
-    "Leshrac": 7.46,
-    "Meepo": 6.79,
-    "Lycan": 5.81,
-    "Tusk": 5.14,
-    "Pugna": 4.84,
-    "Disruptor": 4.83,
-    "Rubick": 4.72,
-    "Marci": 4.35
+    "Leshrac": 8.3,
+    "Brewmaster": 7.7,
+    "Pugna": 6.45,
+    "Batrider": 6.26,
+    "Treant Protector": 5.8,
+    "Beastmaster": 4.65,
+    "Rubick": 4.47,
+    "Bane": 4.22,
+    "Marci": 3.84,
+    "Skywrath Mage": 3.62
   }
 }

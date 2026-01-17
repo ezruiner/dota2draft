@@ -26,27 +26,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Meepo": -7.98,
-    "Legion Commander": -7.64,
-    "Enigma": -6.58,
-    "Winter Wyvern": -6.26,
-    "Riki": -5.84,
-    "Chen": -5.52,
-    "Witch Doctor": -4.98,
-    "Clinkz": -4.92,
-    "Wraith King": -4.71,
-    "Broodmother": -4.61
+    "Meepo": -8.4,
+    "Legion Commander": -7.47,
+    "Winter Wyvern": -6.44,
+    "Riki": -5.72,
+    "Wraith King": -5.24,
+    "Witch Doctor": -5.21,
+    "Enigma": -5.16,
+    "Clinkz": -5.01,
+    "Nyx Assassin": -4.94,
+    "Broodmother": -4.9
   },
   "explicit_synergies": {
-    "Elder Titan": 3.76,
-    "Lone Druid": 3.66,
-    "Death Prophet": 2.93,
-    "Primal Beast": 2.87,
-    "Mirana": 2.7,
-    "Pangolier": 2.44,
-    "Zeus": 2.33,
-    "Night Stalker": 2.3,
-    "Shadow Demon": 2.13,
-    "Batrider": 2.04
+    "Elder Titan": 3.69,
+    "Lone Druid": 2.88,
+    "Mirana": 2.28,
+    "Bane": 2.14,
+    "Night Stalker": 2.06,
+    "Death Prophet": 2.01,
+    "Zeus": 1.97,
+    "Primal Beast": 1.94,
+    "Juggernaut": 1.66,
+    "Snapfire": 1.6
   }
 }

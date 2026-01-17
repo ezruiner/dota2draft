@@ -27,27 +27,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Meepo": -11.4,
-    "Elder Titan": -9.83,
-    "Broodmother": -9.43,
-    "Wraith King": -5.54,
-    "Omniknight": -4.93,
-    "Dazzle": -4.87,
-    "Spectre": -4.4,
-    "Medusa": -4.38,
-    "Night Stalker": -4.12,
-    "Visage": -4.07
+    "Meepo": -11.96,
+    "Broodmother": -9.3,
+    "Elder Titan": -6.2,
+    "Dazzle": -5.87,
+    "Omniknight": -5.2,
+    "Wraith King": -5.16,
+    "Medusa": -4.85,
+    "Visage": -4.55,
+    "Spectre": -4.42,
+    "Night Stalker": -3.82
   },
   "explicit_synergies": {
-    "Elder Titan": 9.95,
-    "Brewmaster": 7.63,
-    "Templar Assassin": 7.18,
-    "Leshrac": 4.78,
-    "Abaddon": 4.57,
-    "Ringmaster": 3.59,
-    "Tinker": 3.32,
-    "Storm Spirit": 3.27,
-    "Grimstroke": 3.16,
-    "Shadow Demon": 3.02
+    "Elder Titan": 7.08,
+    "Templar Assassin": 6.6,
+    "Brewmaster": 4.71,
+    "Abaddon": 4.43,
+    "Storm Spirit": 3.66,
+    "Leshrac": 3.41,
+    "Ringmaster": 3.01,
+    "Grimstroke": 2.84,
+    "Mirana": 2.68,
+    "Faceless Void": 2.62
   }
 }

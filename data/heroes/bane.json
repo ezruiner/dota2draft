@@ -28,27 +28,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Arc Warden": -15.31,
-    "Elder Titan": -15.15,
-    "Lone Druid": -14.29,
-    "Visage": -13.08,
-    "Chaos Knight": -12.24,
-    "Treant Protector": -9.85,
-    "Phantom Lancer": -9.44,
-    "Broodmother": -9.43,
-    "Spectre": -9.31,
-    "Sand King": -7.03
+    "Elder Titan": -17.95,
+    "Arc Warden": -14.94,
+    "Lone Druid": -11.54,
+    "Visage": -11.07,
+    "Broodmother": -10.16,
+    "Chaos Knight": -9.9,
+    "Spectre": -9.78,
+    "Phantom Lancer": -8.94,
+    "Treant Protector": -8.67,
+    "Tidehunter": -7.03
   },
   "explicit_synergies": {
-    "Visage": 16.51,
-    "Brewmaster": 13.22,
-    "Dark Seer": 8.78,
-    "Terrorblade": 8.17,
-    "Lone Druid": 8.04,
-    "Abaddon": 6.96,
-    "Largo": 6.79,
-    "Medusa": 6.58,
-    "Treant Protector": 6.08,
-    "Gyrocopter": 5.65
+    "Visage": 16.78,
+    "Brewmaster": 14.47,
+    "Dark Seer": 11.18,
+    "Medusa": 7.64,
+    "Abaddon": 6.69,
+    "Terrorblade": 6.18,
+    "Treant Protector": 5.67,
+    "Death Prophet": 4.96,
+    "Oracle": 4.28,
+    "Lone Druid": 4.23
   }
 }

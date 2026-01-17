@@ -8,8 +8,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # ==========================================
 # Default values (can be overridden by command line arguments)
-STRATZ_TOKEN = "API_TOKEN_HERE"
-MAX_WORKERS = 3
+STRATZ_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJTdWJqZWN0IjoiNWUyNWJkZWYtYzM0Ni00YzQzLWI3NWItOWY4ZGVlN2M1ZmE4IiwiU3RlYW1JZCI6IjM2MTczOTA4MCIsIkFQSVVzZXIiOiJ0cnVlIiwibmJmIjoxNzY2NDMzMjE4LCJleHAiOjE3OTc5NjkyMTgsImlhdCI6MTc2NjQzMzIxOCwiaXNzIjoiaHR0cHM6Ly9hcGkuc3RyYXR6LmNvbSJ9.FoawYjtPFL2XY4_VBogd2PDEf7LBHx9x2cSgWCSop3Y"
+MAX_WORKERS = 5
 MAX_WAIT_TIME = 60
 
 # Parse command line arguments

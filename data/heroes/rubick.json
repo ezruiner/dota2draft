@@ -27,27 +27,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Spectre": -9.32,
-    "Meepo": -9.06,
-    "Clinkz": -8.05,
-    "Legion Commander": -7.82,
-    "Broodmother": -7.61,
-    "Elder Titan": -7.02,
-    "Visage": -6.49,
-    "Drow Ranger": -6.15,
-    "Dazzle": -5.92,
-    "Razor": -5.66
+    "Spectre": -9.2,
+    "Meepo": -8.24,
+    "Clinkz": -8.06,
+    "Broodmother": -7.95,
+    "Elder Titan": -7.84,
+    "Legion Commander": -7.6,
+    "Visage": -7.23,
+    "Dazzle": -6.42,
+    "Razor": -6.29,
+    "Drow Ranger": -6.08
   },
   "explicit_synergies": {
-    "Chen": 6.67,
-    "Keeper of the Light": 4.82,
-    "Naga Siren": 4.51,
-    "Terrorblade": 2.96,
-    "Lone Druid": 2.72,
-    "Kunkka": 2.31,
-    "Largo": 2.27,
-    "Underlord": 2.19,
-    "Visage": 2.09,
-    "Dawnbreaker": 1.74
+    "Chen": 5.48,
+    "Keeper of the Light": 4.37,
+    "Terrorblade": 3.34,
+    "Naga Siren": 3.05,
+    "Underlord": 2.65,
+    "Largo": 2.32,
+    "Kunkka": 2.19,
+    "Visage": 2.04,
+    "Death Prophet": 2.02,
+    "Lone Druid": 1.88
   }
 }

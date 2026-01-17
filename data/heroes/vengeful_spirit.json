@@ -29,27 +29,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Spectre": -5.41,
-    "Phantom Lancer": -3.44,
-    "Wraith King": -2.87,
-    "Winter Wyvern": -2.57,
-    "Broodmother": -1.81,
-    "Necrophos": -1.75,
-    "Lich": -1.67,
-    "Void Spirit": -1.48,
-    "Underlord": -1.38,
-    "Elder Titan": -1.35
+    "Spectre": -5.19,
+    "Phantom Lancer": -3.51,
+    "Wraith King": -2.98,
+    "Winter Wyvern": -2.5,
+    "Broodmother": -1.82,
+    "Lich": -1.72,
+    "Void Spirit": -1.31,
+    "Spirit Breaker": -1.26,
+    "Necrophos": -1.23,
+    "Chaos Knight": -0.98
   },
   "explicit_synergies": {
-    "Dark Seer": 10.96,
-    "Chen": 6.57,
-    "Batrider": 6.4,
-    "Medusa": 4.46,
-    "Gyrocopter": 3.83,
-    "Lycan": 3.2,
-    "Io": 3.19,
-    "Kunkka": 3.01,
-    "Sven": 3.01,
-    "Huskar": 2.94
+    "Dark Seer": 7.67,
+    "Chen": 6.22,
+    "Keeper of the Light": 5.11,
+    "Gyrocopter": 4.49,
+    "Medusa": 4.33,
+    "Batrider": 3.92,
+    "Brewmaster": 3.06,
+    "Drow Ranger": 2.85,
+    "Visage": 2.77,
+    "Kunkka": 2.72
   }
 }

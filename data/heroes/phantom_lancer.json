@@ -26,27 +26,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Meepo": -5.21,
-    "Tidehunter": -5.2,
-    "Crystal Maiden": -3.85,
-    "Leshrac": -3.59,
-    "Axe": -3.41,
-    "Lina": -3.41,
-    "Necrophos": -3.3,
-    "Underlord": -2.75,
-    "Sand King": -2.16,
-    "Centaur Warrunner": -2.07
+    "Meepo": -6.12,
+    "Tidehunter": -4.93,
+    "Crystal Maiden": -3.76,
+    "Necrophos": -3.56,
+    "Lina": -3.18,
+    "Leshrac": -3.15,
+    "Axe": -2.96,
+    "Warlock": -2.6,
+    "Dark Seer": -2.31,
+    "Underlord": -2.31
   },
   "explicit_synergies": {
-    "Brewmaster": 5.04,
-    "Chen": 4.51,
-    "Elder Titan": 3.76,
-    "Faceless Void": 3.71,
-    "Lycan": 3.44,
-    "Alchemist": 2.99,
-    "Techies": 2.84,
-    "Kunkka": 2.75,
-    "Keeper of the Light": 2.66,
-    "Lina": 2.52
+    "Chen": 4.56,
+    "Brewmaster": 4.5,
+    "Faceless Void": 3.81,
+    "Elder Titan": 3.07,
+    "Lycan": 2.86,
+    "Kunkka": 2.67,
+    "Techies": 2.58,
+    "Bloodseeker": 2.45,
+    "Keeper of the Light": 2.35,
+    "Alchemist": 2.15
   }
 }

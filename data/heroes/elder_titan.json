@@ -28,27 +28,27 @@
     "late": 9
   },
   "explicit_counters": {
-    "Troll Warlord": -12.07,
-    "Wraith King": -10.2,
-    "Clockwerk": -7.5,
-    "Clinkz": -5.71,
-    "Juggernaut": -5.6,
-    "Phoenix": -5.46,
-    "Alchemist": -4.87,
-    "Lone Druid": -4.72,
-    "Brewmaster": -4.39,
-    "Ogre Magi": -4.29
+    "Troll Warlord": -11.22,
+    "Wraith King": -9.28,
+    "Phoenix": -7.55,
+    "Clockwerk": -7.34,
+    "Shadow Demon": -5.0,
+    "Clinkz": -4.9,
+    "Ogre Magi": -4.79,
+    "Juggernaut": -4.3,
+    "Brewmaster": -4.24,
+    "Slardar": -3.8
   },
   "explicit_synergies": {
-    "Chen": 31.97,
-    "Void Spirit": 10.35,
-    "Clockwerk": 9.58,
-    "Tiny": 9.06,
-    "Tidehunter": 9.01,
-    "Dark Willow": 7.54,
-    "Lycan": 7.1,
-    "Templar Assassin": 7.05,
-    "Night Stalker": 6.66,
-    "Slark": 6.65
+    "Chen": 20.87,
+    "Tidehunter": 10.24,
+    "Clockwerk": 9.42,
+    "Lycan": 8.67,
+    "Void Spirit": 7.48,
+    "Tiny": 7.34,
+    "Templar Assassin": 6.8,
+    "Night Stalker": 6.36,
+    "Dark Willow": 6.31,
+    "Lone Druid": 6.17
   }
 }

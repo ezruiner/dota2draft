@@ -29,27 +29,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Arc Warden": -10.5,
-    "Lifestealer": -9.03,
-    "Winter Wyvern": -8.48,
-    "Abaddon": -8.29,
-    "Clockwerk": -7.98,
-    "Lycan": -7.89,
-    "Meepo": -7.47,
-    "Tidehunter": -7.45,
-    "Leshrac": -7.45,
-    "Broodmother": -7.26
+    "Leshrac": -9.64,
+    "Arc Warden": -9.33,
+    "Lycan": -8.46,
+    "Lifestealer": -8.09,
+    "Tidehunter": -7.66,
+    "Clockwerk": -7.66,
+    "Winter Wyvern": -7.65,
+    "Broodmother": -7.5,
+    "Abaddon": -7.47,
+    "Riki": -6.77
   },
   "explicit_synergies": {
-    "Meepo": 12.87,
-    "Bane": 11.72,
-    "Pangolier": 11.59,
-    "Night Stalker": 10.54,
-    "Keeper of the Light": 10.31,
-    "Earth Spirit": 9.49,
-    "Void Spirit": 7.23,
-    "Abaddon": 6.92,
-    "Muerta": 6.64,
-    "Earthshaker": 6.48
+    "Bane": 13.17,
+    "Meepo": 10.14,
+    "Earth Spirit": 9.31,
+    "Night Stalker": 7.69,
+    "Pangolier": 6.51,
+    "Keeper of the Light": 6.5,
+    "Bristleback": 6.15,
+    "Troll Warlord": 6.05,
+    "Abaddon": 5.37,
+    "Earthshaker": 5.08
   }
 }

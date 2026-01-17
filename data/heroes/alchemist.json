@@ -30,27 +30,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Lone Druid": -6.82,
-    "Meepo": -4.31,
-    "Broodmother": -3.97,
-    "Troll Warlord": -3.46,
-    "Clinkz": -3.35,
-    "Dazzle": -3.29,
-    "Io": -2.98,
-    "Lycan": -2.98,
-    "Axe": -2.94,
-    "Visage": -2.81
+    "Lone Druid": -5.34,
+    "Broodmother": -4.53,
+    "Meepo": -4.46,
+    "Phoenix": -3.18,
+    "Clinkz": -2.98,
+    "Troll Warlord": -2.53,
+    "Axe": -2.37,
+    "Slardar": -2.37,
+    "Nyx Assassin": -2.35,
+    "Shadow Shaman": -2.34
   },
   "explicit_synergies": {
-    "Ringmaster": 7.09,
-    "Meepo": 7.01,
-    "Kez": 5.45,
-    "Shadow Demon": 5.42,
-    "Marci": 5.17,
-    "Omniknight": 4.93,
-    "Pangolier": 4.53,
-    "Outworld Destroyer": 4.07,
-    "Faceless Void": 4.0,
-    "Kunkka": 3.94
+    "Ringmaster": 6.89,
+    "Marci": 5.64,
+    "Kez": 5.41,
+    "Meepo": 4.98,
+    "Outworld Destroyer": 4.94,
+    "Shadow Demon": 4.67,
+    "Omniknight": 4.42,
+    "Pangolier": 4.36,
+    "Lina": 3.63,
+    "Faceless Void": 3.6
   }
 }

@@ -26,27 +26,27 @@
     "late": 9
   },
   "explicit_counters": {
-    "Arc Warden": -6.47,
-    "Broodmother": -5.71,
-    "Slardar": -5.01,
-    "Winter Wyvern": -4.94,
-    "Dazzle": -4.84,
-    "Enigma": -4.81,
-    "Elder Titan": -3.8,
-    "Razor": -3.69,
-    "Wraith King": -3.51,
-    "Visage": -3.31
+    "Arc Warden": -6.06,
+    "Broodmother": -5.75,
+    "Slardar": -5.17,
+    "Dazzle": -5.05,
+    "Chen": -4.92,
+    "Enigma": -4.11,
+    "Winter Wyvern": -3.98,
+    "Elder Titan": -3.57,
+    "Riki": -3.28,
+    "Visage": -2.94
   },
   "explicit_synergies": {
-    "Doom": 4.75,
-    "Riki": 4.7,
-    "Mirana": 3.95,
-    "Tusk": 3.83,
-    "Naga Siren": 3.2,
-    "Brewmaster": 3.0,
-    "Night Stalker": 2.95,
-    "Underlord": 2.78,
-    "Centaur Warrunner": 2.7,
-    "Marci": 2.64
+    "Brewmaster": 4.94,
+    "Doom": 4.64,
+    "Riki": 4.33,
+    "Kez": 4.16,
+    "Mirana": 3.61,
+    "Tusk": 3.35,
+    "Treant Protector": 3.15,
+    "Bounty Hunter": 3.1,
+    "Night Stalker": 2.58,
+    "Nyx Assassin": 2.54
   }
 }

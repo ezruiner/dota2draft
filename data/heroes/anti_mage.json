@@ -26,27 +26,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Meepo": -16.12,
-    "Axe": -8.18,
+    "Meepo": -16.03,
+    "Axe": -7.99,
     "Legion Commander": -7.71,
-    "Huskar": -7.7,
-    "Slardar": -6.09,
-    "Troll Warlord": -5.99,
-    "Broodmother": -5.97,
-    "Omniknight": -5.34,
-    "Elder Titan": -4.84,
-    "Spectre": -4.66
+    "Huskar": -7.47,
+    "Broodmother": -6.23,
+    "Slardar": -5.95,
+    "Omniknight": -5.58,
+    "Troll Warlord": -5.45,
+    "Elder Titan": -5.25,
+    "Enigma": -4.88
   },
   "explicit_synergies": {
+    "Pangolier": 5.29,
     "Chen": 4.48,
-    "Pangolier": 4.21,
-    "Bane": 3.64,
-    "Abaddon": 3.25,
-    "Visage": 3.2,
-    "Brewmaster": 3.01,
-    "Lycan": 2.91,
-    "Winter Wyvern": 2.79,
-    "Techies": 2.61,
-    "Monkey King": 2.12
+    "Bane": 2.95,
+    "Brewmaster": 2.83,
+    "Winter Wyvern": 2.8,
+    "Techies": 2.7,
+    "Abaddon": 2.65,
+    "Bristleback": 2.43,
+    "Visage": 2.24,
+    "Dark Seer": 2.24
   }
 }

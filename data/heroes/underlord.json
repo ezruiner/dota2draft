@@ -28,27 +28,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Alchemist": -5.69,
-    "Elder Titan": -5.34,
-    "Clinkz": -4.93,
-    "Dazzle": -4.86,
-    "Juggernaut": -4.53,
-    "Venomancer": -4.43,
-    "Ringmaster": -4.03,
-    "Spectre": -4.02,
-    "Lich": -3.94,
-    "Tinker": -3.77
+    "Dazzle": -6.98,
+    "Alchemist": -5.99,
+    "Elder Titan": -5.56,
+    "Clinkz": -5.18,
+    "Juggernaut": -4.73,
+    "Venomancer": -4.66,
+    "Brewmaster": -4.24,
+    "Arc Warden": -4.23,
+    "Spectre": -3.82,
+    "Earth Spirit": -3.7
   },
   "explicit_synergies": {
-    "Shadow Demon": 5.26,
-    "Night Stalker": 5.23,
-    "Enchantress": 5.19,
-    "Winter Wyvern": 4.55,
-    "Primal Beast": 4.51,
-    "Io": 4.16,
-    "Doom": 4.03,
-    "Arc Warden": 3.98,
-    "Ursa": 3.58,
-    "Mirana": 3.33
+    "Night Stalker": 5.92,
+    "Arc Warden": 5.2,
+    "Shadow Demon": 5.16,
+    "Ursa": 4.46,
+    "Primal Beast": 4.4,
+    "Enchantress": 4.38,
+    "Doom": 4.38,
+    "Winter Wyvern": 4.05,
+    "Mirana": 3.54,
+    "Io": 3.24
   }
 }

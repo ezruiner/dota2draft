@@ -28,27 +28,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Clinkz": -6.87,
-    "Spectre": -6.57,
-    "Elder Titan": -6.52,
-    "Centaur Warrunner": -5.45,
-    "Phoenix": -4.98,
-    "Legion Commander": -3.76,
-    "Void Spirit": -3.56,
-    "Nyx Assassin": -3.52,
-    "Troll Warlord": -3.48,
-    "Zeus": -3.46
+    "Spectre": -7.14,
+    "Clinkz": -6.85,
+    "Centaur Warrunner": -5.41,
+    "Phoenix": -5.25,
+    "Elder Titan": -4.27,
+    "Legion Commander": -4.18,
+    "Zeus": -3.68,
+    "Ember Spirit": -3.23,
+    "Void Spirit": -3.03,
+    "Meepo": -2.92
   },
   "explicit_synergies": {
-    "Beastmaster": 9.73,
-    "Meepo": 8.06,
-    "Enchantress": 6.69,
-    "Arc Warden": 5.49,
-    "Clockwerk": 5.46,
-    "Dazzle": 4.4,
-    "Lycan": 4.28,
-    "Morphling": 3.97,
-    "Broodmother": 3.81,
-    "Dawnbreaker": 3.71
+    "Beastmaster": 9.11,
+    "Enchantress": 7.46,
+    "Meepo": 4.95,
+    "Arc Warden": 4.48,
+    "Dazzle": 4.18,
+    "Clockwerk": 4.16,
+    "Broodmother": 4.13,
+    "Spirit Breaker": 3.86,
+    "Pangolier": 3.52,
+    "Lycan": 3.41
   }
 }

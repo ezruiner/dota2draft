@@ -27,27 +27,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Arc Warden": -5.05,
+    "Winter Wyvern": -5.81,
     "Clinkz": -4.98,
-    "Winter Wyvern": -4.92,
-    "Elder Titan": -4.63,
-    "Vengeful Spirit": -4.47,
-    "Wraith King": -4.44,
-    "Legion Commander": -4.32,
-    "Spectre": -4.31,
-    "Outworld Destroyer": -4.21,
-    "Kunkka": -4.2
+    "Elder Titan": -4.86,
+    "Legion Commander": -4.51,
+    "Outworld Destroyer": -4.47,
+    "Spectre": -4.43,
+    "Arc Warden": -4.42,
+    "Wraith King": -4.35,
+    "Meepo": -4.31,
+    "Vengeful Spirit": -3.93
   },
   "explicit_synergies": {
-    "Io": 7.49,
-    "Lycan": 5.61,
-    "Keeper of the Light": 5.53,
-    "Ringmaster": 4.77,
-    "Marci": 4.65,
-    "Medusa": 3.87,
-    "Terrorblade": 3.67,
-    "Visage": 3.6,
-    "Viper": 2.86,
-    "Razor": 2.75
+    "Lycan": 5.84,
+    "Io": 5.45,
+    "Ringmaster": 4.09,
+    "Keeper of the Light": 4.04,
+    "Visage": 3.8,
+    "Marci": 3.73,
+    "Medusa": 3.36,
+    "Terrorblade": 3.3,
+    "Viper": 2.85,
+    "Lone Druid": 2.75
   }
 }

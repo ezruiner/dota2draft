@@ -28,27 +28,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Meepo": -5.57,
-    "Drow Ranger": -4.17,
-    "Broodmother": -3.76,
+    "Meepo": -5.26,
+    "Drow Ranger": -3.76,
+    "Broodmother": -3.19,
+    "Phoenix": -2.66,
+    "Tidehunter": -2.64,
     "Phantom Lancer": -2.46,
-    "Tidehunter": -2.44,
-    "Phoenix": -2.34,
-    "Chaos Knight": -2.31,
-    "Visage": -1.78,
-    "Winter Wyvern": -1.66,
-    "Troll Warlord": -1.46
+    "Visage": -2.38,
+    "Chaos Knight": -2.06,
+    "Troll Warlord": -1.76,
+    "Juggernaut": -1.53
   },
   "explicit_synergies": {
-    "Doom": 8.12,
-    "Primal Beast": 6.7,
-    "Lycan": 6.66,
-    "Pangolier": 5.16,
-    "Earth Spirit": 4.87,
-    "Dark Seer": 4.73,
-    "Chen": 4.63,
-    "Winter Wyvern": 4.25,
-    "Tidehunter": 3.97,
-    "Sven": 3.37
+    "Doom": 8.38,
+    "Lycan": 4.83,
+    "Dark Seer": 4.79,
+    "Primal Beast": 4.4,
+    "Pangolier": 4.34,
+    "Sven": 4.05,
+    "Terrorblade": 3.99,
+    "Chen": 3.73,
+    "Winter Wyvern": 3.65,
+    "Earth Spirit": 3.65
   }
 }

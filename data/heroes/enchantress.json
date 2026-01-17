@@ -28,27 +28,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Meepo": -13.87,
-    "Muerta": -6.93,
-    "Omniknight": -6.88,
-    "Broodmother": -6.74,
-    "Arc Warden": -6.57,
-    "Medusa": -6.34,
-    "Marci": -6.25,
-    "Lich": -6.2,
-    "Ancient Apparition": -6.07,
-    "Chaos Knight": -5.97
+    "Meepo": -11.87,
+    "Naga Siren": -7.66,
+    "Arc Warden": -7.49,
+    "Marci": -7.41,
+    "Dark Willow": -6.79,
+    "Broodmother": -6.65,
+    "Primal Beast": -6.46,
+    "Lich": -6.4,
+    "Omniknight": -6.33,
+    "Treant Protector": -6.25
   },
   "explicit_synergies": {
-    "Batrider": 11.3,
-    "Visage": 9.19,
-    "Io": 8.68,
-    "Underlord": 5.79,
-    "Sand King": 5.69,
-    "Lone Druid": 5.22,
-    "Skywrath Mage": 5.2,
-    "Alchemist": 5.15,
-    "Huskar": 4.94,
-    "Enigma": 4.51
+    "Batrider": 8.72,
+    "Visage": 8.27,
+    "Sand King": 6.76,
+    "Tinker": 5.78,
+    "Huskar": 5.27,
+    "Underlord": 4.88,
+    "Centaur Warrunner": 3.97,
+    "Muerta": 3.84,
+    "Skywrath Mage": 3.77,
+    "Ogre Magi": 3.55
   }
 }

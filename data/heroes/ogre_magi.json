@@ -29,27 +29,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Broodmother": -5.69,
-    "Meepo": -5.54,
-    "Phantom Lancer": -4.24,
-    "Naga Siren": -3.66,
-    "Legion Commander": -3.25,
-    "Wraith King": -3.07,
-    "Spectre": -3.05,
-    "Arc Warden": -2.42,
-    "Dazzle": -2.35,
-    "Winter Wyvern": -2.29
+    "Broodmother": -6.06,
+    "Meepo": -5.64,
+    "Phantom Lancer": -4.14,
+    "Legion Commander": -3.55,
+    "Wraith King": -3.43,
+    "Spectre": -2.93,
+    "Naga Siren": -2.93,
+    "Arc Warden": -2.68,
+    "Visage": -2.66,
+    "Chaos Knight": -2.59
   },
   "explicit_synergies": {
-    "Enigma": 4.2,
-    "Enchantress": 3.71,
-    "Brewmaster": 3.49,
-    "Lone Druid": 3.01,
-    "Death Prophet": 2.98,
-    "Puck": 2.7,
-    "Void Spirit": 2.64,
-    "Batrider": 2.49,
-    "Troll Warlord": 2.36,
-    "Medusa": 2.25
+    "Enchantress": 3.75,
+    "Enigma": 3.71,
+    "Troll Warlord": 2.65,
+    "Lone Druid": 2.6,
+    "Void Spirit": 2.51,
+    "Death Prophet": 2.33,
+    "Kunkka": 2.31,
+    "Muerta": 2.13,
+    "Keeper of the Light": 2.09,
+    "Brewmaster": 1.94
   }
 }

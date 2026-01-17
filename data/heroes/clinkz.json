@@ -25,27 +25,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Meepo": -6.45,
-    "Broodmother": -5.03,
-    "Phantom Lancer": -2.98,
-    "Wraith King": -2.63,
-    "Arc Warden": -2.56,
-    "Spectre": -2.42,
-    "Bounty Hunter": -2.24,
-    "Chaos Knight": -1.21,
-    "Visage": -0.84,
-    "Naga Siren": -0.29
+    "Meepo": -5.78,
+    "Broodmother": -4.79,
+    "Phantom Lancer": -2.88,
+    "Arc Warden": -2.78,
+    "Wraith King": -2.78,
+    "Bounty Hunter": -2.56,
+    "Spectre": -2.31,
+    "Visage": -1.79,
+    "Chaos Knight": -1.01,
+    "Naga Siren": -0.68
   },
   "explicit_synergies": {
-    "Tinker": 3.32,
-    "Clockwerk": 2.8,
-    "Keeper of the Light": 2.75,
-    "Chen": 2.69,
-    "Leshrac": 2.38,
-    "Naga Siren": 2.23,
-    "Muerta": 2.08,
-    "Storm Spirit": 2.07,
-    "Pangolier": 2.02,
-    "Primal Beast": 1.96
+    "Tinker": 3.48,
+    "Chen": 2.72,
+    "Clockwerk": 2.56,
+    "Leshrac": 2.36,
+    "Pangolier": 2.23,
+    "Storm Spirit": 2.21,
+    "Muerta": 2.15,
+    "Kunkka": 2.02,
+    "Naga Siren": 1.99,
+    "Ember Spirit": 1.95
   }
 }

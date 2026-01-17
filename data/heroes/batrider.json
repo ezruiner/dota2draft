@@ -24,27 +24,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Spectre": -14.03,
-    "Phoenix": -14.02,
-    "Winter Wyvern": -13.46,
-    "Legion Commander": -12.81,
-    "Phantom Lancer": -12.35,
-    "Abaddon": -10.83,
-    "Visage": -10.42,
-    "Enigma": -10.38,
-    "Grimstroke": -10.16,
-    "Disruptor": -10.07
+    "Spectre": -14.06,
+    "Winter Wyvern": -13.79,
+    "Legion Commander": -13.65,
+    "Phantom Lancer": -11.73,
+    "Abaddon": -11.63,
+    "Phoenix": -11.61,
+    "Visage": -11.21,
+    "Meepo": -11.0,
+    "Enigma": -9.84,
+    "Disruptor": -9.52
   },
   "explicit_synergies": {
-    "Enchantress": 11.3,
-    "Terrorblade": 11.23,
-    "Visage": 8.77,
-    "Largo": 7.45,
-    "Monkey King": 6.39,
-    "Chaos Knight": 5.98,
-    "Sven": 5.89,
-    "Vengeful Spirit": 5.8,
-    "Chen": 5.75,
-    "Grimstroke": 5.61
+    "Enchantress": 8.72,
+    "Terrorblade": 8.33,
+    "Largo": 8.31,
+    "Monkey King": 5.82,
+    "Pangolier": 5.78,
+    "Centaur Warrunner": 5.73,
+    "Keeper of the Light": 5.26,
+    "Lich": 5.0,
+    "Sven": 4.59,
+    "Shadow Demon": 4.09
   }
 }

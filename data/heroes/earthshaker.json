@@ -27,27 +27,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Spectre": -8.81,
-    "Clinkz": -8.7,
-    "Wraith King": -6.99,
-    "Lifestealer": -6.58,
-    "Lich": -6.48,
-    "Necrophos": -6.38,
-    "Vengeful Spirit": -5.79,
-    "Ogre Magi": -5.7,
-    "Night Stalker": -5.59,
-    "Slardar": -5.55
+    "Spectre": -8.87,
+    "Clinkz": -8.85,
+    "Wraith King": -6.84,
+    "Lich": -6.41,
+    "Lifestealer": -6.26,
+    "Necrophos": -6.15,
+    "Winter Wyvern": -6.06,
+    "Vengeful Spirit": -5.89,
+    "Ogre Magi": -5.79,
+    "Slardar": -5.7
   },
   "explicit_synergies": {
-    "Brewmaster": 6.48,
-    "Huskar": 5.32,
-    "Doom": 5.03,
-    "Pangolier": 4.38,
-    "Bane": 3.41,
-    "Visage": 2.77,
-    "Naga Siren": 2.58,
-    "Bounty Hunter": 2.25,
-    "Ringmaster": 2.23,
-    "Phoenix": 2.17
+    "Huskar": 5.49,
+    "Brewmaster": 5.08,
+    "Doom": 4.78,
+    "Pangolier": 3.74,
+    "Bounty Hunter": 2.83,
+    "Bane": 2.8,
+    "Visage": 2.69,
+    "Phoenix": 2.21,
+    "Templar Assassin": 1.96,
+    "Medusa": 1.95
   }
 }

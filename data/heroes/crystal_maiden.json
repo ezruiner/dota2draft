@@ -26,27 +26,27 @@
     "late": 4
   },
   "explicit_counters": {
-    "Elder Titan": -5.93,
-    "Phoenix": -4.66,
-    "Clinkz": -3.88,
-    "Juggernaut": -3.78,
-    "Winter Wyvern": -3.45,
-    "Witch Doctor": -2.81,
-    "Wraith King": -2.79,
-    "Omniknight": -2.78,
-    "Drow Ranger": -2.7,
-    "Spectre": -2.68
+    "Phoenix": -4.91,
+    "Elder Titan": -3.96,
+    "Clinkz": -3.87,
+    "Juggernaut": -3.83,
+    "Omniknight": -3.07,
+    "Winter Wyvern": -2.99,
+    "Legion Commander": -2.95,
+    "Wraith King": -2.89,
+    "Spectre": -2.81,
+    "Drow Ranger": -2.8
   },
   "explicit_synergies": {
-    "Visage": 5.25,
-    "Beastmaster": 4.61,
-    "Dark Seer": 3.22,
-    "Dazzle": 2.98,
-    "Warlock": 2.74,
-    "Pugna": 2.59,
-    "Templar Assassin": 2.41,
-    "Enchantress": 2.37,
-    "Enigma": 2.37,
-    "Kez": 2.17
+    "Visage": 5.41,
+    "Dark Seer": 4.1,
+    "Enigma": 2.66,
+    "Lycan": 2.55,
+    "Marci": 2.54,
+    "Huskar": 2.41,
+    "Templar Assassin": 2.38,
+    "Kez": 2.32,
+    "Beastmaster": 2.25,
+    "Pugna": 2.15
   }
 }

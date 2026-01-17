@@ -1057,16 +1057,9 @@
     </style>
 </head>
 <body class="system-cursor">
+    <div id="html-boot" style="position:fixed;bottom:0;left:0;z-index:2147483647;background:#ffcc00;color:#000;padding:4px 6px;font:12px monospace;">HTML BOOT OK</div>
     <div style="position: absolute; top: 0; left: 0; z-index: 10000; background: red; color: white; padding: 5px;" id="debug-overlay">DEBUG MODE ACTIVE</div>
-    <script>
-        window.onerror = function(msg, url, line, col, error) {
-            alert("Error: " + msg + "\nLine: " + line);
-            const d = document.getElementById('debug-overlay');
-            if(d) d.innerHTML += "<br>" + msg;
-        };
-        console.log("Body start script executed");
-    </script>
-    <div id="cursor"></div>
+<div id="cursor"></div>
     <div class="mercury-blob" id="blob"></div>
     <div class="ambient-fog fog-1"></div>
     <div class="ambient-fog fog-2"></div>
@@ -1231,7 +1224,7 @@
                     <label class="setting-label" data-i18n="setting_language">LANGUAGE</label>
                     <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--mercury); padding: 4px; border: 1px solid var(--border); border-radius: 4px; display: flex; gap: 4px;">
                         <button id="lang-en" class="lang-btn active" style="flex: 1; background: none; border: none; color: var(--mercury); padding: 8px 6px; cursor: pointer; opacity: 0.5;">ENGLISH</button>
-                        <button id="lang-ru" class="lang-btn" style="flex: 1; background: none; border: none; color: var(--mercury); padding: 8px 6px; cursor: pointer; opacity: 0.5;">РУССКИЙ</button>
+                        <button id="lang-ru" class="lang-btn" style="flex: 1; background: none; border: none; color: var(--mercury); padding: 8px 6px; cursor: pointer; opacity: 0.5;">�������</button>
                     </div>
                 </div>
 
@@ -1416,7 +1409,7 @@
             "Ogre Magi": "ogre_magi.png",
             "Omniknight": "omniknight.png",
             "Oracle": "oracle.png",
-            "Outworld Destroyer": "obsidian_destroyer.png",
+            "Outworld Devourer": "obsidian_destroyer.png",
             "Pangolier": "pangolier.png",
             "Phantom Assassin": "phantom_assassin.png",
             "Phantom Lancer": "phantom_lancer.png",
@@ -1989,9 +1982,9 @@
                 const removeBtn = document.createElement('button');
                 removeBtn.className = `remove-btn ${type === 'radiant' ? 'remove-right' : 'remove-left'}`;
                 removeBtn.type = 'button';
-                removeBtn.innerText = '×';
-                removeBtn.title = 'Удалить';
-                removeBtn.setAttribute('aria-label', 'Удалить героя');
+                removeBtn.innerText = '?';
+                removeBtn.title = '�������';
+                removeBtn.setAttribute('aria-label', '������� �����');
                 removeBtn.draggable = false;
                 removeBtn.addEventListener('mousedown', (e) => e.stopPropagation());
                 removeBtn.addEventListener('pointerdown', (e) => e.stopPropagation());
@@ -2109,9 +2102,9 @@
                     const removeBtn = document.createElement('button');
                     removeBtn.className = `remove-btn ${type === 'radiant' ? 'remove-right' : 'remove-left'}`;
                     removeBtn.type = 'button';
-                    removeBtn.innerText = '×';
-                    removeBtn.title = 'Удалить';
-                    removeBtn.setAttribute('aria-label', 'Удалить героя');
+                    removeBtn.innerText = '?';
+                    removeBtn.title = '�������';
+                    removeBtn.setAttribute('aria-label', '������� �����');
                     removeBtn.draggable = false;
                     removeBtn.addEventListener('mousedown', (e) => e.stopPropagation());
                     removeBtn.addEventListener('pointerdown', (e) => e.stopPropagation());
@@ -2531,34 +2524,34 @@
                 "modal_no": "CANCEL"
             },
             "ru": {
-                "subtitle": "ПОМОЩНИК ДРАФТА DOTA 2",
-                "settings_title": "КОНФИГУРАЦИЯ СИСТЕМЫ",
+                "subtitle": "Ассистент драфта DOTA 2",
+                "settings_title": "Настройки системы",
                 "reset": "СБРОС",
                 "analyze": "АНАЛИЗ ДРАФТА",
                 "search_placeholder": "ПОИСК ГЕРОЯ...",
-                "helper_text": "ЛЕВЫЙ КЛИК: <span style=\"color: var(--radiant)\">RADIANT</span> // ПРАВЫЙ КЛИК: <span style=\"color: var(--dire)\">DIRE</span>",
-                "loading": "ЗАГРУЗКА ГЕРОВ...",
+                "helper_text": "ЛЕВАЯ КНОПКА: <span style=\"color: var(--radiant)\">RADIANT</span> // ПРАВАЯ КНОПКА: <span style=\"color: var(--dire)\">DIRE</span>",
+                "loading": "ЗАГРУЗКА ГЕРОЕВ...",
                 "radiant": "RADIANT",
                 "dire": "DIRE",
                 "recs": "РЕКОМЕНДАЦИИ",
                 "win_prob": "ВЕРОЯТНОСТЬ ПОБЕДЫ",
                 "no_data": "НЕТ ДАННЫХ",
                 "setting_interface_width": "ШИРИНА ИНТЕРФЕЙСА (%)",
-                "setting_icon_size": "РАЗМЕР ИКОНОК (PX)",
+                "setting_icon_size": "РАЗМЕР ИКОНОК ГЕРОЕВ (PX)",
                 "setting_grid_width": "ШИРИНА СЕТКИ ГЕРОЕВ (PX)",
                 "setting_cursor_glow": "РАДИУС СВЕЧЕНИЯ КУРСОРА (PX)",
-                "setting_side_mode": "БОКОВЫЕ ПАНЕЛИ",
-                "setting_language": "ЯЗЫК / LANGUAGE",
+                "setting_side_mode": "БОКОВЫЕ РЕКОМЕНДАЦИИ",
+                "setting_language": "ЯЗЫК",
                 "section_visual": "ВИЗУАЛ",
                 "section_data": "ДАННЫЕ",
                 "setting_update_data": "ОБНОВИТЬ СТАТИСТИКУ (STRATZ API)",
                 "btn_update": "ЗАПУСТИТЬ ОБНОВЛЕНИЕ",
-                "setting_system_cursor": "СИСТЕМНЫЙ КУРСОР",
-                "setting_auto_analyze": "АВТОАНАЛИЗ ПРИ ВЫБОРЕ",
-                "setting_stratz_api_key": "API КЛЮЧ STRATZ",
-                "setting_max_workers": "МАКС. ПОТОКОВ",
+                "setting_system_cursor": "ВКЛЮЧИТЬ СИСТЕМНЫЙ КУРСОР",
+                "setting_auto_analyze": "АВТО-АНАЛИЗ ПРИ ПИКЕ",
+                "setting_stratz_api_key": "API-КЛЮЧ STRATZ",
+                "setting_max_workers": "МАКС. ВОРКЕРОВ (ПОТОКИ)",
                 "modal_confirm_title": "ПОДТВЕРЖДЕНИЕ",
-                "modal_update_desc": "Данные уже были проверены\nна этой неделе. Скачать заново?",
+                "modal_update_desc": "Данные уже проверялись\nна этой неделе. Скачать снова?",
                 "modal_yes": "ОБНОВИТЬ",
                 "modal_no": "ОТМЕНА"
             }

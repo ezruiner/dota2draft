@@ -25,27 +25,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Omniknight": -8.94,
-    "Dazzle": -8.38,
-    "Shadow Shaman": -8.12,
-    "Enigma": -7.92,
-    "Medusa": -7.61,
-    "Visage": -7.59,
-    "Lone Druid": -7.45,
-    "Vengeful Spirit": -7.14,
-    "Clockwerk": -6.75,
-    "Spectre": -6.45
+    "Shadow Shaman": -8.1,
+    "Dazzle": -8.09,
+    "Visage": -7.82,
+    "Omniknight": -7.75,
+    "Lone Druid": -7.49,
+    "Vengeful Spirit": -7.3,
+    "Medusa": -7.17,
+    "Clockwerk": -7.09,
+    "Broodmother": -6.53,
+    "Necrophos": -6.53
   },
   "explicit_synergies": {
-    "Luna": 6.79,
-    "Enigma": 6.11,
-    "Doom": 5.55,
-    "Drow Ranger": 5.46,
-    "Puck": 5.01,
-    "Alchemist": 4.95,
-    "Huskar": 4.84,
-    "Brewmaster": 4.6,
-    "Troll Warlord": 4.46,
-    "Dawnbreaker": 4.13
+    "Luna": 5.92,
+    "Doom": 5.47,
+    "Alchemist": 4.91,
+    "Enigma": 4.83,
+    "Drow Ranger": 4.36,
+    "Puck": 4.21,
+    "Storm Spirit": 4.02,
+    "Gyrocopter": 4.0,
+    "Pugna": 3.82,
+    "Huskar": 3.78
   }
 }

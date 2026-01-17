@@ -27,27 +27,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Elder Titan": -7.04,
-    "Broodmother": -6.51,
-    "Winter Wyvern": -5.95,
-    "Meepo": -5.59,
-    "Sand King": -4.34,
-    "Clockwerk": -3.93,
-    "Arc Warden": -3.49,
-    "Wraith King": -3.3,
-    "Witch Doctor": -3.24,
-    "Templar Assassin": -3.14
+    "Elder Titan": -7.23,
+    "Broodmother": -5.89,
+    "Winter Wyvern": -5.42,
+    "Arc Warden": -4.57,
+    "Meepo": -3.87,
+    "Lycan": -3.73,
+    "Clockwerk": -3.6,
+    "Wraith King": -3.11,
+    "Lich": -2.94,
+    "Witch Doctor": -2.93
   },
   "explicit_synergies": {
-    "Chen": 6.49,
-    "Troll Warlord": 5.39,
-    "Elder Titan": 4.94,
-    "Death Prophet": 3.91,
-    "Keeper of the Light": 3.64,
-    "Sand King": 3.21,
-    "Io": 3.21,
-    "Juggernaut": 3.16,
-    "Visage": 2.91,
-    "Disruptor": 2.85
+    "Elder Titan": 6.81,
+    "Troll Warlord": 5.14,
+    "Chen": 4.59,
+    "Naga Siren": 3.47,
+    "Visage": 3.35,
+    "Doom": 3.04,
+    "Alchemist": 2.68,
+    "Meepo": 2.53,
+    "Juggernaut": 2.49,
+    "Disruptor": 2.48
   }
 }

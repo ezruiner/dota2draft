@@ -28,27 +28,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Brewmaster": -6.78,
-    "Meepo": -5.13,
-    "Muerta": -4.09,
-    "Legion Commander": -3.18,
-    "Skywrath Mage": -2.89,
-    "Arc Warden": -2.87,
-    "Drow Ranger": -2.64,
-    "Keeper of the Light": -2.5,
-    "Oracle": -2.07,
-    "Lich": -1.85
+    "Brewmaster": -5.97,
+    "Meepo": -4.44,
+    "Muerta": -3.5,
+    "Legion Commander": -3.16,
+    "Visage": -3.09,
+    "Skywrath Mage": -2.93,
+    "Arc Warden": -2.92,
+    "Ancient Apparition": -2.87,
+    "Drow Ranger": -2.6,
+    "Keeper of the Light": -2.53
   },
   "explicit_synergies": {
-    "Enchantress": 4.07,
-    "Dawnbreaker": 3.89,
-    "Brewmaster": 3.16,
-    "Elder Titan": 2.97,
-    "Mirana": 2.51,
-    "Terrorblade": 2.51,
-    "Dark Seer": 2.42,
-    "Storm Spirit": 2.2,
-    "Bloodseeker": 2.18,
-    "Bane": 2.09
+    "Dawnbreaker": 3.88,
+    "Brewmaster": 3.33,
+    "Bloodseeker": 3.19,
+    "Chen": 3.09,
+    "Terrorblade": 2.95,
+    "Dark Seer": 2.75,
+    "Hoodwink": 2.68,
+    "Elder Titan": 2.5,
+    "Mirana": 2.5,
+    "Enchantress": 2.44
   }
 }

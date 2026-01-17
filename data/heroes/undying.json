@@ -30,27 +30,27 @@
     "late": 4
   },
   "explicit_counters": {
-    "Broodmother": -7.62,
-    "Chaos Knight": -4.98,
-    "Elder Titan": -4.31,
-    "Meepo": -3.98,
-    "Alchemist": -3.78,
-    "Bloodseeker": -3.64,
-    "Medusa": -3.48,
-    "Slardar": -3.02,
-    "Clinkz": -2.72,
-    "Legion Commander": -2.7
+    "Broodmother": -6.97,
+    "Meepo": -5.57,
+    "Elder Titan": -4.72,
+    "Chaos Knight": -4.06,
+    "Bloodseeker": -3.95,
+    "Medusa": -3.75,
+    "Alchemist": -3.54,
+    "Legion Commander": -3.16,
+    "Clinkz": -2.88,
+    "Slardar": -2.84
   },
   "explicit_synergies": {
-    "Winter Wyvern": 4.86,
-    "Enigma": 4.18,
-    "Magnus": 3.66,
-    "Riki": 3.58,
-    "Tiny": 3.43,
-    "Sand King": 3.27,
-    "Tusk": 3.21,
-    "Axe": 3.04,
-    "Mars": 3.03,
-    "Beastmaster": 2.63
+    "Winter Wyvern": 5.02,
+    "Tusk": 3.96,
+    "Tiny": 3.47,
+    "Riki": 3.34,
+    "Enigma": 3.31,
+    "Mars": 3.2,
+    "Arc Warden": 2.77,
+    "Magnus": 2.7,
+    "Sand King": 2.66,
+    "Axe": 2.64
   }
 }

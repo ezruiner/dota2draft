@@ -27,27 +27,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Arc Warden": -12.2,
-    "Broodmother": -11.77,
-    "Spectre": -8.47,
-    "Phoenix": -7.77,
-    "Bloodseeker": -7.57,
-    "Meepo": -6.67,
-    "Chaos Knight": -6.53,
-    "Clinkz": -6.44,
-    "Vengeful Spirit": -5.57,
-    "Lycan": -5.45
+    "Arc Warden": -12.14,
+    "Broodmother": -9.96,
+    "Spectre": -8.64,
+    "Meepo": -7.43,
+    "Phoenix": -7.3,
+    "Bloodseeker": -6.71,
+    "Vengeful Spirit": -6.65,
+    "Clinkz": -6.57,
+    "Lycan": -6.14,
+    "Chaos Knight": -5.95
   },
   "explicit_synergies": {
-    "Chen": 12.64,
-    "Shadow Demon": 5.96,
-    "Enigma": 5.88,
-    "Doom": 5.53,
-    "Bane": 5.3,
-    "Earth Spirit": 5.28,
-    "Brewmaster": 4.87,
-    "Tiny": 4.83,
-    "Puck": 4.79,
-    "Spectre": 3.85
+    "Chen": 10.79,
+    "Enigma": 6.5,
+    "Shadow Demon": 5.82,
+    "Bane": 5.66,
+    "Puck": 4.98,
+    "Tiny": 4.86,
+    "Earth Spirit": 4.31,
+    "Doom": 4.24,
+    "Outworld Destroyer": 3.48,
+    "Spectre": 3.01
   }
 }

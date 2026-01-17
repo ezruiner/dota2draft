@@ -28,27 +28,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Winter Wyvern": -5.03,
-    "Broodmother": -3.19,
-    "Chaos Knight": -2.77,
-    "Dazzle": -1.41,
-    "Wraith King": -1.29,
-    "Spectre": -1.24,
-    "Meepo": -1.23,
-    "Vengeful Spirit": -0.98,
-    "Abaddon": -0.57,
-    "Lone Druid": -0.44
+    "Winter Wyvern": -6.05,
+    "Broodmother": -3.33,
+    "Chaos Knight": -2.1,
+    "Dazzle": -1.59,
+    "Vengeful Spirit": -1.5,
+    "Wraith King": -1.28,
+    "Spectre": -0.8,
+    "Visage": -0.77,
+    "Meepo": -0.55,
+    "Clinkz": -0.39
   },
   "explicit_synergies": {
-    "Phoenix": 5.08,
-    "Abaddon": 3.03,
-    "Troll Warlord": 2.96,
-    "Muerta": 2.85,
-    "Meepo": 2.08,
-    "Necrophos": 2.06,
-    "Treant Protector": 2.05,
-    "Bane": 2.02,
-    "Broodmother": 2.02,
-    "Grimstroke": 2.02
+    "Phoenix": 4.88,
+    "Troll Warlord": 3.26,
+    "Abaddon": 3.17,
+    "Lifestealer": 2.15,
+    "Necrophos": 2.14,
+    "Muerta": 2.13,
+    "Lone Druid": 2.01,
+    "Silencer": 1.81,
+    "Grimstroke": 1.78,
+    "Meepo": 1.74
   }
 }

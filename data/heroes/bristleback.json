@@ -27,27 +27,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Legion Commander": -8.24,
-    "Vengeful Spirit": -6.98,
-    "Slark": -6.68,
-    "Broodmother": -6.54,
-    "Meepo": -6.05,
-    "Phantom Lancer": -5.98,
+    "Legion Commander": -8.37,
+    "Slark": -6.5,
+    "Broodmother": -6.36,
+    "Arc Warden": -6.12,
     "Bounty Hunter": -5.94,
-    "Axe": -5.91,
-    "Venomancer": -5.57,
-    "Spirit Breaker": -5.56
+    "Vengeful Spirit": -5.81,
+    "Phantom Lancer": -5.79,
+    "Spirit Breaker": -5.77,
+    "Axe": -5.75,
+    "Meepo": -5.69
   },
   "explicit_synergies": {
-    "Lycan": 12.37,
-    "Pangolier": 6.07,
-    "Bloodseeker": 6.0,
-    "Naga Siren": 4.48,
-    "Enigma": 4.28,
-    "Omniknight": 3.07,
-    "Broodmother": 3.0,
-    "Dazzle": 3.0,
-    "Monkey King": 2.98,
-    "Vengeful Spirit": 2.79
+    "Lycan": 13.61,
+    "Pangolier": 7.12,
+    "Bloodseeker": 5.5,
+    "Brewmaster": 4.15,
+    "Bane": 3.57,
+    "Dazzle": 3.08,
+    "Omniknight": 3.08,
+    "Enigma": 3.02,
+    "Naga Siren": 2.88,
+    "Primal Beast": 2.88
   }
 }

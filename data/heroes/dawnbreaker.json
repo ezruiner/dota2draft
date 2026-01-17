@@ -26,27 +26,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Nyx Assassin": -7.32,
-    "Phoenix": -7.08,
-    "Broodmother": -5.53,
-    "Clinkz": -5.37,
-    "Dazzle": -5.33,
-    "Winter Wyvern": -4.47,
-    "Lich": -4.21,
-    "Razor": -4.0,
-    "Underlord": -4.0,
-    "Lifestealer": -3.95
+    "Nyx Assassin": -7.89,
+    "Phoenix": -6.36,
+    "Clinkz": -5.65,
+    "Broodmother": -5.25,
+    "Underlord": -4.75,
+    "Dazzle": -4.6,
+    "Lich": -3.9,
+    "Visage": -3.87,
+    "Silencer": -3.58,
+    "Lifestealer": -3.53
   },
   "explicit_synergies": {
-    "Doom": 8.68,
-    "Largo": 5.49,
-    "Elder Titan": 5.44,
-    "Sand King": 4.51,
-    "Primal Beast": 4.45,
-    "Nyx Assassin": 4.1,
-    "Kez": 4.03,
-    "Dark Seer": 3.98,
-    "Visage": 3.81,
-    "Oracle": 3.75
+    "Doom": 9.69,
+    "Primal Beast": 4.41,
+    "Elder Titan": 4.36,
+    "Mars": 4.24,
+    "Largo": 4.19,
+    "Marci": 4.03,
+    "Sven": 3.87,
+    "Oracle": 3.8,
+    "Visage": 3.7,
+    "Nyx Assassin": 3.58
   }
 }

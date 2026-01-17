@@ -29,27 +29,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Omniknight": -5.51,
-    "Elder Titan": -4.83,
-    "Meepo": -4.55,
-    "Clinkz": -3.21,
-    "Lifestealer": -3.07,
-    "Legion Commander": -2.72,
-    "Necrophos": -2.69,
-    "Clockwerk": -2.54,
-    "Outworld Destroyer": -2.53,
-    "Nyx Assassin": -2.48
+    "Omniknight": -5.24,
+    "Meepo": -4.79,
+    "Lifestealer": -3.34,
+    "Elder Titan": -3.25,
+    "Legion Commander": -3.08,
+    "Clinkz": -3.04,
+    "Necrophos": -2.67,
+    "Outworld Destroyer": -2.64,
+    "Juggernaut": -2.61,
+    "Nyx Assassin": -2.47
   },
   "explicit_synergies": {
-    "Elder Titan": 8.31,
-    "Lycan": 6.29,
+    "Elder Titan": 9.34,
+    "Lycan": 6.72,
     "Naga Siren": 4.5,
-    "Visage": 3.88,
-    "Slardar": 3.67,
-    "Primal Beast": 3.43,
-    "Arc Warden": 3.31,
-    "Bloodseeker": 2.92,
-    "Doom": 2.75,
-    "Timbersaw": 2.62
+    "Timbersaw": 3.26,
+    "Primal Beast": 3.19,
+    "Slardar": 2.9,
+    "Visage": 2.68,
+    "Arc Warden": 2.59,
+    "Batrider": 2.33,
+    "Marci": 2.31
   }
 }

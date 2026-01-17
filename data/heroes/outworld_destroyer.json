@@ -27,27 +27,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Broodmother": -9.17,
-    "Brewmaster": -8.29,
-    "Visage": -7.78,
-    "Wraith King": -7.5,
-    "Phantom Lancer": -7.28,
-    "Nyx Assassin": -6.04,
-    "Meepo": -5.75,
-    "Naga Siren": -5.68,
-    "Arc Warden": -4.59,
-    "Chaos Knight": -4.46
+    "Broodmother": -9.22,
+    "Phantom Lancer": -7.78,
+    "Wraith King": -7.73,
+    "Brewmaster": -7.44,
+    "Nyx Assassin": -6.74,
+    "Visage": -6.69,
+    "Naga Siren": -6.41,
+    "Chen": -4.69,
+    "Clinkz": -4.12,
+    "Spectre": -4.05
   },
   "explicit_synergies": {
-    "Alchemist": 3.46,
-    "Clockwerk": 3.3,
-    "Winter Wyvern": 3.1,
-    "Doom": 3.07,
-    "Kez": 3.03,
-    "Arc Warden": 2.83,
-    "Largo": 2.79,
-    "Bloodseeker": 2.75,
-    "Timbersaw": 2.54,
-    "Monkey King": 2.43
+    "Alchemist": 4.44,
+    "Death Prophet": 2.98,
+    "Doom": 2.89,
+    "Kez": 2.41,
+    "Clockwerk": 2.29,
+    "Timbersaw": 2.29,
+    "Muerta": 2.18,
+    "Tidehunter": 2.11,
+    "Vengeful Spirit": 1.91,
+    "Elder Titan": 1.86
   }
 }

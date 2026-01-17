@@ -29,27 +29,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Grimstroke": -17.39,
-    "Wraith King": -16.26,
-    "Huskar": -15.52,
-    "Leshrac": -13.16,
-    "Naga Siren": -12.5,
-    "Visage": -12.26,
-    "Sand King": -12.02,
-    "Elder Titan": -11.9,
-    "Nyx Assassin": -11.42,
-    "Underlord": -11.42
+    "Grimstroke": -16.36,
+    "Huskar": -14.63,
+    "Elder Titan": -14.44,
+    "Wraith King": -14.14,
+    "Leshrac": -12.5,
+    "Enigma": -11.62,
+    "Clinkz": -11.29,
+    "Nyx Assassin": -11.14,
+    "Underlord": -11.11,
+    "Visage": -10.32
   },
   "explicit_synergies": {
-    "Chen": 18.36,
-    "Brewmaster": 11.59,
-    "Beastmaster": 9.04,
-    "Weaver": 8.62,
-    "Tinker": 8.38,
-    "Wraith King": 7.97,
-    "Terrorblade": 7.64,
-    "Oracle": 7.51,
-    "Slardar": 7.06,
-    "Bristleback": 6.97
+    "Chen": 15.77,
+    "Tinker": 10.83,
+    "Wraith King": 8.46,
+    "Beastmaster": 8.36,
+    "Bristleback": 7.92,
+    "Terrorblade": 6.83,
+    "Brewmaster": 6.51,
+    "Weaver": 6.46,
+    "Primal Beast": 6.43,
+    "Dazzle": 5.84
   }
 }

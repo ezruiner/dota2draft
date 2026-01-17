@@ -27,27 +27,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Spectre": -7.61,
-    "Visage": -7.12,
-    "Clinkz": -6.74,
-    "Axe": -5.74,
-    "Wraith King": -5.11,
-    "Winter Wyvern": -5.02,
-    "Slardar": -4.82,
-    "Tidehunter": -4.47,
-    "Lich": -4.07,
-    "Medusa": -3.89
+    "Spectre": -7.45,
+    "Clinkz": -6.34,
+    "Visage": -6.28,
+    "Axe": -5.6,
+    "Winter Wyvern": -5.5,
+    "Lycan": -4.95,
+    "Slardar": -4.8,
+    "Wraith King": -4.79,
+    "Tidehunter": -4.36,
+    "Alchemist": -4.11
   },
   "explicit_synergies": {
-    "Phoenix": 3.46,
-    "Alchemist": 3.32,
-    "Io": 2.85,
-    "Bane": 2.8,
-    "Phantom Lancer": 2.62,
-    "Dark Seer": 2.44,
-    "Elder Titan": 1.89,
-    "Sand King": 1.86,
-    "Faceless Void": 1.84,
-    "Slark": 1.72
+    "Alchemist": 3.83,
+    "Elder Titan": 3.35,
+    "Io": 3.15,
+    "Phoenix": 2.82,
+    "Death Prophet": 2.18,
+    "Phantom Lancer": 2.14,
+    "Bane": 2.01,
+    "Vengeful Spirit": 1.8,
+    "Faceless Void": 1.79,
+    "Bounty Hunter": 1.74
   }
 }

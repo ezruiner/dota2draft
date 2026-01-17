@@ -29,27 +29,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Phoenix": -10.57,
-    "Axe": -10.31,
-    "Necrophos": -10.04,
-    "Largo": -8.97,
-    "Kunkka": -8.72,
-    "Medusa": -7.32,
-    "Abaddon": -7.06,
-    "Shadow Demon": -6.9,
-    "Warlock": -6.68,
-    "Dark Seer": -6.16
+    "Phoenix": -9.9,
+    "Axe": -9.46,
+    "Largo": -9.12,
+    "Necrophos": -8.35,
+    "Abaddon": -8.08,
+    "Shadow Demon": -7.78,
+    "Winter Wyvern": -7.61,
+    "Kunkka": -6.85,
+    "Nyx Assassin": -6.58,
+    "Lina": -6.39
   },
   "explicit_synergies": {
-    "Phoenix": 10.08,
-    "Chaos Knight": 8.29,
-    "Dark Willow": 8.13,
-    "Ancient Apparition": 7.24,
-    "Enigma": 5.8,
-    "Puck": 5.3,
-    "Riki": 5.0,
-    "Techies": 4.69,
-    "Tidehunter": 4.5,
-    "Pangolier": 4.49
+    "Chaos Knight": 10.15,
+    "Dark Willow": 9.57,
+    "Phoenix": 8.91,
+    "Ancient Apparition": 7.04,
+    "Puck": 6.02,
+    "Techies": 5.15,
+    "Tidehunter": 4.4,
+    "Visage": 4.19,
+    "Tiny": 3.6,
+    "Ursa": 3.56
   }
 }

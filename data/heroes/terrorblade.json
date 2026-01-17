@@ -26,27 +26,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Elder Titan": -14.63,
-    "Brewmaster": -14.58,
-    "Lifestealer": -13.32,
-    "Phantom Lancer": -13.04,
-    "Enigma": -12.59,
-    "Wraith King": -12.29,
-    "Axe": -12.15,
-    "Lich": -11.82,
-    "Tinker": -11.67,
-    "Arc Warden": -10.55
+    "Phantom Lancer": -13.06,
+    "Enigma": -13.01,
+    "Lifestealer": -12.87,
+    "Axe": -12.67,
+    "Elder Titan": -12.5,
+    "Tinker": -11.87,
+    "Wraith King": -11.63,
+    "Brewmaster": -11.47,
+    "Lich": -11.19,
+    "Winter Wyvern": -9.77
   },
   "explicit_synergies": {
-    "Chen": 10.61,
-    "Batrider": 10.34,
-    "Lycan": 10.24,
-    "Pangolier": 7.64,
-    "Bane": 7.47,
-    "Storm Spirit": 6.48,
-    "Monkey King": 5.95,
-    "Enchantress": 5.16,
-    "Troll Warlord": 4.61,
-    "Lone Druid": 4.26
+    "Lycan": 9.12,
+    "Batrider": 7.63,
+    "Chen": 7.22,
+    "Pangolier": 6.83,
+    "Shadow Demon": 6.24,
+    "Monkey King": 6.17,
+    "Bane": 5.88,
+    "Lone Druid": 4.62,
+    "Storm Spirit": 4.61,
+    "Slardar": 4.19
   }
 }

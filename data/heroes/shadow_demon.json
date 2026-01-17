@@ -28,27 +28,27 @@
     "late": 9
   },
   "explicit_counters": {
-    "Chen": -12.82,
-    "Pangolier": -9.0,
-    "Spectre": -8.38,
-    "Meepo": -8.28,
-    "Undying": -8.17,
-    "Winter Wyvern": -7.69,
-    "Phantom Lancer": -7.1,
-    "Chaos Knight": -6.71,
-    "Lycan": -6.57,
-    "Nyx Assassin": -5.36
+    "Chen": -14.71,
+    "Meepo": -10.0,
+    "Spectre": -8.64,
+    "Undying": -8.61,
+    "Winter Wyvern": -8.16,
+    "Pangolier": -7.52,
+    "Chaos Knight": -6.94,
+    "Lycan": -6.52,
+    "Phantom Lancer": -6.27,
+    "Enchantress": -5.67
   },
   "explicit_synergies": {
-    "Underlord": 5.56,
-    "Meepo": 5.45,
-    "Death Prophet": 5.26,
-    "Terrorblade": 5.12,
-    "Alchemist": 5.02,
-    "Lycan": 4.67,
-    "Grimstroke": 4.6,
-    "Lone Druid": 4.59,
-    "Pangolier": 4.57,
-    "Tusk": 4.51
+    "Terrorblade": 7.14,
+    "Meepo": 6.82,
+    "Underlord": 5.66,
+    "Death Prophet": 5.32,
+    "Lone Druid": 5.19,
+    "Pangolier": 4.99,
+    "Sven": 4.41,
+    "Alchemist": 4.27,
+    "Venomancer": 4.03,
+    "Tinker": 3.85
   }
 }

@@ -27,27 +27,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Spectre": -7.12,
-    "Meepo": -4.55,
-    "Wraith King": -3.79,
-    "Outworld Destroyer": -3.57,
-    "Lifestealer": -3.14,
-    "Clinkz": -3.12,
-    "Witch Doctor": -2.67,
-    "Venomancer": -2.5,
-    "Necrophos": -2.24,
-    "Legion Commander": -1.96
+    "Spectre": -6.93,
+    "Meepo": -4.53,
+    "Wraith King": -3.48,
+    "Outworld Destroyer": -3.17,
+    "Clinkz": -3.06,
+    "Abaddon": -2.99,
+    "Lifestealer": -2.83,
+    "Witch Doctor": -2.52,
+    "Venomancer": -2.41,
+    "Phoenix": -2.31
   },
   "explicit_synergies": {
-    "Abaddon": 3.89,
-    "Doom": 3.71,
-    "Dark Seer": 3.61,
-    "Undying": 2.94,
-    "Io": 2.73,
-    "Night Stalker": 2.61,
-    "Oracle": 2.58,
-    "Batrider": 2.54,
-    "Lycan": 2.45,
-    "Templar Assassin": 2.3
+    "Night Stalker": 3.38,
+    "Lycan": 3.29,
+    "Abaddon": 2.96,
+    "Undying": 2.64,
+    "Templar Assassin": 2.52,
+    "Oracle": 2.35,
+    "Mirana": 2.3,
+    "Arc Warden": 2.25,
+    "Underlord": 2.17,
+    "Dark Seer": 2.15
   }
 }

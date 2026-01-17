@@ -28,27 +28,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Brewmaster": -6.32,
-    "Disruptor": -5.5,
-    "Meepo": -4.96,
-    "Lone Druid": -4.32,
-    "Warlock": -4.2,
-    "Naga Siren": -3.92,
-    "Phantom Lancer": -3.39,
-    "Ember Spirit": -3.25,
-    "Medusa": -3.05,
-    "Axe": -2.91
+    "Lone Druid": -4.95,
+    "Brewmaster": -4.9,
+    "Warlock": -4.13,
+    "Disruptor": -3.6,
+    "Meepo": -3.33,
+    "Phantom Lancer": -3.0,
+    "Bounty Hunter": -2.84,
+    "Ember Spirit": -2.76,
+    "Earth Spirit": -2.11,
+    "Drow Ranger": -1.95
   },
   "explicit_synergies": {
-    "Bane": 16.21,
-    "Enchantress": 9.39,
-    "Ringmaster": 8.63,
-    "Kunkka": 7.79,
-    "Batrider": 7.77,
-    "Largo": 7.35,
-    "Marci": 6.72,
-    "Chen": 6.34,
-    "Crystal Maiden": 6.05,
-    "Alchemist": 4.82
+    "Bane": 16.08,
+    "Largo": 8.96,
+    "Enchantress": 8.77,
+    "Marci": 7.8,
+    "Ringmaster": 7.46,
+    "Leshrac": 6.36,
+    "Crystal Maiden": 6.01,
+    "Chen": 5.52,
+    "Broodmother": 5.24,
+    "Razor": 4.35
   }
 }

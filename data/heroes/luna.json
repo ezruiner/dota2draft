@@ -26,27 +26,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Visage": -9.56,
-    "Meepo": -7.94,
-    "Spectre": -6.24,
-    "Arc Warden": -5.54,
-    "Wraith King": -5.28,
-    "Broodmother": -4.17,
-    "Underlord": -3.47,
-    "Juggernaut": -3.13,
-    "Nyx Assassin": -2.92,
-    "Witch Doctor": -2.74
+    "Visage": -8.88,
+    "Meepo": -8.6,
+    "Spectre": -6.52,
+    "Arc Warden": -5.8,
+    "Broodmother": -5.11,
+    "Wraith King": -4.73,
+    "Underlord": -3.91,
+    "Juggernaut": -3.25,
+    "Clinkz": -3.11,
+    "Dark Seer": -3.05
   },
   "explicit_synergies": {
-    "Lone Druid": 6.89,
-    "Troll Warlord": 6.84,
-    "Kez": 6.58,
-    "Arc Warden": 4.48,
-    "Riki": 3.58,
-    "Huskar": 3.21,
-    "Shadow Demon": 3.06,
-    "Beastmaster": 2.73,
-    "Slardar": 2.45,
-    "Chaos Knight": 2.37
+    "Kez": 5.92,
+    "Lone Druid": 5.55,
+    "Troll Warlord": 4.5,
+    "Arc Warden": 4.22,
+    "Riki": 3.88,
+    "Slardar": 2.93,
+    "Nyx Assassin": 2.89,
+    "Huskar": 2.61,
+    "Void Spirit": 2.26,
+    "Grimstroke": 2.23
   }
 }

@@ -25,27 +25,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Spectre": -6.4,
-    "Phantom Lancer": -3.83,
-    "Wraith King": -3.16,
-    "Arc Warden": -3.09,
-    "Lycan": -3.05,
-    "Winter Wyvern": -2.58,
-    "Clockwerk": -2.53,
-    "Broodmother": -1.71,
-    "Lich": -1.33,
-    "Chaos Knight": -1.21
+    "Spectre": -6.05,
+    "Phantom Lancer": -4.05,
+    "Wraith King": -3.49,
+    "Clockwerk": -2.86,
+    "Arc Warden": -2.62,
+    "Lycan": -2.41,
+    "Winter Wyvern": -2.4,
+    "Broodmother": -2.1,
+    "Lich": -1.57,
+    "Brewmaster": -1.29
   },
   "explicit_synergies": {
-    "Kez": 5.26,
-    "Pangolier": 3.75,
-    "Weaver": 3.28,
-    "Alchemist": 3.0,
-    "Vengeful Spirit": 2.86,
-    "Batrider": 2.44,
-    "Largo": 2.22,
-    "Storm Spirit": 2.19,
-    "Gyrocopter": 1.78,
-    "Chaos Knight": 1.75
+    "Kez": 4.36,
+    "Alchemist": 3.79,
+    "Weaver": 2.99,
+    "Pangolier": 2.81,
+    "Vengeful Spirit": 2.75,
+    "Gyrocopter": 2.47,
+    "Io": 2.4,
+    "Chaos Knight": 2.02,
+    "Razor": 1.93,
+    "Storm Spirit": 1.89
   }
 }

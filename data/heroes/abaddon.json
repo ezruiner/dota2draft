@@ -25,27 +25,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Chen": -13.75,
-    "Broodmother": -8.51,
-    "Elder Titan": -7.03,
-    "Meepo": -4.94,
-    "Undying": -4.52,
-    "Visage": -4.5,
-    "Grimstroke": -3.77,
-    "Phoenix": -3.68,
-    "Alchemist": -3.57,
-    "Keeper of the Light": -3.07
+    "Chen": -11.7,
+    "Elder Titan": -7.64,
+    "Broodmother": -6.93,
+    "Meepo": -4.51,
+    "Undying": -3.38,
+    "Alchemist": -3.35,
+    "Underlord": -2.87,
+    "Visage": -2.85,
+    "Kunkka": -2.85,
+    "Oracle": -2.77
   },
   "explicit_synergies": {
-    "Beastmaster": 8.08,
-    "Brewmaster": 7.92,
-    "Bane": 7.75,
-    "Chaos Knight": 5.12,
-    "Void Spirit": 4.37,
-    "Doom": 4.08,
-    "Terrorblade": 4.08,
-    "Axe": 3.89,
-    "Anti-Mage": 3.15,
-    "Warlock": 3.1
+    "Bane": 7.19,
+    "Beastmaster": 7.02,
+    "Brewmaster": 6.17,
+    "Chaos Knight": 5.55,
+    "Void Spirit": 4.13,
+    "Doom": 3.87,
+    "Keeper of the Light": 3.52,
+    "Mars": 3.42,
+    "Warlock": 3.26,
+    "Legion Commander": 2.97
   }
 }

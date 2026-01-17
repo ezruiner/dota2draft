@@ -27,27 +27,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Brewmaster": -6.92,
-    "Spectre": -6.41,
-    "Phantom Lancer": -5.75,
-    "Broodmother": -4.97,
-    "Clinkz": -4.53,
-    "Arc Warden": -4.12,
-    "Legion Commander": -3.76,
-    "Elder Titan": -3.66,
-    "Riki": -3.54,
-    "Naga Siren": -3.36
+    "Spectre": -6.61,
+    "Brewmaster": -6.4,
+    "Broodmother": -5.73,
+    "Phantom Lancer": -5.33,
+    "Clinkz": -4.8,
+    "Vengeful Spirit": -4.24,
+    "Legion Commander": -3.2,
+    "Arc Warden": -3.2,
+    "Naga Siren": -3.12,
+    "Alchemist": -2.95
   },
   "explicit_synergies": {
-    "Naga Siren": 8.74,
-    "Meepo": 6.81,
-    "Earth Spirit": 4.24,
-    "Medusa": 3.99,
-    "Bounty Hunter": 3.7,
-    "Visage": 3.52,
-    "Lone Druid": 2.95,
-    "Dark Seer": 2.89,
-    "Puck": 2.84,
-    "Arc Warden": 2.74
+    "Naga Siren": 8.54,
+    "Meepo": 7.0,
+    "Earth Spirit": 4.68,
+    "Lone Druid": 4.07,
+    "Bane": 3.33,
+    "Medusa": 3.19,
+    "Bounty Hunter": 2.87,
+    "Keeper of the Light": 2.86,
+    "Arc Warden": 2.73,
+    "Visage": 2.73
   }
 }

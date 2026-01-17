@@ -26,27 +26,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Broodmother": -9.61,
-    "Clinkz": -8.17,
-    "Bloodseeker": -7.38,
-    "Elder Titan": -7.0,
-    "Enigma": -6.9,
-    "Weaver": -6.83,
-    "Spectre": -6.36,
-    "Io": -6.2,
-    "Outworld Destroyer": -6.18,
-    "Troll Warlord": -6.18
+    "Broodmother": -9.58,
+    "Clinkz": -7.55,
+    "Elder Titan": -7.26,
+    "Troll Warlord": -6.69,
+    "Bloodseeker": -6.58,
+    "Medusa": -6.51,
+    "Enigma": -6.26,
+    "Necrophos": -6.25,
+    "Dazzle": -6.18,
+    "Weaver": -6.17
   },
   "explicit_synergies": {
-    "Primal Beast": 10.04,
-    "Tiny": 5.06,
-    "Mars": 4.47,
-    "Elder Titan": 3.83,
-    "Pugna": 3.54,
-    "Marci": 3.25,
-    "Naga Siren": 2.91,
-    "Batrider": 2.8,
-    "Phoenix": 2.8,
-    "Outworld Destroyer": 2.74
+    "Primal Beast": 9.57,
+    "Elder Titan": 5.41,
+    "Tiny": 4.56,
+    "Mars": 4.39,
+    "Pugna": 3.6,
+    "Tidehunter": 3.36,
+    "Naga Siren": 3.17,
+    "Lone Druid": 3.1,
+    "Earth Spirit": 3.01,
+    "Kunkka": 2.9
   }
 }

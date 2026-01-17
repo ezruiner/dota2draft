@@ -27,27 +27,27 @@
     "late": 9
   },
   "explicit_counters": {
-    "Winter Wyvern": -8.82,
-    "Enigma": -6.9,
-    "Arc Warden": -6.04,
-    "Nyx Assassin": -5.07,
-    "Visage": -3.89,
-    "Vengeful Spirit": -3.8,
-    "Ogre Magi": -3.33,
-    "Axe": -3.28,
-    "Razor": -3.14,
-    "Spectre": -2.91
+    "Winter Wyvern": -10.43,
+    "Nyx Assassin": -5.28,
+    "Enigma": -5.12,
+    "Arc Warden": -5.02,
+    "Axe": -4.0,
+    "Razor": -3.56,
+    "Keeper of the Light": -3.45,
+    "Visage": -3.02,
+    "Ogre Magi": -2.85,
+    "Viper": -2.83
   },
   "explicit_synergies": {
-    "Muerta": 7.71,
-    "Morphling": 7.14,
-    "Luna": 7.14,
-    "Razor": 5.39,
-    "Kez": 5.16,
-    "Brewmaster": 5.15,
-    "Bounty Hunter": 4.82,
-    "Doom": 4.81,
-    "Sven": 4.66,
-    "Terrorblade": 4.61
+    "Morphling": 6.97,
+    "Brewmaster": 6.05,
+    "Muerta": 5.64,
+    "Sven": 5.23,
+    "Luna": 5.2,
+    "Razor": 4.84,
+    "Bounty Hunter": 4.01,
+    "Legion Commander": 3.56,
+    "Chaos Knight": 3.43,
+    "Dark Willow": 3.25
   }
 }

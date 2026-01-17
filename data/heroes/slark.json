@@ -28,27 +28,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Enigma": -9.77,
-    "Omniknight": -8.76,
-    "Oracle": -8.75,
-    "Grimstroke": -8.56,
-    "Meepo": -8.46,
-    "Night Stalker": -8.08,
-    "Broodmother": -7.52,
-    "Legion Commander": -7.4,
-    "Bloodseeker": -7.3,
-    "Vengeful Spirit": -7.13
+    "Grimstroke": -9.44,
+    "Omniknight": -8.78,
+    "Enigma": -8.53,
+    "Broodmother": -8.36,
+    "Elder Titan": -7.73,
+    "Legion Commander": -7.68,
+    "Bloodseeker": -7.65,
+    "Night Stalker": -7.39,
+    "Oracle": -7.37,
+    "Meepo": -7.33
   },
   "explicit_synergies": {
-    "Elder Titan": 7.45,
-    "Enchantress": 3.85,
-    "Troll Warlord": 3.7,
-    "Naga Siren": 3.34,
-    "Monkey King": 3.14,
-    "Luna": 2.92,
-    "Keeper of the Light": 2.86,
-    "Viper": 2.79,
-    "Io": 2.62,
-    "Sven": 2.54
+    "Elder Titan": 6.25,
+    "Naga Siren": 3.51,
+    "Keeper of the Light": 3.43,
+    "Monkey King": 3.19,
+    "Enchantress": 3.09,
+    "Troll Warlord": 3.09,
+    "Viper": 3.05,
+    "Lich": 2.57,
+    "Dragon Knight": 2.55,
+    "Sven": 2.36
   }
 }

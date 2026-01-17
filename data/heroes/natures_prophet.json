@@ -26,27 +26,27 @@
     "late": 4
   },
   "explicit_counters": {
-    "Broodmother": -14.79,
-    "Meepo": -13.51,
-    "Arc Warden": -12.25,
-    "Spectre": -11.19,
-    "Troll Warlord": -9.54,
-    "Chaos Knight": -9.42,
-    "Wraith King": -9.26,
-    "Legion Commander": -9.19,
-    "Slardar": -9.13,
-    "Outworld Destroyer": -9.01
+    "Broodmother": -14.94,
+    "Meepo": -14.14,
+    "Arc Warden": -12.15,
+    "Spectre": -11.62,
+    "Wraith King": -9.88,
+    "Chaos Knight": -9.63,
+    "Outworld Destroyer": -9.32,
+    "Legion Commander": -9.13,
+    "Abaddon": -9.11,
+    "Treant Protector": -9.11
   },
   "explicit_synergies": {
-    "Chen": 5.63,
-    "Pangolier": 3.36,
-    "Bane": 2.49,
-    "Ringmaster": 2.31,
-    "Shadow Demon": 2.24,
-    "Wraith King": 2.24,
-    "Storm Spirit": 1.8,
-    "Tidehunter": 1.67,
-    "Underlord": 1.54,
-    "Spectre": 1.53
+    "Chen": 7.13,
+    "Pangolier": 3.54,
+    "Storm Spirit": 2.53,
+    "Ringmaster": 1.88,
+    "Shadow Demon": 1.86,
+    "Elder Titan": 1.85,
+    "Tidehunter": 1.7,
+    "Spectre": 1.65,
+    "Wraith King": 1.63,
+    "Phantom Lancer": 1.33
   }
 }

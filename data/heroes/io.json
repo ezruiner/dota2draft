@@ -25,27 +25,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Elder Titan": -10.32,
-    "Broodmother": -5.85,
-    "Bane": -5.63,
-    "Keeper of the Light": -5.61,
-    "Enigma": -5.05,
-    "Sand King": -4.95,
-    "Visage": -4.76,
-    "Bounty Hunter": -4.67,
-    "Lycan": -4.43,
-    "Underlord": -4.32
+    "Elder Titan": -9.26,
+    "Lycan": -6.38,
+    "Nyx Assassin": -6.37,
+    "Broodmother": -5.67,
+    "Visage": -5.05,
+    "Sand King": -4.44,
+    "Lone Druid": -4.13,
+    "Bane": -3.89,
+    "Winter Wyvern": -3.83,
+    "Bounty Hunter": -3.77
   },
   "explicit_synergies": {
-    "Enchantress": 8.88,
-    "Pugna": 7.7,
-    "Disruptor": 6.99,
-    "Marci": 6.91,
-    "Primal Beast": 6.1,
-    "Batrider": 6.06,
-    "Beastmaster": 5.02,
-    "Winter Wyvern": 4.95,
-    "Oracle": 4.8,
-    "Underlord": 4.66
+    "Pugna": 7.16,
+    "Marci": 6.75,
+    "Winter Wyvern": 6.28,
+    "Primal Beast": 5.03,
+    "Disruptor": 4.75,
+    "Naga Siren": 4.74,
+    "Gyrocopter": 4.64,
+    "Beastmaster": 4.56,
+    "Underlord": 4.04,
+    "Batrider": 3.87
   }
 }

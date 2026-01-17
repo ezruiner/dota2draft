@@ -28,27 +28,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Broodmother": -7.87,
-    "Troll Warlord": -6.53,
-    "Wraith King": -6.49,
-    "Meepo": -6.41,
-    "Legion Commander": -5.78,
-    "Lone Druid": -5.62,
-    "Visage": -5.4,
-    "Spectre": -4.93,
-    "Chaos Knight": -4.84,
-    "Tidehunter": -4.77
+    "Broodmother": -7.49,
+    "Meepo": -6.83,
+    "Wraith King": -6.57,
+    "Troll Warlord": -6.05,
+    "Legion Commander": -5.8,
+    "Spectre": -5.51,
+    "Tidehunter": -5.23,
+    "Visage": -5.11,
+    "Arc Warden": -4.88,
+    "Lone Druid": -4.86
   },
   "explicit_synergies": {
-    "Lone Druid": 5.67,
-    "Alchemist": 4.4,
-    "Kez": 3.27,
-    "Meepo": 3.14,
-    "Phantom Lancer": 3.11,
-    "Viper": 3.01,
-    "Mirana": 2.91,
-    "Clockwerk": 2.73,
-    "Abaddon": 2.59,
-    "Riki": 2.56
+    "Lone Druid": 4.81,
+    "Alchemist": 4.0,
+    "Void Spirit": 2.92,
+    "Phantom Lancer": 2.91,
+    "Earth Spirit": 2.82,
+    "Viper": 2.82,
+    "Death Prophet": 2.65,
+    "Riki": 2.64,
+    "Mirana": 2.22,
+    "Abaddon": 2.18
   }
 }

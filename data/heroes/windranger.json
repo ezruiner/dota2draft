@@ -29,27 +29,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Meepo": -8.3,
-    "Broodmother": -7.55,
-    "Spectre": -7.22,
+    "Meepo": -8.12,
+    "Broodmother": -7.83,
+    "Spectre": -7.43,
     "Wraith King": -6.65,
-    "Phantom Lancer": -5.91,
-    "Axe": -5.76,
-    "Vengeful Spirit": -5.16,
-    "Necrophos": -4.95,
-    "Clinkz": -4.93,
-    "Legion Commander": -4.84
+    "Phantom Lancer": -5.99,
+    "Axe": -5.73,
+    "Legion Commander": -4.89,
+    "Vengeful Spirit": -4.78,
+    "Necrophos": -4.67,
+    "Clinkz": -4.67
   },
   "explicit_synergies": {
-    "Alchemist": 2.47,
-    "Oracle": 2.46,
-    "Dark Willow": 2.36,
-    "Batrider": 1.92,
-    "Troll Warlord": 1.89,
-    "Ember Spirit": 1.85,
-    "Earth Spirit": 1.83,
-    "Ringmaster": 1.78,
+    "Alchemist": 2.28,
+    "Batrider": 2.2,
+    "Dark Willow": 2.13,
+    "Troll Warlord": 2.04,
+    "Arc Warden": 1.96,
+    "Ringmaster": 1.93,
     "Abaddon": 1.76,
-    "Monkey King": 1.73
+    "Oracle": 1.75,
+    "Dazzle": 1.67,
+    "Enchantress": 1.45
   }
 }

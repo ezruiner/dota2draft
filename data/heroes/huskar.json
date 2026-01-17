@@ -27,27 +27,27 @@
     "late": -5
   },
   "explicit_counters": {
-    "Broodmother": -13.81,
-    "Chaos Knight": -8.82,
-    "Viper": -7.65,
-    "Spectre": -6.95,
-    "Chen": -6.85,
-    "Clinkz": -6.41,
-    "Necrophos": -6.32,
-    "Vengeful Spirit": -6.26,
-    "Luna": -6.03,
-    "Razor": -5.99
+    "Broodmother": -13.14,
+    "Chaos Knight": -8.62,
+    "Viper": -7.12,
+    "Clinkz": -7.0,
+    "Spectre": -6.81,
+    "Chen": -6.63,
+    "Necrophos": -6.48,
+    "Elder Titan": -6.38,
+    "Vengeful Spirit": -6.09,
+    "Bloodseeker": -6.09
   },
   "explicit_synergies": {
-    "Chen": 5.6,
-    "Earthshaker": 5.42,
-    "Enchantress": 5.14,
-    "Pangolier": 4.93,
-    "Marci": 4.47,
-    "Kez": 4.44,
-    "Kunkka": 4.24,
-    "Tusk": 4.06,
-    "Winter Wyvern": 4.01,
-    "Luna": 3.81
+    "Earthshaker": 5.69,
+    "Enchantress": 5.17,
+    "Kunkka": 4.72,
+    "Tusk": 4.37,
+    "Winter Wyvern": 4.13,
+    "Lycan": 4.01,
+    "Meepo": 3.85,
+    "Marci": 3.8,
+    "Shadow Demon": 3.74,
+    "Kez": 3.68
   }
 }

@@ -27,27 +27,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Meepo": -5.07,
-    "Legion Commander": -3.97,
-    "Spectre": -3.66,
-    "Chen": -3.33,
-    "Chaos Knight": -3.05,
-    "Omniknight": -2.28,
-    "Visage": -2.26,
-    "Disruptor": -2.25,
-    "Slardar": -1.98,
-    "Wraith King": -1.92
+    "Meepo": -4.55,
+    "Chen": -4.41,
+    "Chaos Knight": -3.51,
+    "Legion Commander": -3.3,
+    "Spectre": -2.86,
+    "Omniknight": -2.23,
+    "Visage": -1.94,
+    "Clinkz": -1.58,
+    "Slardar": -1.57,
+    "Lifestealer": -1.43
   },
   "explicit_synergies": {
-    "Dawnbreaker": 4.7,
-    "Chen": 3.83,
-    "Naga Siren": 3.77,
-    "Meepo": 3.44,
-    "Enchantress": 3.18,
-    "Largo": 2.64,
-    "Oracle": 2.6,
-    "Tinker": 2.56,
-    "Phantom Lancer": 2.52,
-    "Alchemist": 2.51
+    "Dawnbreaker": 4.18,
+    "Lone Druid": 3.0,
+    "Enchantress": 2.95,
+    "Alchemist": 2.89,
+    "Oracle": 2.55,
+    "Pangolier": 2.5,
+    "Tinker": 2.46,
+    "Arc Warden": 2.46,
+    "Snapfire": 2.42,
+    "Luna": 2.39
   }
 }

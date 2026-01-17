@@ -28,27 +28,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Enigma": -8.45,
-    "Visage": -6.84,
-    "Broodmother": -6.35,
-    "Meepo": -6.05,
-    "Phoenix": -5.71,
-    "Leshrac": -4.4,
-    "Lich": -4.32,
-    "Shadow Shaman": -4.21,
-    "Undying": -3.86,
-    "Phantom Lancer": -3.35
+    "Visage": -6.78,
+    "Enigma": -6.73,
+    "Meepo": -6.45,
+    "Leshrac": -5.77,
+    "Phoenix": -5.08,
+    "Lich": -5.03,
+    "Broodmother": -4.97,
+    "Undying": -4.14,
+    "Spectre": -4.01,
+    "Lifestealer": -3.91
   },
   "explicit_synergies": {
-    "Keeper of the Light": 8.27,
-    "Bane": 6.28,
-    "Pangolier": 5.54,
-    "Dark Willow": 4.88,
-    "Brewmaster": 4.34,
-    "Chaos Knight": 4.24,
-    "Io": 4.03,
-    "Lycan": 3.64,
-    "Underlord": 3.23,
-    "Winter Wyvern": 3.23
+    "Bane": 6.17,
+    "Keeper of the Light": 5.9,
+    "Dark Willow": 5.65,
+    "Winter Wyvern": 5.13,
+    "Chaos Knight": 4.23,
+    "Pangolier": 3.12,
+    "Lycan": 3.11,
+    "Ursa": 3.03,
+    "Io": 3.02,
+    "Underlord": 2.98
   }
 }

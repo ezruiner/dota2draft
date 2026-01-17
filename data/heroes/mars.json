@@ -28,27 +28,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Dazzle": -10.87,
-    "Phantom Lancer": -9.66,
-    "Meepo": -8.93,
-    "Visage": -8.92,
-    "Omniknight": -8.58,
-    "Enigma": -8.27,
-    "Broodmother": -8.12,
-    "Wraith King": -7.9,
-    "Lifestealer": -7.36,
-    "Elder Titan": -7.03
+    "Dazzle": -10.25,
+    "Visage": -9.96,
+    "Meepo": -9.58,
+    "Phantom Lancer": -9.26,
+    "Omniknight": -8.96,
+    "Wraith King": -8.37,
+    "Broodmother": -8.31,
+    "Spectre": -7.7,
+    "Elder Titan": -7.48,
+    "Enigma": -7.14
   },
   "explicit_synergies": {
-    "Chen": 4.82,
-    "Doom": 4.2,
-    "Timbersaw": 4.07,
-    "Dawnbreaker": 3.78,
-    "Io": 3.53,
-    "Night Stalker": 3.2,
-    "Shadow Fiend": 2.94,
-    "Undying": 2.83,
-    "Bloodseeker": 2.57,
-    "Abaddon": 2.38
+    "Dawnbreaker": 4.74,
+    "Chen": 4.25,
+    "Timbersaw": 4.19,
+    "Night Stalker": 3.24,
+    "Abaddon": 3.12,
+    "Undying": 3.0,
+    "Dragon Knight": 2.96,
+    "Doom": 2.7,
+    "Io": 2.66,
+    "Broodmother": 2.57
   }
 }

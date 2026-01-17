@@ -27,27 +27,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Broodmother": -5.46,
-    "Meepo": -5.22,
-    "Phoenix": -4.26,
-    "Elder Titan": -3.85,
-    "Phantom Lancer": -3.73,
-    "Underlord": -3.07,
-    "Beastmaster": -2.41,
-    "Kunkka": -2.36,
-    "Wraith King": -2.33,
-    "Io": -2.09
+    "Meepo": -6.51,
+    "Broodmother": -5.16,
+    "Phoenix": -4.32,
+    "Elder Titan": -4.3,
+    "Underlord": -3.62,
+    "Phantom Lancer": -3.45,
+    "Kunkka": -3.23,
+    "Beastmaster": -2.54,
+    "Wraith King": -2.52,
+    "Visage": -2.37
   },
   "explicit_synergies": {
-    "Naga Siren": 7.69,
-    "Batrider": 5.98,
-    "Abaddon": 5.32,
-    "Treant Protector": 5.04,
-    "Beastmaster": 4.44,
-    "Troll Warlord": 3.85,
-    "Viper": 3.54,
-    "Elder Titan": 3.5,
-    "Doom": 3.34,
-    "Terrorblade": 3.14
+    "Naga Siren": 8.95,
+    "Abaddon": 5.75,
+    "Beastmaster": 5.17,
+    "Treant Protector": 4.83,
+    "Troll Warlord": 4.23,
+    "Batrider": 3.49,
+    "Tusk": 3.03,
+    "Warlock": 3.01,
+    "Muerta": 2.81,
+    "Viper": 2.59
   }
 }

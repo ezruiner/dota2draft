@@ -26,27 +26,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Broodmother": -10.75,
-    "Meepo": -9.47,
-    "Visage": -9.41,
-    "Lycan": -6.36,
-    "Spectre": -6.3,
-    "Phantom Lancer": -4.82,
-    "Spirit Breaker": -3.9,
-    "Dazzle": -3.81,
-    "Leshrac": -3.81,
-    "Chaos Knight": -3.79
+    "Meepo": -10.84,
+    "Visage": -10.1,
+    "Broodmother": -9.89,
+    "Lycan": -6.35,
+    "Spectre": -5.98,
+    "Phantom Lancer": -4.22,
+    "Wraith King": -4.2,
+    "Spirit Breaker": -3.53,
+    "Dazzle": -3.27,
+    "Leshrac": -2.88
   },
   "explicit_synergies": {
-    "Sand King": 5.49,
-    "Kunkka": 4.81,
-    "Dark Seer": 4.56,
-    "Night Stalker": 4.36,
-    "Underlord": 4.29,
-    "Luna": 4.18,
-    "Ringmaster": 3.36,
-    "Snapfire": 3.2,
-    "Abaddon": 3.14,
-    "Outworld Destroyer": 3.13
+    "Underlord": 5.2,
+    "Sand King": 4.48,
+    "Luna": 4.12,
+    "Grimstroke": 4.1,
+    "Spectre": 3.74,
+    "Kunkka": 3.73,
+    "Snapfire": 3.25,
+    "Ringmaster": 2.96,
+    "Dark Seer": 2.88,
+    "Undying": 2.87
   }
 }

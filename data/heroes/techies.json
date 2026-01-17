@@ -26,27 +26,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Alchemist": -6.67,
-    "Lifestealer": -6.46,
-    "Elder Titan": -6.44,
-    "Wraith King": -6.27,
-    "Spectre": -6.1,
-    "Lycan": -5.8,
-    "Lich": -5.78,
-    "Broodmother": -5.75,
-    "Clockwerk": -5.64,
-    "Clinkz": -5.42
+    "Elder Titan": -6.66,
+    "Wraith King": -6.65,
+    "Spectre": -6.37,
+    "Lifestealer": -6.34,
+    "Alchemist": -6.32,
+    "Lich": -6.07,
+    "Broodmother": -6.06,
+    "Nyx Assassin": -5.25,
+    "Juggernaut": -5.2,
+    "Clinkz": -5.19
   },
   "explicit_synergies": {
-    "Naga Siren": 4.59,
-    "Dark Seer": 3.55,
-    "Chen": 3.06,
-    "Leshrac": 2.84,
-    "Sand King": 2.78,
-    "Phantom Lancer": 2.74,
-    "Primal Beast": 2.32,
-    "Kez": 2.3,
-    "Bristleback": 2.28,
-    "Wraith King": 2.27
+    "Chen": 5.38,
+    "Naga Siren": 5.35,
+    "Dark Seer": 3.53,
+    "Sand King": 2.93,
+    "Anti-Mage": 2.4,
+    "Phantom Lancer": 2.38,
+    "Bristleback": 2.22,
+    "Primal Beast": 2.14,
+    "Puck": 2.06,
+    "Leshrac": 1.92
   }
 }

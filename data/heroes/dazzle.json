@@ -27,27 +27,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Elder Titan": -5.1,
-    "Meepo": -4.95,
-    "Spectre": -3.91,
-    "Lone Druid": -3.55,
-    "Broodmother": -2.43,
-    "Axe": -2.32,
-    "Outworld Destroyer": -2.3,
-    "Night Stalker": -2.23,
-    "Ancient Apparition": -2.18,
-    "Abaddon": -2.06
+    "Elder Titan": -6.36,
+    "Meepo": -4.47,
+    "Spectre": -3.93,
+    "Broodmother": -3.37,
+    "Abaddon": -3.31,
+    "Lone Druid": -2.34,
+    "Outworld Destroyer": -2.04,
+    "Night Stalker": -1.96,
+    "Axe": -1.91,
+    "Ancient Apparition": -1.87
   },
   "explicit_synergies": {
-    "Lycan": 6.41,
-    "Phoenix": 5.0,
-    "Primal Beast": 4.54,
-    "Sand King": 4.4,
-    "Tinker": 4.0,
-    "Muerta": 3.27,
-    "Lone Druid": 3.23,
-    "Naga Siren": 3.22,
-    "Batrider": 3.11,
-    "Pugna": 3.04
+    "Pugna": 5.43,
+    "Pangolier": 5.14,
+    "Primal Beast": 5.0,
+    "Phoenix": 4.61,
+    "Sand King": 4.29,
+    "Lycan": 4.23,
+    "Naga Siren": 3.61,
+    "Tinker": 3.4,
+    "Muerta": 3.36,
+    "Batrider": 3.34
   }
 }

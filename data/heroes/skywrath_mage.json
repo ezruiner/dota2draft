@@ -27,27 +27,27 @@
     "late": 4
   },
   "explicit_counters": {
-    "Broodmother": -6.78,
-    "Lycan": -6.27,
-    "Meepo": -4.1,
-    "Wraith King": -3.31,
+    "Broodmother": -6.57,
+    "Lycan": -6.26,
+    "Meepo": -4.87,
+    "Dazzle": -3.67,
+    "Vengeful Spirit": -3.39,
+    "Wraith King": -3.21,
+    "Clinkz": -2.76,
     "Arc Warden": -2.7,
-    "Abaddon": -2.58,
-    "Dazzle": -2.51,
-    "Vengeful Spirit": -2.33,
-    "Clinkz": -2.32,
-    "Io": -2.13
+    "Abaddon": -2.53,
+    "Lich": -2.18
   },
   "explicit_synergies": {
-    "Chen": 9.05,
-    "Enchantress": 4.6,
-    "Keeper of the Light": 4.5,
-    "Lone Druid": 4.4,
-    "Broodmother": 3.01,
-    "Tinker": 2.67,
-    "Earth Spirit": 2.39,
-    "Omniknight": 2.18,
-    "Phantom Assassin": 2.11,
-    "Bane": 2.01
+    "Chen": 7.02,
+    "Lone Druid": 4.42,
+    "Keeper of the Light": 4.12,
+    "Enchantress": 3.37,
+    "Brewmaster": 3.36,
+    "Largo": 2.67,
+    "Broodmother": 2.54,
+    "Tinker": 2.19,
+    "Phantom Assassin": 2.17,
+    "Omniknight": 1.79
   }
 }

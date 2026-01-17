@@ -26,27 +26,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Wraith King": -5.25,
-    "Spectre": -4.42,
-    "Phantom Lancer": -4.38,
-    "Clinkz": -4.37,
-    "Broodmother": -4.23,
-    "Troll Warlord": -3.91,
-    "Arc Warden": -3.58,
-    "Enigma": -3.46,
-    "Visage": -3.23,
-    "Nyx Assassin": -2.82
+    "Wraith King": -5.4,
+    "Clinkz": -4.52,
+    "Phantom Lancer": -4.51,
+    "Spectre": -4.08,
+    "Broodmother": -3.8,
+    "Visage": -3.79,
+    "Arc Warden": -3.78,
+    "Troll Warlord": -3.72,
+    "Nyx Assassin": -2.52,
+    "Vengeful Spirit": -2.5
   },
   "explicit_synergies": {
-    "Lone Druid": 4.89,
-    "Tusk": 3.21,
-    "Visage": 2.77,
-    "Mars": 2.73,
-    "Huskar": 2.72,
-    "Bounty Hunter": 2.44,
-    "Meepo": 1.85,
-    "Phantom Lancer": 1.83,
-    "Shadow Shaman": 1.81,
-    "Arc Warden": 1.79
+    "Lone Druid": 5.01,
+    "Tusk": 3.56,
+    "Mars": 2.4,
+    "Bounty Hunter": 1.9,
+    "Visage": 1.86,
+    "Earth Spirit": 1.72,
+    "Omniknight": 1.67,
+    "Shadow Shaman": 1.66,
+    "Meepo": 1.64,
+    "Huskar": 1.56
   }
 }

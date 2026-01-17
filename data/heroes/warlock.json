@@ -27,27 +27,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Phoenix": -3.59,
-    "Io": -3.42,
-    "Winter Wyvern": -3.34,
-    "Broodmother": -3.33,
-    "Clinkz": -3.3,
-    "Spectre": -2.92,
-    "Lich": -2.83,
-    "Sand King": -2.78,
-    "Bounty Hunter": -2.48,
-    "Legion Commander": -2.29
+    "Io": -4.29,
+    "Phoenix": -4.14,
+    "Clinkz": -3.39,
+    "Lich": -3.17,
+    "Sand King": -2.93,
+    "Troll Warlord": -2.8,
+    "Bounty Hunter": -2.74,
+    "Alchemist": -2.63,
+    "Night Stalker": -2.52,
+    "Winter Wyvern": -2.43
   },
   "explicit_synergies": {
-    "Elder Titan": 6.28,
-    "Riki": 3.87,
-    "Brewmaster": 3.57,
-    "Oracle": 3.2,
-    "Earth Spirit": 3.17,
-    "Chaos Knight": 2.87,
-    "Clockwerk": 2.75,
-    "Abaddon": 2.71,
-    "Crystal Maiden": 2.64,
-    "Disruptor": 2.59
+    "Brewmaster": 3.83,
+    "Riki": 3.22,
+    "Chaos Knight": 3.21,
+    "Clockwerk": 3.14,
+    "Abaddon": 3.06,
+    "Elder Titan": 2.9,
+    "Earth Spirit": 2.4,
+    "Vengeful Spirit": 2.35,
+    "Disruptor": 2.17,
+    "Razor": 2.12
   }
 }

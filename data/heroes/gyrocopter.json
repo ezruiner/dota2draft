@@ -26,27 +26,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Phoenix": -9.21,
-    "Alchemist": -8.58,
-    "Meepo": -8.5,
-    "Brewmaster": -8.29,
-    "Bloodseeker": -7.58,
-    "Broodmother": -7.48,
-    "Elder Titan": -7.45,
-    "Ogre Magi": -7.35,
-    "Razor": -6.84,
-    "Legion Commander": -6.82
+    "Phoenix": -11.53,
+    "Meepo": -8.76,
+    "Alchemist": -7.4,
+    "Broodmother": -7.32,
+    "Elder Titan": -7.23,
+    "Spectre": -7.11,
+    "Abaddon": -7.1,
+    "Legion Commander": -7.02,
+    "Brewmaster": -7.01,
+    "Bloodseeker": -6.87
   },
   "explicit_synergies": {
-    "Bane": 6.05,
-    "Brewmaster": 5.12,
-    "Magnus": 4.71,
-    "Troll Warlord": 4.38,
-    "Keeper of the Light": 4.14,
-    "Lone Druid": 4.14,
-    "Vengeful Spirit": 4.03,
-    "Visage": 4.01,
-    "Riki": 3.62,
-    "Ursa": 3.43
+    "Vengeful Spirit": 4.69,
+    "Io": 4.54,
+    "Visage": 4.49,
+    "Kez": 3.9,
+    "Primal Beast": 3.8,
+    "Bane": 3.7,
+    "Magnus": 3.63,
+    "Sven": 3.46,
+    "Kunkka": 3.34,
+    "Riki": 3.27
   }
 }

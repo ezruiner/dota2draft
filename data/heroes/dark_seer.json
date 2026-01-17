@@ -25,27 +25,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Visage": -13.33,
-    "Marci": -11.07,
-    "Riki": -10.19,
-    "Elder Titan": -10.0,
-    "Clinkz": -9.34,
-    "Nyx Assassin": -9.31,
-    "Lich": -9.13,
-    "Invoker": -8.64,
-    "Centaur Warrunner": -7.19,
-    "Shadow Demon": -6.9
+    "Visage": -12.32,
+    "Marci": -11.27,
+    "Clinkz": -9.08,
+    "Riki": -8.44,
+    "Invoker": -8.16,
+    "Lich": -7.81,
+    "Ember Spirit": -7.76,
+    "Elder Titan": -7.63,
+    "Kez": -7.14,
+    "Nyx Assassin": -7.02
   },
   "explicit_synergies": {
-    "Lycan": 15.15,
-    "Doom": 11.1,
-    "Vengeful Spirit": 10.06,
-    "Bane": 9.58,
-    "Kunkka": 8.46,
-    "Weaver": 8.28,
-    "Tusk": 6.99,
-    "Oracle": 6.88,
-    "Morphling": 6.24,
-    "Arc Warden": 5.96
+    "Lycan": 16.41,
+    "Bane": 11.88,
+    "Doom": 8.76,
+    "Vengeful Spirit": 6.97,
+    "Oracle": 6.87,
+    "Weaver": 6.71,
+    "Morphling": 6.57,
+    "Tusk": 6.46,
+    "Kunkka": 6.22,
+    "Spirit Breaker": 4.76
   }
 }

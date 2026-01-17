@@ -26,27 +26,27 @@
     "late": 9
   },
   "explicit_counters": {
-    "Spectre": -11.08,
-    "Meepo": -9.65,
-    "Phantom Lancer": -8.01,
-    "Wraith King": -7.96,
-    "Nyx Assassin": -7.62,
-    "Broodmother": -7.28,
-    "Arc Warden": -6.84,
-    "Centaur Warrunner": -6.79,
-    "Pudge": -6.53,
-    "Clinkz": -6.29
+    "Spectre": -11.05,
+    "Meepo": -9.7,
+    "Wraith King": -7.94,
+    "Phantom Lancer": -7.87,
+    "Nyx Assassin": -7.64,
+    "Broodmother": -7.41,
+    "Arc Warden": -7.36,
+    "Centaur Warrunner": -6.89,
+    "Pudge": -6.44,
+    "Clinkz": -6.4
   },
   "explicit_synergies": {
-    "Enigma": 3.24,
-    "Naga Siren": 2.24,
-    "Bloodseeker": 2.17,
-    "Batrider": 1.73,
-    "Spectre": 1.61,
-    "Pudge": 1.53,
-    "Meepo": 1.52,
-    "Phantom Lancer": 1.49,
-    "Omniknight": 1.44,
-    "Tusk": 1.37
+    "Meepo": 2.64,
+    "Enigma": 1.91,
+    "Naga Siren": 1.78,
+    "Vengeful Spirit": 1.76,
+    "Bloodseeker": 1.7,
+    "Oracle": 1.66,
+    "Chaos Knight": 1.62,
+    "Pudge": 1.6,
+    "Spectre": 1.52,
+    "Phantom Lancer": 1.5
   }
 }

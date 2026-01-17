@@ -26,27 +26,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Meepo": -5.67,
-    "Legion Commander": -4.76,
-    "Broodmother": -4.73,
-    "Clinkz": -4.22,
-    "Riki": -3.89,
-    "Dazzle": -3.7,
-    "Winter Wyvern": -3.67,
-    "Void Spirit": -3.42,
-    "Omniknight": -3.02,
-    "Witch Doctor": -2.46
+    "Meepo": -5.8,
+    "Legion Commander": -4.45,
+    "Clinkz": -4.35,
+    "Riki": -3.79,
+    "Void Spirit": -3.73,
+    "Omniknight": -3.58,
+    "Winter Wyvern": -3.49,
+    "Broodmother": -3.29,
+    "Dazzle": -2.91,
+    "Death Prophet": -2.57
   },
   "explicit_synergies": {
-    "Bloodseeker": 4.96,
-    "Pangolier": 3.43,
-    "Razor": 2.96,
-    "Magnus": 2.62,
-    "Dark Seer": 2.59,
-    "Zeus": 2.32,
-    "Puck": 2.24,
-    "Gyrocopter": 2.06,
-    "Enigma": 1.93,
-    "Alchemist": 1.87
+    "Bloodseeker": 4.94,
+    "Pangolier": 2.86,
+    "Magnus": 2.54,
+    "Razor": 2.29,
+    "Zeus": 2.25,
+    "Enigma": 1.96,
+    "Tiny": 1.82,
+    "Queen of Pain": 1.66,
+    "Dark Seer": 1.6,
+    "Ember Spirit": 1.58
   }
 }

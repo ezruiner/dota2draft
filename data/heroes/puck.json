@@ -27,27 +27,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Meepo": -14.08,
-    "Riki": -10.74,
-    "Broodmother": -10.41,
-    "Omniknight": -8.31,
-    "Wraith King": -8.09,
-    "Spectre": -7.84,
-    "Bane": -7.75,
-    "Night Stalker": -7.49,
-    "Troll Warlord": -6.7,
-    "Alchemist": -6.27
+    "Meepo": -13.93,
+    "Broodmother": -10.73,
+    "Riki": -10.68,
+    "Spectre": -8.52,
+    "Wraith King": -7.88,
+    "Night Stalker": -7.41,
+    "Omniknight": -7.12,
+    "Bane": -6.88,
+    "Clinkz": -6.56,
+    "Kunkka": -6.03
   },
   "explicit_synergies": {
-    "Naga Siren": 6.0,
-    "Kez": 5.41,
-    "Death Prophet": 4.18,
-    "Doom": 3.56,
-    "Elder Titan": 3.22,
-    "Primal Beast": 3.13,
-    "Pugna": 3.03,
-    "Dark Willow": 2.94,
-    "Hoodwink": 2.9,
-    "Ogre Magi": 2.6
+    "Naga Siren": 6.12,
+    "Primal Beast": 4.72,
+    "Death Prophet": 4.68,
+    "Kez": 4.31,
+    "Hoodwink": 3.34,
+    "Dark Willow": 2.38,
+    "Alchemist": 2.34,
+    "Techies": 2.26,
+    "Ancient Apparition": 2.26,
+    "Pugna": 2.25
   }
 }

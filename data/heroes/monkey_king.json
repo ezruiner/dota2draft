@@ -27,27 +27,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Troll Warlord": -13.5,
-    "Phoenix": -12.2,
-    "Clinkz": -11.45,
-    "Io": -11.39,
-    "Spectre": -11.25,
-    "Bloodseeker": -10.89,
-    "Bounty Hunter": -10.76,
-    "Enchantress": -10.74,
-    "Mirana": -10.69,
-    "Broodmother": -10.55
+    "Phoenix": -12.67,
+    "Io": -12.11,
+    "Troll Warlord": -11.42,
+    "Clinkz": -11.35,
+    "Mirana": -11.17,
+    "Bounty Hunter": -11.15,
+    "Lich": -10.58,
+    "Bloodseeker": -10.54,
+    "Spectre": -10.52,
+    "Enchantress": -10.42
   },
   "explicit_synergies": {
-    "Lone Druid": 6.81,
-    "Batrider": 6.69,
-    "Terrorblade": 6.25,
-    "Doom": 5.65,
-    "Naga Siren": 4.0,
-    "Tusk": 3.53,
-    "Bloodseeker": 3.42,
-    "Visage": 3.38,
-    "Slark": 2.94,
-    "Outworld Destroyer": 2.93
+    "Lone Druid": 7.01,
+    "Doom": 6.76,
+    "Terrorblade": 6.47,
+    "Batrider": 5.82,
+    "Bloodseeker": 4.41,
+    "Naga Siren": 3.58,
+    "Tusk": 3.16,
+    "Slark": 2.99,
+    "Tiny": 2.68,
+    "Tidehunter": 2.68
   }
 }

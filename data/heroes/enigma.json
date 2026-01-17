@@ -26,27 +26,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Wraith King": -7.49,
-    "Arc Warden": -6.5,
-    "Meepo": -6.46,
-    "Elder Titan": -6.18,
-    "Spectre": -5.91,
-    "Bristleback": -4.6,
-    "Clinkz": -3.47,
-    "Visage": -3.21,
-    "Vengeful Spirit": -2.76,
-    "Winter Wyvern": -2.63
+    "Wraith King": -7.25,
+    "Spectre": -6.59,
+    "Arc Warden": -6.27,
+    "Meepo": -6.0,
+    "Elder Titan": -3.92,
+    "Bristleback": -3.59,
+    "Vengeful Spirit": -3.54,
+    "Clinkz": -3.39,
+    "Visage": -3.01,
+    "Tidehunter": -2.8
   },
   "explicit_synergies": {
-    "Enchantress": 6.11,
-    "Viper": 5.84,
-    "Muerta": 5.75,
-    "Earth Spirit": 5.7,
-    "Kez": 5.5,
-    "Death Prophet": 5.48,
-    "Pangolier": 5.09,
-    "Phoenix": 5.08,
-    "Naga Siren": 4.7,
-    "Undying": 4.18
+    "Muerta": 6.8,
+    "Death Prophet": 6.3,
+    "Viper": 5.38,
+    "Phoenix": 5.24,
+    "Earth Spirit": 4.78,
+    "Pangolier": 4.58,
+    "Enchantress": 4.32,
+    "Ringmaster": 4.11,
+    "Kez": 4.03,
+    "Visage": 4.03
   }
 }

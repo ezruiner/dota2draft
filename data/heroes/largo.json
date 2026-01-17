@@ -27,27 +27,27 @@
     "late": 9
   },
   "explicit_counters": {
-    "Broodmother": -10.57,
-    "Lycan": -8.82,
-    "Batrider": -8.65,
-    "Enigma": -8.11,
-    "Outworld Destroyer": -8.1,
-    "Riki": -8.04,
-    "Clockwerk": -7.24,
-    "Alchemist": -7.11,
-    "Bloodseeker": -7.04,
-    "Legion Commander": -6.91
+    "Broodmother": -11.82,
+    "Lycan": -7.46,
+    "Riki": -7.43,
+    "Batrider": -6.95,
+    "Alchemist": -6.94,
+    "Dazzle": -6.84,
+    "Clockwerk": -6.82,
+    "Enigma": -6.81,
+    "Outworld Destroyer": -6.77,
+    "Legion Commander": -6.74
   },
   "explicit_synergies": {
-    "Batrider": 7.95,
-    "Visage": 7.25,
-    "Bane": 6.19,
-    "Dawnbreaker": 5.19,
-    "Leshrac": 4.81,
-    "Pangolier": 4.76,
-    "Chen": 4.53,
-    "Naga Siren": 4.46,
-    "Grimstroke": 4.29,
-    "Broodmother": 3.99
+    "Visage": 8.86,
+    "Batrider": 8.71,
+    "Leshrac": 5.25,
+    "Brewmaster": 5.25,
+    "Winter Wyvern": 4.72,
+    "Grimstroke": 4.48,
+    "Jakiro": 4.26,
+    "Bounty Hunter": 4.0,
+    "Muerta": 3.83,
+    "Dawnbreaker": 3.79
   }
 }

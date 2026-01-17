@@ -28,27 +28,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Meepo": -8.51,
-    "Wraith King": -4.51,
-    "Spectre": -4.29,
-    "Broodmother": -4.16,
-    "Enigma": -3.55,
-    "Phantom Lancer": -3.52,
-    "Chen": -3.04,
-    "Arc Warden": -2.91,
-    "Winter Wyvern": -2.82,
-    "Chaos Knight": -2.53
+    "Meepo": -9.2,
+    "Wraith King": -4.47,
+    "Spectre": -4.31,
+    "Winter Wyvern": -3.47,
+    "Phantom Lancer": -3.46,
+    "Broodmother": -3.45,
+    "Arc Warden": -3.19,
+    "Enigma": -2.59,
+    "Chaos Knight": -2.54,
+    "Clinkz": -2.26
   },
   "explicit_synergies": {
-    "Monkey King": 3.03,
-    "Dawnbreaker": 2.56,
-    "Dark Willow": 2.46,
-    "Bloodseeker": 2.15,
-    "Ringmaster": 2.08,
-    "Terrorblade": 2.08,
-    "Ancient Apparition": 1.97,
-    "Phoenix": 1.91,
-    "Mirana": 1.88,
-    "Templar Assassin": 1.87
+    "Monkey King": 2.97,
+    "Phoenix": 2.29,
+    "Ringmaster": 2.26,
+    "Dawnbreaker": 2.1,
+    "Dark Willow": 1.95,
+    "Elder Titan": 1.83,
+    "Terrorblade": 1.77,
+    "Sand King": 1.77,
+    "Shadow Fiend": 1.76,
+    "Witch Doctor": 1.71
   }
 }

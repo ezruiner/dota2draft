@@ -28,27 +28,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Meepo": -11.08,
-    "Huskar": -6.52,
-    "Broodmother": -5.66,
-    "Winter Wyvern": -5.42,
-    "Legion Commander": -5.41,
-    "Elder Titan": -4.78,
-    "Abaddon": -4.74,
-    "Phoenix": -4.19,
-    "Tidehunter": -4.04,
-    "Tinker": -4.04
+    "Meepo": -10.3,
+    "Huskar": -6.38,
+    "Broodmother": -5.65,
+    "Legion Commander": -5.34,
+    "Abaddon": -4.93,
+    "Phoenix": -4.49,
+    "Winter Wyvern": -4.15,
+    "Troll Warlord": -4.07,
+    "Tidehunter": -4.07,
+    "Dazzle": -3.96
   },
   "explicit_synergies": {
-    "Leshrac": 7.46,
-    "Templar Assassin": 3.76,
-    "Ringmaster": 3.37,
-    "Bane": 3.04,
-    "Kunkka": 2.82,
-    "Gyrocopter": 2.54,
-    "Enigma": 2.42,
-    "Batrider": 2.11,
-    "Ancient Apparition": 2.06,
-    "Lifestealer": 1.82
+    "Leshrac": 7.43,
+    "Ringmaster": 2.83,
+    "Templar Assassin": 2.82,
+    "Gyrocopter": 2.67,
+    "Doom": 2.44,
+    "Bane": 2.35,
+    "Visage": 2.35,
+    "Enigma": 2.2,
+    "Chaos Knight": 2.01,
+    "Ancient Apparition": 1.9
   }
 }

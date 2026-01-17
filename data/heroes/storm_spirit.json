@@ -28,27 +28,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Meepo": -13.45,
-    "Troll Warlord": -8.78,
-    "Dazzle": -7.99,
-    "Broodmother": -7.87,
-    "Wraith King": -7.21,
-    "Arc Warden": -7.18,
-    "Legion Commander": -7.16,
-    "Pugna": -7.13,
-    "Night Stalker": -6.11,
-    "Nyx Assassin": -6.02
+    "Meepo": -15.07,
+    "Broodmother": -8.35,
+    "Dazzle": -7.74,
+    "Troll Warlord": -7.27,
+    "Legion Commander": -7.22,
+    "Wraith King": -7.14,
+    "Arc Warden": -6.76,
+    "Pugna": -6.7,
+    "Enigma": -6.42,
+    "Visage": -6.12
   },
   "explicit_synergies": {
-    "Terrorblade": 6.38,
-    "Elder Titan": 4.55,
-    "Medusa": 4.09,
-    "Largo": 3.5,
-    "Void Spirit": 3.37,
-    "Lich": 3.23,
-    "Doom": 3.18,
-    "Kez": 3.14,
-    "Enchantress": 2.94,
-    "Alchemist": 2.88
+    "Elder Titan": 6.27,
+    "Terrorblade": 4.61,
+    "Void Spirit": 3.96,
+    "Medusa": 3.77,
+    "Largo": 3.4,
+    "Kez": 3.32,
+    "Alchemist": 3.04,
+    "Shadow Demon": 2.88,
+    "Lich": 2.79,
+    "Templar Assassin": 2.58
   }
 }

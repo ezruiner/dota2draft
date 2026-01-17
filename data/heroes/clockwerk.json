@@ -28,27 +28,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Broodmother": -7.01,
-    "Chaos Knight": -6.36,
-    "Arc Warden": -6.33,
-    "Meepo": -6.25,
-    "Clinkz": -4.42,
-    "Wraith King": -3.98,
-    "Dazzle": -3.97,
-    "Phantom Lancer": -3.17,
-    "Spectre": -2.81,
-    "Venomancer": -2.75
+    "Broodmother": -7.77,
+    "Meepo": -6.54,
+    "Arc Warden": -6.27,
+    "Chaos Knight": -5.51,
+    "Dazzle": -4.62,
+    "Clinkz": -4.32,
+    "Wraith King": -3.8,
+    "Phantom Lancer": -3.32,
+    "Undying": -2.92,
+    "Venomancer": -2.69
   },
   "explicit_synergies": {
-    "Chen": 16.13,
-    "Lone Druid": 10.78,
-    "Doom": 8.12,
-    "Elder Titan": 7.28,
-    "Beastmaster": 6.62,
-    "Sand King": 5.76,
-    "Oracle": 4.59,
-    "Grimstroke": 4.49,
-    "Dark Seer": 4.33,
-    "Kunkka": 3.87
+    "Chen": 13.11,
+    "Lone Druid": 10.81,
+    "Doom": 8.45,
+    "Elder Titan": 7.62,
+    "Beastmaster": 6.0,
+    "Dark Seer": 5.46,
+    "Grimstroke": 4.58,
+    "Oracle": 4.46,
+    "Sand King": 4.26,
+    "Warlock": 3.34
   }
 }

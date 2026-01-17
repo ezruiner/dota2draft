@@ -28,27 +28,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Meepo": -6.86,
-    "Lifestealer": -5.11,
-    "Dazzle": -4.93,
-    "Clinkz": -4.25,
-    "Wraith King": -4.15,
-    "Enigma": -3.83,
-    "Slardar": -3.49,
-    "Witch Doctor": -3.38,
-    "Bounty Hunter": -3.3,
-    "Omniknight": -3.01
+    "Meepo": -6.44,
+    "Lifestealer": -5.12,
+    "Dazzle": -4.56,
+    "Clinkz": -4.42,
+    "Wraith King": -3.84,
+    "Bounty Hunter": -3.73,
+    "Enigma": -3.35,
+    "Slardar": -3.29,
+    "Witch Doctor": -2.84,
+    "Omniknight": -2.76
   },
   "explicit_synergies": {
-    "Meepo": 8.67,
-    "Batrider": 5.49,
-    "Bloodseeker": 5.32,
-    "Primal Beast": 5.22,
-    "Death Prophet": 2.78,
-    "Enchantress": 2.71,
-    "Lifestealer": 2.7,
-    "Lone Druid": 2.21,
-    "Slardar": 2.17,
-    "Morphling": 2.08
+    "Meepo": 7.06,
+    "Batrider": 5.63,
+    "Bloodseeker": 5.52,
+    "Primal Beast": 4.49,
+    "Enchantress": 3.77,
+    "Slardar": 2.6,
+    "Naga Siren": 2.4,
+    "Death Prophet": 2.26,
+    "Ember Spirit": 2.05,
+    "Lone Druid": 1.92
   }
 }

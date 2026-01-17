@@ -28,27 +28,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Phantom Lancer": -5.91,
-    "Broodmother": -5.37,
-    "Meepo": -5.03,
-    "Arc Warden": -4.89,
-    "Visage": -3.86,
-    "Legion Commander": -3.76,
-    "Lich": -2.17,
-    "Wraith King": -1.98,
-    "Void Spirit": -1.94,
-    "Enigma": -1.89
+    "Phantom Lancer": -5.64,
+    "Broodmother": -4.5,
+    "Arc Warden": -4.19,
+    "Legion Commander": -4.03,
+    "Meepo": -3.98,
+    "Visage": -3.88,
+    "Lich": -2.27,
+    "Enigma": -1.81,
+    "Wraith King": -1.8,
+    "Void Spirit": -1.71
   },
   "explicit_synergies": {
-    "Dawnbreaker": 3.33,
-    "Shadow Demon": 3.18,
-    "Void Spirit": 3.04,
-    "Marci": 2.53,
-    "Winter Wyvern": 2.47,
-    "Leshrac": 2.44,
-    "Ringmaster": 2.05,
-    "Keeper of the Light": 1.81,
-    "Doom": 1.75,
-    "Ember Spirit": 1.72
+    "Shadow Demon": 3.63,
+    "Keeper of the Light": 3.0,
+    "Leshrac": 2.85,
+    "Dawnbreaker": 2.79,
+    "Void Spirit": 2.31,
+    "Pangolier": 2.11,
+    "Winter Wyvern": 1.92,
+    "Centaur Warrunner": 1.67,
+    "Marci": 1.59,
+    "Drow Ranger": 1.44
   }
 }

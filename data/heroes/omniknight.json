@@ -28,27 +28,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Lycan": -4.23,
-    "Broodmother": -3.66,
-    "Visage": -3.56,
-    "Muerta": -2.33,
-    "Phantom Lancer": -1.94,
-    "Dazzle": -1.73,
-    "Enigma": -1.62,
-    "Undying": -1.39,
-    "Alchemist": -1.01,
-    "Necrophos": -0.92
+    "Visage": -4.55,
+    "Broodmother": -3.37,
+    "Lycan": -3.36,
+    "Muerta": -1.63,
+    "Phantom Lancer": -1.48,
+    "Undying": -1.15,
+    "Winter Wyvern": -1.1,
+    "Witch Doctor": -0.96,
+    "Dazzle": -0.9,
+    "Alchemist": -0.83
   },
   "explicit_synergies": {
-    "Primal Beast": 5.42,
-    "Alchemist": 5.23,
-    "Pangolier": 5.19,
-    "Beastmaster": 4.94,
-    "Dawnbreaker": 4.32,
-    "Elder Titan": 4.3,
-    "Leshrac": 4.14,
-    "Winter Wyvern": 4.07,
-    "Chen": 3.86,
-    "Gyrocopter": 3.62
+    "Primal Beast": 5.6,
+    "Beastmaster": 4.92,
+    "Alchemist": 4.82,
+    "Elder Titan": 4.34,
+    "Pangolier": 4.24,
+    "Leshrac": 3.17,
+    "Brewmaster": 3.07,
+    "Chen": 3.03,
+    "Tinker": 3.0,
+    "Riki": 2.96
   }
 }

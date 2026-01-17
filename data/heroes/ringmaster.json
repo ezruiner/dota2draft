@@ -28,27 +28,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Elder Titan": -10.61,
-    "Dazzle": -8.51,
-    "Spectre": -8.14,
-    "Visage": -7.83,
+    "Elder Titan": -10.83,
+    "Dazzle": -8.74,
+    "Visage": -8.71,
+    "Spectre": -8.23,
+    "Pugna": -7.78,
     "Meepo": -7.59,
-    "Tinker": -7.53,
-    "Winter Wyvern": -7.37,
+    "Riki": -7.3,
     "Enchantress": -7.14,
-    "Wraith King": -6.94,
-    "Death Prophet": -6.7
+    "Wraith King": -7.11,
+    "Tinker": -6.88
   },
   "explicit_synergies": {
-    "Visage": 9.03,
-    "Meepo": 9.03,
-    "Alchemist": 7.39,
-    "Tusk": 5.88,
-    "Brewmaster": 5.75,
-    "Elder Titan": 4.96,
-    "Batrider": 4.84,
-    "Disruptor": 4.47,
-    "Pangolier": 4.34,
-    "Lone Druid": 4.16
+    "Meepo": 7.84,
+    "Visage": 7.46,
+    "Alchemist": 7.19,
+    "Elder Titan": 6.11,
+    "Tusk": 4.65,
+    "Sven": 4.52,
+    "Pangolier": 4.31,
+    "Disruptor": 4.09,
+    "Enigma": 3.71,
+    "Batrider": 3.51
   }
 }

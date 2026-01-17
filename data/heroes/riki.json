@@ -26,27 +26,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Naga Siren": -7.73,
-    "Broodmother": -6.79,
-    "Spectre": -5.59,
-    "Leshrac": -4.93,
-    "Razor": -3.67,
-    "Meepo": -3.53,
-    "Omniknight": -3.51,
-    "Wraith King": -3.49,
-    "Drow Ranger": -3.45,
-    "Lone Druid": -3.43
+    "Broodmother": -7.19,
+    "Naga Siren": -7.14,
+    "Spectre": -5.8,
+    "Leshrac": -5.21,
+    "Meepo": -4.94,
+    "Wraith King": -3.96,
+    "Omniknight": -3.4,
+    "Razor": -3.2,
+    "Tinker": -3.19,
+    "Chaos Knight": -2.95
   },
   "explicit_synergies": {
-    "Chen": 9.26,
-    "Sven": 8.4,
-    "Lifestealer": 4.5,
-    "Undying": 3.88,
-    "Enchantress": 3.81,
-    "Luna": 3.78,
-    "Naga Siren": 3.6,
-    "Warlock": 3.37,
-    "Elder Titan": 3.21,
-    "Enigma": 3.1
+    "Chen": 8.09,
+    "Sven": 6.81,
+    "Lifestealer": 4.43,
+    "Elder Titan": 4.1,
+    "Luna": 4.08,
+    "Enchantress": 3.64,
+    "Undying": 3.54,
+    "Bristleback": 2.94,
+    "Warlock": 2.92,
+    "Keeper of the Light": 2.89
   }
 }

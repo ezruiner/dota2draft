@@ -28,27 +28,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Meepo": -6.67,
-    "Spectre": -3.76,
-    "Wraith King": -3.27,
-    "Lich": -3.26,
-    "Enigma": -3.19,
+    "Meepo": -6.22,
+    "Visage": -3.61,
+    "Spectre": -3.51,
+    "Lich": -3.12,
+    "Wraith King": -2.96,
+    "Witch Doctor": -2.86,
+    "Necrophos": -2.81,
     "Omniknight": -2.74,
-    "Witch Doctor": -2.56,
-    "Io": -2.53,
-    "Visage": -2.44,
-    "Venomancer": -2.29
+    "Venomancer": -2.52,
+    "Clinkz": -2.31
   },
   "explicit_synergies": {
-    "Dark Seer": 4.71,
-    "Sand King": 2.65,
-    "Abaddon": 2.29,
-    "Elder Titan": 2.27,
-    "Arc Warden": 1.86,
-    "Muerta": 1.81,
-    "Omniknight": 1.75,
-    "Lycan": 1.75,
-    "Keeper of the Light": 1.67,
-    "Undying": 1.64
+    "Dark Seer": 5.06,
+    "Sand King": 3.56,
+    "Abaddon": 2.28,
+    "Keeper of the Light": 2.1,
+    "Mars": 2.0,
+    "Arc Warden": 1.97,
+    "Muerta": 1.84,
+    "Huskar": 1.77,
+    "Lone Druid": 1.71,
+    "Terrorblade": 1.67
   }
 }

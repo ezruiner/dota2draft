@@ -27,27 +27,27 @@
     "late": 4
   },
   "explicit_counters": {
-    "Legion Commander": -7.08,
-    "Spectre": -6.6,
-    "Clinkz": -5.56,
-    "Arc Warden": -5.19,
-    "Lifestealer": -5.1,
-    "Winter Wyvern": -4.85,
-    "Pudge": -4.64,
-    "Dark Seer": -4.64,
-    "Phantom Lancer": -4.62,
-    "Broodmother": -4.55
+    "Legion Commander": -6.89,
+    "Spectre": -5.92,
+    "Clinkz": -5.55,
+    "Arc Warden": -5.51,
+    "Winter Wyvern": -5.05,
+    "Lifestealer": -5.04,
+    "Dazzle": -4.82,
+    "Phantom Lancer": -4.79,
+    "Venomancer": -4.55,
+    "Pudge": -4.54
   },
   "explicit_synergies": {
-    "Largo": 3.85,
-    "Io": 3.36,
-    "Meepo": 2.95,
-    "Pangolier": 2.77,
-    "Kez": 2.69,
-    "Brewmaster": 2.58,
-    "Marci": 2.51,
-    "Treant Protector": 2.43,
-    "Broodmother": 2.31,
-    "Earth Spirit": 2.08
+    "Largo": 4.66,
+    "Io": 3.63,
+    "Meepo": 3.25,
+    "Kez": 2.89,
+    "Marci": 2.61,
+    "Earth Spirit": 2.23,
+    "Naga Siren": 2.09,
+    "Broodmother": 2.04,
+    "Riki": 1.85,
+    "Templar Assassin": 1.85
   }
 }

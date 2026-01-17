@@ -28,27 +28,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Medusa": -7.63,
-    "Troll Warlord": -6.89,
-    "Spectre": -6.68,
-    "Lich": -5.87,
-    "Dazzle": -5.82,
-    "Wraith King": -5.76,
-    "Legion Commander": -5.76,
-    "Clockwerk": -5.45,
-    "Kunkka": -5.28,
-    "Chaos Knight": -5.13
+    "Troll Warlord": -7.68,
+    "Spectre": -7.59,
+    "Medusa": -7.12,
+    "Clockwerk": -6.2,
+    "Lich": -6.18,
+    "Legion Commander": -5.46,
+    "Chaos Knight": -5.4,
+    "Wraith King": -5.23,
+    "Omniknight": -5.02,
+    "Dazzle": -4.94
   },
   "explicit_synergies": {
-    "Meepo": 8.29,
-    "Elder Titan": 6.03,
-    "Centaur Warrunner": 5.32,
-    "Bristleback": 5.3,
-    "Muerta": 4.97,
-    "Spectre": 4.79,
-    "Brewmaster": 4.51,
-    "Juggernaut": 4.16,
-    "Razor": 3.45,
-    "Monkey King": 3.42
+    "Meepo": 8.99,
+    "Centaur Warrunner": 5.42,
+    "Monkey King": 4.81,
+    "Bristleback": 4.8,
+    "Primal Beast": 4.42,
+    "Spectre": 4.37,
+    "Juggernaut": 4.34,
+    "Elder Titan": 3.96,
+    "Necrophos": 3.38,
+    "Brewmaster": 3.29
   }
 }

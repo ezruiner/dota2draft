@@ -25,27 +25,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Broodmother": -10.91,
-    "Oracle": -9.66,
-    "Lycan": -9.09,
-    "Razor": -8.41,
-    "Lich": -7.77,
-    "Underlord": -7.46,
-    "Phantom Assassin": -7.14,
-    "Muerta": -6.96,
-    "Ogre Magi": -6.57,
-    "Omniknight": -6.48
+    "Broodmother": -12.29,
+    "Lycan": -11.11,
+    "Underlord": -8.25,
+    "Phantom Assassin": -7.92,
+    "Oracle": -7.75,
+    "Lich": -7.67,
+    "Razor": -6.83,
+    "Muerta": -6.52,
+    "Bristleback": -6.36,
+    "Crystal Maiden": -6.18
   },
   "explicit_synergies": {
-    "Primal Beast": 17.04,
-    "Clockwerk": 9.98,
-    "Morphling": 7.7,
-    "Bane": 6.64,
-    "Monkey King": 5.91,
-    "Luna": 5.79,
-    "Muerta": 5.56,
-    "Faceless Void": 5.38,
-    "Enchantress": 5.22,
-    "Hoodwink": 5.01
+    "Primal Beast": 16.83,
+    "Clockwerk": 10.31,
+    "Morphling": 7.82,
+    "Monkey King": 6.21,
+    "Muerta": 6.09,
+    "Hoodwink": 4.85,
+    "Shadow Fiend": 4.81,
+    "Elder Titan": 4.67,
+    "Luna": 4.66,
+    "Faceless Void": 4.51
   }
 }

@@ -26,27 +26,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Wraith King": -8.35,
-    "Meepo": -7.59,
-    "Spectre": -6.87,
-    "Clockwerk": -6.2,
-    "Clinkz": -5.52,
-    "Visage": -5.32,
-    "Void Spirit": -5.28,
-    "Winter Wyvern": -4.85,
-    "Phantom Lancer": -4.7,
-    "Legion Commander": -4.56
+    "Wraith King": -8.52,
+    "Meepo": -7.82,
+    "Spectre": -7.15,
+    "Clockwerk": -6.67,
+    "Clinkz": -5.7,
+    "Visage": -5.68,
+    "Void Spirit": -5.03,
+    "Phoenix": -4.99,
+    "Broodmother": -4.79,
+    "Winter Wyvern": -4.75
   },
   "explicit_synergies": {
-    "Gyrocopter": 4.81,
-    "Beastmaster": 4.73,
-    "Medusa": 4.54,
-    "Tinker": 4.37,
-    "Visage": 3.97,
-    "Muerta": 3.93,
-    "Elder Titan": 3.69,
-    "Phoenix": 3.57,
-    "Io": 3.46,
-    "Undying": 3.26
+    "Beastmaster": 6.05,
+    "Medusa": 4.17,
+    "Muerta": 3.98,
+    "Phoenix": 3.83,
+    "Tinker": 3.72,
+    "Elder Titan": 3.67,
+    "Io": 3.66,
+    "Gyrocopter": 3.63,
+    "Visage": 3.41,
+    "Juggernaut": 2.65
   }
 }

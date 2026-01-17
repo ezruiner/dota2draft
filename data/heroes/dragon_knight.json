@@ -28,27 +28,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Arc Warden": -10.88,
-    "Spectre": -9.09,
-    "Broodmother": -8.55,
-    "Viper": -8.39,
-    "Witch Doctor": -7.05,
-    "Wraith King": -7.01,
-    "Omniknight": -6.94,
-    "Chaos Knight": -6.68,
-    "Sand King": -6.61,
-    "Venomancer": -6.55
+    "Arc Warden": -11.1,
+    "Spectre": -9.1,
+    "Viper": -7.77,
+    "Witch Doctor": -7.63,
+    "Chaos Knight": -7.46,
+    "Broodmother": -7.14,
+    "Wraith King": -7.07,
+    "Lich": -6.73,
+    "Alchemist": -6.57,
+    "Sand King": -6.57
   },
   "explicit_synergies": {
-    "Chen": 8.02,
-    "Doom": 5.9,
-    "Meepo": 4.13,
-    "Underlord": 3.74,
-    "Tinker": 3.14,
-    "Oracle": 2.68,
-    "Brewmaster": 2.55,
-    "Kunkka": 2.46,
-    "Slardar": 2.43,
-    "Dawnbreaker": 2.38
+    "Chen": 7.77,
+    "Doom": 5.42,
+    "Brewmaster": 3.91,
+    "Meepo": 3.5,
+    "Underlord": 3.44,
+    "Sand King": 3.12,
+    "Dawnbreaker": 3.06,
+    "Oracle": 3.02,
+    "Slardar": 2.94,
+    "Lycan": 2.87
   }
 }

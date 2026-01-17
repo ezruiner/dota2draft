@@ -28,27 +28,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Brewmaster": -9.48,
-    "Clinkz": -8.8,
-    "Sand King": -8.31,
-    "Elder Titan": -7.95,
-    "Enigma": -7.83,
-    "Medusa": -7.25,
-    "Warlock": -7.17,
-    "Underlord": -7.14,
-    "Witch Doctor": -7.06,
-    "Treant Protector": -6.61
+    "Clinkz": -9.49,
+    "Elder Titan": -9.43,
+    "Underlord": -7.55,
+    "Sand King": -7.46,
+    "Witch Doctor": -7.26,
+    "Lich": -7.14,
+    "Medusa": -6.96,
+    "Io": -6.6,
+    "Ancient Apparition": -6.42,
+    "Warlock": -6.18
   },
   "explicit_synergies": {
-    "Doom": 13.29,
-    "Abaddon": 9.18,
-    "Pangolier": 9.04,
-    "Sand King": 8.53,
-    "Clockwerk": 6.62,
-    "Marci": 6.18,
-    "Shadow Demon": 5.32,
-    "Magnus": 5.13,
-    "Broodmother": 4.97,
-    "Batrider": 4.83
+    "Doom": 8.5,
+    "Pangolier": 8.36,
+    "Sand King": 7.81,
+    "Abaddon": 7.62,
+    "Magnus": 6.35,
+    "Marci": 6.14,
+    "Hoodwink": 5.84,
+    "Clockwerk": 5.7,
+    "Broodmother": 4.87,
+    "Omniknight": 4.72
   }
 }

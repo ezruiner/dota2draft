@@ -27,27 +27,27 @@
     "late": 9
   },
   "explicit_counters": {
-    "Broodmother": -11.67,
-    "Lycan": -9.48,
-    "Spectre": -8.49,
-    "Meepo": -6.86,
-    "Brewmaster": -6.76,
-    "Legion Commander": -6.18,
-    "Nyx Assassin": -5.72,
-    "Bounty Hunter": -5.43,
-    "Clinkz": -5.34,
-    "Visage": -5.25
+    "Broodmother": -9.63,
+    "Lycan": -9.57,
+    "Spectre": -8.63,
+    "Meepo": -6.85,
+    "Legion Commander": -6.42,
+    "Arc Warden": -6.3,
+    "Visage": -6.22,
+    "Nyx Assassin": -5.92,
+    "Clinkz": -5.27,
+    "Wraith King": -5.25
   },
   "explicit_synergies": {
-    "Troll Warlord": 7.41,
-    "Lone Druid": 7.26,
-    "Doom": 7.0,
-    "Brewmaster": 6.64,
-    "Bloodseeker": 5.77,
-    "Enigma": 5.75,
-    "Enchantress": 4.56,
-    "Io": 4.13,
-    "Shadow Demon": 4.03,
-    "Magnus": 3.63
+    "Lone Druid": 7.49,
+    "Enigma": 6.7,
+    "Troll Warlord": 5.44,
+    "Lycan": 5.29,
+    "Brewmaster": 4.93,
+    "Doom": 4.83,
+    "Io": 4.29,
+    "Enchantress": 4.14,
+    "Largo": 3.83,
+    "Magnus": 3.78
   }
 }

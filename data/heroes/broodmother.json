@@ -26,27 +26,27 @@
     "late": 4
   },
   "explicit_counters": {
-    "Meepo": -5.06,
-    "Elder Titan": -1.3,
-    "Phoenix": -1.28,
-    "Necrophos": -1.13,
-    "Visage": -0.54,
-    "Spectre": -0.26,
-    "Sand King": 0.25,
-    "Underlord": 0.33,
-    "Nyx Assassin": 0.41,
-    "Lycan": 0.45
+    "Meepo": -6.76,
+    "Phoenix": -1.66,
+    "Necrophos": -1.36,
+    "Visage": -0.8,
+    "Spectre": -0.35,
+    "Underlord": -0.09,
+    "Tidehunter": 0.0,
+    "Axe": 0.63,
+    "Nyx Assassin": 1.04,
+    "Spirit Breaker": 1.04
   },
   "explicit_synergies": {
-    "Beastmaster": 5.87,
-    "Primal Beast": 5.55,
-    "Marci": 4.16,
-    "Elder Titan": 4.13,
-    "Visage": 3.91,
-    "Tinker": 3.81,
-    "Winter Wyvern": 3.6,
-    "Sand King": 3.31,
-    "Largo": 3.29,
-    "Treant Protector": 3.28
+    "Primal Beast": 6.35,
+    "Beastmaster": 5.97,
+    "Visage": 5.44,
+    "Sand King": 3.53,
+    "Winter Wyvern": 3.4,
+    "Snapfire": 3.1,
+    "Gyrocopter": 3.05,
+    "Tinker": 2.85,
+    "Elder Titan": 2.79,
+    "Marci": 2.67
   }
 }

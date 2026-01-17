@@ -27,27 +27,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Broodmother": -9.39,
-    "Outworld Destroyer": -8.69,
-    "Elder Titan": -8.39,
-    "Omniknight": -7.92,
-    "Winter Wyvern": -6.46,
-    "Visage": -6.45,
-    "Void Spirit": -6.37,
-    "Meepo": -6.27,
-    "Night Stalker": -6.21,
-    "Lycan": -6.2
+    "Broodmother": -9.5,
+    "Elder Titan": -8.33,
+    "Outworld Destroyer": -7.78,
+    "Visage": -7.24,
+    "Meepo": -7.14,
+    "Omniknight": -7.1,
+    "Chaos Knight": -6.09,
+    "Winter Wyvern": -6.02,
+    "Shadow Shaman": -5.94,
+    "Vengeful Spirit": -5.59
   },
   "explicit_synergies": {
-    "Lone Druid": 15.14,
-    "Lycan": 11.72,
-    "Timbersaw": 10.24,
-    "Doom": 8.47,
-    "Io": 6.1,
-    "Slardar": 5.9,
-    "Broodmother": 5.65,
-    "Omniknight": 5.62,
-    "Pangolier": 5.52,
-    "Dawnbreaker": 5.15
+    "Lone Druid": 15.13,
+    "Lycan": 11.22,
+    "Doom": 9.97,
+    "Timbersaw": 9.27,
+    "Broodmother": 6.45,
+    "Omniknight": 5.9,
+    "Pangolier": 5.83,
+    "Io": 5.03,
+    "Dawnbreaker": 5.01,
+    "Underlord": 5.0
   }
 }

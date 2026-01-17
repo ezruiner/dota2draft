@@ -28,27 +28,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Meepo": -11.48,
-    "Broodmother": -11.27,
-    "Spectre": -7.91,
-    "Phantom Lancer": -7.4,
-    "Shadow Shaman": -7.37,
-    "Outworld Destroyer": -7.13,
-    "Omniknight": -6.96,
-    "Nyx Assassin": -6.86,
-    "Night Stalker": -6.62,
-    "Abaddon": -6.48
+    "Meepo": -12.85,
+    "Broodmother": -11.21,
+    "Spectre": -8.15,
+    "Outworld Destroyer": -7.47,
+    "Shadow Shaman": -7.31,
+    "Omniknight": -7.31,
+    "Nyx Assassin": -7.17,
+    "Visage": -6.98,
+    "Luna": -6.97,
+    "Phantom Lancer": -6.88
   },
   "explicit_synergies": {
-    "Lone Druid": 7.5,
-    "Dark Seer": 6.84,
-    "Chen": 6.65,
-    "Visage": 4.37,
-    "Troll Warlord": 4.34,
-    "Enigma": 3.79,
-    "Sand King": 3.77,
-    "Doom": 2.73,
-    "Hoodwink": 2.38,
-    "Batrider": 2.27
+    "Lone Druid": 7.32,
+    "Dark Seer": 6.97,
+    "Troll Warlord": 4.57,
+    "Enigma": 3.43,
+    "Visage": 3.28,
+    "Chen": 2.92,
+    "Sand King": 2.67,
+    "Keeper of the Light": 2.51,
+    "Puck": 2.41,
+    "Bane": 2.38
   }
 }

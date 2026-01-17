@@ -28,27 +28,27 @@
     "late": 9
   },
   "explicit_counters": {
-    "Spectre": -3.88,
-    "Necrophos": -3.24,
-    "Chaos Knight": -2.27,
-    "Lich": -1.93,
-    "Spirit Breaker": -1.59,
-    "Broodmother": -1.59,
-    "Abaddon": -1.41,
-    "Keeper of the Light": -1.41,
-    "Clockwerk": -0.68,
-    "Muerta": -0.31
+    "Spectre": -3.68,
+    "Abaddon": -2.56,
+    "Necrophos": -2.45,
+    "Broodmother": -1.32,
+    "Lich": -1.26,
+    "Spirit Breaker": -1.03,
+    "Chaos Knight": -0.87,
+    "Wraith King": -0.61,
+    "Enchantress": -0.38,
+    "Muerta": -0.35
   },
   "explicit_synergies": {
-    "Oracle": 6.7,
-    "Marci": 6.31,
-    "Undying": 5.25,
-    "Huskar": 4.91,
-    "Tinker": 4.86,
-    "Io": 4.65,
-    "Underlord": 4.46,
-    "Enchantress": 3.98,
-    "Slardar": 3.95,
-    "Pugna": 3.9
+    "Io": 6.08,
+    "Marci": 5.46,
+    "Tinker": 5.44,
+    "Oracle": 5.33,
+    "Undying": 5.32,
+    "Treant Protector": 5.03,
+    "Huskar": 4.73,
+    "Pugna": 4.28,
+    "Tiny": 4.04,
+    "Largo": 4.02
   }
 }

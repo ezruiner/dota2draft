@@ -29,27 +29,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Legion Commander": -4.7,
-    "Clinkz": -3.91,
-    "Juggernaut": -3.63,
-    "Marci": -3.15,
-    "Muerta": -3.04,
-    "Nyx Assassin": -2.53,
-    "Meepo": -2.46,
-    "Lina": -1.88,
-    "Huskar": -1.84,
-    "Winter Wyvern": -1.81
+    "Legion Commander": -4.62,
+    "Clinkz": -3.52,
+    "Meepo": -3.37,
+    "Juggernaut": -2.92,
+    "Nyx Assassin": -2.64,
+    "Marci": -2.58,
+    "Muerta": -2.54,
+    "Mirana": -1.82,
+    "Lina": -1.74,
+    "Winter Wyvern": -1.74
   },
   "explicit_synergies": {
-    "Naga Siren": 10.88,
-    "Leshrac": 5.13,
-    "Legion Commander": 5.08,
-    "Enigma": 4.98,
-    "Dazzle": 4.7,
-    "Magnus": 3.57,
-    "Pangolier": 3.38,
+    "Naga Siren": 9.61,
+    "Enigma": 4.94,
+    "Legion Commander": 4.88,
+    "Dazzle": 4.21,
+    "Magnus": 3.83,
+    "Shadow Demon": 3.56,
+    "Pangolier": 3.34,
     "Gyrocopter": 3.21,
-    "Primal Beast": 3.21,
-    "Lina": 3.16
+    "Primal Beast": 3.0,
+    "Night Stalker": 2.82
   }
 }

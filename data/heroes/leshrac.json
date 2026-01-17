@@ -27,27 +27,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Elder Titan": -16.67,
-    "Lycan": -8.33,
-    "Visage": -7.95,
-    "Clinkz": -6.63,
-    "Dawnbreaker": -5.76,
-    "Enchantress": -5.61,
-    "Wraith King": -5.49,
-    "Nyx Assassin": -5.31,
-    "Witch Doctor": -4.7,
-    "Undying": -4.5
+    "Elder Titan": -14.8,
+    "Visage": -10.1,
+    "Lycan": -6.52,
+    "Clinkz": -6.14,
+    "Dawnbreaker": -4.85,
+    "Broodmother": -4.76,
+    "Enchantress": -4.69,
+    "Nyx Assassin": -4.68,
+    "Witch Doctor": -4.45,
+    "Undying": -4.37
   },
   "explicit_synergies": {
-    "Keeper of the Light": 7.56,
-    "Ember Spirit": 7.46,
-    "Largo": 4.81,
-    "Sven": 4.65,
-    "Phoenix": 4.63,
-    "Void Spirit": 4.38,
-    "Omniknight": 4.14,
-    "Grimstroke": 3.57,
-    "Broodmother": 3.27,
-    "Visage": 3.23
+    "Keeper of the Light": 8.2,
+    "Ember Spirit": 7.33,
+    "Visage": 5.76,
+    "Sven": 5.42,
+    "Largo": 5.25,
+    "Grimstroke": 4.68,
+    "Void Spirit": 3.41,
+    "Templar Assassin": 3.23,
+    "Bounty Hunter": 3.2,
+    "Omniknight": 3.17
   }
 }

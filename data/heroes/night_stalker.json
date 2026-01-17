@@ -29,27 +29,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Broodmother": -10.31,
-    "Lycan": -9.87,
-    "Bounty Hunter": -8.08,
-    "Meepo": -6.27,
-    "Beastmaster": -5.21,
-    "Wraith King": -4.92,
-    "Spectre": -4.88,
-    "Vengeful Spirit": -4.4,
-    "Chaos Knight": -4.14,
-    "Troll Warlord": -3.9
+    "Broodmother": -8.5,
+    "Bounty Hunter": -8.02,
+    "Meepo": -6.96,
+    "Wraith King": -5.63,
+    "Lycan": -5.62,
+    "Spectre": -4.82,
+    "Chaos Knight": -4.37,
+    "Beastmaster": -4.32,
+    "Vengeful Spirit": -3.8,
+    "Troll Warlord": -3.69
   },
   "explicit_synergies": {
-    "Brewmaster": 10.54,
-    "Lycan": 9.84,
-    "Elder Titan": 9.56,
-    "Underlord": 5.63,
-    "Doom": 4.8,
-    "Arc Warden": 4.76,
-    "Chen": 4.71,
-    "Grimstroke": 3.67,
-    "Dawnbreaker": 3.58,
-    "Lifestealer": 3.55
+    "Elder Titan": 8.96,
+    "Brewmaster": 7.69,
+    "Lycan": 7.04,
+    "Underlord": 6.32,
+    "Doom": 5.09,
+    "Grimstroke": 3.82,
+    "Mars": 3.54,
+    "Axe": 3.18,
+    "Chen": 3.05,
+    "Lifestealer": 2.98
   }
 }

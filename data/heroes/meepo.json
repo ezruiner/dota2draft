@@ -29,27 +29,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Elder Titan": -3.85,
-    "Troll Warlord": -3.0,
-    "Winter Wyvern": -2.57,
-    "Sven": -1.52,
-    "Drow Ranger": -1.31,
-    "Omniknight": -1.3,
-    "Shadow Fiend": -1.23,
-    "Warlock": -0.37,
-    "Vengeful Spirit": -0.26,
-    "Lina": 0.49
+    "Winter Wyvern": -4.82,
+    "Elder Titan": -4.55,
+    "Lone Druid": -1.76,
+    "Omniknight": -1.48,
+    "Shadow Fiend": -0.98,
+    "Troll Warlord": -0.97,
+    "Ancient Apparition": -0.93,
+    "Kunkka": -0.57,
+    "Drow Ranger": -0.48,
+    "Vengeful Spirit": 0.0
   },
   "explicit_synergies": {
-    "Brewmaster": 11.87,
-    "Ringmaster": 10.03,
-    "Centaur Warrunner": 8.87,
-    "Sand King": 8.66,
-    "Bloodseeker": 8.19,
-    "Ancient Apparition": 7.91,
-    "Keeper of the Light": 7.89,
-    "Alchemist": 6.01,
-    "Sven": 5.67,
-    "Shadow Demon": 5.15
+    "Brewmaster": 9.34,
+    "Ringmaster": 8.94,
+    "Bloodseeker": 8.89,
+    "Ancient Apparition": 7.9,
+    "Centaur Warrunner": 7.16,
+    "Shadow Demon": 6.92,
+    "Lycan": 5.89,
+    "Sven": 5.51,
+    "Sand King": 5.25,
+    "Huskar": 5.05
   }
 }

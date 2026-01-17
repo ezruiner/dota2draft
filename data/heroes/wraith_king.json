@@ -31,27 +31,27 @@
     "late": 9
   },
   "explicit_counters": {
-    "Meepo": -5.89,
-    "Broodmother": -3.92,
-    "Phantom Lancer": -3.87,
-    "Necrophos": -2.66,
-    "Underlord": -2.16,
-    "Alchemist": -1.76,
-    "Dazzle": -1.63,
-    "Lich": -1.53,
-    "Tidehunter": -1.39,
-    "Phoenix": -0.49
+    "Meepo": -6.27,
+    "Broodmother": -4.49,
+    "Phantom Lancer": -3.77,
+    "Necrophos": -2.51,
+    "Underlord": -2.15,
+    "Alchemist": -2.02,
+    "Lich": -1.78,
+    "Tidehunter": -1.24,
+    "Dazzle": -0.75,
+    "Abaddon": -0.41
   },
   "explicit_synergies": {
-    "Pangolier": 7.87,
-    "Dark Seer": 6.33,
-    "Marci": 3.01,
-    "Ringmaster": 2.83,
-    "Techies": 2.47,
-    "Death Prophet": 2.45,
-    "Nature's Prophet": 2.34,
-    "Timbersaw": 2.29,
-    "Ancient Apparition": 2.21,
-    "Tusk": 2.2
+    "Pangolier": 8.06,
+    "Elder Titan": 3.37,
+    "Dark Seer": 3.21,
+    "Kez": 2.82,
+    "Snapfire": 2.78,
+    "Ringmaster": 2.5,
+    "Marci": 2.44,
+    "Death Prophet": 2.29,
+    "Huskar": 2.01,
+    "Enigma": 1.97
   }
 }

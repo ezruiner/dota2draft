@@ -28,27 +28,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Broodmother": -5.75,
-    "Clinkz": -3.5,
-    "Brewmaster": -2.36,
-    "Wraith King": -2.23,
-    "Meepo": -2.07,
-    "Winter Wyvern": -1.68,
-    "Legion Commander": -1.54,
-    "Spectre": -1.43,
-    "Vengeful Spirit": -0.56,
-    "Medusa": -0.5
+    "Broodmother": -5.14,
+    "Clinkz": -3.26,
+    "Meepo": -2.83,
+    "Brewmaster": -2.31,
+    "Wraith King": -2.0,
+    "Winter Wyvern": -1.62,
+    "Legion Commander": -1.48,
+    "Spectre": -1.37,
+    "Phantom Lancer": -0.96,
+    "Medusa": -0.86
   },
   "explicit_synergies": {
     "Terrorblade": 3.42,
-    "Lone Druid": 2.29,
-    "Grimstroke": 2.19,
-    "Shadow Shaman": 1.8,
-    "Visage": 1.76,
-    "Enchantress": 1.68,
-    "Lycan": 1.57,
-    "Spectre": 1.54,
-    "Windranger": 1.5,
-    "Nature's Prophet": 1.34
+    "Enchantress": 2.31,
+    "Grimstroke": 2.23,
+    "Shadow Shaman": 1.91,
+    "Spectre": 1.67,
+    "Bounty Hunter": 1.56,
+    "Viper": 1.27,
+    "Lone Druid": 1.26,
+    "Spirit Breaker": 1.21,
+    "Windranger": 1.19
   }
 }

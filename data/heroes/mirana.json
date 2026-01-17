@@ -28,27 +28,27 @@
     "late": 6
   },
   "explicit_counters": {
-    "Meepo": -7.89,
-    "Broodmother": -6.8,
-    "Wraith King": -5.18,
-    "Phantom Lancer": -4.8,
-    "Brewmaster": -4.39,
-    "Spectre": -4.25,
-    "Outworld Destroyer": -3.71,
-    "Nyx Assassin": -3.53,
-    "Slardar": -3.36,
-    "Chaos Knight": -3.3
+    "Meepo": -7.68,
+    "Broodmother": -6.28,
+    "Wraith King": -5.16,
+    "Spectre": -4.19,
+    "Phantom Lancer": -4.11,
+    "Nyx Assassin": -3.65,
+    "Visage": -3.59,
+    "Outworld Destroyer": -3.38,
+    "Brewmaster": -3.33,
+    "Slardar": -3.18
   },
   "explicit_synergies": {
-    "Pangolier": 6.04,
-    "Lifestealer": 3.65,
-    "Underlord": 3.23,
-    "Templar Assassin": 2.9,
-    "Disruptor": 2.87,
-    "Queen of Pain": 2.8,
-    "Sven": 2.75,
-    "Necrophos": 2.61,
-    "Faceless Void": 2.41,
-    "Bloodseeker": 2.37
+    "Pangolier": 5.68,
+    "Lone Druid": 3.47,
+    "Lifestealer": 3.41,
+    "Underlord": 3.34,
+    "Arc Warden": 3.23,
+    "Disruptor": 2.85,
+    "Necrophos": 2.5,
+    "Templar Assassin": 2.5,
+    "Queen of Pain": 2.38,
+    "Death Prophet": 2.31
   }
 }

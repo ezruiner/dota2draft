@@ -29,27 +29,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Meepo": -6.19,
-    "Broodmother": -5.88,
-    "Clinkz": -4.67,
-    "Void Spirit": -3.35,
-    "Riki": -3.12,
-    "Phantom Lancer": -2.97,
-    "Omniknight": -2.84,
-    "Slardar": -2.33,
-    "Legion Commander": -2.27,
-    "Alchemist": -2.23
+    "Meepo": -6.16,
+    "Broodmother": -5.8,
+    "Clinkz": -4.54,
+    "Riki": -3.47,
+    "Omniknight": -3.32,
+    "Void Spirit": -3.21,
+    "Phantom Lancer": -3.15,
+    "Visage": -2.71,
+    "Slardar": -2.36,
+    "Alchemist": -2.21
   },
   "explicit_synergies": {
-    "Death Prophet": 1.89,
-    "Lone Druid": 1.82,
-    "Pangolier": 1.8,
-    "Shadow Demon": 1.79,
-    "Clockwerk": 1.78,
-    "Templar Assassin": 1.75,
-    "Io": 1.58,
-    "Phantom Lancer": 1.45,
-    "Dark Willow": 1.44,
-    "Underlord": 1.39
+    "Pangolier": 2.12,
+    "Death Prophet": 1.95,
+    "Templar Assassin": 1.94,
+    "Winter Wyvern": 1.83,
+    "Io": 1.72,
+    "Tidehunter": 1.58,
+    "Ringmaster": 1.45,
+    "Shadow Demon": 1.44,
+    "Clockwerk": 1.36,
+    "Legion Commander": 1.36
   }
 }

@@ -28,27 +28,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Elder Titan": -12.5,
-    "Legion Commander": -6.73,
-    "Meepo": -6.52,
-    "Naga Siren": -4.84,
-    "Broodmother": -4.73,
-    "Death Prophet": -4.55,
-    "Bane": -4.35,
-    "Troll Warlord": -4.25,
-    "Bounty Hunter": -4.24,
-    "Vengeful Spirit": -4.16
+    "Elder Titan": -11.39,
+    "Lycan": -6.8,
+    "Legion Commander": -6.33,
+    "Meepo": -5.81,
+    "Naga Siren": -5.19,
+    "Dazzle": -4.58,
+    "Oracle": -4.36,
+    "Io": -4.31,
+    "Chaos Knight": -3.98,
+    "Leshrac": -3.95
   },
   "explicit_synergies": {
-    "Brewmaster": 8.39,
-    "Chen": 8.16,
-    "Enigma": 5.6,
-    "Death Prophet": 5.08,
-    "Slardar": 5.07,
-    "Bane": 4.82,
-    "Templar Assassin": 4.44,
-    "Ancient Apparition": 3.84,
-    "Huskar": 3.53,
-    "Viper": 3.34
+    "Brewmaster": 8.41,
+    "Chen": 6.57,
+    "Enigma": 4.48,
+    "Ancient Apparition": 4.28,
+    "Death Prophet": 3.91,
+    "Slardar": 3.85,
+    "Viper": 3.78,
+    "Templar Assassin": 3.4,
+    "Faceless Void": 2.92,
+    "Kez": 2.84
   }
 }

@@ -30,27 +30,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Omniknight": -7.04,
-    "Spectre": -5.06,
-    "Arc Warden": -4.57,
-    "Grimstroke": -4.29,
-    "Io": -4.03,
-    "Clinkz": -3.94,
-    "Dazzle": -3.9,
-    "Keeper of the Light": -3.85,
-    "Phantom Lancer": -3.65,
-    "Undying": -3.35
+    "Omniknight": -6.99,
+    "Spectre": -5.66,
+    "Arc Warden": -4.93,
+    "Dazzle": -4.84,
+    "Phoenix": -4.59,
+    "Keeper of the Light": -4.19,
+    "Clinkz": -3.95,
+    "Phantom Lancer": -3.83,
+    "Undying": -3.69,
+    "Broodmother": -3.59
   },
   "explicit_synergies": {
-    "Visage": 9.59,
-    "Dark Seer": 5.86,
-    "Arc Warden": 5.01,
-    "Huskar": 4.54,
-    "Terrorblade": 4.25,
-    "Kez": 3.81,
-    "Naga Siren": 3.6,
-    "Clockwerk": 3.47,
-    "Alchemist": 3.34,
-    "Troll Warlord": 3.26
+    "Huskar": 5.02,
+    "Visage": 5.02,
+    "Dark Seer": 4.22,
+    "Arc Warden": 3.93,
+    "Timbersaw": 3.1,
+    "Clockwerk": 2.91,
+    "Alchemist": 2.85,
+    "Gyrocopter": 2.84,
+    "Tinker": 2.73,
+    "Bloodseeker": 2.66
   }
 }

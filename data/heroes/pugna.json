@@ -25,27 +25,27 @@
     "late": 5
   },
   "explicit_counters": {
-    "Meepo": -10.38,
-    "Nyx Assassin": -8.49,
-    "Enigma": -6.7,
-    "Chaos Knight": -6.62,
-    "Pudge": -6.16,
-    "Io": -5.27,
-    "Spectre": -5.2,
-    "Largo": -5.04,
-    "Clinkz": -5.0,
-    "Wraith King": -4.89
+    "Nyx Assassin": -8.91,
+    "Meepo": -8.88,
+    "Chaos Knight": -6.79,
+    "Enigma": -6.4,
+    "Largo": -5.81,
+    "Pudge": -5.64,
+    "Marci": -5.58,
+    "Spectre": -5.49,
+    "Wraith King": -5.11,
+    "Elder Titan": -4.73
   },
   "explicit_synergies": {
-    "Lycan": 8.02,
-    "Io": 6.6,
-    "Lone Druid": 5.54,
-    "Keeper of the Light": 5.24,
-    "Chen": 5.08,
-    "Marci": 4.26,
-    "Timbersaw": 3.84,
-    "Kez": 3.53,
-    "Puck": 3.43,
-    "Spectre": 3.29
+    "Chen": 7.66,
+    "Lycan": 7.25,
+    "Keeper of the Light": 6.95,
+    "Io": 5.86,
+    "Dazzle": 5.03,
+    "Lone Druid": 4.56,
+    "Kez": 4.02,
+    "Timbersaw": 3.8,
+    "Winter Wyvern": 3.58,
+    "Marci": 3.35
   }
 }

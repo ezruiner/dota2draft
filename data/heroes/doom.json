@@ -29,27 +29,27 @@
     "late": 8
   },
   "explicit_counters": {
-    "Meepo": -16.46,
-    "Broodmother": -15.62,
-    "Spectre": -13.31,
-    "Dazzle": -11.81,
-    "Arc Warden": -11.76,
-    "Clinkz": -11.19,
-    "Brewmaster": -10.63,
-    "Wraith King": -10.56,
-    "Tusk": -9.63,
-    "Chaos Knight": -9.45
+    "Broodmother": -16.27,
+    "Meepo": -15.38,
+    "Spectre": -13.68,
+    "Clinkz": -11.31,
+    "Wraith King": -11.09,
+    "Dazzle": -10.98,
+    "Arc Warden": -10.42,
+    "Chaos Knight": -10.26,
+    "Witch Doctor": -9.39,
+    "Night Stalker": -9.38
   },
   "explicit_synergies": {
-    "Dark Seer": 13.1,
-    "Beastmaster": 12.19,
-    "Primal Beast": 9.87,
-    "Dawnbreaker": 8.58,
-    "Clockwerk": 8.22,
-    "Slardar": 7.02,
-    "Muerta": 6.8,
-    "Night Stalker": 6.2,
-    "Monkey King": 6.15,
-    "Death Prophet": 5.53
+    "Dark Seer": 11.46,
+    "Primal Beast": 11.07,
+    "Dawnbreaker": 10.09,
+    "Clockwerk": 8.55,
+    "Beastmaster": 7.8,
+    "Slardar": 7.48,
+    "Monkey King": 7.16,
+    "Night Stalker": 6.29,
+    "Lifestealer": 5.14,
+    "Earthshaker": 4.98
   }
 }

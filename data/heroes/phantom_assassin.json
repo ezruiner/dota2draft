@@ -25,27 +25,27 @@
     "late": 10
   },
   "explicit_counters": {
-    "Void Spirit": -8.16,
-    "Meepo": -7.71,
-    "Wraith King": -7.65,
-    "Spectre": -7.63,
-    "Nyx Assassin": -7.24,
-    "Axe": -6.74,
-    "Vengeful Spirit": -6.7,
-    "Drow Ranger": -6.6,
-    "Clockwerk": -6.15,
-    "Keeper of the Light": -5.82
+    "Meepo": -7.91,
+    "Wraith King": -7.67,
+    "Nyx Assassin": -7.56,
+    "Void Spirit": -7.45,
+    "Spectre": -7.29,
+    "Axe": -6.86,
+    "Vengeful Spirit": -6.67,
+    "Drow Ranger": -6.66,
+    "Phoenix": -6.56,
+    "Broodmother": -5.97
   },
   "explicit_synergies": {
-    "Visage": 4.6,
-    "Dark Seer": 3.88,
-    "Ursa": 3.32,
-    "Grimstroke": 2.94,
-    "Earth Spirit": 2.62,
-    "Riki": 2.62,
-    "Slark": 2.56,
-    "Sand King": 2.31,
-    "Skywrath Mage": 2.11,
-    "Magnus": 2.1
+    "Visage": 3.96,
+    "Earth Spirit": 2.92,
+    "Grimstroke": 2.88,
+    "Ursa": 2.83,
+    "Dark Seer": 2.56,
+    "Sand King": 2.36,
+    "Magnus": 2.2,
+    "Skywrath Mage": 2.17,
+    "Riki": 2.14,
+    "Slark": 1.98
   }
 }

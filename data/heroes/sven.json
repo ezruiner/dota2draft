@@ -29,27 +29,27 @@
     "late": 7
   },
   "explicit_counters": {
-    "Broodmother": -10.59,
-    "Troll Warlord": -8.47,
-    "Wraith King": -7.93,
-    "Arc Warden": -7.8,
-    "Treant Protector": -7.47,
-    "Abaddon": -6.87,
-    "Clockwerk": -6.77,
-    "Brewmaster": -6.65,
-    "Clinkz": -6.64,
-    "Enchantress": -6.49
+    "Broodmother": -9.44,
+    "Wraith King": -7.87,
+    "Troll Warlord": -7.49,
+    "Clinkz": -7.03,
+    "Phoenix": -6.99,
+    "Clockwerk": -6.88,
+    "Abaddon": -6.86,
+    "Vengeful Spirit": -6.8,
+    "Spectre": -6.78,
+    "Arc Warden": -6.69
   },
   "explicit_synergies": {
-    "Riki": 7.7,
-    "Elder Titan": 6.71,
-    "Troll Warlord": 5.56,
-    "Meepo": 5.28,
-    "Batrider": 4.29,
-    "Ringmaster": 4.25,
-    "Leshrac": 4.15,
-    "Lycan": 4.09,
-    "Dark Seer": 3.86,
-    "Dawnbreaker": 3.63
+    "Elder Titan": 6.99,
+    "Riki": 6.31,
+    "Troll Warlord": 6.13,
+    "Shadow Demon": 5.3,
+    "Meepo": 5.01,
+    "Ringmaster": 4.92,
+    "Leshrac": 4.82,
+    "Gyrocopter": 4.16,
+    "Dawnbreaker": 4.07,
+    "Slardar": 4.05
   }
 }
