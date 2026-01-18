@@ -225,6 +225,9 @@ fn main() {
             let mut state_guard = state.lock().unwrap();
             state_guard.drafter = drafter;
 
+            // Let Tauri load the initial URL from config (window.url = "index.html").
+            // No manual navigation to avoid scheme restrictions.
+
             Ok(())
         })
         .invoke_handler(tauri::generate_handler![cmd_get_heroes, cmd_recommend, cmd_check_data_freshness, cmd_update_data])

@@ -5,7 +5,8 @@
   "build": {
     "beforeDevCommand": "",
     "beforeBuildCommand": "",
-    "frontendDist": "../ui"
+    "frontendDist": "../ui",
+    "devUrl": "http://127.0.0.1:1430"
   },
   "app": {
     "withGlobalTauri": true,
@@ -19,7 +20,8 @@
         "height": 860,
         "resizable": true,
         "fullscreen": false,
-        "center": true
+        "center": true,
+        "url": "index.html"
       }
     ]
   },
