@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "identifier": "com.dota2draft.dev",
   "build": {
-    "beforeDevCommand": "",
+    "beforeDevCommand": "node dev-server.js",
     "beforeBuildCommand": "",
     "frontendDist": "../ui",
     "devUrl": "http://127.0.0.1:1430"
@@ -11,7 +11,7 @@
   "app": {
     "withGlobalTauri": true,
     "security": {
-      "csp": "default-src 'self' 'unsafe-inline' https://cdn.steamstatic.com https://cdn.tailwindcss.com; img-src 'self' * data:;"
+      "csp": "default-src 'self' https://cdn.steamstatic.com https://cdn.tailwindcss.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' * data:;"
     },
     "windows": [
       {
@@ -21,7 +21,7 @@
         "resizable": true,
         "fullscreen": false,
         "center": true,
-        "url": "index.html"
+        "url": "http://127.0.0.1:1430"
       }
     ]
   },
