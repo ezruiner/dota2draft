@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "identifier": "com.dota2draft.dev",
   "build": {
-    "beforeDevCommand": "node dev-server.js",
+    "beforeDevCommand": "node ../scripts/dev-server.js",
     "beforeBuildCommand": "",
     "frontendDist": "../ui",
     "devUrl": "http://127.0.0.1:1430"
