@@ -12,30 +12,52 @@ from pathlib import Path
 
 def update_version(version: str):
     """Update version in all config files"""
-    files = {
-        'Cargo.toml': r'version = ".*"',
-        'src-tauri/Cargo.toml': r'version = ".*"',
-        'src-tauri/tauri.conf.json': r'"version": ".*"',
-        'package.json': r'"version": ".*"',
-    }
     
-    replacement = f'version = "{version}"' if 'toml' in 'Cargo.toml' else f'"version": "{version}"'
-    
-    for file_path, pattern in files.items():
-        p = Path(file_path)
-        if not p.exists():
-            print(f"⚠️  {file_path} not found, skipping")
-            continue
-            
+    # Update Cargo.toml (root)
+    p = Path('Cargo.toml')
+    if p.exists():
         content = p.read_text()
-        
-        if 'toml' in file_path:
-            new_content = re.sub(pattern, f'version = "{version}"', content)
-        else:
-            new_content = re.sub(pattern, f'"version": "{version}"', content)
-            
+        # Only update version in [package] section
+        new_content = re.sub(
+            r'(\[package\][^\[]*?version\s*=\s*)"[^"]*"',
+            rf'\1"{version}"',
+            content,
+            flags=re.DOTALL
+        )
         p.write_text(new_content)
-        print(f"✓ Updated {file_path}")
+        print(f"✓ Updated {p}")
+    
+    # Update src-tauri/Cargo.toml
+    p = Path('src-tauri/Cargo.toml')
+    if p.exists():
+        content = p.read_text()
+        # Only update version in [package] section
+        new_content = re.sub(
+            r'(\[package\][^\[]*?version\s*=\s*)"[^"]*"',
+            rf'\1"{version}"',
+            content,
+            flags=re.DOTALL
+        )
+        p.write_text(new_content)
+        print(f"✓ Updated {p}")
+    
+    # Update tauri.conf.json
+    p = Path('src-tauri/tauri.conf.json')
+    if p.exists():
+        content = p.read_text()
+        data = json.loads(content)
+        data['version'] = version
+        p.write_text(json.dumps(data, indent=2))
+        print(f"✓ Updated {p}")
+    
+    # Update package.json
+    p = Path('package.json')
+    if p.exists():
+        content = p.read_text()
+        data = json.loads(content)
+        data['version'] = version
+        p.write_text(json.dumps(data, indent=2))
+        print(f"✓ Updated {p}")
 
 def build():
     """Build the release"""

@@ -1,20 +1,20 @@
 [package]
 name = "dota2draft-tauri"
-version = "0.1.0"
+version = "0.2.0"
 description = "Dota2 Draft Analyzer"
 authors = ["author"]
 edition = "2021"
 
 [dependencies]
-tauri = { version = "2", features = [] }
-serde = { version = "1.0", features = ["derive"] }
+tauri = { version = "2.0", features = [] }
+serde = { version = "1.0" }
 serde_json = "1.0"
 tauri-plugin-shell = "2.0"
 dota2draft = { path = ".." }
 url = "2"
 
 [build-dependencies]
-tauri-build = { version = "2", features = [] }
+tauri-build = { version = "2.0", features = [] }
 
 [profile.release]
 codegen-units = 1
