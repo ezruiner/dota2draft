@@ -1224,7 +1224,7 @@
                     <label class="setting-label" data-i18n="setting_language">LANGUAGE</label>
                     <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--mercury); padding: 4px; border: 1px solid var(--border); border-radius: 4px; display: flex; gap: 4px;">
                         <button id="lang-en" class="lang-btn active" style="flex: 1; background: none; border: none; color: var(--mercury); padding: 8px 6px; cursor: pointer; opacity: 0.5;">ENGLISH</button>
-                        <button id="lang-ru" class="lang-btn" style="flex: 1; background: none; border: none; color: var(--mercury); padding: 8px 6px; cursor: pointer; opacity: 0.5;">�������</button>
+                        <button id="lang-ru" class="lang-btn" style="flex: 1; background: none; border: none; color: var(--mercury); padding: 8px 6px; cursor: pointer; opacity: 0.5;">РУССКИЙ</button>
                     </div>
                 </div>
 
@@ -1982,9 +1982,9 @@
                 const removeBtn = document.createElement('button');
                 removeBtn.className = `remove-btn ${type === 'radiant' ? 'remove-right' : 'remove-left'}`;
                 removeBtn.type = 'button';
-                removeBtn.innerText = '?';
-                removeBtn.title = '�������';
-                removeBtn.setAttribute('aria-label', '������� �����');
+                removeBtn.innerText = 'х';
+                removeBtn.title = 'Удалить';
+                removeBtn.setAttribute('aria-label', 'Удалить героя');
                 removeBtn.draggable = false;
                 removeBtn.addEventListener('mousedown', (e) => e.stopPropagation());
                 removeBtn.addEventListener('pointerdown', (e) => e.stopPropagation());
@@ -2103,8 +2103,8 @@
                     removeBtn.className = `remove-btn ${type === 'radiant' ? 'remove-right' : 'remove-left'}`;
                     removeBtn.type = 'button';
                     removeBtn.innerText = '?';
-                    removeBtn.title = '�������';
-                    removeBtn.setAttribute('aria-label', '������� �����');
+                    removeBtn.title = 'Удалить';
+                    removeBtn.setAttribute('aria-label', 'Удалить героя');
                     removeBtn.draggable = false;
                     removeBtn.addEventListener('mousedown', (e) => e.stopPropagation());
                     removeBtn.addEventListener('pointerdown', (e) => e.stopPropagation());
